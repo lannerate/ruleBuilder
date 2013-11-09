@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<digester-rules>
+   <object-create-rule pattern="ExecuteInfos" classname="com.flagleader.server.ExecuteInfos" />
+   <set-properties-rule pattern="ExecuteInfos" >
+      <alias attr-name="displayName" prop-name="displayName" />
+   </set-properties-rule>
+   
+   <pattern value="*/RuleExecuteInfo">
+     <object-create-rule classname="com.flagleader.server.RuleExecuteInfo" />
+     <set-properties-rule>
+       <alias attr-name="exeRuleName" prop-name="exeRuleName" />
+       <alias attr-name="displayName" prop-name="displayName" />
+       <alias attr-name="internalTime" prop-name="internalTime" />
+       <alias attr-name="planType" prop-name="planType" />
+       <alias attr-name="specialDay" prop-name="specialDay" />
+       <alias attr-name="specialTime" prop-name="specialTime" />
+       <alias attr-name="startTime" prop-name="startTime" />
+       <alias attr-name="lastTime" prop-name="lastTime" />
+       <alias attr-name="state" prop-name="state" />
+       <alias attr-name="times" prop-name="times" />
+       <alias attr-name="tracelogtype" prop-name="tracelogtype" />
+       <alias attr-name="errorInfo" prop-name="errorInfo" />
+     </set-properties-rule>
+     <set-next-rule methodname="addRuleExecuteInfo" />
+   </pattern>
+   
+   <pattern value="*/advancedProperty">
+     <object-create-rule classname="com.flagleader.repository.tree.AdvancedProperty" />
+     <set-properties-rule>
+       <alias attr-name="key" prop-name="key" />
+       <alias attr-name="property" prop-name="property" />
+     </set-properties-rule>
+     <set-next-rule methodname="addAdvanceProperty" />
+   </pattern>
+   
+</digester-rules>

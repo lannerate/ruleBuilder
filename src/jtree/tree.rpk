@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="GBK"?>
+<RulePackage displayName="树" uuid="U01GZT7GLEQC6CLDU3FLP8" packageName="jtree" exportDir="" fileName="tree" startTime="0" endTime="0" createTime="1331780046088" modifyTime="1331780136833" locked="false" checkType="0" version="1.0" mainVersion="" projver="" modifyUser="develop" stringignore="0" stringinit="1" datenulltype="0" rulesid="0" dbRules="false" edittype="0" logType="0" dblog="0" fileVersion="2" logTimes="0" vmlFlowType="3" templateType="" document="">
+ <RuleSet displayName="新建" uuid="U02GZT7GLEQC6CLDU3FLP8" editType="3" startTime="0" endTime="0" createTime="1331780053671" modifyTime="1331780053671" actived="true" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" editTable="false" exceptionType="1" errorMsg="" syn="false">
+  <Rule displayName="规则" uuid="U03GZT7GLEQC6CLDU3FLP8" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1331780053671" modifyTime="1331780053671" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+   <RuleToken uuid="U04GZT7GLEQC6CLDU3FLP8">
+    <MultiConditionToken uuid="U05GZT7GLEQC6CLDU3FLP8" type="0">
+    </MultiConditionToken>
+    <MultiActionToken uuid="U06GZT7GLEQC6CLDU3FLP8" type="0">
+    </MultiActionToken>
+    <MultiActionToken uuid="U07GZT7GLEQC6CLDU3FLP8" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <RuleSetToken uuid="U08GZT7GLEQC6CLDU3FLP8">
+   <MultiConditionToken uuid="U09GZT7GLEQC6CLDU3FLP8" type="0">
+    <ConditionToken uuid="U0AGZT7GLEQC6CLDU3FLP8" leftParenthesisNumber="0" rightParenthesisNumber="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UZUGZT79S42C6CLDU3FLP8" uniqueName="string_hidAct" valueType="" displayName="操作">
+     </MemberToken>
+     <StringJudgeToken type="0">
+     </StringJudgeToken>
+     <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <ConstantToken valueType="string" value="add">
+      </ConstantToken>
+      <StringOperatorToken type="0">
+      </StringOperatorToken>
+     </ValueToken>
+    </ConditionToken>
+   </MultiConditionToken>
+   <MultiActionToken uuid="U0BGZT7GLEQC6CLDU3FLP8" type="2">
+   </MultiActionToken>
+   <MultiActionToken uuid="U0CGZT7GLEQC6CLDU3FLP8" type="5">
+   </MultiActionToken>
+  </RuleSetToken>
+  <doc>
+  </doc>
+ </RuleSet>
+ <RuleSet displayName="修改" uuid="U0DGZT7GLEQC6CLDU3FLP8" editType="3" startTime="0" endTime="0" createTime="1331780053671" modifyTime="1331780053671" actived="true" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" editTable="false" exceptionType="1" errorMsg="" syn="false">
+  <Rule displayName="规则" uuid="U0EGZT7GLEQC6CLDU3FLP8" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1331780053671" modifyTime="1331780053671" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+   <RuleToken uuid="U0FGZT7GLEQC6CLDU3FLP8">
+    <MultiConditionToken uuid="U0GGZT7GLEQC6CLDU3FLP8" type="0">
+    </MultiConditionToken>
+    <MultiActionToken uuid="U0HGZT7GLEQC6CLDU3FLP8" type="0">
+    </MultiActionToken>
+    <MultiActionToken uuid="U0IGZT7GLEQC6CLDU3FLP8" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <RuleSetToken uuid="U0JGZT7GLEQC6CLDU3FLP8">
+   <MultiConditionToken uuid="U0KGZT7GLEQC6CLDU3FLP8" type="0">
+    <ConditionToken uuid="U0LGZT7GLEQC6CLDU3FLP8" leftParenthesisNumber="0" rightParenthesisNumber="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UZUGZT79S42C6CLDU3FLP8" uniqueName="string_hidAct" valueType="" displayName="操作">
+     </MemberToken>
+     <StringJudgeToken type="0">
+     </StringJudgeToken>
+     <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <ConstantToken valueType="string" value="mod">
+      </ConstantToken>
+      <StringOperatorToken type="0">
+      </StringOperatorToken>
+     </ValueToken>
+    </ConditionToken>
+   </MultiConditionToken>
+  </RuleSetToken>
+  <doc>
+  </doc>
+ </RuleSet>
+ <RuleSet displayName="删除" uuid="U0MGZT7GLEQC6CLDU3FLP8" editType="3" startTime="0" endTime="0" createTime="1331780053671" modifyTime="1331780053671" actived="true" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" editTable="false" exceptionType="1" errorMsg="" syn="false">
+  <Rule displayName="规则" uuid="U0NGZT7GLEQC6CLDU3FLP8" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1331780053671" modifyTime="1331780053671" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+   <RuleToken uuid="U0OGZT7GLEQC6CLDU3FLP8">
+    <MultiConditionToken uuid="U0PGZT7GLEQC6CLDU3FLP8" type="0">
+    </MultiConditionToken>
+    <MultiActionToken uuid="U0QGZT7GLEQC6CLDU3FLP8" type="0">
+    </MultiActionToken>
+    <MultiActionToken uuid="U0RGZT7GLEQC6CLDU3FLP8" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <RuleSetToken uuid="U0SGZT7GLEQC6CLDU3FLP8">
+   <MultiConditionToken uuid="U0TGZT7GLEQC6CLDU3FLP8" type="0">
+    <ConditionToken uuid="U0UGZT7GLEQC6CLDU3FLP8" leftParenthesisNumber="0" rightParenthesisNumber="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UZUGZT79S42C6CLDU3FLP8" uniqueName="string_hidAct" valueType="" displayName="操作">
+     </MemberToken>
+     <StringJudgeToken type="0">
+     </StringJudgeToken>
+     <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <ConstantToken valueType="string" value="del">
+      </ConstantToken>
+      <StringOperatorToken type="0">
+      </StringOperatorToken>
+     </ValueToken>
+    </ConditionToken>
+   </MultiConditionToken>
+  </RuleSetToken>
+  <doc>
+  </doc>
+ </RuleSet>
+ <RuleLogConditionToken uuid="U0VGZT7GLEQC6CLDU3FLP8" type="3">
+ </RuleLogConditionToken>
+ <Envionment displayName="对象库" uuid="U0WGZT7GLEQC6CLDU3FLP8" modifyTime="1331780053693" functionNum="1">
+  <ValueLibrary displayName="传入数据" modifyTime="1331780053673" uuid="U0XGZT7GLEQC6CLDU3FLP8">
+   <MappingVariable displayName="操作" uuid="UZUGZT79S42C6CLDU3FLP8" variableName="hidAct" visible="false" groupName="传入数据" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="nID" uuid="UZVGZT79S42C6CLDU3FLP8" variableName="nID" visible="false" groupName="p" valueType="string" inout="3" loged="false">
+    <SubTypeMethod displayName="将nID按{arg1}切割成字符数组" uuid="UZWGZT79S42C6CLDU3FLP8" valueName="split(string)" visible="true" valueType="string[&#93;" variableName="com.flagleader.util.StringUtil.split($p,{arg1})" varPre="" groupName="p">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <SubVariable displayName="将nID按{arg1}切割成字符数组[{arg2}&#93;" uuid="UZXGZT79S42C6CLDU3FLP8" valueName="get(0)" visible="true" valueType="string" variableName="[{arg2}&#93;" varPre="" groupName="p">
+      <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+     </SubVariable>
+    </SubTypeMethod>
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1331780053673" uuid="U0YGZT7GLEQC6CLDU3FLP8">
+   <TempVariable displayName="lid" uuid="UZYGZT79S42C6CLDU3FLP8" variableName="lid" visible="true" groupName="p" valueType="int" loged="false">
+   </TempVariable>
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1331780053673" uuid="U0ZGZT7GLEQC6CLDU3FLP8">
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1331780053673" uuid="U10GZT7GLEQC6CLDU3FLP8">
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <doc>
+  </doc>
+ </Envionment>
+ <ExportModel displayName="system/lanmuframes.jsp" uuid="U00GZT7GLEQC6CLDU3FLP8" exportFile="" importFile="jquery/page_frames.rsp" value="" title="栏目管理" modifyTime="1331787936390">
+  <modelStr>
+  </modelStr>
+  <advancedProperty key="judge" property="notsupport"/>
+  <advancedProperty key="navigate" property="show"/>
+  <advancedProperty key="input" property="show"/>
+  <advancedProperty key="inputtable" property="2"/>
+  <advancedProperty key="submit" property="submit"/>
+  <advancedProperty key="output" property="show"/>
+  <advancedProperty key="success" property="notshow"/>
+  <advancedProperty key="error" property="notshow"/>
+  <advancedProperty key="leftsize" property="160"/>
+  <advancedProperty key="rightsize" property="*"/>
+  <advancedProperty key="rule" property="run"/>
+  <advancedProperty key="showpopup" property="show"/>
+  <advancedProperty key="leftpage" property="tree.jsp"/>
+  <advancedProperty key="rightpage" property=""/>
+  <PageFieldModel displayName="操作" variableName="hidAct" valueType="string" nullType="null" len="255" inputType="notdisplay" resultType="notdisplay" statType="inout" defaultValue="" inputValueType="nottest" showValue="resultvalue" valueFrom="request">
+  </PageFieldModel>
+  <doc>
+  </doc>
+ </ExportModel>
+</RulePackage>

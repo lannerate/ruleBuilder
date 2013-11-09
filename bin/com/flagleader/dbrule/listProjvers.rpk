@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="GBK"?>
+<RulePackage displayName="工程规则包" uuid="U16G4NQWWRQGR6TNLXB" packageName="com.flagleader.dbrule" exportDir="classes" fileName="listProjvers" startTime="0" endTime="0" createTime="1139388657341" modifyTime="1293614312765" locked="false" checkType="1" version="1.0" mainVersion="" projver="" modifyUser="develop" stringignore="0" stringinit="1" datenulltype="0" rulesid="23" dbRules="false" edittype="0" logType="1" ruleEditLevel="0" dblog="0" fileVersion="2" logTimes="0" vmlFlowType="3" templateType="" webrole="0" document="取得所有可以打开的规则包" checktype="0">
+ <Rule displayName="规则" uuid="U15G4NQWWRQGR6TNLXB" exceptionType="0" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1263969692625" modifyTime="1263969835406" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+  <RuleToken uuid="U17G4NQWWRQGR6TNLXB">
+   <MultiConditionToken uuid="U18G4NQWWRQGR6TNLXB" type="0">
+   </MultiConditionToken>
+   <MultiActionToken uuid="U19G4NQWWRQGR6TNLXB" type="0">
+    <StatementContainerToken>
+     <TableFunctionToken elementUuid="U07G4NQWWRQGR6TNLXB" uniqueName="void_db5select1.selectWhere(&quot;select pv.projverid,pv.projver  from r_projversion pv,r_proj p  where pv.projid=p.projid and p.ruleproject= ? &quot;,new Object[&#93;{ {arg1}})" valueType="" displayName="根据{arg1}执行自定义查询">
+      <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <StringOperatorToken type="0">
+       </StringOperatorToken>
+       <MemberToken elementUuid="U03G4NQWWRQGR6TNLXB" uniqueName="string_ruleproject" valueType="string" displayName="projname">
+       </MemberToken>
+      </ValueToken>
+      <ElementTextToken displayName="执行自定义查询" colorType="default" pos="0" elementUuid="" uniqueName="">
+      </ElementTextToken>
+     </TableFunctionToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="U01G4NQWWRQGR6TNLXB" uniqueName="list&lt;list&gt;_ruleList" valueType="" displayName="ruleList">
+      </FieldToken>
+      <AssignJudgeToken type="0">
+      </AssignJudgeToken>
+      <ValueToken valueType="list&lt;list&gt;" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <MemberToken elementUuid="U0JG4NQWWRQGR6TNLXB" uniqueName="db5select1.getListResult()" valueType="list&lt;list&gt;" displayName="自定义查询.getListResult()">
+       </MemberToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+   <MultiActionToken uuid="U1AG4NQWWRQGR6TNLXB" type="3">
+   </MultiActionToken>
+  </RuleToken>
+  <doc>
+  </doc>
+ </Rule>
+ <RuleLogConditionToken uuid="UUID0380F7D9EBA014010000C8C65B016400A8C0" type="3">
+ </RuleLogConditionToken>
+ <Envionment displayName="对象库" uuid="U1BG4NQWWRQGR6TNLXB" modifyTime="1263969831734" functionNum="2">
+  <ValueLibrary displayName="传入数据" modifyTime="1263969831734" uuid="U1CG4NQWWRQGR6TNLXB">
+   <MappingVariable displayName="ruleList" uuid="U01G4NQWWRQGR6TNLXB" variableName="ruleList" visible="true" groupName="" valueType="list&lt;list&gt;" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="操作用户登录名" uuid="U02G4NQWWRQGR6TNLXB" variableName="loginname" visible="true" groupName="传入数据" valueType="string" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="projname" uuid="U03G4NQWWRQGR6TNLXB" variableName="ruleproject" visible="true" groupName="p" valueType="string" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1263969692625" uuid="U1DG4NQWWRQGR6TNLXB">
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1263969692625" uuid="U1EG4NQWWRQGR6TNLXB">
+   <FunctionClass displayName="com.flagleader.util.MD5" uuid="U04G4NQWWRQGR6TNLXB" visible="false" className="com.flagleader.util.MD5" valueType="com.flagleader.util.MD5" dir="" groupName="外部调用" shortClassName="MD5">
+    <BusinessObjectMethod displayName="加密({arg1})" uuid="U05G4NQWWRQGR6TNLXB" memberName="getMD5ofStr(java.lang.String)" visible="true" valueType="java.lang.String" groupName="外部调用" shortMemberName="getMD5ofStr">
+     <MethodParam typeName="java.lang.String" paramName="arg1" defaultValue=""/>
+    </BusinessObjectMethod>
+   </FunctionClass>
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1263969692625" uuid="U1FG4NQWWRQGR6TNLXB">
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <DBModel displayName="rules" uuid="U14G4NQWWRQGR6TNLXB" url="jdbc:mysql://localhost/rules" driver="com.mysql.jdbc.Driver" userName="root" encryptedPasswd="Xs9UzDAgGfLhcJn2WMXwew==" datasourceName="rules" catalogName="" schemaName="" connType="0" varName="db5" modifyTime="1263969692625" dbFilePath="D:\Personal\Desktop\rules.dbs" vml="0" transationlevel="0">
+   <selectTable uuid="U06G4NQWWRQGR6TNLXB" displayName="自定义查询" sqlSelect="select pv.projverid,pv.projver&#13;&#10;from r_projversion pv,r_proj p&#13;&#10;where pv.projid=p.projid and p.ruleproject={string}" englishName="select1" resultType="0" afterCommit="true" modifyTime="1263969823875" vml="0">
+    <TableFunction displayName="根据{arg1}执行自定义查询" uuid="U07G4NQWWRQGR6TNLXB" valueName="selectWhere" visible="true" valueType="void" variableName="selectWhere(&quot;select pv.projverid,pv.projver  from r_projversion pv,r_proj p  where pv.projid=p.projid and p.ruleproject= ? &quot;,new Object[&#93;{ {arg1}})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="自定义查询是否存在下一条记录" uuid="U08G4NQWWRQGR6TNLXB" valueName="hasNext" visible="false" valueType="boolean" variableName="hasNext()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到自定义查询下一条记录" uuid="U09G4NQWWRQGR6TNLXB" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="自定义查询记录的个数" uuid="U0AG4NQWWRQGR6TNLXB" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到自定义查询的第一条记录" uuid="U0BG4NQWWRQGR6TNLXB" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到自定义查询的上一条记录" uuid="U0CG4NQWWRQGR6TNLXB" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到自定义查询的最后一条记录" uuid="U0DG4NQWWRQGR6TNLXB" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得自定义查询当前记录的位置" uuid="U0EG4NQWWRQGR6TNLXB" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到自定义查询第{arg1}个记录" uuid="U0FG4NQWWRQGR6TNLXB" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="rulename 等于{arg1}" uuid="U0GG4NQWWRQGR6TNLXB" valueName="setRulename" visible="false" valueType="void" variableName="setString(&quot;rulename&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="savetime 等于{arg1}" uuid="U0HG4NQWWRQGR6TNLXB" valueName="setSavetime" visible="false" valueType="void" variableName="setTimestamp(&quot;savetime&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="datetime" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="login 等于{arg1}" uuid="U0IG4NQWWRQGR6TNLXB" valueName="setLogin" visible="false" valueType="void" variableName="setString(&quot;login&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <BusinessObjectMethod displayName="自定义查询.getListResult()" uuid="U0JG4NQWWRQGR6TNLXB" memberName="getListResult()" visible="true" valueType="java.util.List" groupName="自定义查询" shortMemberName="getListResult">
+    </BusinessObjectMethod>
+    <TableFunction displayName="取自定义查询的projver字段的值" uuid="U13G4NQWWRQGR6TNLXB" valueName="getProjver" visible="false" valueType="string" variableName="getString(1)" varPre="" groupName="取值">
+    </TableFunction>
+    <fieldModel displayName="projverid" uuid="U1GG4NQWWRQGR6TNLXB" fieldName="projverid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="true" autoIncrement="true" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="projver" uuid="U0XG4NQWWRQGR6TNLXB" fieldName="projver" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="40" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <TableFunction displayName="取自定义查询的projverid字段的值" uuid="U1HG4NQWWRQGR6TNLXB" valueName="getProjverid" visible="false" valueType="int" variableName="getInteger(0)" varPre="" groupName="取值">
+    </TableFunction>
+    <doc>
+    </doc>
+   </selectTable>
+   <doc>
+   </doc>
+  </DBModel>
+  <doc>
+  </doc>
+ </Envionment>
+</RulePackage>

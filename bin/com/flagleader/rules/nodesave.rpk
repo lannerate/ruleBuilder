@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="GBK"?>
+<RulePackage displayName="保存模板" uuid="UUID0480E0552090250100000C57E3009B00A8C0" packageName="com.flagleader.rules" exportDir="classes" fileName="nodesave" startTime="0" endTime="0" createTime="1139373521076" modifyTime="1260843468125" locked="false" checkType="0" version="1.0" mainVersion="" modifyUser="192.168.0.155" stringignore="0" stringinit="1" datenulltype="0" rulesid="0" dbRules="false" edittype="0" logType="1" fileVersion="2" logTimes="0" vmlFlowType="0" templateType="" document="">
+ <RuleSet displayName="规则包已存在" uuid="UUID0180E0552090250100000C57E3009B00A8C0" editType="3" startTime="0" endTime="0" createTime="1260843468109" modifyTime="1260843471484" actived="true" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0">
+  <Rule displayName="更新主规则记录" uuid="UUID0280E0552090250100000C57E3009B00A8C0" exceptionType="2" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1260843468109" modifyTime="1260843471484" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0">
+   <RuleToken uuid="UUID6B80E0552090250100000C57E3009B00A8C0">
+    <MultiConditionToken uuid="UUID6C80E0552090250100000C57E3009B00A8C0" type="0">
+    </MultiConditionToken>
+    <MultiActionToken uuid="UUID6D80E0552090250100000C57E3009B00A8C0" type="0">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3C80E0552090250100000C57E3009B00A8C0" uniqueName="void_db5r_rulenode.setInteger(&quot;pos&quot;,{arg1})" valueType="" displayName="设置r_rulenode的pos字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <MemberToken elementUuid="UUID0E80E0552090250100000C57E3009B00A8C0" uniqueName="int_pos" valueType="int" displayName="pos">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3E80E0552090250100000C57E3009B00A8C0" uniqueName="void_db5r_rulenode.setInteger(&quot;checktype&quot;,{arg1})" valueType="" displayName="设置r_rulenode的checktype字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantSelectToken elementUuid="UUID1780E0552090250100000C57E3009B00A8C0" uniqueName="int_0_常量数据" valueType="int" displayName="被捡入">
+        </ConstantSelectToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID2E80E0552090250100000C57E3009B00A8C0" uniqueName="void_db5r_rulenode.setString(&quot;exename&quot;,{arg1})" valueType="" displayName="设置r_rulenode的exename字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID0780E0552090250100000C57E3009B00A8C0" uniqueName="string_exename" valueType="string" displayName="exename">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3080E0552090250100000C57E3009B00A8C0" uniqueName="void_db5r_rulenode.setString(&quot;nodename&quot;,{arg1})" valueType="" displayName="设置r_rulenode的nodename字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID0880E0552090250100000C57E3009B00A8C0" uniqueName="string_nodename" valueType="string" displayName="nodename">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3280E0552090250100000C57E3009B00A8C0" uniqueName="void_db5r_rulenode.setString(&quot;nodetype&quot;,{arg1})" valueType="" displayName="设置r_rulenode的nodetype字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID0980E0552090250100000C57E3009B00A8C0" uniqueName="string_nodetype" valueType="string" displayName="nodetype">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3480E0552090250100000C57E3009B00A8C0" uniqueName="void_db5r_rulenode.setString(&quot;parentpath&quot;,{arg1})" valueType="" displayName="设置r_rulenode的parentpath字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID0A80E0552090250100000C57E3009B00A8C0" uniqueName="string_parentpath" valueType="string" displayName="parentpath">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3680E0552090250100000C57E3009B00A8C0" uniqueName="void_db5r_rulenode.setString(&quot;filecontext&quot;,{arg1})" valueType="" displayName="设置r_rulenode的filecontext字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID0B80E0552090250100000C57E3009B00A8C0" uniqueName="string_filecontext" valueType="string" displayName="filecontext">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3880E0552090250100000C57E3009B00A8C0" uniqueName="void_db5r_rulenode.setTimestamp(&quot;modifytime&quot;,{arg1})" valueType="" displayName="设置r_rulenode的modifytime字段的值为{arg1}">
+       <ValueToken valueType="datetime" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID0C80E0552090250100000C57E3009B00A8C0" uniqueName="datetime_modifytime" valueType="datetime" displayName="modifytime">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3A80E0552090250100000C57E3009B00A8C0" uniqueName="void_db5r_rulenode.setString(&quot;modifyuser&quot;,{arg1})" valueType="" displayName="设置r_rulenode的modifyuser字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID0D80E0552090250100000C57E3009B00A8C0" uniqueName="string_modifyuser" valueType="string" displayName="modifyuser">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID1E80E0552090250100000C57E3009B00A8C0" uniqueName="int_db5r_rulenode.replace()" valueType="" displayName="添加或更新r_rulenode当前记录">
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <FunctionSheetToken elementUuid="UUID6980E0552090250100000C57E3009B00A8C0" uniqueName="sheetg2u0qk72c.loadFromList(java.util.List)" valueType="" displayName="需保存子节点.loadFromList({arg1})">
+       <ValueToken valueType="java.util.List" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID1080E0552090250100000C57E3009B00A8C0" uniqueName="list&lt;list&gt;_list" valueType="java.util.List" displayName="list">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName=")" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </FunctionSheetToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UUID6E80E0552090250100000C57E3009B00A8C0" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <Rule displayName="循环保存子节点" uuid="UUID0380E0552090250100000C57E3009B00A8C0" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1260843468109" modifyTime="1260843471484" modifyUser="" vml="0" logtype="0" sheetWhile="true" sheetUuid="UUID4880E0552090250100000C57E3009B00A8C0" sheetName="需保存子节点" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0">
+   <RuleToken uuid="UUID6F80E0552090250100000C57E3009B00A8C0">
+    <MultiConditionToken uuid="UUID7080E0552090250100000C57E3009B00A8C0" type="0">
+    </MultiConditionToken>
+    <MultiActionToken uuid="UUID7180E0552090250100000C57E3009B00A8C0" type="0">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID2E80E0552090250100000C57E3009B00A8C0" uniqueName="void_db5r_rulenode.setString(&quot;exename&quot;,{arg1})" valueType="" displayName="设置r_rulenode的exename字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID0780E0552090250100000C57E3009B00A8C0" uniqueName="string_exename" valueType="string" displayName="exename">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3480E0552090250100000C57E3009B00A8C0" uniqueName="void_db5r_rulenode.setString(&quot;parentpath&quot;,{arg1})" valueType="" displayName="设置r_rulenode的parentpath字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID6480E0552090250100000C57E3009B00A8C0" uniqueName="需保存子节点.parentpath" valueType="string" displayName="parentpath(需保存子节点)">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3080E0552090250100000C57E3009B00A8C0" uniqueName="void_db5r_rulenode.setString(&quot;nodename&quot;,{arg1})" valueType="" displayName="设置r_rulenode的nodename字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID6580E0552090250100000C57E3009B00A8C0" uniqueName="需保存子节点.nodename" valueType="string" displayName="nodename(需保存子节点)">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3280E0552090250100000C57E3009B00A8C0" uniqueName="void_db5r_rulenode.setString(&quot;nodetype&quot;,{arg1})" valueType="" displayName="设置r_rulenode的nodetype字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID6680E0552090250100000C57E3009B00A8C0" uniqueName="需保存子节点.nodetype" valueType="string" displayName="nodetype(需保存子节点)">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3C80E0552090250100000C57E3009B00A8C0" uniqueName="void_db5r_rulenode.setInteger(&quot;pos&quot;,{arg1})" valueType="" displayName="设置r_rulenode的pos字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <MemberToken elementUuid="UUID6780E0552090250100000C57E3009B00A8C0" uniqueName="需保存子节点.pos" valueType="int" displayName="pos(需保存子节点)">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3680E0552090250100000C57E3009B00A8C0" uniqueName="void_db5r_rulenode.setString(&quot;filecontext&quot;,{arg1})" valueType="" displayName="设置r_rulenode的filecontext字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID02804D425B5E25010000DFD326014401A8C0" uniqueName="需保存子节点.filecontext" valueType="string" displayName="filecontext(需保存子节点)">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID7080CC909D4E2501000099B11E019B00A8C0" uniqueName="void_db5r_rulenode.setTimestamp(&quot;modifytime&quot;,{arg1})" valueType="" displayName="设置r_rulenode的modifytime字段的值为{arg1}">
+       <ValueToken valueType="datetime" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID2B80072D945D25010000E2A4B1004401A8C0" uniqueName="需保存子节点.modifytime" valueType="datetime" displayName="modifytime(需保存子节点)">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID7280CC909D4E2501000099B11E019B00A8C0" uniqueName="void_db5r_rulenode.setString(&quot;modifyuser&quot;,{arg1})" valueType="" displayName="设置r_rulenode的modifyuser字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID4680CC909D4E2501000099B11E019B00A8C0" uniqueName="string_modifyuser" valueType="string" displayName="modifyuser">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID0480072D945D25010000E2A4B1004401A8C0" uniqueName="void_db5r_rulenode.setInteger(&quot;checktype&quot;,{arg1})" valueType="" displayName="设置r_rulenode的checktype字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantSelectToken elementUuid="UUID4D80CC909D4E2501000099B11E019B00A8C0" uniqueName="int_0_常量数据" valueType="int" displayName="被捡入">
+        </ConstantSelectToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID5480CC909D4E2501000099B11E019B00A8C0" uniqueName="int_db5r_rulenode.replace()" valueType="" displayName="添加或更新r_rulenode当前记录">
+      </TableFunctionToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UUID7280E0552090250100000C57E3009B00A8C0" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <RuleSetToken uuid="UUID7380E0552090250100000C57E3009B00A8C0">
+   <MultiConditionToken uuid="UUID7480E0552090250100000C57E3009B00A8C0" type="0">
+   </MultiConditionToken>
+   <MultiActionToken uuid="UUID7580E0552090250100000C57E3009B00A8C0" type="2">
+   </MultiActionToken>
+   <MultiActionToken uuid="UUID7680E0552090250100000C57E3009B00A8C0" type="5">
+   </MultiActionToken>
+  </RuleSetToken>
+  <doc>
+  </doc>
+ </RuleSet>
+ <RuleLogConditionToken uuid="UUID4C80474963AC14010000563916006400A8C0" type="3">
+ </RuleLogConditionToken>
+ <Envionment displayName="对象库" uuid="UUID7780E0552090250100000C57E3009B00A8C0" modifyTime="1260843468156" functionNum="2">
+  <ValueLibrary displayName="传入数据" modifyTime="1260843468109" uuid="UUID7880E0552090250100000C57E3009B00A8C0">
+   <MappingVariable displayName="操作用户登录名" uuid="UUID0580E0552090250100000C57E3009B00A8C0" variableName="loginname" visible="true" groupName="" valueType="string" inout="1" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="错误提示信息" uuid="UUID0680E0552090250100000C57E3009B00A8C0" variableName="error" visible="true" groupName="" valueType="string" inout="2" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="exename" uuid="UUID0780E0552090250100000C57E3009B00A8C0" variableName="exename" visible="true" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="nodename" uuid="UUID0880E0552090250100000C57E3009B00A8C0" variableName="nodename" visible="true" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="nodetype" uuid="UUID0980E0552090250100000C57E3009B00A8C0" variableName="nodetype" visible="true" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="parentpath" uuid="UUID0A80E0552090250100000C57E3009B00A8C0" variableName="parentpath" visible="true" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="filecontext" uuid="UUID0B80E0552090250100000C57E3009B00A8C0" variableName="filecontext" visible="true" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="modifytime" uuid="UUID0C80E0552090250100000C57E3009B00A8C0" variableName="modifytime" visible="true" groupName="p" valueType="datetime" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="modifyuser" uuid="UUID0D80E0552090250100000C57E3009B00A8C0" variableName="modifyuser" visible="true" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="pos" uuid="UUID0E80E0552090250100000C57E3009B00A8C0" variableName="pos" visible="true" groupName="p" valueType="int" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="checktype" uuid="UUID0F80E0552090250100000C57E3009B00A8C0" variableName="checktype" visible="true" groupName="p" valueType="int" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="list" uuid="UUID1080E0552090250100000C57E3009B00A8C0" variableName="list" visible="true" groupName="p" valueType="list&lt;list&gt;" inout="3" loged="false">
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1260843468109" uuid="UUID7980E0552090250100000C57E3009B00A8C0">
+   <TempVariable displayName="editstate" uuid="UUID1180E0552090250100000C57E3009B00A8C0" variableName="editstate" visible="true" groupName="临时数据" valueType="int" loged="false">
+   </TempVariable>
+   <TempVariable displayName="用户编号" uuid="UUID1280E0552090250100000C57E3009B00A8C0" variableName="userid" visible="true" groupName="临时数据" valueType="int" loged="false">
+   </TempVariable>
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1260843468109" uuid="UUID7A80E0552090250100000C57E3009B00A8C0">
+   <FunctionClass displayName="java.util.Date" uuid="UUID1380E0552090250100000C57E3009B00A8C0" visible="false" className="java.util.Date" valueType="java.util.Date" dir="" groupName="" shortClassName="Date">
+    <BusinessObjectConstructor displayName="当前时间" uuid="UUID1480E0552090250100000C57E3009B00A8C0" memberName="Date()" visible="true" valueType="java.util.Date" groupName="" shortMemberName="Date">
+    </BusinessObjectConstructor>
+   </FunctionClass>
+   <FunctionClass displayName="com.flagleader.util.MD5" uuid="UUID1580E0552090250100000C57E3009B00A8C0" visible="false" className="com.flagleader.util.MD5" valueType="com.flagleader.util.MD5" dir="" groupName="" shortClassName="MD5">
+    <BusinessObjectMethod displayName="加密({arg1})" uuid="UUID1680E0552090250100000C57E3009B00A8C0" memberName="getMD5ofStr(java.lang.String)" visible="true" valueType="java.lang.String" groupName="" shortMemberName="getMD5ofStr">
+     <MethodParam typeName="java.lang.String" paramName="arg1" defaultValue=""/>
+    </BusinessObjectMethod>
+   </FunctionClass>
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1260843468109" uuid="UUID7B80E0552090250100000C57E3009B00A8C0">
+   <ConstantEnum displayName="被捡入" uuid="UUID1780E0552090250100000C57E3009B00A8C0" value="0" visible="true" groupName="常量数据" valueType="int">
+   </ConstantEnum>
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <DBModel displayName="rules" uuid="UUID1880E0552090250100000C57E3009B00A8C0" url="jdbc:mysql://localhost/rules" driver="com.mysql.jdbc.Driver" userName="root" encryptedPasswd="Xs9UzDAgGfLhcJn2WMXwew==" datasourceName="rules" catalogName="" schemaName="" connType="0" varName="db5" modifyTime="1260843468125" dbFilePath="D:\Personal\Desktop\rules.dbs" vml="0">
+   <TableModel uuid="UUID1980E0552090250100000C57E3009B00A8C0" displayName="r_rulenode" tableName="r_rulenode" shortTableName="r_rulenode" varName="r_rulenode" accessType="0" resultType="0" modifyTime="1260843468109" vml="0">
+    <TableFunction displayName="查询r_rulenode中符合条件记录" uuid="UUID1A80E0552090250100000C57E3009B00A8C0" valueName="select" visible="false" valueType="void" variableName="select()" varPre="" groupName="查询">
+    </TableFunction>
+    <TableFunction displayName="添加r_rulenode当前记录" uuid="UUID1B80E0552090250100000C57E3009B00A8C0" valueName="insert" visible="false" valueType="int" variableName="insertRows()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="删除r_rulenode当前记录" uuid="UUID1C80E0552090250100000C57E3009B00A8C0" valueName="delete" visible="false" valueType="int" variableName="deleteRows()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="更新r_rulenode当前记录" uuid="UUID1D80E0552090250100000C57E3009B00A8C0" valueName="update" visible="false" valueType="int" variableName="updateRows()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="添加或更新r_rulenode当前记录" uuid="UUID1E80E0552090250100000C57E3009B00A8C0" valueName="replace" visible="true" valueType="int" variableName="replace()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="取r_rulenode当前查询结果的下一条记录" uuid="UUID1F80E0552090250100000C57E3009B00A8C0" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="初始化r_rulenode当前记录" uuid="UUID2080E0552090250100000C57E3009B00A8C0" valueName="resetValues" visible="false" valueType="void" variableName="resetValues()" varPre="" groupName="查询">
+    </TableFunction>
+    <TableFunction displayName="取r_rulenode当前查询结果的最后一条记录" uuid="UUID2180E0552090250100000C57E3009B00A8C0" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="r_rulenode当前查询结果的所有记录" uuid="UUID2280E0552090250100000C57E3009B00A8C0" valueName="getListResult" visible="false" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="根据外键删除r_rulenode当前记录" uuid="UUID2380E0552090250100000C57E3009B00A8C0" valueName="deleteByForeignKey" visible="false" valueType="void" variableName="deleteByForeignKey()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="判断r_rulenode主键字段是否已有其他表引用" uuid="UUID2480E0552090250100000C57E3009B00A8C0" valueName="hasExported" visible="false" valueType="boolean" variableName="hasExported()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="根据外键更新r_rulenode当前记录" uuid="UUID2580E0552090250100000C57E3009B00A8C0" valueName="updateByForeignKey" visible="false" valueType="void" variableName="updateByForeignKey()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="r_rulenode当前查询结果的记录数" uuid="UUID2680E0552090250100000C57E3009B00A8C0" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="关闭r_rulenode当前查询结果集" uuid="UUID2780E0552090250100000C57E3009B00A8C0" valueName="close" visible="false" valueType="void" variableName="close()" varPre="" groupName="查询">
+    </TableFunction>
+    <TableFunction displayName="查询r_rulenode中所有记录" uuid="UUID2880E0552090250100000C57E3009B00A8C0" valueName="selectAll" visible="false" valueType="void" variableName="selectAll()" varPre="" groupName="查询">
+    </TableFunction>
+    <TableFunction displayName="取r_rulenode当前查询结果的第一条记录" uuid="UUID2980E0552090250100000C57E3009B00A8C0" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取r_rulenode当前查询结果的上一条记录" uuid="UUID2A80E0552090250100000C57E3009B00A8C0" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取得r_rulenode当前记录在查询结果中的位置" uuid="UUID2B80E0552090250100000C57E3009B00A8C0" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取r_rulenode当前查询结果的第{arg1}条记录" uuid="UUID2C80E0552090250100000C57E3009B00A8C0" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="结果">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rulenode的exename字段的值" uuid="UUID2D80E0552090250100000C57E3009B00A8C0" valueName="getExename" visible="false" valueType="string" variableName="getString(1)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_rulenode的exename字段的值为{arg1}" uuid="UUID2E80E0552090250100000C57E3009B00A8C0" valueName="setExename" visible="false" valueType="void" variableName="setString(&quot;exename&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rulenode的nodename字段的值" uuid="UUID2F80E0552090250100000C57E3009B00A8C0" valueName="getNodename" visible="false" valueType="string" variableName="getString(3)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_rulenode的nodename字段的值为{arg1}" uuid="UUID3080E0552090250100000C57E3009B00A8C0" valueName="setNodename" visible="false" valueType="void" variableName="setString(&quot;nodename&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rulenode的nodetype字段的值" uuid="UUID3180E0552090250100000C57E3009B00A8C0" valueName="getNodetype" visible="false" valueType="string" variableName="getString(4)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_rulenode的nodetype字段的值为{arg1}" uuid="UUID3280E0552090250100000C57E3009B00A8C0" valueName="setNodetype" visible="false" valueType="void" variableName="setString(&quot;nodetype&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rulenode的parentpath字段的值" uuid="UUID3380E0552090250100000C57E3009B00A8C0" valueName="getParentpath" visible="false" valueType="string" variableName="getString(2)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_rulenode的parentpath字段的值为{arg1}" uuid="UUID3480E0552090250100000C57E3009B00A8C0" valueName="setParentpath" visible="false" valueType="void" variableName="setString(&quot;parentpath&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rulenode的filecontext字段的值" uuid="UUID3580E0552090250100000C57E3009B00A8C0" valueName="getFilecontext" visible="false" valueType="string" variableName="getString(6)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_rulenode的filecontext字段的值为{arg1}" uuid="UUID3680E0552090250100000C57E3009B00A8C0" valueName="setFilecontext" visible="false" valueType="void" variableName="setString(&quot;filecontext&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rulenode的modifytime字段的值" uuid="UUID3780E0552090250100000C57E3009B00A8C0" valueName="getModifytime" visible="false" valueType="datetime" variableName="getTimestamp(7)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_rulenode的modifytime字段的值为{arg1}" uuid="UUID3880E0552090250100000C57E3009B00A8C0" valueName="setModifytime" visible="false" valueType="void" variableName="setTimestamp(&quot;modifytime&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="datetime" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rulenode的modifyuser字段的值" uuid="UUID3980E0552090250100000C57E3009B00A8C0" valueName="getModifyuser" visible="false" valueType="string" variableName="getString(8)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_rulenode的modifyuser字段的值为{arg1}" uuid="UUID3A80E0552090250100000C57E3009B00A8C0" valueName="setModifyuser" visible="false" valueType="void" variableName="setString(&quot;modifyuser&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <indexModel displayName="PRIMARY" indexName="PRIMARY" unique="true">
+    </indexModel>
+    <TableFunction displayName="取r_rulenode的pos字段的值" uuid="UUID3B80E0552090250100000C57E3009B00A8C0" valueName="getPos" visible="false" valueType="int" variableName="getInteger(5)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_rulenode的pos字段的值为{arg1}" uuid="UUID3C80E0552090250100000C57E3009B00A8C0" valueName="setPos" visible="false" valueType="void" variableName="setInteger(&quot;pos&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rulenode的checktype字段的值" uuid="UUID3D80E0552090250100000C57E3009B00A8C0" valueName="getChecktype" visible="false" valueType="int" variableName="getInteger(9)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_rulenode的checktype字段的值为{arg1}" uuid="UUID3E80E0552090250100000C57E3009B00A8C0" valueName="setChecktype" visible="false" valueType="void" variableName="setInteger(&quot;checktype&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <fieldModel displayName="exename" uuid="UUID3F80E0552090250100000C57E3009B00A8C0" fieldName="exename" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="45" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="true" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="parentpath" uuid="UUID4080E0552090250100000C57E3009B00A8C0" fieldName="parentpath" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="400" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="true" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="nodename" uuid="UUID4180E0552090250100000C57E3009B00A8C0" fieldName="nodename" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="50" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="true" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="nodetype" uuid="UUID4280E0552090250100000C57E3009B00A8C0" fieldName="nodetype" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="30" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="true" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="pos" uuid="UUID4380E0552090250100000C57E3009B00A8C0" fieldName="pos" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="3" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="filecontext" uuid="UUID4480E0552090250100000C57E3009B00A8C0" fieldName="filecontext" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="8388607" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="-1" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="modifytime" uuid="UUID4580E0552090250100000C57E3009B00A8C0" fieldName="modifytime" fieldType="DATETIME" valueType="datetime" classType="java.sql.Timestamp" len="19" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="93" defaultType="datetime">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="modifyuser" uuid="UUID4680E0552090250100000C57E3009B00A8C0" fieldName="modifyuser" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="checktype" uuid="UUID4780E0552090250100000C57E3009B00A8C0" fieldName="checktype" fieldType="TINYINT UNSIGNED" valueType="int" classType="java.lang.Integer" len="3" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="-6" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <indexModel displayName="Index_2" indexName="Index_2" unique="false">
+    </indexModel>
+    <doc>
+    </doc>
+   </TableModel>
+   <SheetTable uuid="UUID4880E0552090250100000C57E3009B00A8C0" displayName="需保存子节点" sqlSelect="" englishName="sheetg2u0qk72c" modifyTime="1260843468125" vml="0" excelFile="" testFile="" saveValue="false" linkList="false" matchFields="" nullDefault="0">
+    <TableFunction displayName="将查询结果({arg1})中的数据全部导入表格(需保存子节点)" uuid="UUID4980E0552090250100000C57E3009B00A8C0" valueName="loadFromView" visible="true" valueType="void" variableName="loadFromView({arg1})" varPre="" groupName="数据库">
+     <MethodParam typeName="com.flagleader.db.IResult" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="将查询结果({arg1})中的数据根据设定的列对应关系全部导入到表格(需保存子节点)中" uuid="UUID4A80E0552090250100000C57E3009B00A8C0" valueName="loadFromResult" visible="true" valueType="void" variableName="loadFromResult({arg1})" varPre="" groupName="数据库">
+     <MethodParam typeName="resultandfields" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="将查询结果({arg1})中的数据根据设定的列对应关系追加导入到表格(需保存子节点)中" uuid="UUID4B80E0552090250100000C57E3009B00A8C0" valueName="appendFromResult" visible="true" valueType="void" variableName="appendFromResult({arg1})" varPre="" groupName="数据库">
+     <MethodParam typeName="resultandfields" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="根据{arg1}更新需保存子节点，其中需更新列为{arg2}，匹配列为{arg3}" uuid="UUID4C80E0552090250100000C57E3009B00A8C0" valueName="updateBySheet" visible="true" valueType="void" variableName="updateBySheet({arg1},{arg2},{arg3})" varPre="" groupName="内存表">
+     <MethodParam typeName="com.flagleader.db.Sheet" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="sheetfields" paramName="arg2" defaultValue=""/>
+     <MethodParam typeName="sheetfields" paramName="arg3" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="根据设定的条件以及需要更新列的对应关系，将{arg1}中的数据更新到需保存子节点中" uuid="UUID4D80E0552090250100000C57E3009B00A8C0" valueName="updateFromSheet" visible="true" valueType="void" variableName="updateFromSheet({arg1})" varPre="" groupName="内存表">
+     <MethodParam typeName="sheetandwheres" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="根据结果集{arg1}更新需保存子节点，其中需更新列为{arg2}，匹配列为{arg3}" uuid="UUID4E80E0552090250100000C57E3009B00A8C0" valueName="updateByResult" visible="true" valueType="void" variableName="updateByResult({arg1},{arg2},{arg3})" varPre="" groupName="数据库">
+     <MethodParam typeName="com.flagleader.db.IResult" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="sheetfields" paramName="arg2" defaultValue=""/>
+     <MethodParam typeName="sheetfields" paramName="arg3" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="根据设定的条件以及需要更新列的对应关系，将结果集{arg1}中的数据更新到需保存子节点中" uuid="UUID4F80E0552090250100000C57E3009B00A8C0" valueName="updateFromResult" visible="true" valueType="void" variableName="updateFromResult({arg1})" varPre="" groupName="数据库">
+     <MethodParam typeName="resultandwheres" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="将{arg1}中数据全部导入需保存子节点" uuid="UUID5080E0552090250100000C57E3009B00A8C0" valueName="loadFromSheet" visible="true" valueType="void" variableName="loadFromSheet({arg1})" varPre="" groupName="内存表">
+     <MethodParam typeName="com.flagleader.db.Sheet" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="将{arg1}中的数据根据设定的列对应关系全部导入到需保存子节点中" uuid="UUID5180E0552090250100000C57E3009B00A8C0" valueName="initFromSheet" visible="true" valueType="void" variableName="initFromSheet({arg1})" varPre="" groupName="内存表">
+     <MethodParam typeName="sheetandfields" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="将{arg1}中的数据根据设定的列对应关系,追加导入到需保存子节点中" uuid="UUID5280E0552090250100000C57E3009B00A8C0" valueName="appendFromSheet" visible="true" valueType="void" variableName="appendFromSheet({arg1})" varPre="" groupName="内存表">
+     <MethodParam typeName="sheetandfields" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="汇总需保存子节点(其中汇总列为{arg1},分组列为{arg2},条件列为{arg3})" uuid="UUID5380E0552090250100000C57E3009B00A8C0" valueName="createSheet" visible="true" valueType="sheet" variableName="createSheet({arg1},{arg2},{arg3})" varPre="" groupName="内存表">
+     <MethodParam typeName="sheetfuncs" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="sheetfields" paramName="arg2" defaultValue=""/>
+     <MethodParam typeName="sheetwheres" paramName="arg3" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="将动表{arg1}中的数据根据字段对应关系更新到表格需保存子节点中" uuid="UUID5480E0552090250100000C57E3009B00A8C0" valueName="updateByDynamicSheet" visible="true" valueType="void" variableName="updateByDynamicSheet({arg1})" varPre="" groupName="内存表">
+     <MethodParam typeName="sheetdynamic" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="移动需保存子节点中当前记录到第一条前" uuid="UUID5580E0552090250100000C57E3009B00A8C0" valueName="beforeFirst" visible="false" valueType="void" variableName="beforeFirst()" varPre="" groupName="结果集">
+    </TableFunction>
+    <TableFunction displayName="取需保存子节点中下一条记录" uuid="UUID5680E0552090250100000C57E3009B00A8C0" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="结果集">
+    </TableFunction>
+    <TableFunction displayName="取需保存子节点中所有数据" uuid="UUID5780E0552090250100000C57E3009B00A8C0" valueName="getListResult" visible="false" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="结果集">
+    </TableFunction>
+    <TableFunction displayName="将导出列表{arg1}的数据重新导入到需保存子节点中" uuid="UUID5880E0552090250100000C57E3009B00A8C0" valueName="loadFromList" visible="true" valueType="void" variableName="loadFromList({arg1})" varPre="" groupName="结果集">
+     <MethodParam typeName="list&lt;list&gt;" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取需保存子节点记录数" uuid="UUID5980E0552090250100000C57E3009B00A8C0" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="结果集">
+    </TableFunction>
+    <TableFunction displayName="取需保存子节点中的第一条记录" uuid="UUID5A80E0552090250100000C57E3009B00A8C0" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="结果集">
+    </TableFunction>
+    <TableFunction displayName="移动需保存子节点中当前记录到最后一条后" uuid="UUID5B80E0552090250100000C57E3009B00A8C0" valueName="afterLast" visible="false" valueType="void" variableName="afterLast()" varPre="" groupName="结果集">
+    </TableFunction>
+    <TableFunction displayName="取需保存子节点中上一条记录" uuid="UUID5C80E0552090250100000C57E3009B00A8C0" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="结果集">
+    </TableFunction>
+    <TableFunction displayName="取需保存子节点中最后一条记录" uuid="UUID5D80E0552090250100000C57E3009B00A8C0" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="结果集">
+    </TableFunction>
+    <TableFunction displayName="得到需保存子节点当前记录位置" uuid="UUID5E80E0552090250100000C57E3009B00A8C0" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="结果集">
+    </TableFunction>
+    <TableFunction displayName="取需保存子节点的第{arg1}条记录" uuid="UUID5F80E0552090250100000C57E3009B00A8C0" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="结果集">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="在需保存子节点当前位置插入空记录" uuid="UUID6080E0552090250100000C57E3009B00A8C0" valueName="insert" visible="false" valueType="void" variableName="insert()" varPre="" groupName="结果集">
+    </TableFunction>
+    <TableFunction displayName="删除需保存子节点当前位置的记录" uuid="UUID6180E0552090250100000C57E3009B00A8C0" valueName="delete" visible="false" valueType="void" variableName="delete()" varPre="" groupName="结果集">
+    </TableFunction>
+    <TableFunction displayName="清空表格需保存子节点中数据" uuid="UUID6280E0552090250100000C57E3009B00A8C0" valueName="resetValues" visible="false" valueType="void" variableName="resetValues()" varPre="" groupName="结果集">
+    </TableFunction>
+    <TableFunction displayName="将需保存子节点中第{arg1}列的数据用{arg2}填充" uuid="UUID6380E0552090250100000C57E3009B00A8C0" valueName="setFieldList" visible="true" valueType="void" variableName="setFieldList({arg1},{arg2})" varPre="" groupName="结果集">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="list" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <SheetFieldModel displayName="parentpath" fieldName="parentpath" uuid="UUID6480E0552090250100000C57E3009B00A8C0" visible="true" valueType="string" groupName="p" loged="false">
+    </SheetFieldModel>
+    <SheetFieldModel displayName="nodename" fieldName="nodename" uuid="UUID6580E0552090250100000C57E3009B00A8C0" visible="true" valueType="string" groupName="p" loged="false">
+    </SheetFieldModel>
+    <SheetFieldModel displayName="nodetype" fieldName="nodetype" uuid="UUID6680E0552090250100000C57E3009B00A8C0" visible="true" valueType="string" groupName="p" loged="false">
+    </SheetFieldModel>
+    <SheetFieldModel displayName="pos" fieldName="pos" uuid="UUID6780E0552090250100000C57E3009B00A8C0" visible="true" valueType="int" groupName="p" loged="false">
+    </SheetFieldModel>
+    <SheetFieldModel displayName="modifytime" fieldName="modifytime" uuid="UUID6880E0552090250100000C57E3009B00A8C0" visible="true" valueType="datetime" groupName="p" loged="false">
+    </SheetFieldModel>
+    <BusinessObjectMethod displayName="需保存子节点.loadFromList({arg1})" uuid="UUID6980E0552090250100000C57E3009B00A8C0" memberName="loadFromList(java.util.List)" visible="true" valueType="void" groupName="p" shortMemberName="loadFromList">
+     <MethodParam typeName="java.util.List" paramName="arg1" defaultValue=""/>
+    </BusinessObjectMethod>
+    <SheetFieldModel displayName="filecontext" fieldName="filecontext" uuid="UUID6A80E0552090250100000C57E3009B00A8C0" visible="true" valueType="string" groupName="p" loged="false">
+    </SheetFieldModel>
+    <doc>
+    </doc>
+   </SheetTable>
+   <doc>
+   </doc>
+  </DBModel>
+  <doc>
+  </doc>
+ </Envionment>
+</RulePackage>

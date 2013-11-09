@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="GB18030"?>
+<RulePackage displayName="规则包" uuid="UUID1D80D9B9A09907010000D5C43D01BC01A8C0" packageName="com.flagleader.dbold" exportDir="classes" fileName="uploadjsp" startTime="0" endTime="0" createTime="1132153975439" modifyTime="1209181264750" locked="false" checkType="0" version="1.0" mainVersion="" modifyUser="develop" stringignore="0" stringinit="1" datenulltype="0" rulesid="0" dbRules="false" edittype="0" document="">
+ <Rule displayName="规则" uuid="UUID6180D9B9A09907010000D5C43D01BC01A8C0" exceptionType="0" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1132154232489" modifyTime="1209183433984" modifyUser="develop" vml="0" logtype="0">
+  <RuleToken uuid="UUID6280D9B9A09907010000D5C43D01BC01A8C0">
+   <MultiConditionToken uuid="UUID6380D9B9A09907010000D5C43D01BC01A8C0" type="0">
+    <ConditionToken uuid="UUID0480AD51F2C914010000494735006400A8C0" leftParenthesisNumber="0" rightParenthesisNumber="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UUID5E80D9B9A09907010000D5C43D01BC01A8C0" uniqueName="string_url" valueType="" displayName="页面url">
+     </MemberToken>
+     <StringJudgeToken type="8">
+     </StringJudgeToken>
+    </ConditionToken>
+    <ConditionToken uuid="UUID0A803842B48819010000E13639016700A8C0" leftParenthesisNumber="0" rightParenthesisNumber="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UUID6080D9B9A09907010000D5C43D01BC01A8C0" uniqueName="string_source" valueType="" displayName="页面源文件">
+     </MemberToken>
+     <StringJudgeToken type="8">
+     </StringJudgeToken>
+    </ConditionToken>
+   </MultiConditionToken>
+   <MultiActionToken uuid="UUID6480D9B9A09907010000D5C43D01BC01A8C0" type="0">
+    <StatementContainerToken>
+     <MethodToken elementUuid="UUID09803842B48819010000E13639016700A8C0" uniqueName="java.io.File.File(java.lang.String, java.lang.String)" valueType="" displayName="java.io.File.File({arg1}, {arg2})">
+      <ValueToken valueType="java.lang.String" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <StringOperatorToken type="0">
+       </StringOperatorToken>
+       <MemberToken elementUuid="UUID02803842B48819010000E13639016700A8C0" uniqueName="request.getRealPath(java.lang.String)" valueType="java.lang.String" displayName="request.getRealPath({arg1})">
+        <ValueToken valueType="java.lang.String" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <ConstantToken valueType="java.lang.String" value="">
+         </ConstantToken>
+        </ValueToken>
+        <ElementTextToken displayName=")" colorType="classMethod" pos="0" elementUuid="UUID02803842B48819010000E13639016700A8C0" uniqueName="request.getRealPath(java.lang.String)">
+        </ElementTextToken>
+       </MemberToken>
+      </ValueToken>
+      <ElementTextToken displayName="," colorType="classMethod" pos="0" elementUuid="UUID09803842B48819010000E13639016700A8C0" uniqueName="java.io.File.File(java.lang.String, java.lang.String)">
+      </ElementTextToken>
+      <ValueToken valueType="java.lang.String" displayName="" argName="arg2" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <StringOperatorToken type="0">
+       </StringOperatorToken>
+       <MemberToken elementUuid="UUID5E80D9B9A09907010000D5C43D01BC01A8C0" uniqueName="string_url" valueType="java.lang.String" displayName="页面url">
+       </MemberToken>
+      </ValueToken>
+      <ElementTextToken displayName=")" colorType="classMethod" pos="1" elementUuid="UUID09803842B48819010000E13639016700A8C0" uniqueName="java.io.File.File(java.lang.String, java.lang.String)">
+      </ElementTextToken>
+     </MethodToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <MethodToken elementUuid="UUID08803842B48819010000E13639016700A8C0" uniqueName="com.flagleader.util.filesystem.FileUtil.saveToFile(java.io.File, java.lang.StringBuffer)" valueType="" displayName="com.flagleader.util.filesystem.FileUtil.saveToFile({arg1}, {arg2})">
+      <ValueToken valueType="java.io.File" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <MemberToken elementUuid="UUID09803842B48819010000E13639016700A8C0" uniqueName="java.io.File.File(java.lang.String, java.lang.String)" valueType="java.io.File" displayName="java.io.File.File({arg1}, {arg2})">
+        <ValueToken valueType="java.lang.String" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="UUID02803842B48819010000E13639016700A8C0" uniqueName="request.getRealPath(java.lang.String)" valueType="java.lang.String" displayName="request.getRealPath({arg1})">
+          <ValueToken valueType="java.lang.String" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+           <StringOperatorToken type="0">
+           </StringOperatorToken>
+           <ConstantToken valueType="java.lang.String" value="">
+           </ConstantToken>
+          </ValueToken>
+          <ElementTextToken displayName=")" colorType="classMethod" pos="0" elementUuid="UUID02803842B48819010000E13639016700A8C0" uniqueName="request.getRealPath(java.lang.String)">
+          </ElementTextToken>
+         </MemberToken>
+        </ValueToken>
+        <ElementTextToken displayName="," colorType="classMethod" pos="0" elementUuid="UUID09803842B48819010000E13639016700A8C0" uniqueName="java.io.File.File(java.lang.String, java.lang.String)">
+        </ElementTextToken>
+        <ValueToken valueType="java.lang.String" displayName="" argName="arg2" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="UUID5E80D9B9A09907010000D5C43D01BC01A8C0" uniqueName="string_url" valueType="java.lang.String" displayName="页面url">
+         </MemberToken>
+        </ValueToken>
+        <ElementTextToken displayName=")" colorType="classMethod" pos="1" elementUuid="UUID09803842B48819010000E13639016700A8C0" uniqueName="java.io.File.File(java.lang.String, java.lang.String)">
+        </ElementTextToken>
+       </MemberToken>
+      </ValueToken>
+      <ElementTextToken displayName="," colorType="classMethod" pos="0" elementUuid="UUID08803842B48819010000E13639016700A8C0" uniqueName="com.flagleader.util.filesystem.FileUtil.saveToFile(java.io.File, java.lang.StringBuffer)">
+      </ElementTextToken>
+      <ValueToken valueType="java.lang.StringBuffer" displayName="" argName="arg2" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <MemberToken elementUuid="UUID05803842B48819010000E13639016700A8C0" uniqueName="java.lang.StringBuffer.StringBuffer(java.lang.String)" valueType="java.lang.StringBuffer" displayName="java.lang.StringBuffer.StringBuffer({arg1})">
+        <ValueToken valueType="java.lang.String" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="UUID6080D9B9A09907010000D5C43D01BC01A8C0" uniqueName="string_source" valueType="java.lang.String" displayName="页面源文件">
+         </MemberToken>
+        </ValueToken>
+        <ElementTextToken displayName=")" colorType="classMethod" pos="0" elementUuid="UUID05803842B48819010000E13639016700A8C0" uniqueName="java.lang.StringBuffer.StringBuffer(java.lang.String)">
+        </ElementTextToken>
+       </MemberToken>
+      </ValueToken>
+      <ElementTextToken displayName=")" colorType="classMethod" pos="1" elementUuid="UUID08803842B48819010000E13639016700A8C0" uniqueName="com.flagleader.util.filesystem.FileUtil.saveToFile(java.io.File, java.lang.StringBuffer)">
+      </ElementTextToken>
+     </MethodToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+   <MultiActionToken uuid="UUID6580D9B9A09907010000D5C43D01BC01A8C0" type="3">
+   </MultiActionToken>
+  </RuleToken>
+  <doc>
+  </doc>
+ </Rule>
+ <Envionment displayName="对象库" uuid="UUID1E80D9B9A09907010000D5C43D01BC01A8C0" modifyTime="1209179883828" functionNum="2">
+  <ClassLibrary displayName="Java类对象" uuid="UUID1F80D9B9A09907010000D5C43D01BC01A8C0" modifyTime="1180435725890">
+  </ClassLibrary>
+  <ValueLibrary displayName="传入数据" modifyTime="1209179507546" uuid="UUID2080D9B9A09907010000D5C43D01BC01A8C0">
+   <MappingVariable displayName="页面url" uuid="UUID5E80D9B9A09907010000D5C43D01BC01A8C0" variableName="url" visible="true" groupName="" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="页面源文件" uuid="UUID6080D9B9A09907010000D5C43D01BC01A8C0" variableName="source" visible="true" groupName="" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="request" uuid="UUID0380ED4B72881901000092F82B016700A8C0" variableName="request" visible="true" groupName="传入数据" valueType="javax.servlet.http.HttpServletRequest" inout="3" loged="false">
+    <BusinessObjectMethod displayName="request.getRealPath({arg1})" uuid="UUID02803842B48819010000E13639016700A8C0" memberName="getRealPath(java.lang.String)" visible="true" valueType="java.lang.String" groupName="传入数据" shortMemberName="getRealPath">
+     <MethodParam typeName="java.lang.String" paramName="arg1" defaultValue=""/>
+    </BusinessObjectMethod>
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1180435725937" uuid="UUID2180D9B9A09907010000D5C43D01BC01A8C0">
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1209179883828" uuid="UUID2280D9B9A09907010000D5C43D01BC01A8C0">
+   <FunctionClass displayName="com.flagleader.util.filesystem.FileUtil" uuid="UUID03803842B48819010000E13639016700A8C0" visible="true" className="com.flagleader.util.filesystem.FileUtil" valueType="com.flagleader.util.filesystem.FileUtil" dir="" groupName="外部调用" shortClassName="FileUtil">
+    <BusinessObjectMethod displayName="com.flagleader.util.filesystem.FileUtil.saveToFile({arg1}, {arg2})" uuid="UUID08803842B48819010000E13639016700A8C0" memberName="saveToFile(java.io.File, java.lang.StringBuffer)" visible="true" valueType="boolean" groupName="外部调用" shortMemberName="saveToFile">
+     <MethodParam typeName="java.io.File" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="java.lang.StringBuffer" paramName="arg2" defaultValue=""/>
+    </BusinessObjectMethod>
+   </FunctionClass>
+   <FunctionClass displayName="java.io.File" uuid="UUID06803842B48819010000E13639016700A8C0" visible="true" className="java.io.File" valueType="java.io.File" dir="" groupName="外部调用" shortClassName="File">
+    <BusinessObjectConstructor displayName="java.io.File.File({arg1}, {arg2})" uuid="UUID09803842B48819010000E13639016700A8C0" memberName="File(java.lang.String, java.lang.String)" visible="true" valueType="java.io.File" groupName="外部调用" shortMemberName="File">
+     <MethodParam typeName="java.lang.String" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="java.lang.String" paramName="arg2" defaultValue=""/>
+    </BusinessObjectConstructor>
+   </FunctionClass>
+   <FunctionClass displayName="java.lang.StringBuffer" uuid="UUID04803842B48819010000E13639016700A8C0" visible="true" className="java.lang.StringBuffer" valueType="java.lang.StringBuffer" dir="" groupName="外部调用" shortClassName="StringBuffer">
+    <BusinessObjectConstructor displayName="java.lang.StringBuffer.StringBuffer({arg1})" uuid="UUID05803842B48819010000E13639016700A8C0" memberName="StringBuffer(java.lang.String)" visible="true" valueType="java.lang.StringBuffer" groupName="外部调用" shortMemberName="StringBuffer">
+     <MethodParam typeName="java.lang.String" paramName="arg1" defaultValue=""/>
+    </BusinessObjectConstructor>
+   </FunctionClass>
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1180435725953" uuid="UUID2380D9B9A09907010000D5C43D01BC01A8C0">
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <doc>
+  </doc>
+ </Envionment>
+ <RuleLogConditionToken uuid="UUID0680AD51F2C914010000494735006400A8C0" type="3">
+ </RuleLogConditionToken>
+</RulePackage>

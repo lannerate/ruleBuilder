@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="GBK"?>
+<RulePackage displayName="取得规则包所有版本" uuid="U4KGIA0N8MX16YA31EKN" packageName="com.flagleader.dbrule" exportDir="" fileName="ruleversions" startTime="0" endTime="0" createTime="1293614453625" modifyTime="1293614464265" locked="false" checkType="1" version="1.0" mainVersion="" projver="" modifyUser="develop" stringignore="0" stringinit="1" datenulltype="0" rulesid="34" dbRules="false" edittype="0" logType="1" ruleEditLevel="0" dblog="0" fileVersion="2" logTimes="0" vmlFlowType="3" templateType="" webrole="0" document="" checktype="0">
+ <Rule displayName="规则" uuid="U4LGIA0N8MX16YA31EKN" exceptionType="2" actived="true" errorMsg="" supportElse="true" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1293614464250" modifyTime="1293614464250" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+  <RuleToken uuid="U4MGIA0N8MX16YA31EKN">
+   <MultiConditionToken uuid="U4NGIA0N8MX16YA31EKN" type="0">
+    <ConditionToken uuid="U4OGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="U2QGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="" displayName="规则编号">
+     </MemberToken>
+     <NumberJudgeToken type="0">
+     </NumberJudgeToken>
+     <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <NumberOperatorToken type="0">
+      </NumberOperatorToken>
+      <ConstantToken valueType="int" value="0">
+      </ConstantToken>
+     </ValueToken>
+    </ConditionToken>
+   </MultiConditionToken>
+   <MultiActionToken uuid="U4PGIA0N8MX16YA31EKN" type="0">
+    <StatementContainerToken>
+     <TableFunctionToken elementUuid="U2UGIA0N8MX16YA31EKN" uniqueName="void_db5select1.selectWhere(&quot;select rv.ruleid,r.ruledisplay,r.exerule,rv.rulever,rv.mhint,rv.mtime,statename,rv.muser ,r.ruletypeid,pv.projver  from r_ruleversion rv   inner join r_rule r on r.ruleid=rv.ruleid   left join r_state on rv.stateid=r_state.stateid  left join r_projversion pv on pv.projverid=rv.projverid  where r.exerule= ? &quot;,new Object[&#93;{ {arg1}})" valueType="" displayName="根据{arg1}执行根据执行名查询各版本">
+      <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <StringOperatorToken type="0">
+       </StringOperatorToken>
+       <MemberToken elementUuid="U2PGIA0N8MX16YA31EKN" uniqueName="string_exerule" valueType="string" displayName="规则执行名称">
+       </MemberToken>
+      </ValueToken>
+      <ElementTextToken displayName="执行根据执行名查询各版本" colorType="default" pos="0" elementUuid="" uniqueName="">
+      </ElementTextToken>
+     </TableFunctionToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="U2OGIA0N8MX16YA31EKN" uniqueName="list&lt;list&gt;_ruleList" valueType="" displayName="规则包列表">
+      </FieldToken>
+      <AssignJudgeToken type="0">
+      </AssignJudgeToken>
+      <ValueToken valueType="list&lt;list&gt;" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <MemberToken elementUuid="U31GIA0N8MX16YA31EKN" uniqueName="list&lt;list&gt;_db5select1.getListResult()" valueType="list&lt;list&gt;" displayName="根据执行名查询各版本当前查询结果的所有记录">
+       </MemberToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+   <MultiActionToken uuid="U4QGIA0N8MX16YA31EKN" type="3">
+    <StatementContainerToken>
+     <TableFunctionToken elementUuid="U3PGIA0N8MX16YA31EKN" uniqueName="void_db5select2.selectWhere(&quot;select rv.ruleid,r.ruledisplay,r.exerule,rv.rulever,rv.mhint,rv.mtime,statename,rv.muser,r.ruletypeid,pv.projver  from r_ruleversion rv   inner join r_rule r on r.ruleid=rv.ruleid   left join r_state on rv.stateid=r_state.stateid  left join r_projversion pv on pv.projverid=rv.projverid  where rv.ruleid= ?  &quot;,new Object[&#93;{new Integer( {arg1})})" valueType="" displayName="根据{arg1}执行根据编号查询版本">
+      <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <MemberToken elementUuid="U2QGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+       </MemberToken>
+      </ValueToken>
+      <ElementTextToken displayName="执行根据编号查询版本" colorType="default" pos="0" elementUuid="" uniqueName="">
+      </ElementTextToken>
+     </TableFunctionToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="U2OGIA0N8MX16YA31EKN" uniqueName="list&lt;list&gt;_ruleList" valueType="" displayName="规则包列表">
+      </FieldToken>
+      <AssignJudgeToken type="0">
+      </AssignJudgeToken>
+      <ValueToken valueType="list&lt;list&gt;" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <TableFunctionToken elementUuid="U3WGIA0N8MX16YA31EKN" uniqueName="list&lt;list&gt;_db5select2.getListResult()" valueType="list&lt;list&gt;" displayName="根据编号查询版本当前查询结果的所有记录">
+       </TableFunctionToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+  </RuleToken>
+  <doc>
+  </doc>
+ </Rule>
+ <RuleLogConditionToken uuid="U4RGIA0N8MX16YA31EKN" type="3">
+ </RuleLogConditionToken>
+ <Envionment displayName="对象库" uuid="U4SGIA0N8MX16YA31EKN" modifyTime="1293614464281" functionNum="2">
+  <ValueLibrary displayName="传入数据" modifyTime="1293614464250" uuid="U4TGIA0N8MX16YA31EKN">
+   <MappingVariable displayName="错误提示信息" uuid="U2NGIA0N8MX16YA31EKN" variableName="error" visible="true" groupName="传出数据" valueType="string" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则包列表" uuid="U2OGIA0N8MX16YA31EKN" variableName="ruleList" visible="true" groupName="传出数据" valueType="list&lt;list&gt;" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则执行名称" uuid="U2PGIA0N8MX16YA31EKN" variableName="exerule" visible="true" groupName="传入数据" valueType="string" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则编号" uuid="U2QGIA0N8MX16YA31EKN" variableName="ruleid" visible="true" groupName="传入数据" valueType="int" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1293614464250" uuid="U4UGIA0N8MX16YA31EKN">
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1293614464250" uuid="U4VGIA0N8MX16YA31EKN">
+   <FunctionClass displayName="com.flagleader.util.MD5" uuid="U2RGIA0N8MX16YA31EKN" visible="false" className="com.flagleader.util.MD5" valueType="com.flagleader.util.MD5" dir="" groupName="" shortClassName="MD5">
+    <BusinessObjectMethod displayName="加密({arg1})" uuid="U2SGIA0N8MX16YA31EKN" memberName="getMD5ofStr(java.lang.String)" visible="true" valueType="java.lang.String" groupName="" shortMemberName="getMD5ofStr">
+     <MethodParam typeName="java.lang.String" paramName="arg1" defaultValue=""/>
+    </BusinessObjectMethod>
+   </FunctionClass>
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1293614464250" uuid="U4WGIA0N8MX16YA31EKN">
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <DBModel displayName="rules" uuid="U4JGIA0N8MX16YA31EKN" url="jdbc:mysql://localhost/rules" driver="com.mysql.jdbc.Driver" userName="root" encryptedPasswd="Xs9UzDAgGfLhcJn2WMXwew==" datasourceName="rules" catalogName="" schemaName="" connType="0" varName="db5" modifyTime="1293614464250" dbFilePath="D:\Personal\Desktop\rules.dbs" vml="0" transationlevel="0">
+   <selectTable uuid="U2TGIA0N8MX16YA31EKN" displayName="根据执行名查询各版本" sqlSelect="select rv.ruleid,r.ruledisplay,r.exerule,rv.rulever,rv.mhint,rv.mtime,statename,rv.muser ,r.ruletypeid,pv.projver&#13;&#10;from r_ruleversion rv &#13;&#10;inner join r_rule r on r.ruleid=rv.ruleid &#13;&#10;left join r_state on rv.stateid=r_state.stateid&#13;&#10;left join r_projversion pv on pv.projverid=rv.projverid&#13;&#10;where r.exerule={string}" englishName="select1" resultType="0" afterCommit="true" modifyTime="1293614464250" vml="0">
+    <TableFunction displayName="根据{arg1}执行根据执行名查询各版本" uuid="U2UGIA0N8MX16YA31EKN" valueName="selectWhere" visible="true" valueType="void" variableName="selectWhere(&quot;select rv.ruleid,r.ruledisplay,r.exerule,rv.rulever,rv.mhint,rv.mtime,statename,rv.muser ,r.ruletypeid,pv.projver  from r_ruleversion rv   inner join r_rule r on r.ruleid=rv.ruleid   left join r_state on rv.stateid=r_state.stateid  left join r_projversion pv on pv.projverid=rv.projverid  where r.exerule= ? &quot;,new Object[&#93;{ {arg1}})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="判断根据执行名查询各版本当前查询结果是否存在下一条记录" uuid="U2VGIA0N8MX16YA31EKN" valueName="hasNext" visible="false" valueType="boolean" variableName="hasNext()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据执行名查询各版本当前查询结果的下一条记录" uuid="U2WGIA0N8MX16YA31EKN" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="根据执行名查询各版本当前查询结果的记录数" uuid="U2XGIA0N8MX16YA31EKN" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据执行名查询各版本当前查询结果的第一条记录" uuid="U2YGIA0N8MX16YA31EKN" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据执行名查询各版本当前查询结果的上一条记录" uuid="U2ZGIA0N8MX16YA31EKN" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据执行名查询各版本当前查询结果的最后一条记录" uuid="U30GIA0N8MX16YA31EKN" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="根据执行名查询各版本当前查询结果的所有记录" uuid="U31GIA0N8MX16YA31EKN" valueName="getListResult" visible="true" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得根据执行名查询各版本当前记录在查询结果中的位置" uuid="U32GIA0N8MX16YA31EKN" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据执行名查询各版本当前查询结果的第{arg1}条记录" uuid="U33GIA0N8MX16YA31EKN" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取根据执行名查询各版本的ruleid字段的值" uuid="U34GIA0N8MX16YA31EKN" valueName="getRuleid" visible="false" valueType="int" variableName="getInteger(0)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据执行名查询各版本的ruledisplay字段的值" uuid="U35GIA0N8MX16YA31EKN" valueName="getRuledisplay" visible="false" valueType="string" variableName="getString(1)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据执行名查询各版本的exerule字段的值" uuid="U36GIA0N8MX16YA31EKN" valueName="getExerule" visible="false" valueType="string" variableName="getString(2)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据执行名查询各版本的rulever字段的值" uuid="U37GIA0N8MX16YA31EKN" valueName="getRulever" visible="false" valueType="double" variableName="getDouble(3)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据执行名查询各版本的mhint字段的值" uuid="U38GIA0N8MX16YA31EKN" valueName="getMhint" visible="false" valueType="string" variableName="getString(4)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据执行名查询各版本的mtime字段的值" uuid="U39GIA0N8MX16YA31EKN" valueName="getMtime" visible="false" valueType="datetime" variableName="getTimestamp(5)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据执行名查询各版本的statename字段的值" uuid="U3AGIA0N8MX16YA31EKN" valueName="getStatename" visible="false" valueType="string" variableName="getString(6)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据执行名查询各版本的ruletypeid字段的值" uuid="U3BGIA0N8MX16YA31EKN" valueName="getRuletypeid" visible="false" valueType="int" variableName="getInteger(8)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据执行名查询各版本的projver字段的值" uuid="U3CGIA0N8MX16YA31EKN" valueName="getProjver" visible="false" valueType="string" variableName="getString(9)" varPre="" groupName="取值">
+    </TableFunction>
+    <fieldModel displayName="ruleid" uuid="U3DGIA0N8MX16YA31EKN" fieldName="ruleid" fieldType="int" valueType="int" classType="java.lang.Integer" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="true" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="ruledisplay" uuid="U3EGIA0N8MX16YA31EKN" fieldName="ruledisplay" fieldType="varchar" valueType="string" classType="java.lang.String" len="90" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="exerule" uuid="U3FGIA0N8MX16YA31EKN" fieldName="exerule" fieldType="varchar" valueType="string" classType="java.lang.String" len="90" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="rulever" uuid="U3GGIA0N8MX16YA31EKN" fieldName="rulever" fieldType="decimal" valueType="double" classType="java.math.BigDecimal" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="true" primaryKey="false" friendKey="false" iType="3" defaultType="double">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="mhint" uuid="U3HGIA0N8MX16YA31EKN" fieldName="mhint" fieldType="varchar" valueType="string" classType="java.lang.String" len="200" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="mtime" uuid="U3IGIA0N8MX16YA31EKN" fieldName="mtime" fieldType="datetime" valueType="datetime" classType="java.sql.Timestamp" len="23" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="93" defaultType="datetime">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="statename" uuid="U3JGIA0N8MX16YA31EKN" fieldName="statename" fieldType="varchar" valueType="string" classType="java.lang.String" len="45" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="muser" uuid="U3KGIA0N8MX16YA31EKN" fieldName="muser" fieldType="varchar" valueType="string" classType="java.lang.String" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="ruletypeid" uuid="U3LGIA0N8MX16YA31EKN" fieldName="ruletypeid" fieldType="smallint" valueType="int" classType="java.lang.Short" len="5" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="true" primaryKey="false" friendKey="false" iType="5" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="projver" uuid="U3MGIA0N8MX16YA31EKN" fieldName="projver" fieldType="varchar" valueType="string" classType="java.lang.String" len="40" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <TableFunction displayName="取根据执行名查询各版本的muser字段的值" uuid="U3NGIA0N8MX16YA31EKN" valueName="getMuser" visible="false" valueType="string" variableName="getString(7)" varPre="" groupName="取值">
+    </TableFunction>
+    <doc>
+    </doc>
+   </selectTable>
+   <selectTable uuid="U3OGIA0N8MX16YA31EKN" displayName="根据编号查询版本" sqlSelect="select rv.ruleid,r.ruledisplay,r.exerule,rv.rulever,rv.mhint,rv.mtime,statename,rv.muser,r.ruletypeid,pv.projver&#13;&#10;from r_ruleversion rv &#13;&#10;inner join r_rule r on r.ruleid=rv.ruleid &#13;&#10;left join r_state on rv.stateid=r_state.stateid&#13;&#10;left join r_projversion pv on pv.projverid=rv.projverid&#13;&#10;where rv.ruleid={int} " englishName="select2" resultType="0" afterCommit="true" modifyTime="1293614464250" vml="0">
+    <TableFunction displayName="根据{arg1}执行根据编号查询版本" uuid="U3PGIA0N8MX16YA31EKN" valueName="selectWhere" visible="true" valueType="void" variableName="selectWhere(&quot;select rv.ruleid,r.ruledisplay,r.exerule,rv.rulever,rv.mhint,rv.mtime,statename,rv.muser,r.ruletypeid,pv.projver  from r_ruleversion rv   inner join r_rule r on r.ruleid=rv.ruleid   left join r_state on rv.stateid=r_state.stateid  left join r_projversion pv on pv.projverid=rv.projverid  where rv.ruleid= ?  &quot;,new Object[&#93;{new Integer( {arg1})})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="判断根据编号查询版本当前查询结果是否存在下一条记录" uuid="U3QGIA0N8MX16YA31EKN" valueName="hasNext" visible="false" valueType="boolean" variableName="hasNext()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据编号查询版本当前查询结果的下一条记录" uuid="U3RGIA0N8MX16YA31EKN" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="根据编号查询版本当前查询结果的记录数" uuid="U3SGIA0N8MX16YA31EKN" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据编号查询版本当前查询结果的第一条记录" uuid="U3TGIA0N8MX16YA31EKN" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据编号查询版本当前查询结果的上一条记录" uuid="U3UGIA0N8MX16YA31EKN" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据编号查询版本当前查询结果的最后一条记录" uuid="U3VGIA0N8MX16YA31EKN" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="根据编号查询版本当前查询结果的所有记录" uuid="U3WGIA0N8MX16YA31EKN" valueName="getListResult" visible="true" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得根据编号查询版本当前记录在查询结果中的位置" uuid="U3XGIA0N8MX16YA31EKN" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据编号查询版本当前查询结果的第{arg1}条记录" uuid="U3YGIA0N8MX16YA31EKN" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取根据编号查询版本的ruleid字段的值" uuid="U3ZGIA0N8MX16YA31EKN" valueName="getRuleid" visible="false" valueType="int" variableName="getInteger(0)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据编号查询版本的ruledisplay字段的值" uuid="U40GIA0N8MX16YA31EKN" valueName="getRuledisplay" visible="false" valueType="string" variableName="getString(1)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据编号查询版本的exerule字段的值" uuid="U41GIA0N8MX16YA31EKN" valueName="getExerule" visible="false" valueType="string" variableName="getString(2)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据编号查询版本的rulever字段的值" uuid="U42GIA0N8MX16YA31EKN" valueName="getRulever" visible="false" valueType="double" variableName="getDouble(3)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据编号查询版本的mhint字段的值" uuid="U43GIA0N8MX16YA31EKN" valueName="getMhint" visible="false" valueType="string" variableName="getString(4)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据编号查询版本的mtime字段的值" uuid="U44GIA0N8MX16YA31EKN" valueName="getMtime" visible="false" valueType="datetime" variableName="getTimestamp(5)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据编号查询版本的statename字段的值" uuid="U45GIA0N8MX16YA31EKN" valueName="getStatename" visible="false" valueType="string" variableName="getString(6)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据编号查询版本的ruletypeid字段的值" uuid="U46GIA0N8MX16YA31EKN" valueName="getRuletypeid" visible="false" valueType="int" variableName="getInteger(8)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取根据编号查询版本的projver字段的值" uuid="U47GIA0N8MX16YA31EKN" valueName="getProjver" visible="false" valueType="string" variableName="getString(9)" varPre="" groupName="取值">
+    </TableFunction>
+    <fieldModel displayName="ruleid" uuid="U48GIA0N8MX16YA31EKN" fieldName="ruleid" fieldType="int" valueType="int" classType="java.lang.Integer" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="true" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="ruledisplay" uuid="U49GIA0N8MX16YA31EKN" fieldName="ruledisplay" fieldType="varchar" valueType="string" classType="java.lang.String" len="90" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="exerule" uuid="U4AGIA0N8MX16YA31EKN" fieldName="exerule" fieldType="varchar" valueType="string" classType="java.lang.String" len="90" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="rulever" uuid="U4BGIA0N8MX16YA31EKN" fieldName="rulever" fieldType="decimal" valueType="double" classType="java.math.BigDecimal" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="true" primaryKey="false" friendKey="false" iType="3" defaultType="double">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="mhint" uuid="U4CGIA0N8MX16YA31EKN" fieldName="mhint" fieldType="varchar" valueType="string" classType="java.lang.String" len="200" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="mtime" uuid="U4DGIA0N8MX16YA31EKN" fieldName="mtime" fieldType="datetime" valueType="datetime" classType="java.sql.Timestamp" len="23" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="93" defaultType="datetime">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="statename" uuid="U4EGIA0N8MX16YA31EKN" fieldName="statename" fieldType="varchar" valueType="string" classType="java.lang.String" len="45" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="muser" uuid="U4FGIA0N8MX16YA31EKN" fieldName="muser" fieldType="varchar" valueType="string" classType="java.lang.String" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="ruletypeid" uuid="U4GGIA0N8MX16YA31EKN" fieldName="ruletypeid" fieldType="smallint" valueType="int" classType="java.lang.Short" len="5" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="true" primaryKey="false" friendKey="false" iType="5" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="projver" uuid="U4HGIA0N8MX16YA31EKN" fieldName="projver" fieldType="varchar" valueType="string" classType="java.lang.String" len="40" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <TableFunction displayName="取根据编号查询版本的muser字段的值" uuid="U4IGIA0N8MX16YA31EKN" valueName="getMuser" visible="false" valueType="string" variableName="getString(7)" varPre="" groupName="取值">
+    </TableFunction>
+    <doc>
+    </doc>
+   </selectTable>
+   <doc>
+   </doc>
+  </DBModel>
+  <doc>
+  </doc>
+ </Envionment>
+</RulePackage>

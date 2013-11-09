@@ -1,0 +1,2440 @@
+<?xml version="1.0" encoding="GBK"?>
+<RulePackage displayName="测试是否可以检入" uuid="ULIGIA0N8MX16YA31EKN" packageName="com.flagleader.dbrule" exportDir="" fileName="testcheckin" startTime="0" endTime="0" createTime="1293614500406" modifyTime="1375951276125" locked="false" checkType="1" version="1.0" mainVersion="" projver="" modifyUser="192.168.135.136" stringignore="0" stringinit="1" datenulltype="0" rulesid="39" dbRules="false" edittype="0" logType="1" ruleEditLevel="0" dblog="0" fileVersion="2" logTimes="0" vmlFlowType="3" templateType="" webrole="0" document="" checktype="0">
+ <Rule displayName="被锁定1" uuid="UMEGIA0N8MX16YA31EKN" exceptionType="1" actived="false" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1293614509953" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+  <RuleToken uuid="UMFGIA0N8MX16YA31EKN">
+   <MultiConditionToken uuid="UMGGIA0N8MX16YA31EKN" type="0">
+    <ConditionToken uuid="UMHGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UHRGIA0N8MX16YA31EKN" uniqueName="string_mhint" valueType="" displayName="mhint">
+     </MemberToken>
+     <StringJudgeToken type="9">
+     </StringJudgeToken>
+    </ConditionToken>
+   </MultiConditionToken>
+   <MultiActionToken uuid="UMIGIA0N8MX16YA31EKN" type="0">
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="UHGGIA0N8MX16YA31EKN" uniqueName="int_errortype" valueType="" displayName="错误提示类别">
+      </FieldToken>
+      <NumberAssignJudgeToken type="0">
+      </NumberAssignJudgeToken>
+      <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <ConstantToken valueType="int" value="2">
+       </ConstantToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="UHFGIA0N8MX16YA31EKN" uniqueName="string_error" valueType="" displayName="错误提示信息">
+      </FieldToken>
+      <StringAssignJudgeToken type="0">
+      </StringAssignJudgeToken>
+      <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <StringOperatorToken type="0">
+       </StringOperatorToken>
+       <ConstantToken valueType="string" value="必须输入规则包说明信息！">
+       </ConstantToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <ReturnToken returnType="2" displayName="退出规则包">
+     </ReturnToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+   <MultiActionToken uuid="UMJGIA0N8MX16YA31EKN" type="3">
+   </MultiActionToken>
+  </RuleToken>
+  <doc>
+  </doc>
+ </Rule>
+ <RuleSet displayName="已经指定了规则编号" uuid="UMKGIA0N8MX16YA31EKN" editType="3" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1366530541457" actived="true" modifyUser="192.168.1.104" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" supportCatch="false" editTable="false" exceptionType="1" errorMsg="" syn="false" checktype="0">
+  <Rule displayName="按规则编号查询" uuid="U0ZHFRUF0Y5HQ5EG3FLP4" exceptionType="1" actived="true" errorMsg="" supportElse="true" supportCatch="false" supportInit="true" startTime="0" endTime="0" createTime="1366529561098" modifyTime="1366529973973" modifyUser="192.168.1.104" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+   <RuleToken uuid="U10HFRUF0Y5HQ5EG3FLP4">
+    <MultiConditionToken uuid="U11HFRUF0Y5HQ5EG3FLP4" type="0">
+     <ConditionToken uuid="U14HFRUF0Y5HQ5EG3FLP4" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UJHGIA0N8MX16YA31EKN" uniqueName="boolean_db5select2.next()" valueType="" displayName="取主规则表信息当前查询结果的下一条记录">
+      </MemberToken>
+      <BooleanJudgeToken type="0">
+      </BooleanJudgeToken>
+      <BooleanJudgeToken type="0">
+      </BooleanJudgeToken>
+     </ConditionToken>
+    </MultiConditionToken>
+    <MultiActionToken uuid="U12HFRUF0Y5HQ5EG3FLP4" type="0">
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="" displayName="规则编号">
+       </FieldToken>
+       <AssignJudgeToken type="0">
+       </AssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <TableFunctionToken elementUuid="UJWGIA0N8MX16YA31EKN" uniqueName="int_db5select2.getInteger(0)" valueType="int" displayName="取主规则表信息的ruleid字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHNGIA0N8MX16YA31EKN" uniqueName="int_editstate" valueType="" displayName="规则包编辑类型">
+       </FieldToken>
+       <AssignJudgeToken type="0">
+       </AssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <TableFunctionToken elementUuid="UJXGIA0N8MX16YA31EKN" uniqueName="int_db5select2.getInteger(1)" valueType="int" displayName="取主规则表信息的editstate字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHMGIA0N8MX16YA31EKN" uniqueName="int_ruletypeid" valueType="" displayName="ruletypeid">
+       </FieldToken>
+       <AssignJudgeToken type="0">
+       </AssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <TableFunctionToken elementUuid="UJYGIA0N8MX16YA31EKN" uniqueName="int_db5select2.getInteger(2)" valueType="int" displayName="取主规则表信息的ruletypeid字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHWGIA0N8MX16YA31EKN" uniqueName="string_exerule" valueType="" displayName="临时规则执行名">
+       </FieldToken>
+       <AssignJudgeToken type="0">
+       </AssignJudgeToken>
+       <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <TableFunctionToken elementUuid="UJZGIA0N8MX16YA31EKN" uniqueName="string_db5select2.getString(3)" valueType="string" displayName="取主规则表信息的exerule字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHYGIA0N8MX16YA31EKN" uniqueName="string_oldproject" valueType="" displayName="oldproject">
+       </FieldToken>
+       <AssignJudgeToken type="0">
+       </AssignJudgeToken>
+       <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <TableFunctionToken elementUuid="U0YHFRUF0Y5HQ5EG3FLP4" uniqueName="string_db5select2.getString(4)" valueType="string" displayName="取主规则表信息的ruleproject字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="U0QHFRUF0Y5HQ5EG3FLP4" uniqueName="int_lockstate" valueType="" displayName="lockstate">
+       </FieldToken>
+       <AssignJudgeToken type="0">
+       </AssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <TableFunctionToken elementUuid="U0WHFRUF0Y5HQ5EG3FLP4" uniqueName="int_db5select2.getInteger(5)" valueType="int" displayName="取主规则表信息的lockstate字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="U13HFRUF0Y5HQ5EG3FLP4" type="3">
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="" displayName="规则编号">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantToken valueType="int" value="0">
+        </ConstantToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="U15HFRUF0Y5HQ5EG3FLP4" type="1">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UJGGIA0N8MX16YA31EKN" uniqueName="void_db5select2.selectWhere(&quot;select ruleid,editstate,ruletypeid,exerule,ruleproject,r_rule.stateid as lockstate  from r_rule   where r_rule.ruleid =  ?  &quot;,new Object[&#93;{new Integer( {arg1})})" valueType="" displayName="根据{arg1}执行主规则表信息">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <MemberToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="执行主规则表信息" colorType="tableFunction" pos="0" elementUuid="UJGGIA0N8MX16YA31EKN" uniqueName="void_db5select2.selectWhere(&quot;select ruleid,editstate,ruletypeid,exerule,ruleproject,r_rule.stateid as lockstate  from r_rule   where r_rule.ruleid =  ?  &quot;,new Object[&#93;{new Integer( {arg1})})">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <RuleSet displayName="判断该规则编号的信息" uuid="U0SHFRUF0Y5HQ5EG3FLP4" editType="3" startTime="0" endTime="0" createTime="1366529269536" modifyTime="1366530579614" actived="true" modifyUser="192.168.1.104" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" supportCatch="false" editTable="false" exceptionType="1" errorMsg="" syn="false" checktype="0">
+   <Rule displayName="规则工程和执行名称不一致" uuid="UMSGIA0N8MX16YA31EKN" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1366530565270" modifyUser="192.168.1.104" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+    <RuleToken uuid="UMTGIA0N8MX16YA31EKN">
+     <MultiConditionToken uuid="UMUGIA0N8MX16YA31EKN" type="0">
+      <ConditionToken uuid="UMVGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+       <LogicalJudgeToken type="1">
+       </LogicalJudgeToken>
+       <MemberToken elementUuid="UHUGIA0N8MX16YA31EKN" uniqueName="string_ruleproject" valueType="" displayName="规则包工程名">
+       </MemberToken>
+       <StringJudgeToken type="8">
+       </StringJudgeToken>
+       <ConditionToken uuid="UMWGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+        <LogicalJudgeToken type="1">
+        </LogicalJudgeToken>
+        <MemberToken elementUuid="UHYGIA0N8MX16YA31EKN" uniqueName="string_oldproject" valueType="" displayName="oldproject">
+        </MemberToken>
+        <StringJudgeToken type="1">
+        </StringJudgeToken>
+        <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="UHUGIA0N8MX16YA31EKN" uniqueName="string_ruleproject" valueType="string" displayName="规则包工程名">
+         </MemberToken>
+        </ValueToken>
+       </ConditionToken>
+      </ConditionToken>
+      <ConditionToken uuid="U17HFRUF0Y5HQ5EG3FLP4" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+       <LogicalJudgeToken type="1">
+       </LogicalJudgeToken>
+       <MemberToken elementUuid="UHWGIA0N8MX16YA31EKN" uniqueName="string_exerule" valueType="" displayName="临时规则执行名">
+       </MemberToken>
+       <StringJudgeToken type="1">
+       </StringJudgeToken>
+       <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UHJGIA0N8MX16YA31EKN" uniqueName="string_rulename" valueType="string" displayName="规则包执行名">
+        </MemberToken>
+       </ValueToken>
+      </ConditionToken>
+     </MultiConditionToken>
+     <MultiActionToken uuid="UMXGIA0N8MX16YA31EKN" type="0">
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="" displayName="规则编号">
+        </FieldToken>
+        <NumberAssignJudgeToken type="0">
+        </NumberAssignJudgeToken>
+        <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <ConstantToken valueType="int" value="0">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHLGIA0N8MX16YA31EKN" uniqueName="double_rulever" valueType="" displayName="规则版本号">
+        </FieldToken>
+        <NumberAssignJudgeToken type="0">
+        </NumberAssignJudgeToken>
+        <ValueToken valueType="double" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <ConstantToken valueType="double" value="1.0">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHGGIA0N8MX16YA31EKN" uniqueName="int_errortype" valueType="" displayName="错误提示类别">
+        </FieldToken>
+        <NumberAssignJudgeToken type="0">
+        </NumberAssignJudgeToken>
+        <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <ConstantToken valueType="int" value="1">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHFGIA0N8MX16YA31EKN" uniqueName="string_error" valueType="" displayName="错误提示信息">
+        </FieldToken>
+        <StringAssignJudgeToken type="0">
+        </StringAssignJudgeToken>
+        <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <ConstantToken valueType="string" value="当前规则编号对应的规则执行名和工程名称不一致，系统将创建新纪录，并且版本号更新为1.0？">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <ReturnToken returnType="2" displayName="退出规则包">
+       </ReturnToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+     <MultiActionToken uuid="UMYGIA0N8MX16YA31EKN" type="3">
+     </MultiActionToken>
+    </RuleToken>
+    <doc>
+    </doc>
+   </Rule>
+   <Rule displayName="工程一致执行名称不一致" uuid="UMZGIA0N8MX16YA31EKN" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1366530820020" modifyUser="192.168.1.104" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+    <RuleToken uuid="UN0GIA0N8MX16YA31EKN">
+     <MultiConditionToken uuid="UN1GIA0N8MX16YA31EKN" type="0">
+      <ConditionToken uuid="U18HFRUF0Y5HQ5EG3FLP4" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+       <LogicalJudgeToken type="1">
+       </LogicalJudgeToken>
+       <MemberToken elementUuid="UHYGIA0N8MX16YA31EKN" uniqueName="string_oldproject" valueType="" displayName="oldproject">
+       </MemberToken>
+       <StringJudgeToken type="0">
+       </StringJudgeToken>
+       <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UHUGIA0N8MX16YA31EKN" uniqueName="string_ruleproject" valueType="string" displayName="规则包工程名">
+        </MemberToken>
+       </ValueToken>
+      </ConditionToken>
+      <ConditionToken uuid="U19HFRUF0Y5HQ5EG3FLP4" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+       <LogicalJudgeToken type="1">
+       </LogicalJudgeToken>
+       <MemberToken elementUuid="UHWGIA0N8MX16YA31EKN" uniqueName="string_exerule" valueType="" displayName="临时规则执行名">
+       </MemberToken>
+       <StringJudgeToken type="1">
+       </StringJudgeToken>
+       <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UHJGIA0N8MX16YA31EKN" uniqueName="string_rulename" valueType="string" displayName="规则包执行名">
+        </MemberToken>
+       </ValueToken>
+      </ConditionToken>
+     </MultiConditionToken>
+     <MultiActionToken uuid="UN3GIA0N8MX16YA31EKN" type="0">
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHFGIA0N8MX16YA31EKN" uniqueName="string_error" valueType="" displayName="错误提示信息">
+        </FieldToken>
+        <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <ConstantToken valueType="string" value="规则执行名与原规则记录编号不一致，是否将此规则包的执行名称进行变更？">
+         </ConstantToken>
+         <StringOperatorToken type="1">
+         </StringOperatorToken>
+         <ValueToken valueType="string" displayName="" argName="string" leftParenthesisNumber="0" rightParenthesisNumber="0">
+          <StringOperatorToken type="0">
+          </StringOperatorToken>
+          <ConstantToken valueType="string" value="\n">
+          </ConstantToken>
+         </ValueToken>
+        </ValueToken>
+        <StringAssignJudgeToken type="1">
+        </StringAssignJudgeToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHGGIA0N8MX16YA31EKN" uniqueName="int_errortype" valueType="" displayName="错误提示类别">
+        </FieldToken>
+        <NumberAssignJudgeToken type="0">
+        </NumberAssignJudgeToken>
+        <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <ConstantToken valueType="int" value="1">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+     <MultiActionToken uuid="UN4GIA0N8MX16YA31EKN" type="3">
+     </MultiActionToken>
+    </RuleToken>
+    <doc>
+    </doc>
+   </Rule>
+   <RuleSetToken uuid="U0THFRUF0Y5HQ5EG3FLP4">
+    <MultiConditionToken uuid="U0UHFRUF0Y5HQ5EG3FLP4" type="0">
+     <ConditionToken uuid="U16HFRUF0Y5HQ5EG3FLP4" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="" displayName="规则编号">
+      </MemberToken>
+      <NumberJudgeToken type="1">
+      </NumberJudgeToken>
+      <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <ConstantToken valueType="int" value="0">
+       </ConstantToken>
+      </ValueToken>
+     </ConditionToken>
+    </MultiConditionToken>
+   </RuleSetToken>
+   <doc>
+   </doc>
+  </RuleSet>
+  <Rule displayName="查询规则" uuid="UMLGIA0N8MX16YA31EKN" exceptionType="1" actived="false" errorMsg="" supportElse="true" supportCatch="false" supportInit="true" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1366530949348" modifyUser="192.168.1.104" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+   <RuleToken uuid="UMMGIA0N8MX16YA31EKN">
+    <MultiConditionToken uuid="UMNGIA0N8MX16YA31EKN" type="0">
+     <ConditionToken uuid="UMOGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UIUGIA0N8MX16YA31EKN" uniqueName="boolean_db5select1.next()" valueType="" displayName="取查询规则当前查询结果的下一条记录">
+      </MemberToken>
+      <BooleanJudgeToken type="0">
+      </BooleanJudgeToken>
+      <BooleanJudgeToken type="0">
+      </BooleanJudgeToken>
+     </ConditionToken>
+    </MultiConditionToken>
+    <MultiActionToken uuid="UMPGIA0N8MX16YA31EKN" type="0">
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHYGIA0N8MX16YA31EKN" uniqueName="string_oldproject" valueType="" displayName="oldproject">
+       </FieldToken>
+       <AssignJudgeToken type="0">
+       </AssignJudgeToken>
+       <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <TableFunctionToken elementUuid="UJEGIA0N8MX16YA31EKN" uniqueName="string_db5select1.getString(4)" valueType="string" displayName="取查询规则的ruleproject字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHVGIA0N8MX16YA31EKN" uniqueName="int_oldruleid" valueType="" displayName="临时规则编号">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <TableFunctionToken elementUuid="UJ5GIA0N8MX16YA31EKN" uniqueName="int_db5select1.getInteger(0)" valueType="int" displayName="取查询规则的ruleid字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHMGIA0N8MX16YA31EKN" uniqueName="int_ruletypeid" valueType="" displayName="ruletypeid">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <TableFunctionToken elementUuid="UJ8GIA0N8MX16YA31EKN" uniqueName="int_db5select1.getInteger(3)" valueType="int" displayName="取查询规则的ruletypeid字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHNGIA0N8MX16YA31EKN" uniqueName="int_editstate" valueType="" displayName="规则包编辑类型">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <TableFunctionToken elementUuid="UJ6GIA0N8MX16YA31EKN" uniqueName="int_db5select1.getInteger(1)" valueType="int" displayName="取查询规则的editstate字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UMQGIA0N8MX16YA31EKN" type="3">
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="" displayName="规则编号">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantToken valueType="int" value="0">
+        </ConstantToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHLGIA0N8MX16YA31EKN" uniqueName="double_rulever" valueType="" displayName="规则版本号">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="double" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantToken valueType="double" value="1.0">
+        </ConstantToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHGGIA0N8MX16YA31EKN" uniqueName="int_errortype" valueType="" displayName="错误提示类别">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantToken valueType="int" value="1">
+        </ConstantToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHFGIA0N8MX16YA31EKN" uniqueName="string_error" valueType="" displayName="错误提示信息">
+       </FieldToken>
+       <StringAssignJudgeToken type="0">
+       </StringAssignJudgeToken>
+       <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <ConstantToken valueType="string" value="还没有对应的规则包，是否增加规则包，并且版本号更新为1.0？">
+        </ConstantToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <ReturnToken returnType="2" displayName="退出规则包">
+      </ReturnToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UMRGIA0N8MX16YA31EKN" type="1">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UITGIA0N8MX16YA31EKN" uniqueName="void_db5select1.selectWhere(&quot;select ruleid,editstate,loginname,ruletypeid,ruleproject,r_rule.stateid as lockstate  from r_rule   where r_rule.exerule =  ?   and r_rule.ruleproject =  ? &quot;,new Object[&#93;{ {arg1}, {arg2}})" valueType="" displayName="根据{arg1}{arg2}执行查询规则">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UHJGIA0N8MX16YA31EKN" uniqueName="string_rulename" valueType="string" displayName="规则包执行名">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="执行查询规则" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+       <ValueToken valueType="string" displayName="" argName="arg2" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UHUGIA0N8MX16YA31EKN" uniqueName="string_ruleproject" valueType="string" displayName="规则包工程名">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+根据规则执行名称取得原规则包的相关信息。&#13;&#10;主要是取得原规则包的编号，类别和编辑类型。   </doc>
+  </Rule>
+  <RuleSetToken uuid="UN5GIA0N8MX16YA31EKN">
+   <MultiConditionToken uuid="UN6GIA0N8MX16YA31EKN" type="0">
+    <ConditionToken uuid="UN7GIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="" displayName="规则编号">
+     </MemberToken>
+     <NumberJudgeToken type="1">
+     </NumberJudgeToken>
+     <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <NumberOperatorToken type="0">
+      </NumberOperatorToken>
+      <ConstantToken valueType="int" value="0">
+      </ConstantToken>
+     </ValueToken>
+    </ConditionToken>
+   </MultiConditionToken>
+  </RuleSetToken>
+  <doc>
+首先判断规则是否需要修改可执行名称。&#13;&#10;如果需要修改，则判断是否该执行名称已经存在。&#13;&#10;如果已经存在，则提醒不能更新，并且退出。  </doc>
+ </RuleSet>
+ <RuleSet displayName="没有规则编号" uuid="UN8GIA0N8MX16YA31EKN" editType="3" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1293614509953" actived="true" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" supportCatch="false" editTable="false" exceptionType="1" errorMsg="" syn="false" checktype="0">
+  <Rule displayName="查询规则" uuid="UN9GIA0N8MX16YA31EKN" exceptionType="1" actived="true" errorMsg="" supportElse="true" supportCatch="false" supportInit="true" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1366530956536" modifyUser="192.168.1.104" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+   <RuleToken uuid="UNAGIA0N8MX16YA31EKN">
+    <MultiConditionToken uuid="UNBGIA0N8MX16YA31EKN" type="0">
+     <ConditionToken uuid="UNCGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UIUGIA0N8MX16YA31EKN" uniqueName="boolean_db5select1.next()" valueType="" displayName="取查询规则当前查询结果的下一条记录">
+      </MemberToken>
+      <BooleanJudgeToken type="0">
+      </BooleanJudgeToken>
+      <BooleanJudgeToken type="0">
+      </BooleanJudgeToken>
+     </ConditionToken>
+    </MultiConditionToken>
+    <MultiActionToken uuid="UNDGIA0N8MX16YA31EKN" type="0">
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="U0QHFRUF0Y5HQ5EG3FLP4" uniqueName="int_lockstate" valueType="" displayName="lockstate">
+       </FieldToken>
+       <AssignJudgeToken type="0">
+       </AssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <TableFunctionToken elementUuid="U1BHFRUF0Y5HQ5EG3FLP4" uniqueName="int_db5select1.getInteger(5)" valueType="int" displayName="取查询规则的lockstate字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="" displayName="规则编号">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <TableFunctionToken elementUuid="UJ5GIA0N8MX16YA31EKN" uniqueName="int_db5select1.getInteger(0)" valueType="int" displayName="取查询规则的ruleid字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHMGIA0N8MX16YA31EKN" uniqueName="int_ruletypeid" valueType="" displayName="ruletypeid">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <TableFunctionToken elementUuid="UJ8GIA0N8MX16YA31EKN" uniqueName="int_db5select1.getInteger(3)" valueType="int" displayName="取查询规则的ruletypeid字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHNGIA0N8MX16YA31EKN" uniqueName="int_editstate" valueType="" displayName="规则包编辑类型">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <TableFunctionToken elementUuid="UJ6GIA0N8MX16YA31EKN" uniqueName="int_db5select1.getInteger(1)" valueType="int" displayName="取查询规则的editstate字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHYGIA0N8MX16YA31EKN" uniqueName="string_oldproject" valueType="" displayName="oldproject">
+       </FieldToken>
+       <AssignJudgeToken type="0">
+       </AssignJudgeToken>
+       <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <TableFunctionToken elementUuid="UJEGIA0N8MX16YA31EKN" uniqueName="string_db5select1.getString(4)" valueType="string" displayName="取查询规则的ruleproject字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UNEGIA0N8MX16YA31EKN" type="3">
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="" displayName="规则编号">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantToken valueType="int" value="0">
+        </ConstantToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHLGIA0N8MX16YA31EKN" uniqueName="double_rulever" valueType="" displayName="规则版本号">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="double" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantToken valueType="double" value="1.0">
+        </ConstantToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHGGIA0N8MX16YA31EKN" uniqueName="int_errortype" valueType="" displayName="错误提示类别">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantToken valueType="int" value="1">
+        </ConstantToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHFGIA0N8MX16YA31EKN" uniqueName="string_error" valueType="" displayName="错误提示信息">
+       </FieldToken>
+       <StringAssignJudgeToken type="0">
+       </StringAssignJudgeToken>
+       <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <ConstantToken valueType="string" value="还没有对应的规则包，是否增加规则包，并且版本号更新为1.0？">
+        </ConstantToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <ReturnToken returnType="2" displayName="退出规则包">
+      </ReturnToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UNFGIA0N8MX16YA31EKN" type="1">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UITGIA0N8MX16YA31EKN" uniqueName="void_db5select1.selectWhere(&quot;select ruleid,editstate,loginname,ruletypeid,ruleproject,r_rule.stateid as lockstate  from r_rule   where r_rule.exerule =  ?   and r_rule.ruleproject =  ? &quot;,new Object[&#93;{ {arg1}, {arg2}})" valueType="" displayName="根据{arg1}{arg2}执行查询规则">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UHJGIA0N8MX16YA31EKN" uniqueName="string_rulename" valueType="string" displayName="规则包执行名">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="执行查询规则" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+       <ValueToken valueType="string" displayName="" argName="arg2" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UHUGIA0N8MX16YA31EKN" uniqueName="string_ruleproject" valueType="string" displayName="规则包工程名">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+根据规则执行名称取得原规则包的相关信息。&#13;&#10;主要是取得原规则包的编号，类别和编辑类型。   </doc>
+  </Rule>
+  <Rule displayName="规则工程不一致" uuid="UNGGIA0N8MX16YA31EKN" exceptionType="1" actived="false" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1366529830832" modifyUser="192.168.1.104" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+   <RuleToken uuid="UNHGIA0N8MX16YA31EKN">
+    <MultiConditionToken uuid="UNIGIA0N8MX16YA31EKN" type="0">
+     <ConditionToken uuid="UNJGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UHUGIA0N8MX16YA31EKN" uniqueName="string_ruleproject" valueType="" displayName="规则包工程名">
+      </MemberToken>
+      <StringJudgeToken type="8">
+      </StringJudgeToken>
+     </ConditionToken>
+     <ConditionToken uuid="UNKGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UHYGIA0N8MX16YA31EKN" uniqueName="string_oldproject" valueType="" displayName="oldproject">
+      </MemberToken>
+      <StringJudgeToken type="1">
+      </StringJudgeToken>
+      <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <StringOperatorToken type="0">
+       </StringOperatorToken>
+       <MemberToken elementUuid="UHUGIA0N8MX16YA31EKN" uniqueName="string_ruleproject" valueType="string" displayName="规则包工程名">
+       </MemberToken>
+      </ValueToken>
+     </ConditionToken>
+    </MultiConditionToken>
+    <MultiActionToken uuid="UNLGIA0N8MX16YA31EKN" type="0">
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHFGIA0N8MX16YA31EKN" uniqueName="string_error" valueType="" displayName="错误提示信息">
+       </FieldToken>
+       <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <ConstantToken valueType="string" value="规则所属工程与原工程不一致，不同工程下不能有同一调用名的规则包！">
+        </ConstantToken>
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+       </ValueToken>
+       <StringAssignJudgeToken type="1">
+       </StringAssignJudgeToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHGGIA0N8MX16YA31EKN" uniqueName="int_errortype" valueType="" displayName="错误提示类别">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantToken valueType="int" value="1">
+        </ConstantToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <ReturnToken returnType="2" displayName="退出规则包">
+      </ReturnToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UNMGIA0N8MX16YA31EKN" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <RuleSetToken uuid="UNNGIA0N8MX16YA31EKN">
+   <MultiConditionToken uuid="UNOGIA0N8MX16YA31EKN" type="0">
+    <ConditionToken uuid="UNPGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="" displayName="规则编号">
+     </MemberToken>
+     <NumberJudgeToken type="0">
+     </NumberJudgeToken>
+     <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <NumberOperatorToken type="0">
+      </NumberOperatorToken>
+      <ConstantToken valueType="int" value="0">
+      </ConstantToken>
+     </ValueToken>
+    </ConditionToken>
+   </MultiConditionToken>
+   <MultiActionToken uuid="UNQGIA0N8MX16YA31EKN" type="2">
+   </MultiActionToken>
+   <MultiActionToken uuid="UNRGIA0N8MX16YA31EKN" type="5">
+   </MultiActionToken>
+  </RuleSetToken>
+  <doc>
+  </doc>
+ </RuleSet>
+ <RuleSet displayName="判断权限" uuid="UNSGIA0N8MX16YA31EKN" editType="3" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1293614509953" actived="true" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" supportCatch="false" editTable="false" exceptionType="1" errorMsg="" syn="false" checktype="0">
+  <Rule displayName="判断用户是否具有规则权限" uuid="UNTGIA0N8MX16YA31EKN" exceptionType="0" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="true" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1293614509953" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+   <RuleToken uuid="UNUGIA0N8MX16YA31EKN">
+    <MultiConditionToken uuid="UNVGIA0N8MX16YA31EKN" type="0">
+     <ConditionToken uuid="UNWGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UK2GIA0N8MX16YA31EKN" uniqueName="boolean_db5select4.next()" valueType="" displayName="取判断规则用户权限当前查询结果的下一条记录">
+      </MemberToken>
+      <BooleanJudgeToken type="1">
+      </BooleanJudgeToken>
+     </ConditionToken>
+    </MultiConditionToken>
+    <MultiActionToken uuid="UNXGIA0N8MX16YA31EKN" type="0">
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHGGIA0N8MX16YA31EKN" uniqueName="int_errortype" valueType="" displayName="错误提示类别">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantToken valueType="int" value="2">
+        </ConstantToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHFGIA0N8MX16YA31EKN" uniqueName="string_error" valueType="" displayName="错误提示信息">
+       </FieldToken>
+       <StringAssignJudgeToken type="0">
+       </StringAssignJudgeToken>
+       <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <ConstantToken valueType="string" value="你对此规则包没有修改权限，不能读取！">
+        </ConstantToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <ReturnToken returnType="2" displayName="退出规则包">
+      </ReturnToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UNYGIA0N8MX16YA31EKN" type="3">
+    </MultiActionToken>
+    <MultiActionToken uuid="UNZGIA0N8MX16YA31EKN" type="1">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UK1GIA0N8MX16YA31EKN" uniqueName="void_db5select4.selectWhere(&quot;select rrl.userid  from r_ruleuser rrl  where rrl.userid= ?  and rrl.ruleid= ? &quot;,new Object[&#93;{new Integer( {arg1}),new Integer( {arg2})})" valueType="" displayName="根据{arg1}{arg2}执行判断规则用户权限">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UHQGIA0N8MX16YA31EKN" uniqueName="int_userid" valueType="int" displayName="userid">
+        </MemberToken>
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+       </ValueToken>
+       <ValueToken valueType="int" displayName="" argName="arg2" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+        </MemberToken>
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+       </ValueToken>
+       <ElementTextToken displayName="执行判断规则用户权限" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <RuleSetToken uuid="UO0GIA0N8MX16YA31EKN">
+   <MultiConditionToken uuid="UO1GIA0N8MX16YA31EKN" type="0">
+    <ConditionToken uuid="UO2GIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="" displayName="规则编号">
+     </MemberToken>
+     <NumberJudgeToken type="1">
+     </NumberJudgeToken>
+     <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <NumberOperatorToken type="0">
+      </NumberOperatorToken>
+      <ConstantToken valueType="int" value="0">
+      </ConstantToken>
+     </ValueToken>
+    </ConditionToken>
+   </MultiConditionToken>
+  </RuleSetToken>
+  <doc>
+  </doc>
+ </RuleSet>
+ <Rule displayName="被锁定" uuid="UO3GIA0N8MX16YA31EKN" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1293614509953" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+  <RuleToken uuid="UO4GIA0N8MX16YA31EKN">
+   <MultiConditionToken uuid="UO5GIA0N8MX16YA31EKN" type="0">
+    <ConditionToken uuid="UO6GIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UHNGIA0N8MX16YA31EKN" uniqueName="int_editstate" valueType="" displayName="规则包编辑类型">
+     </MemberToken>
+     <NumberJudgeToken type="0">
+     </NumberJudgeToken>
+     <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <NumberOperatorToken type="0">
+      </NumberOperatorToken>
+      <ConstantSelectToken elementUuid="UL5GIA0N8MX16YA31EKN" uniqueName="int_2_规则包状态" valueType="int" displayName="被锁定">
+      </ConstantSelectToken>
+     </ValueToken>
+    </ConditionToken>
+    <ConditionToken uuid="UO7GIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+     <LogicalJudgeToken type="0">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UHNGIA0N8MX16YA31EKN" uniqueName="int_editstate" valueType="" displayName="规则包编辑类型">
+     </MemberToken>
+     <NumberJudgeToken type="3">
+     </NumberJudgeToken>
+     <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <NumberOperatorToken type="0">
+      </NumberOperatorToken>
+      <ConstantSelectToken elementUuid="UL7GIA0N8MX16YA31EKN" uniqueName="int_4_规则包状态" valueType="int" displayName="已作废">
+      </ConstantSelectToken>
+     </ValueToken>
+    </ConditionToken>
+   </MultiConditionToken>
+   <MultiActionToken uuid="UO8GIA0N8MX16YA31EKN" type="0">
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="UHGGIA0N8MX16YA31EKN" uniqueName="int_errortype" valueType="" displayName="错误提示类别">
+      </FieldToken>
+      <NumberAssignJudgeToken type="0">
+      </NumberAssignJudgeToken>
+      <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <ConstantToken valueType="int" value="2">
+       </ConstantToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="UHFGIA0N8MX16YA31EKN" uniqueName="string_error" valueType="" displayName="错误提示信息">
+      </FieldToken>
+      <StringAssignJudgeToken type="0">
+      </StringAssignJudgeToken>
+      <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <StringOperatorToken type="0">
+       </StringOperatorToken>
+       <ConstantToken valueType="string" value="文件被锁定，不能保存！">
+       </ConstantToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <ReturnToken returnType="2" displayName="退出规则包">
+     </ReturnToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+   <MultiActionToken uuid="UO9GIA0N8MX16YA31EKN" type="3">
+   </MultiActionToken>
+  </RuleToken>
+  <doc>
+  </doc>
+ </Rule>
+ <Rule displayName="被锁定修改，不能检入" uuid="U1DHFRUF0Y5HQ5EG3FLP4" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1366530998254" modifyTime="1366534020645" modifyUser="192.168.1.104" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+  <RuleToken uuid="U1EHFRUF0Y5HQ5EG3FLP4">
+   <MultiConditionToken uuid="U1FHFRUF0Y5HQ5EG3FLP4" type="0">
+    <ConditionToken uuid="U1GHFRUF0Y5HQ5EG3FLP4" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="U0PHFRUF0Y5HQ5EG3FLP4" uniqueName="boolean_lockcheckout" valueType="" displayName="lockcheckout">
+     </MemberToken>
+     <BooleanJudgeToken type="1">
+     </BooleanJudgeToken>
+    </ConditionToken>
+    <ConditionToken uuid="U1HHFRUF0Y5HQ5EG3FLP4" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="U0QHFRUF0Y5HQ5EG3FLP4" uniqueName="int_lockstate" valueType="" displayName="lockstate">
+     </MemberToken>
+     <NumberJudgeToken type="0">
+     </NumberJudgeToken>
+     <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <NumberOperatorToken type="0">
+      </NumberOperatorToken>
+      <ConstantSelectToken elementUuid="UL9GIA0N8MX16YA31EKN" uniqueName="int_2_编辑状态" valueType="int" displayName="正在修改">
+      </ConstantSelectToken>
+     </ValueToken>
+    </ConditionToken>
+   </MultiConditionToken>
+   <MultiActionToken uuid="U1IHFRUF0Y5HQ5EG3FLP4" type="0">
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="UHGGIA0N8MX16YA31EKN" uniqueName="int_errortype" valueType="" displayName="错误提示类别">
+      </FieldToken>
+      <NumberAssignJudgeToken type="0">
+      </NumberAssignJudgeToken>
+      <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <ConstantToken valueType="int" value="2">
+       </ConstantToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="UHFGIA0N8MX16YA31EKN" uniqueName="string_error" valueType="" displayName="错误提示信息">
+      </FieldToken>
+      <StringAssignJudgeToken type="1">
+      </StringAssignJudgeToken>
+      <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <StringOperatorToken type="0">
+       </StringOperatorToken>
+       <ConstantToken valueType="string" value="规则包已经被其他用户锁定并检出修改，不能保存，请先解除检出修改状态！">
+       </ConstantToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <ReturnToken returnType="2" displayName="退出规则包">
+     </ReturnToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+   <MultiActionToken uuid="U1JHFRUF0Y5HQ5EG3FLP4" type="3">
+   </MultiActionToken>
+  </RuleToken>
+  <doc>
+  </doc>
+ </Rule>
+ <Rule displayName="未锁定修改，检入警告" uuid="U1NHFRUF0Y5HQ5EG3FLP4" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1366534026864" modifyTime="1366534114473" modifyUser="192.168.1.104" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+  <RuleToken uuid="U1OHFRUF0Y5HQ5EG3FLP4">
+   <MultiConditionToken uuid="U1PHFRUF0Y5HQ5EG3FLP4" type="0">
+    <ConditionToken uuid="U1QHFRUF0Y5HQ5EG3FLP4" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="U0PHFRUF0Y5HQ5EG3FLP4" uniqueName="boolean_lockcheckout" valueType="" displayName="lockcheckout">
+     </MemberToken>
+     <BooleanJudgeToken type="0">
+     </BooleanJudgeToken>
+    </ConditionToken>
+    <ConditionToken uuid="U1RHFRUF0Y5HQ5EG3FLP4" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="U0QHFRUF0Y5HQ5EG3FLP4" uniqueName="int_lockstate" valueType="" displayName="lockstate">
+     </MemberToken>
+     <NumberJudgeToken type="1">
+     </NumberJudgeToken>
+     <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <NumberOperatorToken type="0">
+      </NumberOperatorToken>
+      <ConstantSelectToken elementUuid="UL9GIA0N8MX16YA31EKN" uniqueName="int_2_编辑状态" valueType="int" displayName="正在修改">
+      </ConstantSelectToken>
+     </ValueToken>
+    </ConditionToken>
+   </MultiConditionToken>
+   <MultiActionToken uuid="U1SHFRUF0Y5HQ5EG3FLP4" type="0">
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="UHGGIA0N8MX16YA31EKN" uniqueName="int_errortype" valueType="" displayName="错误提示类别">
+      </FieldToken>
+      <NumberAssignJudgeToken type="0">
+      </NumberAssignJudgeToken>
+      <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <ConstantToken valueType="int" value="1">
+       </ConstantToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="UHFGIA0N8MX16YA31EKN" uniqueName="string_error" valueType="" displayName="错误提示信息">
+      </FieldToken>
+      <StringAssignJudgeToken type="1">
+      </StringAssignJudgeToken>
+      <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <StringOperatorToken type="1">
+       </StringOperatorToken>
+       <ConstantToken valueType="string" value="规则包并不在锁定并检出状态，可能已被其他用户强制解除锁定检出状态！">
+       </ConstantToken>
+       <ValueToken valueType="string" displayName="" argName="string" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <ConstantToken valueType="string" value="\n">
+        </ConstantToken>
+       </ValueToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+   <MultiActionToken uuid="U1THFRUF0Y5HQ5EG3FLP4" type="3">
+   </MultiActionToken>
+  </RuleToken>
+  <doc>
+  </doc>
+ </Rule>
+ <RuleSet displayName="新增版本" uuid="U00HK3PUP62ASU4V0003C" editType="3" startTime="0" endTime="0" createTime="1375951256500" modifyTime="1375951334421" actived="true" modifyUser="192.168.135.136" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" supportCatch="false" editTable="false" exceptionType="1" errorMsg="" syn="false" checktype="0">
+  <Rule displayName="递增版本号" uuid="U03HK3PUP62ASU4V0003C" exceptionType="1" actived="true" errorMsg="" supportElse="true" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1375951323156" modifyTime="1375951323156" modifyUser="192.168.135.136" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+   <RuleToken uuid="U05HK3PUP62ASU4V0003C">
+    <MultiConditionToken uuid="U06HK3PUP62ASU4V0003C" type="0">
+     <ConditionToken uuid="U07HK3PUP62ASU4V0003C" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UHNGIA0N8MX16YA31EKN" uniqueName="int_editstate" valueType="" displayName="规则包编辑类型">
+      </MemberToken>
+      <NumberJudgeToken type="0">
+      </NumberJudgeToken>
+      <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <ConstantSelectToken elementUuid="UL6GIA0N8MX16YA31EKN" uniqueName="int_3_规则包状态" valueType="int" displayName="已发布">
+       </ConstantSelectToken>
+      </ValueToken>
+     </ConditionToken>
+    </MultiConditionToken>
+    <MultiActionToken uuid="U08HK3PUP62ASU4V0003C" type="0">
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHLGIA0N8MX16YA31EKN" uniqueName="double_rulever" valueType="double" displayName="规则版本号">
+       </FieldToken>
+       <ValueToken valueType="double" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <TableFunctionToken elementUuid="U01HJY49CFO4DQT10003C" uniqueName="double_db5.executeDouble(&quot;select  max(rulever) from r_ruleversion where ruleid= ?  &quot;,new Object[&#93;{new Integer( {arg1})})" valueType="double" displayName="根据{arg1}执行最大版本号语句">
+         <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+          <NumberOperatorToken type="0">
+          </NumberOperatorToken>
+          <MemberToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+          </MemberToken>
+         </ValueToken>
+         <ElementTextToken displayName="执行最大版本号语句" colorType="default" pos="0" elementUuid="" uniqueName="">
+         </ElementTextToken>
+        </TableFunctionToken>
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+       </ValueToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <MethodToken elementUuid="U02HJY49CFO4DQT10003C" uniqueName="addVer(boolean)" valueType="" displayName="递增版本号{arg1}">
+       <ValueToken valueType="boolean" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <ConstantToken valueType="boolean" value="true">
+        </ConstantToken>
+       </ValueToken>
+      </MethodToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="U09HK3PUP62ASU4V0003C" type="3">
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHLGIA0N8MX16YA31EKN" uniqueName="double_rulever" valueType="double" displayName="规则版本号">
+       </FieldToken>
+       <ValueToken valueType="double" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <TableFunctionToken elementUuid="U01HJY49CFO4DQT10003C" uniqueName="double_db5.executeDouble(&quot;select  max(rulever) from r_ruleversion where ruleid= ?  &quot;,new Object[&#93;{new Integer( {arg1})})" valueType="double" displayName="根据{arg1}执行最大版本号语句">
+         <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+          <NumberOperatorToken type="0">
+          </NumberOperatorToken>
+          <MemberToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+          </MemberToken>
+         </ValueToken>
+         <ElementTextToken displayName="执行最大版本号语句" colorType="default" pos="0" elementUuid="" uniqueName="">
+         </ElementTextToken>
+        </TableFunctionToken>
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+       </ValueToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <MethodToken elementUuid="U02HJY49CFO4DQT10003C" uniqueName="addVer(boolean)" valueType="" displayName="递增版本号{arg1}">
+       <ValueToken valueType="boolean" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <ConstantToken valueType="boolean" value="false">
+        </ConstantToken>
+       </ValueToken>
+      </MethodToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <RuleSetToken uuid="U0AHK3PUP62ASU4V0003C">
+   <MultiConditionToken uuid="U0BHK3PUP62ASU4V0003C" type="0">
+    <ConditionToken uuid="U0CHK3PUP62ASU4V0003C" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UHHGIA0N8MX16YA31EKN" uniqueName="boolean_newversion" valueType="" displayName="是否需要新建版本">
+     </MemberToken>
+     <BooleanJudgeToken type="0">
+     </BooleanJudgeToken>
+    </ConditionToken>
+   </MultiConditionToken>
+  </RuleSetToken>
+  <doc>
+  </doc>
+ </RuleSet>
+ <RuleSet displayName="没有要求新建版本" uuid="UOAGIA0N8MX16YA31EKN" editType="3" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1375612683500" actived="true" modifyUser="192.168.135.136" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" supportCatch="false" editTable="false" exceptionType="1" errorMsg="" syn="false" checktype="0">
+  <Rule displayName="被发布" uuid="UOBGIA0N8MX16YA31EKN" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1375612875688" modifyUser="192.168.135.136" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+   <RuleToken uuid="UOCGIA0N8MX16YA31EKN">
+    <MultiConditionToken uuid="UODGIA0N8MX16YA31EKN" type="0">
+     <ConditionToken uuid="UOEGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UHNGIA0N8MX16YA31EKN" uniqueName="int_editstate" valueType="" displayName="规则包编辑类型">
+      </MemberToken>
+      <NumberJudgeToken type="0">
+      </NumberJudgeToken>
+      <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <ConstantSelectToken elementUuid="UL6GIA0N8MX16YA31EKN" uniqueName="int_3_规则包状态" valueType="int" displayName="已发布">
+       </ConstantSelectToken>
+      </ValueToken>
+     </ConditionToken>
+    </MultiConditionToken>
+    <MultiActionToken uuid="UOFGIA0N8MX16YA31EKN" type="0">
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHLGIA0N8MX16YA31EKN" uniqueName="double_rulever" valueType="double" displayName="规则版本号">
+       </FieldToken>
+       <ValueToken valueType="double" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <TableFunctionToken elementUuid="U01HJY49CFO4DQT10003C" uniqueName="double_db5.executeDouble(&quot;select  max(rulever) from r_ruleversion where ruleid= ?  &quot;,new Object[&#93;{new Integer( {arg1})})" valueType="double" displayName="根据{arg1}执行最大版本号语句">
+         <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+          <NumberOperatorToken type="0">
+          </NumberOperatorToken>
+          <MemberToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+          </MemberToken>
+         </ValueToken>
+         <ElementTextToken displayName="执行最大版本号语句" colorType="default" pos="0" elementUuid="" uniqueName="">
+         </ElementTextToken>
+        </TableFunctionToken>
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+       </ValueToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <MethodToken elementUuid="U02HJY49CFO4DQT10003C" uniqueName="addVer(boolean)" valueType="" displayName="递增版本号{arg1}">
+       <ValueToken valueType="boolean" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <ConstantToken valueType="boolean" value="true">
+        </ConstantToken>
+       </ValueToken>
+      </MethodToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHHGIA0N8MX16YA31EKN" uniqueName="boolean_newversion" valueType="" displayName="是否需要新建版本">
+       </FieldToken>
+       <AssignJudgeToken type="0">
+       </AssignJudgeToken>
+       <ValueToken valueType="boolean" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <ConstantToken valueType="boolean" value="true">
+        </ConstantToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHGGIA0N8MX16YA31EKN" uniqueName="int_errortype" valueType="" displayName="错误提示类别">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantToken valueType="int" value="1">
+        </ConstantToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UHFGIA0N8MX16YA31EKN" uniqueName="string_error" valueType="" displayName="错误提示信息">
+       </FieldToken>
+       <StringAssignJudgeToken type="1">
+       </StringAssignJudgeToken>
+       <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <ConstantToken valueType="string" value="文件被发布，是否递增版本进行检入！">
+        </ConstantToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <ReturnToken returnType="2" displayName="退出规则包">
+      </ReturnToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UOGGIA0N8MX16YA31EKN" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <RuleSet displayName="未指定标签" uuid="UOHGIA0N8MX16YA31EKN" editType="3" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1293614509953" actived="true" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" supportCatch="false" editTable="false" exceptionType="1" errorMsg="" syn="false" checktype="0">
+   <Rule displayName="查询规则" uuid="UOIGIA0N8MX16YA31EKN" exceptionType="1" actived="true" errorMsg="" supportElse="true" supportCatch="false" supportInit="true" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1293614509953" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+    <RuleToken uuid="UOJGIA0N8MX16YA31EKN">
+     <MultiConditionToken uuid="UOKGIA0N8MX16YA31EKN" type="0">
+      <ConditionToken uuid="UOLGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+       <LogicalJudgeToken type="1">
+       </LogicalJudgeToken>
+       <MemberToken elementUuid="UI5GIA0N8MX16YA31EKN" uniqueName="boolean_db5select.next()" valueType="" displayName="取指定规则包当前查询结果的下一条记录">
+       </MemberToken>
+       <BooleanJudgeToken type="0">
+       </BooleanJudgeToken>
+       <BooleanJudgeToken type="0">
+       </BooleanJudgeToken>
+      </ConditionToken>
+     </MultiConditionToken>
+     <MultiActionToken uuid="UOMGIA0N8MX16YA31EKN" type="0">
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHPGIA0N8MX16YA31EKN" uniqueName="int_stateid" valueType="" displayName="规则版本的编辑状态">
+        </FieldToken>
+        <NumberAssignJudgeToken type="0">
+        </NumberAssignJudgeToken>
+        <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <TableFunctionToken elementUuid="UIJGIA0N8MX16YA31EKN" uniqueName="int_db5select.getInteger(3)" valueType="int" displayName="取指定规则包的stateid字段的值">
+         </TableFunctionToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHOGIA0N8MX16YA31EKN" uniqueName="datetime_tt" valueType="" displayName="原规则包的修改时间">
+        </FieldToken>
+        <AssignJudgeToken type="0">
+        </AssignJudgeToken>
+        <ValueToken valueType="datetime" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <TableFunctionToken elementUuid="UIIGIA0N8MX16YA31EKN" uniqueName="datetime_db5select.getTimestamp(2)" valueType="datetime" displayName="取指定规则包的mtime字段的值">
+         </TableFunctionToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHXGIA0N8MX16YA31EKN" uniqueName="boolean_neednew" valueType="" displayName="该版本规则包不存在">
+        </FieldToken>
+        <AssignJudgeToken type="0">
+        </AssignJudgeToken>
+        <ValueToken valueType="boolean" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <ConstantToken valueType="boolean" value="否">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+     <MultiActionToken uuid="UONGIA0N8MX16YA31EKN" type="3">
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHXGIA0N8MX16YA31EKN" uniqueName="boolean_neednew" valueType="" displayName="该版本规则包不存在">
+        </FieldToken>
+        <AssignJudgeToken type="0">
+        </AssignJudgeToken>
+        <ValueToken valueType="boolean" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <ConstantToken valueType="boolean" value="是">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+     <MultiActionToken uuid="UOOGIA0N8MX16YA31EKN" type="1">
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UI4GIA0N8MX16YA31EKN" uniqueName="void_db5select.selectWhere(&quot;select r_ruleversion.ruleid,r_ruleversion.rulever,r_ruleversion.mtime,r_ruleversion.stateid,r_ruleversion.muser,r_ruleversion.mhint   from r_ruleversion   where r_ruleversion.rulever =  ?   and r_ruleversion.ruleid =  ?  &quot;,new Object[&#93;{new Double( {arg1}),new Integer( {arg2})})" valueType="" displayName="根据{arg1}{arg2}执行指定规则包">
+        <ValueToken valueType="double" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <MemberToken elementUuid="UHLGIA0N8MX16YA31EKN" uniqueName="double_rulever" valueType="double" displayName="规则版本号">
+         </MemberToken>
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+        </ValueToken>
+        <ValueToken valueType="int" displayName="" argName="arg2" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <MemberToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+         </MemberToken>
+        </ValueToken>
+        <ElementTextToken displayName="执行指定规则包" colorType="default" pos="0" elementUuid="" uniqueName="">
+        </ElementTextToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+    </RuleToken>
+    <doc>
+    </doc>
+   </Rule>
+   <RuleSetToken uuid="UOPGIA0N8MX16YA31EKN">
+    <MultiConditionToken uuid="UOQGIA0N8MX16YA31EKN" type="0">
+     <ConditionToken uuid="UORGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UHTGIA0N8MX16YA31EKN" uniqueName="int_projverid" valueType="" displayName="projverid">
+      </MemberToken>
+      <NumberJudgeToken type="5">
+      </NumberJudgeToken>
+      <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <ConstantToken valueType="int" value="0">
+       </ConstantToken>
+      </ValueToken>
+     </ConditionToken>
+    </MultiConditionToken>
+   </RuleSetToken>
+   <doc>
+   </doc>
+  </RuleSet>
+  <RuleSet displayName="指定标签" uuid="UOSGIA0N8MX16YA31EKN" editType="3" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1293614509953" actived="true" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" supportCatch="false" editTable="false" exceptionType="1" errorMsg="" syn="false" checktype="0">
+   <Rule displayName="规则" uuid="UOTGIA0N8MX16YA31EKN" exceptionType="1" actived="true" errorMsg="" supportElse="true" supportCatch="false" supportInit="true" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1293614509953" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+    <RuleToken uuid="UOUGIA0N8MX16YA31EKN">
+     <MultiConditionToken uuid="UOVGIA0N8MX16YA31EKN" type="0">
+      <ConditionToken uuid="UOWGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+       <LogicalJudgeToken type="1">
+       </LogicalJudgeToken>
+       <MemberToken elementUuid="UKHGIA0N8MX16YA31EKN" uniqueName="boolean_db5select3.next()" valueType="" displayName="取指定标签规则包当前查询结果的下一条记录">
+       </MemberToken>
+       <BooleanJudgeToken type="0">
+       </BooleanJudgeToken>
+       <BooleanJudgeToken type="0">
+       </BooleanJudgeToken>
+      </ConditionToken>
+     </MultiConditionToken>
+     <MultiActionToken uuid="UOXGIA0N8MX16YA31EKN" type="0">
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHOGIA0N8MX16YA31EKN" uniqueName="datetime_tt" valueType="" displayName="原规则包的修改时间">
+        </FieldToken>
+        <AssignJudgeToken type="0">
+        </AssignJudgeToken>
+        <ValueToken valueType="datetime" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <TableFunctionToken elementUuid="UKUGIA0N8MX16YA31EKN" uniqueName="datetime_db5select3.getTimestamp(2)" valueType="datetime" displayName="取指定标签规则包的mtime字段的值">
+         </TableFunctionToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHPGIA0N8MX16YA31EKN" uniqueName="int_stateid" valueType="" displayName="规则版本的编辑状态">
+        </FieldToken>
+        <AssignJudgeToken type="0">
+        </AssignJudgeToken>
+        <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <TableFunctionToken elementUuid="UKVGIA0N8MX16YA31EKN" uniqueName="int_db5select3.getInteger(3)" valueType="int" displayName="取指定标签规则包的stateid字段的值">
+         </TableFunctionToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHRGIA0N8MX16YA31EKN" uniqueName="string_mhint" valueType="" displayName="mhint">
+        </FieldToken>
+        <AssignJudgeToken type="0">
+        </AssignJudgeToken>
+        <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <TableFunctionToken elementUuid="UKXGIA0N8MX16YA31EKN" uniqueName="string_db5select3.getString(5)" valueType="string" displayName="取指定标签规则包的mhint字段的值">
+         </TableFunctionToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHXGIA0N8MX16YA31EKN" uniqueName="boolean_neednew" valueType="" displayName="该版本规则包不存在">
+        </FieldToken>
+        <AssignJudgeToken type="0">
+        </AssignJudgeToken>
+        <ValueToken valueType="boolean" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <ConstantToken valueType="boolean" value="否">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+     <MultiActionToken uuid="UOYGIA0N8MX16YA31EKN" type="1">
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UKGGIA0N8MX16YA31EKN" uniqueName="void_db5select3.selectWhere(&quot;select r_ruleversion.ruleid,r_ruleversion.rulever,r_ruleversion.mtime,r_ruleversion.stateid,r_ruleversion.muser,r_ruleversion.mhint   from r_ruleversion   where r_ruleversion.rulever =  ?   and r_ruleversion.ruleid =  ?  and projverid= ? &quot;,new Object[&#93;{new Double( {arg1}),new Integer( {arg2}),new Integer( {arg3})})" valueType="" displayName="根据{arg1}{arg2}{arg3}执行指定标签规则包">
+        <ValueToken valueType="double" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <MemberToken elementUuid="UHLGIA0N8MX16YA31EKN" uniqueName="double_rulever" valueType="double" displayName="规则版本号">
+         </MemberToken>
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+        </ValueToken>
+        <ValueToken valueType="int" displayName="" argName="arg2" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <MemberToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+         </MemberToken>
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+        </ValueToken>
+        <ValueToken valueType="int" displayName="" argName="arg3" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <MemberToken elementUuid="UHTGIA0N8MX16YA31EKN" uniqueName="int_projverid" valueType="int" displayName="projverid">
+         </MemberToken>
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+        </ValueToken>
+        <ElementTextToken displayName="执行指定标签规则包" colorType="default" pos="0" elementUuid="" uniqueName="">
+        </ElementTextToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+     <MultiActionToken uuid="UOZGIA0N8MX16YA31EKN" type="3">
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHXGIA0N8MX16YA31EKN" uniqueName="boolean_neednew" valueType="" displayName="该版本规则包不存在">
+        </FieldToken>
+        <AssignJudgeToken type="0">
+        </AssignJudgeToken>
+        <ValueToken valueType="boolean" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <ConstantToken valueType="boolean" value="是">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+    </RuleToken>
+    <doc>
+    </doc>
+   </Rule>
+   <RuleSetToken uuid="UP0GIA0N8MX16YA31EKN">
+    <MultiConditionToken uuid="UP1GIA0N8MX16YA31EKN" type="0">
+     <ConditionToken uuid="UP2GIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UHTGIA0N8MX16YA31EKN" uniqueName="int_projverid" valueType="" displayName="projverid">
+      </MemberToken>
+      <NumberJudgeToken type="2">
+      </NumberJudgeToken>
+      <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <ConstantToken valueType="int" value="0">
+       </ConstantToken>
+      </ValueToken>
+     </ConditionToken>
+    </MultiConditionToken>
+   </RuleSetToken>
+   <doc>
+   </doc>
+  </RuleSet>
+  <RuleSet displayName="该版本规则包存在" uuid="UP3GIA0N8MX16YA31EKN" editType="3" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1293614509953" actived="true" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" supportCatch="false" editTable="false" exceptionType="1" errorMsg="" syn="false" checktype="0">
+   <Rule displayName="被锁定" uuid="UP4GIA0N8MX16YA31EKN" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1375612892188" modifyUser="192.168.135.136" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+    <RuleToken uuid="UP5GIA0N8MX16YA31EKN">
+     <MultiConditionToken uuid="UP6GIA0N8MX16YA31EKN" type="0">
+      <ConditionToken uuid="UP7GIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+       <LogicalJudgeToken type="1">
+       </LogicalJudgeToken>
+       <MemberToken elementUuid="UHPGIA0N8MX16YA31EKN" uniqueName="int_stateid" valueType="" displayName="规则版本的编辑状态">
+       </MemberToken>
+       <NumberJudgeToken type="3">
+       </NumberJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantSelectToken elementUuid="ULBGIA0N8MX16YA31EKN" uniqueName="int_4_编辑状态" valueType="int" displayName="测试通过">
+        </ConstantSelectToken>
+       </ValueToken>
+      </ConditionToken>
+     </MultiConditionToken>
+     <MultiActionToken uuid="UP8GIA0N8MX16YA31EKN" type="0">
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHLGIA0N8MX16YA31EKN" uniqueName="double_rulever" valueType="double" displayName="规则版本号">
+        </FieldToken>
+        <ValueToken valueType="double" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <TableFunctionToken elementUuid="U01HJY49CFO4DQT10003C" uniqueName="double_db5.executeDouble(&quot;select  max(rulever) from r_ruleversion where ruleid= ?  &quot;,new Object[&#93;{new Integer( {arg1})})" valueType="double" displayName="根据{arg1}执行最大版本号语句">
+          <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+           <NumberOperatorToken type="0">
+           </NumberOperatorToken>
+           <MemberToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+           </MemberToken>
+          </ValueToken>
+          <ElementTextToken displayName="执行最大版本号语句" colorType="default" pos="0" elementUuid="" uniqueName="">
+          </ElementTextToken>
+         </TableFunctionToken>
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+        </ValueToken>
+        <NumberAssignJudgeToken type="0">
+        </NumberAssignJudgeToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <MethodToken elementUuid="U02HJY49CFO4DQT10003C" uniqueName="addVer(boolean)" valueType="" displayName="递增版本号{arg1}">
+        <ValueToken valueType="boolean" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <ConstantToken valueType="boolean" value="false">
+         </ConstantToken>
+        </ValueToken>
+       </MethodToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHHGIA0N8MX16YA31EKN" uniqueName="boolean_newversion" valueType="" displayName="是否需要新建版本">
+        </FieldToken>
+        <AssignJudgeToken type="0">
+        </AssignJudgeToken>
+        <ValueToken valueType="boolean" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <ConstantToken valueType="boolean" value="true">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHGGIA0N8MX16YA31EKN" uniqueName="int_errortype" valueType="" displayName="错误提示类别">
+        </FieldToken>
+        <NumberAssignJudgeToken type="0">
+        </NumberAssignJudgeToken>
+        <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <ConstantToken valueType="int" value="1">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHFGIA0N8MX16YA31EKN" uniqueName="string_error" valueType="" displayName="错误提示信息">
+        </FieldToken>
+        <StringAssignJudgeToken type="1">
+        </StringAssignJudgeToken>
+        <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <ConstantToken valueType="string" value="该版本规则包已经提交申请，不能再被修改，是否创建新的版本！">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <ReturnToken returnType="2" displayName="退出规则包">
+       </ReturnToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+     <MultiActionToken uuid="UP9GIA0N8MX16YA31EKN" type="3">
+     </MultiActionToken>
+    </RuleToken>
+    <doc>
+    </doc>
+   </Rule>
+   <Rule displayName="服务器规则包比本地新" uuid="UPAGIA0N8MX16YA31EKN" exceptionType="2" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1293614509953" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+    <RuleToken uuid="UPBGIA0N8MX16YA31EKN">
+     <MultiConditionToken uuid="UPCGIA0N8MX16YA31EKN" type="0">
+      <ConditionToken uuid="UPDGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+       <LogicalJudgeToken type="1">
+       </LogicalJudgeToken>
+       <MemberToken elementUuid="UHOGIA0N8MX16YA31EKN" uniqueName="datetime_tt" valueType="" displayName="原规则包的修改时间">
+       </MemberToken>
+       <DateJudgeToken type="2">
+       </DateJudgeToken>
+       <ValueToken valueType="datetime" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UHIGIA0N8MX16YA31EKN" uniqueName="datetime_modifytime" valueType="datetime" displayName="规则包修改时间">
+        </MemberToken>
+       </ValueToken>
+      </ConditionToken>
+     </MultiConditionToken>
+     <MultiActionToken uuid="UPEGIA0N8MX16YA31EKN" type="0">
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHGGIA0N8MX16YA31EKN" uniqueName="int_errortype" valueType="" displayName="错误提示类别">
+        </FieldToken>
+        <NumberAssignJudgeToken type="0">
+        </NumberAssignJudgeToken>
+        <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <ConstantToken valueType="int" value="1">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHFGIA0N8MX16YA31EKN" uniqueName="string_error" valueType="" displayName="错误提示信息">
+        </FieldToken>
+        <StringAssignJudgeToken type="1">
+        </StringAssignJudgeToken>
+        <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <ConstantToken valueType="string" value="服务器上的规则包比您目前的规则包新，是否覆盖？\n">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+     <MultiActionToken uuid="UPFGIA0N8MX16YA31EKN" type="3">
+     </MultiActionToken>
+    </RuleToken>
+    <doc>
+    </doc>
+   </Rule>
+   <Rule displayName="规则没有被更新" uuid="UPGGIA0N8MX16YA31EKN" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1293614509953" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+    <RuleToken uuid="UPHGIA0N8MX16YA31EKN">
+     <MultiConditionToken uuid="UPIGIA0N8MX16YA31EKN" type="0">
+      <ConditionToken uuid="UPJGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+       <LogicalJudgeToken type="1">
+       </LogicalJudgeToken>
+       <MemberToken elementUuid="ULHGIA0N8MX16YA31EKN" uniqueName="isSameRules()" valueType="" displayName="规则没有被更新">
+       </MemberToken>
+       <BooleanJudgeToken type="0">
+       </BooleanJudgeToken>
+      </ConditionToken>
+     </MultiConditionToken>
+     <MultiActionToken uuid="UPKGIA0N8MX16YA31EKN" type="0">
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHGGIA0N8MX16YA31EKN" uniqueName="int_errortype" valueType="" displayName="错误提示类别">
+        </FieldToken>
+        <NumberAssignJudgeToken type="0">
+        </NumberAssignJudgeToken>
+        <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <ConstantToken valueType="int" value="1">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHFGIA0N8MX16YA31EKN" uniqueName="string_error" valueType="" displayName="错误提示信息">
+        </FieldToken>
+        <StringAssignJudgeToken type="1">
+        </StringAssignJudgeToken>
+        <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <ConstantToken valueType="string" value="本地规则包和服务器上规则包一致，是否还继续更新？">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <ReturnToken returnType="2" displayName="退出规则包">
+       </ReturnToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+     <MultiActionToken uuid="UPLGIA0N8MX16YA31EKN" type="3">
+     </MultiActionToken>
+    </RuleToken>
+    <doc>
+    </doc>
+   </Rule>
+   <RuleSetToken uuid="UPMGIA0N8MX16YA31EKN">
+    <MultiConditionToken uuid="UPNGIA0N8MX16YA31EKN" type="0">
+     <ConditionToken uuid="UPOGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UHXGIA0N8MX16YA31EKN" uniqueName="boolean_neednew" valueType="" displayName="该版本规则包不存在">
+      </MemberToken>
+      <BooleanJudgeToken type="1">
+      </BooleanJudgeToken>
+     </ConditionToken>
+    </MultiConditionToken>
+   </RuleSetToken>
+   <doc>
+   </doc>
+  </RuleSet>
+  <RuleSet displayName="该版本规则包不存在" uuid="U00HJY49CFO4DQT10003C" editType="3" startTime="0" endTime="0" createTime="1375612654750" modifyTime="1375612734031" actived="true" modifyUser="192.168.135.136" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" supportCatch="false" editTable="true" exceptionType="1" errorMsg="" syn="false" checktype="0">
+   <Rule displayName="递增版本号" uuid="U03HJY49CFO4DQT10003C" exceptionType="1" actived="true" errorMsg="" supportElse="true" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1375612728344" modifyTime="1375612753703" modifyUser="192.168.135.136" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+    <RuleToken uuid="U06HJY49CFO4DQT10003C">
+     <MultiConditionToken uuid="U07HJY49CFO4DQT10003C" type="0">
+      <ConditionToken uuid="U08HJY49CFO4DQT10003C" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+       <LogicalJudgeToken type="1">
+       </LogicalJudgeToken>
+       <MemberToken elementUuid="UHNGIA0N8MX16YA31EKN" uniqueName="int_editstate" valueType="" displayName="规则包编辑类型">
+       </MemberToken>
+       <NumberJudgeToken type="0">
+       </NumberJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantSelectToken elementUuid="UL6GIA0N8MX16YA31EKN" uniqueName="int_3_规则包状态" valueType="int" displayName="已发布">
+        </ConstantSelectToken>
+       </ValueToken>
+      </ConditionToken>
+     </MultiConditionToken>
+     <MultiActionToken uuid="U09HJY49CFO4DQT10003C" type="0">
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHLGIA0N8MX16YA31EKN" uniqueName="double_rulever" valueType="double" displayName="规则版本号">
+        </FieldToken>
+        <ValueToken valueType="double" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <TableFunctionToken elementUuid="U01HJY49CFO4DQT10003C" uniqueName="double_db5.executeDouble(&quot;select  max(rulever) from r_ruleversion where ruleid= ?  &quot;,new Object[&#93;{new Integer( {arg1})})" valueType="double" displayName="根据{arg1}执行最大版本号语句">
+          <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+           <NumberOperatorToken type="0">
+           </NumberOperatorToken>
+           <MemberToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+           </MemberToken>
+          </ValueToken>
+          <ElementTextToken displayName="执行最大版本号语句" colorType="default" pos="0" elementUuid="" uniqueName="">
+          </ElementTextToken>
+         </TableFunctionToken>
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+        </ValueToken>
+        <NumberAssignJudgeToken type="0">
+        </NumberAssignJudgeToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <MethodToken elementUuid="U02HJY49CFO4DQT10003C" uniqueName="addVer(boolean)" valueType="" displayName="递增版本号{arg1}">
+        <ValueToken valueType="boolean" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <ConstantToken valueType="boolean" value="true">
+         </ConstantToken>
+        </ValueToken>
+       </MethodToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+     <MultiActionToken uuid="U0AHJY49CFO4DQT10003C" type="3">
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHLGIA0N8MX16YA31EKN" uniqueName="double_rulever" valueType="double" displayName="规则版本号">
+        </FieldToken>
+        <ValueToken valueType="double" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <TableFunctionToken elementUuid="U01HJY49CFO4DQT10003C" uniqueName="double_db5.executeDouble(&quot;select  max(rulever) from r_ruleversion where ruleid= ?  &quot;,new Object[&#93;{new Integer( {arg1})})" valueType="double" displayName="根据{arg1}执行最大版本号语句">
+          <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+           <NumberOperatorToken type="0">
+           </NumberOperatorToken>
+           <MemberToken elementUuid="UHKGIA0N8MX16YA31EKN" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+           </MemberToken>
+          </ValueToken>
+          <ElementTextToken displayName="执行最大版本号语句" colorType="default" pos="0" elementUuid="" uniqueName="">
+          </ElementTextToken>
+         </TableFunctionToken>
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+        </ValueToken>
+        <NumberAssignJudgeToken type="0">
+        </NumberAssignJudgeToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <MethodToken elementUuid="U02HJY49CFO4DQT10003C" uniqueName="addVer(boolean)" valueType="" displayName="递增版本号{arg1}">
+        <ValueToken valueType="boolean" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <ConstantToken valueType="boolean" value="false">
+         </ConstantToken>
+        </ValueToken>
+       </MethodToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+    </RuleToken>
+    <doc>
+    </doc>
+   </Rule>
+   <Rule displayName="未被捡出" uuid="UPPGIA0N8MX16YA31EKN" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1293614509953" modifyTime="1375612686938" modifyUser="192.168.135.136" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+    <RuleToken uuid="UPQGIA0N8MX16YA31EKN">
+     <MultiConditionToken uuid="UPRGIA0N8MX16YA31EKN" type="0">
+     </MultiConditionToken>
+     <MultiActionToken uuid="UPTGIA0N8MX16YA31EKN" type="0">
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHHGIA0N8MX16YA31EKN" uniqueName="boolean_newversion" valueType="" displayName="是否需要新建版本">
+        </FieldToken>
+        <AssignJudgeToken type="0">
+        </AssignJudgeToken>
+        <ValueToken valueType="boolean" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <ConstantToken valueType="boolean" value="true">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHGGIA0N8MX16YA31EKN" uniqueName="int_errortype" valueType="" displayName="错误提示类别">
+        </FieldToken>
+        <NumberAssignJudgeToken type="0">
+        </NumberAssignJudgeToken>
+        <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <ConstantToken valueType="int" value="1">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UHFGIA0N8MX16YA31EKN" uniqueName="string_error" valueType="" displayName="错误提示信息">
+        </FieldToken>
+        <StringAssignJudgeToken type="1">
+        </StringAssignJudgeToken>
+        <ValueToken valueType="string" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <ConstantToken valueType="string" value="该版本规则包还不存在，是否递增版本进行检入？">
+         </ConstantToken>
+        </ValueToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <ReturnToken returnType="2" displayName="退出规则包">
+       </ReturnToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+     <MultiActionToken uuid="UPUGIA0N8MX16YA31EKN" type="3">
+     </MultiActionToken>
+    </RuleToken>
+    <doc>
+    </doc>
+   </Rule>
+   <RuleSetToken uuid="U0BHJY49CFO4DQT10003C">
+    <MultiConditionToken uuid="U0CHJY49CFO4DQT10003C" type="0">
+     <ConditionToken uuid="U0DHJY49CFO4DQT10003C" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UHXGIA0N8MX16YA31EKN" uniqueName="boolean_neednew" valueType="" displayName="该版本规则包不存在">
+      </MemberToken>
+      <BooleanJudgeToken type="0">
+      </BooleanJudgeToken>
+     </ConditionToken>
+    </MultiConditionToken>
+   </RuleSetToken>
+   <doc>
+   </doc>
+  </RuleSet>
+  <RuleSetToken uuid="UPVGIA0N8MX16YA31EKN">
+   <MultiConditionToken uuid="UPWGIA0N8MX16YA31EKN" type="0">
+    <ConditionToken uuid="UPXGIA0N8MX16YA31EKN" leftParenthesisNumber="0" rightParenthesisNumber="0" opeType="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UHHGIA0N8MX16YA31EKN" uniqueName="boolean_newversion" valueType="" displayName="是否需要新建版本">
+     </MemberToken>
+     <BooleanJudgeToken type="1">
+     </BooleanJudgeToken>
+    </ConditionToken>
+   </MultiConditionToken>
+  </RuleSetToken>
+  <doc>
+  </doc>
+ </RuleSet>
+ <RuleLogConditionToken uuid="UPYGIA0N8MX16YA31EKN" type="3">
+ </RuleLogConditionToken>
+ <Envionment displayName="对象库" uuid="UPZGIA0N8MX16YA31EKN" modifyTime="1375612710063" functionNum="3">
+  <ValueLibrary displayName="传入数据" modifyTime="1366528348598" uuid="UQ0GIA0N8MX16YA31EKN">
+   <MappingVariable displayName="操作用户登录名" uuid="UHDGIA0N8MX16YA31EKN" variableName="loginname" visible="true" groupName="用户信息" valueType="string" inout="1" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="用户密码" uuid="UHEGIA0N8MX16YA31EKN" variableName="passwd" visible="true" groupName="用户信息" valueType="string" inout="1" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="错误提示信息" uuid="UHFGIA0N8MX16YA31EKN" variableName="error" visible="true" groupName="操作信息" valueType="string" inout="2" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="错误提示类别" uuid="UHGGIA0N8MX16YA31EKN" variableName="errortype" visible="true" groupName="操作信息" valueType="int" inout="2" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="是否需要新建版本" uuid="UHHGIA0N8MX16YA31EKN" variableName="newversion" visible="true" groupName="操作信息" valueType="boolean" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则包修改时间" uuid="UHIGIA0N8MX16YA31EKN" variableName="modifytime" visible="true" groupName="当前规则包信息" valueType="datetime" inout="1" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则包执行名" uuid="UHJGIA0N8MX16YA31EKN" variableName="rulename" visible="true" groupName="当前规则包信息" valueType="string" inout="1" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则编号" uuid="UHKGIA0N8MX16YA31EKN" variableName="ruleid" visible="true" groupName="当前规则包信息" valueType="int" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则版本号" uuid="UHLGIA0N8MX16YA31EKN" variableName="rulever" visible="true" groupName="当前规则包信息" valueType="double" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="ruletypeid" uuid="UHMGIA0N8MX16YA31EKN" variableName="ruletypeid" visible="true" groupName="原规则包" valueType="int" inout="2" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则包编辑类型" uuid="UHNGIA0N8MX16YA31EKN" variableName="editstate" visible="true" groupName="原规则包" valueType="int" inout="2" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="原规则包的修改时间" uuid="UHOGIA0N8MX16YA31EKN" variableName="tt" visible="true" groupName="原规则包" valueType="datetime" inout="2" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则版本的编辑状态" uuid="UHPGIA0N8MX16YA31EKN" variableName="stateid" visible="true" groupName="原规则包" valueType="int" inout="2" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="userid" uuid="UHQGIA0N8MX16YA31EKN" variableName="userid" visible="true" groupName="p" valueType="int" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="mhint" uuid="UHRGIA0N8MX16YA31EKN" variableName="mhint" visible="true" groupName="p" valueType="string" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="projver" uuid="UHSGIA0N8MX16YA31EKN" variableName="projver" visible="true" groupName="p" valueType="string" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="projverid" uuid="UHTGIA0N8MX16YA31EKN" variableName="projverid" visible="true" groupName="p" valueType="int" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则包工程名" uuid="UHUGIA0N8MX16YA31EKN" variableName="ruleproject" visible="true" groupName="规则包信息" valueType="string" inout="1" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="lockcheckout" uuid="U0PHFRUF0Y5HQ5EG3FLP4" variableName="lockcheckout" visible="true" groupName="p" valueType="boolean" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="lockstate" uuid="U0QHFRUF0Y5HQ5EG3FLP4" variableName="lockstate" visible="true" groupName="p" valueType="int" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1293614509953" uuid="UQ1GIA0N8MX16YA31EKN">
+   <TempVariable displayName="临时规则编号" uuid="UHVGIA0N8MX16YA31EKN" variableName="oldruleid" visible="true" groupName="临时数据" valueType="int" loged="false">
+   </TempVariable>
+   <TempVariable displayName="临时规则执行名" uuid="UHWGIA0N8MX16YA31EKN" variableName="exerule" visible="true" groupName="临时数据" valueType="string" loged="false">
+   </TempVariable>
+   <TempVariable displayName="该版本规则包不存在" uuid="UHXGIA0N8MX16YA31EKN" variableName="neednew" visible="true" groupName="临时数据" valueType="boolean" loged="false">
+   </TempVariable>
+   <TempVariable displayName="oldproject" uuid="UHYGIA0N8MX16YA31EKN" variableName="oldproject" visible="true" groupName="p" valueType="string" loged="false">
+   </TempVariable>
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1293614509953" uuid="UQ2GIA0N8MX16YA31EKN">
+   <FunctionClass displayName="java.util.Date" uuid="UHZGIA0N8MX16YA31EKN" visible="false" className="java.util.Date" valueType="java.util.Date" dir="" groupName="" shortClassName="Date">
+    <BusinessObjectConstructor displayName="当前时间" uuid="UI0GIA0N8MX16YA31EKN" memberName="Date()" visible="true" valueType="java.util.Date" groupName="" shortMemberName="Date">
+    </BusinessObjectConstructor>
+   </FunctionClass>
+   <FunctionClass displayName="com.flagleader.util.MD5" uuid="UI1GIA0N8MX16YA31EKN" visible="false" className="com.flagleader.util.MD5" valueType="com.flagleader.util.MD5" dir="" groupName="" shortClassName="MD5">
+    <BusinessObjectMethod displayName="加密({arg1})" uuid="UI2GIA0N8MX16YA31EKN" memberName="getMD5ofStr(java.lang.String)" visible="true" valueType="java.lang.String" groupName="" shortMemberName="getMD5ofStr">
+     <MethodParam typeName="java.lang.String" paramName="arg1" defaultValue=""/>
+    </BusinessObjectMethod>
+   </FunctionClass>
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1293614509953" uuid="UQ3GIA0N8MX16YA31EKN">
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <DBModel displayName="rules" uuid="ULGGIA0N8MX16YA31EKN" url="jdbc:mysql://localhost/rules" driver="com.mysql.jdbc.Driver" userName="root" encryptedPasswd="Xs9UzDAgGfLhcJn2WMXwew==" datasourceName="rules" catalogName="" schemaName="" connType="0" varName="db5" modifyTime="1375612699016" dbFilePath="D:\Personal\Desktop\rules.dbs" vml="0" transationlevel="0">
+   <selectTable uuid="UI3GIA0N8MX16YA31EKN" displayName="指定规则包" sqlSelect="select r_ruleversion.ruleid,r_ruleversion.rulever,r_ruleversion.mtime,r_ruleversion.stateid,r_ruleversion.muser,r_ruleversion.mhint&#13;&#10; from r_ruleversion&#13;&#10; where r_ruleversion.rulever = {double}  and r_ruleversion.ruleid = {int} " englishName="select" resultType="0" afterCommit="true" modifyTime="1293614509953" vml="0">
+    <TableFunction displayName="根据{arg1}{arg2}执行指定规则包" uuid="UI4GIA0N8MX16YA31EKN" valueName="selectWhere" visible="true" valueType="void" variableName="selectWhere(&quot;select r_ruleversion.ruleid,r_ruleversion.rulever,r_ruleversion.mtime,r_ruleversion.stateid,r_ruleversion.muser,r_ruleversion.mhint   from r_ruleversion   where r_ruleversion.rulever =  ?   and r_ruleversion.ruleid =  ?  &quot;,new Object[&#93;{new Double( {arg1}),new Integer( {arg2})})" varPre="" groupName="rules">
+     <MethodParam typeName="double" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取指定规则包当前查询结果的下一条记录" uuid="UI5GIA0N8MX16YA31EKN" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="指定规则包当前查询结果的所有记录" uuid="UI6GIA0N8MX16YA31EKN" valueName="getListResult" visible="true" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置指定规则包的排序字段为{arg1}，方向为{arg2}" uuid="UI7GIA0N8MX16YA31EKN" valueName="setOrderField" visible="false" valueType="void" variableName="setOrderField({arg1},{arg2})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="boolean" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="设置指定规则包分页页码为{arg1}，每页数为{arg2}" uuid="UI8GIA0N8MX16YA31EKN" valueName="setPage" visible="false" valueType="void" variableName="setPage({arg1},{arg2})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取符合指定规则包查询条件的总记录数" uuid="UI9GIA0N8MX16YA31EKN" valueName="getCount" visible="false" valueType="int" variableName="getCount()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="指定规则包当前查询结果的记录数" uuid="UIAGIA0N8MX16YA31EKN" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定规则包当前查询结果的第一条记录" uuid="UIBGIA0N8MX16YA31EKN" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定规则包当前查询结果的上一条记录" uuid="UICGIA0N8MX16YA31EKN" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定规则包当前查询结果的最后一条记录" uuid="UIDGIA0N8MX16YA31EKN" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得指定规则包当前记录在查询结果中的位置" uuid="UIEGIA0N8MX16YA31EKN" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定规则包当前查询结果的第{arg1}条记录" uuid="UIFGIA0N8MX16YA31EKN" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取指定规则包的ruleid字段的值" uuid="UIGGIA0N8MX16YA31EKN" valueName="getRuleid" visible="false" valueType="int" variableName="getInteger(0)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定规则包的rulever字段的值" uuid="UIHGIA0N8MX16YA31EKN" valueName="getRulever" visible="false" valueType="double" variableName="getDouble(1)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定规则包的mtime字段的值" uuid="UIIGIA0N8MX16YA31EKN" valueName="getMtime" visible="false" valueType="datetime" variableName="getTimestamp(2)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定规则包的stateid字段的值" uuid="UIJGIA0N8MX16YA31EKN" valueName="getStateid" visible="false" valueType="int" variableName="getInteger(3)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定规则包的muser字段的值" uuid="UIKGIA0N8MX16YA31EKN" valueName="getMuser" visible="false" valueType="string" variableName="getString(4)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定规则包的mhint字段的值" uuid="UILGIA0N8MX16YA31EKN" valueName="getMhint" visible="false" valueType="string" variableName="getString(5)" varPre="" groupName="rules">
+    </TableFunction>
+    <fieldModel displayName="ruleid" uuid="UIMGIA0N8MX16YA31EKN" fieldName="ruleid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="rulever" uuid="UINGIA0N8MX16YA31EKN" fieldName="rulever" fieldType="DOUBLE" valueType="double" classType="java.lang.Double" len="22" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="true" primaryKey="false" friendKey="false" iType="8" defaultType="double">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="mtime" uuid="UIOGIA0N8MX16YA31EKN" fieldName="mtime" fieldType="DATETIME" valueType="datetime" classType="java.sql.Timestamp" len="19" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="93" defaultType="datetime">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="stateid" uuid="UIPGIA0N8MX16YA31EKN" fieldName="stateid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="muser" uuid="UIQGIA0N8MX16YA31EKN" fieldName="muser" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="mhint" uuid="UIRGIA0N8MX16YA31EKN" fieldName="mhint" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="200" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <doc>
+    </doc>
+   </selectTable>
+   <selectTable uuid="UISGIA0N8MX16YA31EKN" displayName="查询规则" sqlSelect="select ruleid,editstate,loginname,ruletypeid,ruleproject,r_rule.stateid as lockstate&#13;&#10;from r_rule &#13;&#10;where r_rule.exerule = {string}  and r_rule.ruleproject = {string}" englishName="select1" resultType="0" afterCommit="true" modifyTime="1366530949504" vml="0">
+    <TableFunction displayName="根据{arg1}{arg2}执行查询规则" uuid="UITGIA0N8MX16YA31EKN" valueName="selectWhere" visible="true" valueType="void" variableName="selectWhere(&quot;select ruleid,editstate,loginname,ruletypeid,ruleproject,r_rule.stateid as lockstate  from r_rule   where r_rule.exerule =  ?   and r_rule.ruleproject =  ? &quot;,new Object[&#93;{ {arg1}, {arg2}})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="string" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取查询规则当前查询结果的下一条记录" uuid="UIUGIA0N8MX16YA31EKN" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="查询规则当前查询结果的所有记录" uuid="UIVGIA0N8MX16YA31EKN" valueName="getListResult" visible="true" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置查询规则的排序字段为{arg1}，方向为{arg2}" uuid="UIWGIA0N8MX16YA31EKN" valueName="setOrderField" visible="false" valueType="void" variableName="setOrderField({arg1},{arg2})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="boolean" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="设置查询规则分页页码为{arg1}，每页数为{arg2}" uuid="UIXGIA0N8MX16YA31EKN" valueName="setPage" visible="false" valueType="void" variableName="setPage({arg1},{arg2})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取符合查询规则查询条件的总记录数" uuid="UIYGIA0N8MX16YA31EKN" valueName="getCount" visible="false" valueType="int" variableName="getCount()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="查询规则当前查询结果的记录数" uuid="UIZGIA0N8MX16YA31EKN" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取查询规则当前查询结果的第一条记录" uuid="UJ0GIA0N8MX16YA31EKN" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取查询规则当前查询结果的上一条记录" uuid="UJ1GIA0N8MX16YA31EKN" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取查询规则当前查询结果的最后一条记录" uuid="UJ2GIA0N8MX16YA31EKN" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得查询规则当前记录在查询结果中的位置" uuid="UJ3GIA0N8MX16YA31EKN" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取查询规则当前查询结果的第{arg1}条记录" uuid="UJ4GIA0N8MX16YA31EKN" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取查询规则的ruleid字段的值" uuid="UJ5GIA0N8MX16YA31EKN" valueName="getRuleid" visible="false" valueType="int" variableName="getInteger(0)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取查询规则的editstate字段的值" uuid="UJ6GIA0N8MX16YA31EKN" valueName="getEditstate" visible="false" valueType="int" variableName="getInteger(1)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取查询规则的loginname字段的值" uuid="UJ7GIA0N8MX16YA31EKN" valueName="getLoginname" visible="false" valueType="string" variableName="getString(2)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取查询规则的ruletypeid字段的值" uuid="UJ8GIA0N8MX16YA31EKN" valueName="getRuletypeid" visible="false" valueType="int" variableName="getInteger(3)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取查询规则的ruleproject字段的值" uuid="UJEGIA0N8MX16YA31EKN" valueName="getRuleproject" visible="false" valueType="string" variableName="getString(4)" varPre="" groupName="取值">
+    </TableFunction>
+    <fieldModel displayName="ruleid" uuid="UJ9GIA0N8MX16YA31EKN" fieldName="ruleid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="true" autoIncrement="true" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="editstate" uuid="UJAGIA0N8MX16YA31EKN" fieldName="editstate" fieldType="SMALLINT UNSIGNED" valueType="int" classType="java.lang.Integer" len="5" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="5" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="loginname" uuid="UJBGIA0N8MX16YA31EKN" fieldName="loginname" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="ruletypeid" uuid="UJCGIA0N8MX16YA31EKN" fieldName="ruletypeid" fieldType="SMALLINT UNSIGNED" valueType="int" classType="java.lang.Integer" len="5" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="5" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="ruleproject" uuid="UJDGIA0N8MX16YA31EKN" fieldName="ruleproject" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="40" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="lockstate" uuid="U1AHFRUF0Y5HQ5EG3FLP4" fieldName="lockstate" fieldType="SMALLINT UNSIGNED" valueType="int" classType="java.lang.Integer" len="5" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="5" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <TableFunction displayName="取查询规则的lockstate字段的值" uuid="U1BHFRUF0Y5HQ5EG3FLP4" valueName="getLockstate" visible="false" valueType="int" variableName="getInteger(5)" varPre="" groupName="取值">
+    </TableFunction>
+    <doc>
+    </doc>
+   </selectTable>
+   <selectTable uuid="UJFGIA0N8MX16YA31EKN" displayName="主规则表信息" sqlSelect="select ruleid,editstate,ruletypeid,exerule,ruleproject,r_rule.stateid as lockstate&#13;&#10;from r_rule &#13;&#10;where r_rule.ruleid = {int} " englishName="select2" resultType="0" afterCommit="true" modifyTime="1366529448786" vml="0">
+    <TableFunction displayName="根据{arg1}执行主规则表信息" uuid="UJGGIA0N8MX16YA31EKN" valueName="selectWhere" visible="true" valueType="void" variableName="selectWhere(&quot;select ruleid,editstate,ruletypeid,exerule,ruleproject,r_rule.stateid as lockstate  from r_rule   where r_rule.ruleid =  ?  &quot;,new Object[&#93;{new Integer( {arg1})})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取主规则表信息当前查询结果的下一条记录" uuid="UJHGIA0N8MX16YA31EKN" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="主规则表信息当前查询结果的所有记录" uuid="UJIGIA0N8MX16YA31EKN" valueName="getListResult" visible="true" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置主规则表信息的排序字段为{arg1}，方向为{arg2}" uuid="UJJGIA0N8MX16YA31EKN" valueName="setOrderField" visible="false" valueType="void" variableName="setOrderField({arg1},{arg2})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="boolean" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="设置主规则表信息分页页码为{arg1}，每页数为{arg2}" uuid="UJKGIA0N8MX16YA31EKN" valueName="setPage" visible="false" valueType="void" variableName="setPage({arg1},{arg2})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取符合主规则表信息查询条件的总记录数" uuid="UJLGIA0N8MX16YA31EKN" valueName="getCount" visible="false" valueType="int" variableName="getCount()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="主规则表信息当前查询结果的记录数" uuid="UJMGIA0N8MX16YA31EKN" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取主规则表信息当前查询结果的第一条记录" uuid="UJNGIA0N8MX16YA31EKN" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取主规则表信息当前查询结果的上一条记录" uuid="UJOGIA0N8MX16YA31EKN" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取主规则表信息当前查询结果的最后一条记录" uuid="UJPGIA0N8MX16YA31EKN" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得主规则表信息当前记录在查询结果中的位置" uuid="UJQGIA0N8MX16YA31EKN" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取主规则表信息当前查询结果的第{arg1}条记录" uuid="UJRGIA0N8MX16YA31EKN" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取主规则表信息的ruleid字段的值" uuid="UJWGIA0N8MX16YA31EKN" valueName="getRuleid" visible="false" valueType="int" variableName="getInteger(0)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取主规则表信息的editstate字段的值" uuid="UJXGIA0N8MX16YA31EKN" valueName="getEditstate" visible="false" valueType="int" variableName="getInteger(1)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取主规则表信息的ruletypeid字段的值" uuid="UJYGIA0N8MX16YA31EKN" valueName="getRuletypeid" visible="false" valueType="int" variableName="getInteger(2)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取主规则表信息的exerule字段的值" uuid="UJZGIA0N8MX16YA31EKN" valueName="getExerule" visible="false" valueType="string" variableName="getString(3)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取主规则表信息的lockstate字段的值" uuid="U0WHFRUF0Y5HQ5EG3FLP4" valueName="getLockstate" visible="false" valueType="int" variableName="getInteger(5)" varPre="" groupName="取值">
+    </TableFunction>
+    <fieldModel displayName="ruleid" uuid="UJSGIA0N8MX16YA31EKN" fieldName="ruleid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="false" autoIncrement="true" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="editstate" uuid="UJTGIA0N8MX16YA31EKN" fieldName="editstate" fieldType="SMALLINT UNSIGNED" valueType="int" classType="java.lang.Integer" len="5" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="5" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="ruletypeid" uuid="UJUGIA0N8MX16YA31EKN" fieldName="ruletypeid" fieldType="SMALLINT UNSIGNED" valueType="int" classType="java.lang.Integer" len="5" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="5" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="exerule" uuid="UJVGIA0N8MX16YA31EKN" fieldName="exerule" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="90" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="ruleproject" uuid="U0XHFRUF0Y5HQ5EG3FLP4" fieldName="ruleproject" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="40" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="lockstate" uuid="U0VHFRUF0Y5HQ5EG3FLP4" fieldName="lockstate" fieldType="SMALLINT UNSIGNED" valueType="int" classType="java.lang.Integer" len="5" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="5" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <TableFunction displayName="取主规则表信息的ruleproject字段的值" uuid="U0YHFRUF0Y5HQ5EG3FLP4" valueName="getRuleproject" visible="false" valueType="string" variableName="getString(4)" varPre="" groupName="取值">
+    </TableFunction>
+    <doc>
+    </doc>
+   </selectTable>
+   <selectTable uuid="UK0GIA0N8MX16YA31EKN" displayName="判断规则用户权限" sqlSelect="select rrl.userid&#13;&#10;from r_ruleuser rrl&#13;&#10;where rrl.userid={int} and rrl.ruleid={int}" englishName="select4" resultType="0" afterCommit="true" modifyTime="1293614509953" vml="0">
+    <TableFunction displayName="根据{arg1}{arg2}执行判断规则用户权限" uuid="UK1GIA0N8MX16YA31EKN" valueName="selectWhere" visible="true" valueType="void" variableName="selectWhere(&quot;select rrl.userid  from r_ruleuser rrl  where rrl.userid= ?  and rrl.ruleid= ? &quot;,new Object[&#93;{new Integer( {arg1}),new Integer( {arg2})})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取判断规则用户权限当前查询结果的下一条记录" uuid="UK2GIA0N8MX16YA31EKN" valueName="next" visible="true" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="判断规则用户权限当前查询结果的所有记录" uuid="UK3GIA0N8MX16YA31EKN" valueName="getListResult" visible="false" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置判断规则用户权限的排序字段为{arg1}，方向为{arg2}" uuid="UK4GIA0N8MX16YA31EKN" valueName="setOrderField" visible="false" valueType="void" variableName="setOrderField({arg1},{arg2})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="boolean" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="设置判断规则用户权限分页页码为{arg1}，每页数为{arg2}" uuid="UK5GIA0N8MX16YA31EKN" valueName="setPage" visible="false" valueType="void" variableName="setPage({arg1},{arg2})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取符合判断规则用户权限查询条件的总记录数" uuid="UK6GIA0N8MX16YA31EKN" valueName="getCount" visible="false" valueType="int" variableName="getCount()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="判断规则用户权限当前查询结果的记录数" uuid="UK7GIA0N8MX16YA31EKN" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取判断规则用户权限当前查询结果的第一条记录" uuid="UK8GIA0N8MX16YA31EKN" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取判断规则用户权限当前查询结果的上一条记录" uuid="UK9GIA0N8MX16YA31EKN" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取判断规则用户权限当前查询结果的最后一条记录" uuid="UKAGIA0N8MX16YA31EKN" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得判断规则用户权限当前记录在查询结果中的位置" uuid="UKBGIA0N8MX16YA31EKN" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取判断规则用户权限当前查询结果的第{arg1}条记录" uuid="UKCGIA0N8MX16YA31EKN" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <fieldModel displayName="userid" uuid="UKDGIA0N8MX16YA31EKN" fieldName="userid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <TableFunction displayName="取判断规则用户权限的userid字段的值" uuid="UKEGIA0N8MX16YA31EKN" valueName="getUserid" visible="false" valueType="int" variableName="getInteger(0)" varPre="" groupName="取值">
+    </TableFunction>
+    <doc>
+    </doc>
+   </selectTable>
+   <selectTable uuid="UKFGIA0N8MX16YA31EKN" displayName="指定标签规则包" sqlSelect="select r_ruleversion.ruleid,r_ruleversion.rulever,r_ruleversion.mtime,r_ruleversion.stateid,r_ruleversion.muser,r_ruleversion.mhint&#13;&#10; from r_ruleversion&#13;&#10; where r_ruleversion.rulever = {double}  and r_ruleversion.ruleid = {int} and projverid={int}" englishName="select3" resultType="0" afterCommit="true" modifyTime="1293614509953" vml="0">
+    <TableFunction displayName="根据{arg1}{arg2}{arg3}执行指定标签规则包" uuid="UKGGIA0N8MX16YA31EKN" valueName="selectWhere" visible="true" valueType="void" variableName="selectWhere(&quot;select r_ruleversion.ruleid,r_ruleversion.rulever,r_ruleversion.mtime,r_ruleversion.stateid,r_ruleversion.muser,r_ruleversion.mhint   from r_ruleversion   where r_ruleversion.rulever =  ?   and r_ruleversion.ruleid =  ?  and projverid= ? &quot;,new Object[&#93;{new Double( {arg1}),new Integer( {arg2}),new Integer( {arg3})})" varPre="" groupName="rules">
+     <MethodParam typeName="double" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg3" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取指定标签规则包当前查询结果的下一条记录" uuid="UKHGIA0N8MX16YA31EKN" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="指定标签规则包当前查询结果的所有记录" uuid="UKIGIA0N8MX16YA31EKN" valueName="getListResult" visible="true" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置指定标签规则包的排序字段为{arg1}，方向为{arg2}" uuid="UKJGIA0N8MX16YA31EKN" valueName="setOrderField" visible="false" valueType="void" variableName="setOrderField({arg1},{arg2})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="boolean" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="设置指定标签规则包分页页码为{arg1}，每页数为{arg2}" uuid="UKKGIA0N8MX16YA31EKN" valueName="setPage" visible="false" valueType="void" variableName="setPage({arg1},{arg2})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取符合指定标签规则包查询条件的总记录数" uuid="UKLGIA0N8MX16YA31EKN" valueName="getCount" visible="false" valueType="int" variableName="getCount()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="指定标签规则包当前查询结果的记录数" uuid="UKMGIA0N8MX16YA31EKN" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定标签规则包当前查询结果的第一条记录" uuid="UKNGIA0N8MX16YA31EKN" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定标签规则包当前查询结果的上一条记录" uuid="UKOGIA0N8MX16YA31EKN" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定标签规则包当前查询结果的最后一条记录" uuid="UKPGIA0N8MX16YA31EKN" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得指定标签规则包当前记录在查询结果中的位置" uuid="UKQGIA0N8MX16YA31EKN" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定标签规则包当前查询结果的第{arg1}条记录" uuid="UKRGIA0N8MX16YA31EKN" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取指定标签规则包的ruleid字段的值" uuid="UKSGIA0N8MX16YA31EKN" valueName="getRuleid" visible="false" valueType="int" variableName="getInteger(0)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定标签规则包的rulever字段的值" uuid="UKTGIA0N8MX16YA31EKN" valueName="getRulever" visible="false" valueType="double" variableName="getDouble(1)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定标签规则包的mtime字段的值" uuid="UKUGIA0N8MX16YA31EKN" valueName="getMtime" visible="false" valueType="datetime" variableName="getTimestamp(2)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定标签规则包的stateid字段的值" uuid="UKVGIA0N8MX16YA31EKN" valueName="getStateid" visible="false" valueType="int" variableName="getInteger(3)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定标签规则包的muser字段的值" uuid="UKWGIA0N8MX16YA31EKN" valueName="getMuser" visible="false" valueType="string" variableName="getString(4)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取指定标签规则包的mhint字段的值" uuid="UKXGIA0N8MX16YA31EKN" valueName="getMhint" visible="false" valueType="string" variableName="getString(5)" varPre="" groupName="rules">
+    </TableFunction>
+    <fieldModel displayName="ruleid" uuid="UKYGIA0N8MX16YA31EKN" fieldName="ruleid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="rulever" uuid="UKZGIA0N8MX16YA31EKN" fieldName="rulever" fieldType="DOUBLE" valueType="double" classType="java.lang.Double" len="22" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="true" primaryKey="false" friendKey="false" iType="8" defaultType="double">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="mtime" uuid="UL0GIA0N8MX16YA31EKN" fieldName="mtime" fieldType="DATETIME" valueType="datetime" classType="java.sql.Timestamp" len="19" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="93" defaultType="datetime">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="stateid" uuid="UL1GIA0N8MX16YA31EKN" fieldName="stateid" fieldType="SMALLINT UNSIGNED" valueType="int" classType="java.lang.Integer" len="5" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="5" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="muser" uuid="UL2GIA0N8MX16YA31EKN" fieldName="muser" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="mhint" uuid="UL3GIA0N8MX16YA31EKN" fieldName="mhint" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="200" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <doc>
+    </doc>
+   </selectTable>
+   <CustomSql uuid="U04HJY49CFO4DQT10003C" displayName="最大版本号" sqlCustom="select  max(rulever) from r_ruleversion where ruleid={int} " valueType="double" modifyTime="1375612698906" vml="0">
+    <TableFunction displayName="根据{arg1}执行最大版本号语句" uuid="U01HJY49CFO4DQT10003C" valueName="execute(&quot;select  max(rulever) from r_ruleversion where ruleid= ?  &quot;)" visible="true" valueType="double" variableName="executeDouble(&quot;select  max(rulever) from r_ruleversion where ruleid= ?  &quot;,new Object[&#93;{new Integer( {arg1})})" varPre="" groupName="">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <doc>
+    </doc>
+   </CustomSql>
+   <EnumTable uuid="UQ4GIA0N8MX16YA31EKN" displayName="规则包状态" sqlSelect="" enumType="string" modifyTime="1293614509953" vml="0">
+    <ConstantEnum displayName="可修改" uuid="UL4GIA0N8MX16YA31EKN" value="1" visible="true" groupName="规则包状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="被锁定" uuid="UL5GIA0N8MX16YA31EKN" value="2" visible="true" groupName="规则包状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="已发布" uuid="UL6GIA0N8MX16YA31EKN" value="3" visible="true" groupName="规则包状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="已作废" uuid="UL7GIA0N8MX16YA31EKN" value="4" visible="true" groupName="规则包状态" valueType="int">
+    </ConstantEnum>
+    <doc>
+    </doc>
+   </EnumTable>
+   <EnumTable uuid="UQ5GIA0N8MX16YA31EKN" displayName="编辑状态" sqlSelect="" enumType="string" modifyTime="1293614509953" vml="0">
+    <ConstantEnum displayName="新建" uuid="UL8GIA0N8MX16YA31EKN" value="1" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="正在修改" uuid="UL9GIA0N8MX16YA31EKN" value="2" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="修改完毕" uuid="ULAGIA0N8MX16YA31EKN" value="3" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="测试通过" uuid="ULBGIA0N8MX16YA31EKN" value="4" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="审核通过" uuid="ULCGIA0N8MX16YA31EKN" value="5" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="审核不通过" uuid="ULDGIA0N8MX16YA31EKN" value="6" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="已经发布" uuid="ULEGIA0N8MX16YA31EKN" value="7" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="发布不通过" uuid="ULFGIA0N8MX16YA31EKN" value="8" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <doc>
+    </doc>
+   </EnumTable>
+   <doc>
+   </doc>
+  </DBModel>
+  <CustomFunction displayName="规则没有被更新" uuid="UQ6GIA0N8MX16YA31EKN" modifyTime="1293614509953">
+   <FunctionMember uuid="ULHGIA0N8MX16YA31EKN" displayName="规则没有被更新" visible="true">
+    <txt>
+public boolean isSameRules() {&#13;&#10;&#9;if ( tt == null || modifytime == null ) return false ;&#10;&#9;if (modifytime.getTime()/1000 == tt.getTime()/1000 )&#13;&#10;&#9;&#9;return true ;&#13;&#10;&#9;return false ;&#10;}    </txt>
+   </FunctionMember>
+  </CustomFunction>
+  <CustomFunction displayName="递增版本号{arg1}" uuid="U05HJY49CFO4DQT10003C" modifyTime="1375612709969">
+   <FunctionMember uuid="U02HJY49CFO4DQT10003C" displayName="递增版本号{arg1}" visible="true">
+    <txt>
+public void addVer(boolean fabu) {&#13;&#10;   if ( rulever == 0 ){&#13;&#10;&#9;&#9;rulever = 1 ;&#13;&#10;&#9;} else if ( fabu ) {&#13;&#10;&#9;&#9;rulever = (int)rulever+1 ;&#13;&#10;&#9;} else {&#13;&#10;&#9;&#9;rulever = rulever + 0.01 ;&#13;&#10;&#9;}&#10;}    </txt>
+   </FunctionMember>
+  </CustomFunction>
+  <doc>
+  </doc>
+ </Envionment>
+</RulePackage>

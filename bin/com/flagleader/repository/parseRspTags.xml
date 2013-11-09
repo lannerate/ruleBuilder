@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<digester-rules>
+
+   <pattern value="RspTags">
+   <object-create-rule classname="com.flagleader.repository.export.RspTags" />
+   </pattern>
+
+   <pattern value="*/TagType">
+     <object-create-rule classname="com.flagleader.repository.export.TagType" />
+     <set-properties-rule>
+      <alias attr-name="name" prop-name="name" />
+      <alias attr-name="disName" prop-name="disName" />
+     </set-properties-rule>
+     <set-next-rule methodname="addTagType" />
+   </pattern>
+
+   <pattern value="*/Tag">
+     <object-create-rule classname="com.flagleader.repository.export.Tag" />
+     <set-properties-rule>
+      <alias attr-name="name" prop-name="name" />
+     </set-properties-rule>
+      <call-method-rule pattern="preCode" methodname="setPreCode" paramcount="0" />
+      <call-method-rule pattern="postCode" methodname="setPostCode" paramcount="0" />
+     <set-next-rule methodname="addTag" />
+   </pattern>
+</digester-rules>

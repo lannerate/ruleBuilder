@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="GB18030"?>
+<RulePackage displayName="用户可编辑规则包" uuid="UUID0C80E7EE2DF5040100003018E4010100007F" packageName="com.flagleader.rules" exportDir="classes" fileName="listRules" startTime="0" endTime="0" createTime="1139388657341" modifyTime="1207562248312" locked="false" checkType="0" version="1.0" mainVersion="" modifyUser="develop" stringignore="0" stringinit="1" datenulltype="0" rulesid="0" dbRules="false" edittype="0" document="">
+ <Rule displayName="规则" uuid="UUID4980E7EE2DF5040100003018E4010100007F" exceptionType="0" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1139388657341" modifyTime="1207562277250" modifyUser="develop" vml="0" logtype="0">
+  <RuleToken uuid="UUID4A80E7EE2DF5040100003018E4010100007F">
+   <MultiConditionToken uuid="UUID4B80E7EE2DF5040100003018E4010100007F" type="0">
+   </MultiConditionToken>
+   <MultiActionToken uuid="UUID4C80E7EE2DF5040100003018E4010100007F" type="0">
+    <StatementContainerToken>
+     <TableFunctionToken elementUuid="UUID038079250CFB040100001C0E2D000100007F" uniqueName="void_db5select1.selectWhere(&quot;select rv.ruleid,r.ruledisplay,r.exerule,r.ruleproject,r.jspinfo,rv.mtime,statename,rv.muser,rv.rulever,r.ruletypeid  from r_rule r    inner join r_ruleversion rv on r.ruleid=rv.ruleid and r.rulever=rv.rulever  inner join r_ruleuser rr on rr.ruleid=r.ruleid  left join r_state on rv.stateid=r_state.stateid   where rr.loginname= ?  and (r.editstate=1 or r.editstate=3)&quot;,new Object[&#93;{ {arg1}})" valueType="" displayName="根据{arg1}执行自定义查询">
+      <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <StringOperatorToken type="0">
+       </StringOperatorToken>
+       <MemberToken elementUuid="UUID0380B9A24DCD13010000AC671E010100007F" uniqueName="string_loginname" valueType="string" displayName="操作用户登录名">
+       </MemberToken>
+      </ValueToken>
+      <ElementTextToken displayName="执行自定义查询" colorType="tableFunction" pos="0" elementUuid="UUID038079250CFB040100001C0E2D000100007F" uniqueName="void_db5select1.selectWhere(&quot;select rv.ruleid,r.ruledisplay,r.exerule,r.ruleproject,r.jspinfo,rv.mtime,statename,rv.muser,rv.rulever,r.ruletypeid  from r_rule r    inner join r_ruleversion rv on r.ruleid=rv.ruleid and r.rulever=rv.rulever  inner join r_ruleuser rr on rr.ruleid=r.ruleid  left join r_state on rv.stateid=r_state.stateid   where rr.loginname= ?  and (r.editstate=1 or r.editstate=3)&quot;,new Object[&#93;{ {arg1}})">
+      </ElementTextToken>
+     </TableFunctionToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="UUID4E80E7EE2DF5040100003018E4010100007F" uniqueName="list&lt;list&gt;_ruleList" valueType="" displayName="ruleList">
+      </FieldToken>
+      <AssignJudgeToken type="0">
+      </AssignJudgeToken>
+      <ValueToken valueType="list&lt;list&gt;" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <MemberToken elementUuid="UUID038081FC57CD13010000738057000100007F" uniqueName="db5select1.getListResult()" valueType="list&lt;list&gt;" displayName="自定义查询.getListResult()">
+       </MemberToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+   <MultiActionToken uuid="UUID4D80E7EE2DF5040100003018E4010100007F" type="3">
+   </MultiActionToken>
+  </RuleToken>
+  <doc>
+  </doc>
+ </Rule>
+ <Envionment displayName="对象库" uuid="UUID0D80E7EE2DF5040100003018E4010100007F" modifyTime="1207562248312" functionNum="2">
+  <ClassLibrary displayName="Java类对象" uuid="UUID0980E7EE2DF5040100003018E4010100007F" modifyTime="1139388657361">
+  </ClassLibrary>
+  <ValueLibrary displayName="传入数据" modifyTime="1184572740359" uuid="UUID0780E7EE2DF5040100003018E4010100007F">
+   <MappingVariable displayName="ruleList" uuid="UUID4E80E7EE2DF5040100003018E4010100007F" variableName="ruleList" visible="true" groupName="" valueType="list&lt;list&gt;" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="操作用户登录名" uuid="UUID0380B9A24DCD13010000AC671E010100007F" variableName="loginname" visible="true" groupName="传入数据" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1139388657361" uuid="UUID0880E7EE2DF5040100003018E4010100007F">
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1184560658937" uuid="UUID0A80E7EE2DF5040100003018E4010100007F">
+   <FunctionClass displayName="com.flagleader.util.MD5" uuid="UUID0580B9A24DCD13010000AC671E010100007F" visible="false" className="com.flagleader.util.MD5" valueType="com.flagleader.util.MD5" dir="" groupName="外部调用" shortClassName="MD5">
+    <BusinessObjectMethod displayName="加密({arg1})" uuid="UUID0680B9A24DCD13010000AC671E010100007F" memberName="getMD5ofStr(java.lang.String)" visible="true" valueType="java.lang.String" groupName="外部调用" shortMemberName="getMD5ofStr">
+     <MethodParam typeName="java.lang.String" paramName="arg1" defaultValue=""/>
+    </BusinessObjectMethod>
+   </FunctionClass>
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1139388657371" uuid="UUID0B80E7EE2DF5040100003018E4010100007F">
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <DBModel displayName="rules" url="jdbc:mysql://localhost/rules" driver="com.mysql.jdbc.Driver" userName="root" encryptedPasswd="Xs9UzDAgGfLhcJn2WMXwew==" datasourceName="rules" catalogName="" schemaName="" connType="0" varName="db5" modifyTime="1207562248312" dbFilePath="D:\Personal\Desktop\rules.dbs" vml="0">
+   <selectTable displayName="自定义查询" sqlSelect="select rv.ruleid,r.ruledisplay,r.exerule,r.ruleproject,r.jspinfo,rv.mtime,statename,rv.muser,rv.rulever,r.ruletypeid&#13;&#10;from r_rule r  &#13;&#10;inner join r_ruleversion rv on r.ruleid=rv.ruleid and r.rulever=rv.rulever&#13;&#10;inner join r_ruleuser rr on rr.ruleid=r.ruleid&#13;&#10;left join r_state on rv.stateid=r_state.stateid &#13;&#10;where rr.loginname={string} and (r.editstate=1 or r.editstate=3)" englishName="select1" resultType="0" modifyTime="1207562248312" vml="0">
+    <TableFunction displayName="根据{arg1}执行自定义查询" uuid="UUID038079250CFB040100001C0E2D000100007F" valueName="selectWhere" visible="true" valueType="void" variableName="selectWhere(&quot;select rv.ruleid,r.ruledisplay,r.exerule,r.ruleproject,r.jspinfo,rv.mtime,statename,rv.muser,rv.rulever,r.ruletypeid  from r_rule r    inner join r_ruleversion rv on r.ruleid=rv.ruleid and r.rulever=rv.rulever  inner join r_ruleuser rr on rr.ruleid=r.ruleid  left join r_state on rv.stateid=r_state.stateid   where rr.loginname= ?  and (r.editstate=1 or r.editstate=3)&quot;,new Object[&#93;{ {arg1}})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="自定义查询是否存在下一条记录" uuid="UUID048079250CFB040100001C0E2D000100007F" valueName="hasNext" visible="false" valueType="boolean" variableName="hasNext()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到自定义查询下一条记录" uuid="UUID058079250CFB040100001C0E2D000100007F" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="自定义查询记录的个数" uuid="UUID068079250CFB040100001C0E2D000100007F" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到自定义查询的第一条记录" uuid="UUID078079250CFB040100001C0E2D000100007F" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到自定义查询的上一条记录" uuid="UUID088079250CFB040100001C0E2D000100007F" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到自定义查询的最后一条记录" uuid="UUID098079250CFB040100001C0E2D000100007F" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得自定义查询当前记录的位置" uuid="UUID0B8079250CFB040100001C0E2D000100007F" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到自定义查询第{arg1}个记录" uuid="UUID0C8079250CFB040100001C0E2D000100007F" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="rulename 等于{arg1}" uuid="UUID128079250CFB040100001C0E2D000100007F" valueName="setRulename" visible="false" valueType="void" variableName="setString(&quot;rulename&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="savetime 等于{arg1}" uuid="UUID148079250CFB040100001C0E2D000100007F" valueName="setSavetime" visible="false" valueType="void" variableName="setTimestamp(&quot;savetime&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="datetime" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="login 等于{arg1}" uuid="UUID168079250CFB040100001C0E2D000100007F" valueName="setLogin" visible="false" valueType="void" variableName="setString(&quot;login&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <BusinessObjectMethod displayName="自定义查询.getListResult()" uuid="UUID038081FC57CD13010000738057000100007F" memberName="getListResult()" visible="true" valueType="java.util.List" groupName="自定义查询" shortMemberName="getListResult">
+    </BusinessObjectMethod>
+    <TableFunction displayName="取自定义查询的ruleid字段的值" uuid="UUID0280A71A1CD713010000B7B9D2010100007F" valueName="getRuleid" visible="false" valueType="int" variableName="getInteger(0)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取自定义查询的ruledisplay字段的值" uuid="UUID0380A71A1CD713010000B7B9D2010100007F" valueName="getRuledisplay" visible="false" valueType="string" variableName="getString(1)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取自定义查询的exerule字段的值" uuid="UUID0480A71A1CD713010000B7B9D2010100007F" valueName="getExerule" visible="false" valueType="string" variableName="getString(2)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取自定义查询的ruleproject字段的值" uuid="UUID0580A71A1CD713010000B7B9D2010100007F" valueName="getRuleproject" visible="false" valueType="string" variableName="getString(3)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取自定义查询的jspinfo字段的值" uuid="UUID0680A71A1CD713010000B7B9D2010100007F" valueName="getJspinfo" visible="false" valueType="string" variableName="getString(4)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取自定义查询的mtime字段的值" uuid="UUID0780A71A1CD713010000B7B9D2010100007F" valueName="getMtime" visible="false" valueType="datetime" variableName="getTimestamp(5)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取自定义查询的statename字段的值" uuid="UUID0880A71A1CD713010000B7B9D2010100007F" valueName="getStatename" visible="false" valueType="string" variableName="getString(6)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取自定义查询的muser字段的值" uuid="UUID0980A71A1CD713010000B7B9D2010100007F" valueName="getMuser" visible="false" valueType="string" variableName="getString(7)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取自定义查询的rulever字段的值" uuid="UUID0A80A71A1CD713010000B7B9D2010100007F" valueName="getRulever" visible="false" valueType="double" variableName="getDouble(8)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取自定义查询的ruletypeid字段的值" uuid="UUID0B80A71A1CD713010000B7B9D2010100007F" valueName="getRuletypeid" visible="false" valueType="int" variableName="getInteger(9)" varPre="" groupName="rules">
+    </TableFunction>
+    <fieldModel displayName="ruleid" fieldName="ruleid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="ruledisplay" fieldName="ruledisplay" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="90" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="exerule" fieldName="exerule" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="90" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="ruleproject" fieldName="ruleproject" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="40" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="jspinfo" fieldName="jspinfo" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="255" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="mtime" fieldName="mtime" fieldType="DATETIME" valueType="datetime" classType="java.sql.Timestamp" len="19" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="93" defaultType="datetime">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="statename" fieldName="statename" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="20" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="muser" fieldName="muser" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="rulever" fieldName="rulever" fieldType="DOUBLE" valueType="double" classType="java.lang.Double" len="22" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="true" primaryKey="false" friendKey="false" iType="8" defaultType="double">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="ruletypeid" fieldName="ruletypeid" fieldType="INTEGER" valueType="int" classType="java.lang.Integer" len="11" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="true" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <doc>
+    </doc>
+   </selectTable>
+   <doc>
+   </doc>
+  </DBModel>
+  <doc>
+  </doc>
+ </Envionment>
+ <RuleLogConditionToken uuid="UUID0380F7D9EBA014010000C8C65B016400A8C0" type="3">
+ </RuleLogConditionToken>
+</RulePackage>

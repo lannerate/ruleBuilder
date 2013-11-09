@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="GB18030"?>
+<RulePackage displayName="判断用户权限" uuid="UUIDE58060D69083070100000C0632000100007F" packageName="com.flagleader.rules" exportDir="classes" fileName="judgerole" startTime="0" endTime="0" createTime="1135916971893" modifyTime="1206885822265" locked="false" checkType="0" version="1.0" mainVersion="" modifyUser="develop" stringignore="0" stringinit="1" datenulltype="0" rulesid="0" dbRules="false" edittype="0" document="">
+ <Rule displayName="开发权限" uuid="UUID388160D69083070100000C0632000100007F" exceptionType="0" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="true" startTime="0" endTime="0" createTime="1135916972324" modifyTime="1206885823796" modifyUser="develop" vml="0" logtype="0">
+  <RuleToken uuid="UUID398160D69083070100000C0632000100007F">
+   <MultiConditionToken uuid="UUID3A8160D69083070100000C0632000100007F" type="0">
+    <ConditionToken uuid="UUID0380D09B89CD13010000601938010100007F" leftParenthesisNumber="0" rightParenthesisNumber="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UUIDED8060D69083070100000C0632000100007F" uniqueName="boolean_db5select.hasNext()" valueType="" displayName="是否具有开发权限是否存在下一条记录">
+     </MemberToken>
+     <BooleanJudgeToken type="0">
+     </BooleanJudgeToken>
+    </ConditionToken>
+   </MultiConditionToken>
+   <MultiActionToken uuid="UUID3B8160D69083070100000C0632000100007F" type="0">
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="UUID338160D69083070100000C0632000100007F" uniqueName="int_ruleright" valueType="" displayName="编辑权限">
+      </FieldToken>
+      <AssignJudgeToken type="0">
+      </AssignJudgeToken>
+      <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <ConstantSelectToken elementUuid="UUID378160D69083070100000C0632000100007F" uniqueName="int_3_" valueType="int" displayName="开发权限">
+       </ConstantSelectToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <ReturnToken returnType="2" displayName="退出规则包">
+     </ReturnToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+   <MultiActionToken uuid="UUID3C8160D69083070100000C0632000100007F" type="3">
+   </MultiActionToken>
+   <MultiActionToken uuid="UUID3D8160D69083070100000C0632000100007F" type="1">
+    <StatementContainerToken>
+     <TableFunctionToken elementUuid="UUIDEC8060D69083070100000C0632000100007F" uniqueName="void_db5select.selectWhere(&quot;select rr.ruleid  from r_ruleuser rr,r_roleuser ru,r_roleresource rres  where rr.loginname=rr.loginname and ru.roleid=rres.roleid and rres.rescode='001' and rr.loginname= ?  and rr.ruleid= ? &quot;,new Object[&#93;{ {arg1},new Integer( {arg2})})" valueType="" displayName="根据{arg1}{arg2}执行是否具有开发权限">
+      <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <StringOperatorToken type="0">
+       </StringOperatorToken>
+       <MemberToken elementUuid="UUID318160D69083070100000C0632000100007F" uniqueName="string_loginname" valueType="string" displayName="用户登录名">
+       </MemberToken>
+      </ValueToken>
+      <ValueToken valueType="int" displayName="" argName="arg2" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <MemberToken elementUuid="UUID328160D69083070100000C0632000100007F" uniqueName="int_ruleid" valueType="int" displayName="需要操作的规则包">
+       </MemberToken>
+      </ValueToken>
+      <ElementTextToken displayName="执行是否具有开发权限" colorType="tableFunction" pos="1" elementUuid="UUIDEC8060D69083070100000C0632000100007F" uniqueName="void_db5select.selectWhere(&quot;select rr.ruleid  from r_ruleuser rr,r_roleuser ru,r_roleresource rres  where rr.loginname=rr.loginname and ru.roleid=rres.roleid and rres.rescode='001' and rr.loginname= ?  and rr.ruleid= ? &quot;,new Object[&#93;{ {arg1},new Integer( {arg2})})">
+      </ElementTextToken>
+     </TableFunctionToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+  </RuleToken>
+  <doc>
+  </doc>
+ </Rule>
+ <Rule displayName="编辑权限" uuid="UUID1480D09B89CD13010000601938010100007F" exceptionType="0" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="true" startTime="0" endTime="0" createTime="1184564842796" modifyTime="1206885823796" modifyUser="develop" vml="0" logtype="0">
+  <RuleToken uuid="UUID1980D09B89CD13010000601938010100007F">
+   <MultiConditionToken uuid="UUID1A80D09B89CD13010000601938010100007F" type="0">
+    <ConditionToken uuid="UUID0480D09B89CD13010000601938010100007F" leftParenthesisNumber="0" rightParenthesisNumber="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UUIDF88060D69083070100000C0632000100007F" uniqueName="boolean_db5select1.hasNext()" valueType="" displayName="判断是否具有修改权限是否存在下一条记录">
+     </MemberToken>
+     <BooleanJudgeToken type="0">
+     </BooleanJudgeToken>
+    </ConditionToken>
+   </MultiConditionToken>
+   <MultiActionToken uuid="UUID1B80D09B89CD13010000601938010100007F" type="0">
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="UUID338160D69083070100000C0632000100007F" uniqueName="int_ruleright" valueType="" displayName="编辑权限">
+      </FieldToken>
+      <AssignJudgeToken type="0">
+      </AssignJudgeToken>
+      <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <ConstantSelectToken elementUuid="UUID368160D69083070100000C0632000100007F" uniqueName="int_2_" valueType="int" displayName="编辑权限">
+       </ConstantSelectToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <ReturnToken returnType="2" displayName="退出规则包">
+     </ReturnToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+   <MultiActionToken uuid="UUID1C80D09B89CD13010000601938010100007F" type="3">
+   </MultiActionToken>
+   <MultiActionToken uuid="UUID1D80D09B89CD13010000601938010100007F" type="1">
+    <StatementContainerToken>
+     <TableFunctionToken elementUuid="UUIDF78060D69083070100000C0632000100007F" uniqueName="void_db5select1.selectWhere(&quot;select rr.loginname  from r_ruleuser rr,r_roleuser ru,r_roleresource rres  where ru.roleid=rres.roleid and rres.rescode='003' and rr.loginname=ru.loginname and ru.loginname= ?  and rr.ruleid= ? &quot;,new Object[&#93;{ {arg1},new Integer( {arg2})})" valueType="" displayName="根据{arg1}{arg2}执行判断是否具有修改权限">
+      <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <StringOperatorToken type="0">
+       </StringOperatorToken>
+       <MemberToken elementUuid="UUID318160D69083070100000C0632000100007F" uniqueName="string_loginname" valueType="string" displayName="用户登录名">
+       </MemberToken>
+      </ValueToken>
+      <ValueToken valueType="int" displayName="" argName="arg2" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <MemberToken elementUuid="UUID328160D69083070100000C0632000100007F" uniqueName="int_ruleid" valueType="int" displayName="需要操作的规则包">
+       </MemberToken>
+      </ValueToken>
+      <ElementTextToken displayName="执行判断是否具有修改权限" colorType="tableFunction" pos="1" elementUuid="UUIDF78060D69083070100000C0632000100007F" uniqueName="void_db5select1.selectWhere(&quot;select rr.loginname  from r_ruleuser rr,r_roleuser ru,r_roleresource rres  where ru.roleid=rres.roleid and rres.rescode='003' and rr.loginname=ru.loginname and ru.loginname= ?  and rr.ruleid= ? &quot;,new Object[&#93;{ {arg1},new Integer( {arg2})})">
+      </ElementTextToken>
+     </TableFunctionToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+  </RuleToken>
+  <doc>
+  </doc>
+ </Rule>
+ <Rule displayName="只读权限" uuid="UUID1680D09B89CD13010000601938010100007F" exceptionType="0" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="true" startTime="0" endTime="0" createTime="1184564862765" modifyTime="1206885823796" modifyUser="develop" vml="0" logtype="0">
+  <RuleToken uuid="UUID1E80D09B89CD13010000601938010100007F">
+   <MultiConditionToken uuid="UUID1F80D09B89CD13010000601938010100007F" type="0">
+    <ConditionToken uuid="UUID1280D09B89CD13010000601938010100007F" leftParenthesisNumber="0" rightParenthesisNumber="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UUID038160D69083070100000C0632000100007F" uniqueName="boolean_db5select2.hasNext()" valueType="" displayName="判断是否具有察看权限是否存在下一条记录">
+     </MemberToken>
+     <BooleanJudgeToken type="0">
+     </BooleanJudgeToken>
+    </ConditionToken>
+   </MultiConditionToken>
+   <MultiActionToken uuid="UUID2080D09B89CD13010000601938010100007F" type="0">
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="UUID338160D69083070100000C0632000100007F" uniqueName="int_ruleright" valueType="" displayName="编辑权限">
+      </FieldToken>
+      <AssignJudgeToken type="0">
+      </AssignJudgeToken>
+      <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <ConstantSelectToken elementUuid="UUID358160D69083070100000C0632000100007F" uniqueName="int_1_" valueType="int" displayName="浏览权限">
+       </ConstantSelectToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <ReturnToken returnType="2" displayName="退出规则包">
+     </ReturnToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+   <MultiActionToken uuid="UUID2180D09B89CD13010000601938010100007F" type="3">
+   </MultiActionToken>
+   <MultiActionToken uuid="UUID2280D09B89CD13010000601938010100007F" type="1">
+    <StatementContainerToken>
+     <TableFunctionToken elementUuid="UUID028160D69083070100000C0632000100007F" uniqueName="void_db5select2.selectWhere(&quot;select rr.loginname  from r_ruleuser rr,r_roleuser ru,r_roleresource rres  where ru.roleid=rres.roleid and rres.rescode='002' and rr.loginname=ru.loginname and ru.loginname= ?  and rr.ruleid= ? &quot;,new Object[&#93;{ {arg1},new Integer( {arg2})})" valueType="" displayName="根据{arg1}{arg2}执行判断是否具有察看权限">
+      <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <StringOperatorToken type="0">
+       </StringOperatorToken>
+       <MemberToken elementUuid="UUID318160D69083070100000C0632000100007F" uniqueName="string_loginname" valueType="string" displayName="用户登录名">
+       </MemberToken>
+      </ValueToken>
+      <ValueToken valueType="int" displayName="" argName="arg2" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+       <MemberToken elementUuid="UUID328160D69083070100000C0632000100007F" uniqueName="int_ruleid" valueType="int" displayName="需要操作的规则包">
+       </MemberToken>
+      </ValueToken>
+      <ElementTextToken displayName="执行判断是否具有察看权限" colorType="tableFunction" pos="1" elementUuid="UUID028160D69083070100000C0632000100007F" uniqueName="void_db5select2.selectWhere(&quot;select rr.loginname  from r_ruleuser rr,r_roleuser ru,r_roleresource rres  where ru.roleid=rres.roleid and rres.rescode='002' and rr.loginname=ru.loginname and ru.loginname= ?  and rr.ruleid= ? &quot;,new Object[&#93;{ {arg1},new Integer( {arg2})})">
+      </ElementTextToken>
+     </TableFunctionToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+  </RuleToken>
+  <doc>
+  </doc>
+ </Rule>
+ <Envionment displayName="对象库" uuid="UUIDE68060D69083070100000C0632000100007F" modifyTime="1206881802453" functionNum="1">
+  <ClassLibrary displayName="Java类对象" uuid="UUIDE78060D69083070100000C0632000100007F" modifyTime="1139388592097">
+  </ClassLibrary>
+  <ValueLibrary displayName="传入数据" modifyTime="1139388592097" uuid="UUIDE88060D69083070100000C0632000100007F">
+   <MappingVariable displayName="用户登录名" uuid="UUID318160D69083070100000C0632000100007F" variableName="loginname" visible="true" groupName="" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="需要操作的规则包" uuid="UUID328160D69083070100000C0632000100007F" variableName="ruleid" visible="true" groupName="" valueType="int" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="编辑权限" uuid="UUID338160D69083070100000C0632000100007F" variableName="ruleright" visible="true" groupName="" valueType="int" inout="3" loged="false">
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1139388592107" uuid="UUIDE98060D69083070100000C0632000100007F">
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1139388592107" uuid="UUIDEA8060D69083070100000C0632000100007F">
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1139388592107" uuid="UUIDEB8060D69083070100000C0632000100007F">
+   <ConstantEnum displayName="没有权限" uuid="UUID348160D69083070100000C0632000100007F" value="0" visible="true" groupName="" valueType="int">
+   </ConstantEnum>
+   <ConstantEnum displayName="浏览权限" uuid="UUID358160D69083070100000C0632000100007F" value="1" visible="true" groupName="" valueType="int">
+   </ConstantEnum>
+   <ConstantEnum displayName="编辑权限" uuid="UUID368160D69083070100000C0632000100007F" value="2" visible="true" groupName="" valueType="int">
+   </ConstantEnum>
+   <ConstantEnum displayName="开发权限" uuid="UUID378160D69083070100000C0632000100007F" value="3" visible="true" groupName="" valueType="int">
+   </ConstantEnum>
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <DBModel displayName="rules" url="jdbc:mysql://localhost/rules" driver="com.mysql.jdbc.Driver" userName="root" encryptedPasswd="Xs9UzDAgGfLhcJn2WMXwew==" datasourceName="rules" catalogName="" schemaName="" connType="0" varName="db5" modifyTime="1206881802453" dbFilePath="D:\Personal\Desktop\rules.dbs" vml="0">
+   <selectTable displayName="是否具有开发权限" sqlSelect="select rr.ruleid&#13;&#10;from r_ruleuser rr,r_roleuser ru,r_roleresource rres&#13;&#10;where rr.loginname=rr.loginname and ru.roleid=rres.roleid and rres.rescode='001' and rr.loginname={string} and rr.ruleid={int}" englishName="select" resultType="0" modifyTime="1206881786328" vml="0">
+    <TableFunction displayName="根据{arg1}{arg2}执行是否具有开发权限" uuid="UUIDEC8060D69083070100000C0632000100007F" valueName="selectWhere" visible="true" valueType="void" variableName="selectWhere(&quot;select rr.ruleid  from r_ruleuser rr,r_roleuser ru,r_roleresource rres  where rr.loginname=rr.loginname and ru.roleid=rres.roleid and rres.rescode='001' and rr.loginname= ?  and rr.ruleid= ? &quot;,new Object[&#93;{ {arg1},new Integer( {arg2})})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="是否具有开发权限是否存在下一条记录" uuid="UUIDED8060D69083070100000C0632000100007F" valueName="hasNext" visible="true" valueType="boolean" variableName="hasNext()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到是否具有开发权限下一条记录" uuid="UUIDEE8060D69083070100000C0632000100007F" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="是否具有开发权限记录的个数" uuid="UUIDEF8060D69083070100000C0632000100007F" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到是否具有开发权限的第一条记录" uuid="UUIDF08060D69083070100000C0632000100007F" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到是否具有开发权限的上一条记录" uuid="UUIDF18060D69083070100000C0632000100007F" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到是否具有开发权限的最后一条记录" uuid="UUIDF28060D69083070100000C0632000100007F" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到是否具有开发权限所有记录对象" uuid="UUIDF38060D69083070100000C0632000100007F" valueName="getResultList" visible="false" valueType="list&lt;list&gt;" variableName="getResultList()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得是否具有开发权限当前记录的位置" uuid="UUIDF48060D69083070100000C0632000100007F" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到是否具有开发权限第{arg1}个记录" uuid="UUIDF58060D69083070100000C0632000100007F" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取是否具有开发权限的ruleid字段的值" uuid="UUID04801EAEEEF814010000DC1B7001961AA50A" valueName="getRuleid" visible="false" valueType="long" variableName="getLong(0)" varPre="" groupName="rules">
+    </TableFunction>
+    <fieldModel displayName="ruleid" fieldName="ruleid" fieldType="BIGINT UNSIGNED" valueType="long" classType="java.math.BigInteger" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="-5" defaultType="long">
+     <doc>
+     </doc>
+    </fieldModel>
+    <doc>
+    </doc>
+   </selectTable>
+   <selectTable displayName="判断是否具有修改权限" sqlSelect="select rr.loginname&#13;&#10;from r_ruleuser rr,r_roleuser ru,r_roleresource rres&#13;&#10;where ru.roleid=rres.roleid and rres.rescode='003' and rr.loginname=ru.loginname and ru.loginname={string} and rr.ruleid={int}" englishName="select1" resultType="0" modifyTime="1206881794875" vml="0">
+    <TableFunction displayName="根据{arg1}{arg2}执行判断是否具有修改权限" uuid="UUIDF78060D69083070100000C0632000100007F" valueName="selectWhere" visible="true" valueType="void" variableName="selectWhere(&quot;select rr.loginname  from r_ruleuser rr,r_roleuser ru,r_roleresource rres  where ru.roleid=rres.roleid and rres.rescode='003' and rr.loginname=ru.loginname and ru.loginname= ?  and rr.ruleid= ? &quot;,new Object[&#93;{ {arg1},new Integer( {arg2})})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="判断是否具有修改权限是否存在下一条记录" uuid="UUIDF88060D69083070100000C0632000100007F" valueName="hasNext" visible="true" valueType="boolean" variableName="hasNext()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到判断是否具有修改权限下一条记录" uuid="UUIDF98060D69083070100000C0632000100007F" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="判断是否具有修改权限记录的个数" uuid="UUIDFA8060D69083070100000C0632000100007F" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到判断是否具有修改权限的第一条记录" uuid="UUIDFB8060D69083070100000C0632000100007F" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到判断是否具有修改权限的上一条记录" uuid="UUIDFC8060D69083070100000C0632000100007F" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到判断是否具有修改权限的最后一条记录" uuid="UUIDFD8060D69083070100000C0632000100007F" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到判断是否具有修改权限所有记录对象" uuid="UUIDFE8060D69083070100000C0632000100007F" valueName="getResultList" visible="false" valueType="list&lt;list&gt;" variableName="getResultList()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得判断是否具有修改权限当前记录的位置" uuid="UUIDFF8060D69083070100000C0632000100007F" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到判断是否具有修改权限第{arg1}个记录" uuid="UUID008160D69083070100000C0632000100007F" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取判断是否具有修改权限的loginname字段的值" uuid="UUID088048E5ABFF180100005B219E010100007F" valueName="getLoginname" visible="false" valueType="string" variableName="getString(0)" varPre="" groupName="rules">
+    </TableFunction>
+    <fieldModel displayName="loginname" fieldName="loginname" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <doc>
+    </doc>
+   </selectTable>
+   <selectTable displayName="判断是否具有察看权限" sqlSelect="select rr.loginname&#13;&#10;from r_ruleuser rr,r_roleuser ru,r_roleresource rres&#13;&#10;where ru.roleid=rres.roleid and rres.rescode='002' and rr.loginname=ru.loginname and ru.loginname={string} and rr.ruleid={int}" englishName="select2" resultType="0" modifyTime="1206881802453" vml="0">
+    <TableFunction displayName="根据{arg1}{arg2}执行判断是否具有察看权限" uuid="UUID028160D69083070100000C0632000100007F" valueName="selectWhere" visible="true" valueType="void" variableName="selectWhere(&quot;select rr.loginname  from r_ruleuser rr,r_roleuser ru,r_roleresource rres  where ru.roleid=rres.roleid and rres.rescode='002' and rr.loginname=ru.loginname and ru.loginname= ?  and rr.ruleid= ? &quot;,new Object[&#93;{ {arg1},new Integer( {arg2})})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="判断是否具有察看权限是否存在下一条记录" uuid="UUID038160D69083070100000C0632000100007F" valueName="hasNext" visible="true" valueType="boolean" variableName="hasNext()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到判断是否具有察看权限下一条记录" uuid="UUID048160D69083070100000C0632000100007F" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="判断是否具有察看权限记录的个数" uuid="UUID058160D69083070100000C0632000100007F" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到判断是否具有察看权限的第一条记录" uuid="UUID068160D69083070100000C0632000100007F" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到判断是否具有察看权限的上一条记录" uuid="UUID078160D69083070100000C0632000100007F" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到判断是否具有察看权限的最后一条记录" uuid="UUID088160D69083070100000C0632000100007F" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到判断是否具有察看权限所有记录对象" uuid="UUID098160D69083070100000C0632000100007F" valueName="getResultList" visible="false" valueType="list&lt;list&gt;" variableName="getResultList()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得判断是否具有察看权限当前记录的位置" uuid="UUID0A8160D69083070100000C0632000100007F" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="得到判断是否具有察看权限第{arg1}个记录" uuid="UUID0B8160D69083070100000C0632000100007F" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取判断是否具有察看权限的loginname字段的值" uuid="UUID0B8048E5ABFF180100005B219E010100007F" valueName="getLoginname" visible="false" valueType="string" variableName="getString(0)" varPre="" groupName="rules">
+    </TableFunction>
+    <fieldModel displayName="loginname" fieldName="loginname" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <doc>
+    </doc>
+   </selectTable>
+   <doc>
+   </doc>
+  </DBModel>
+  <doc>
+  </doc>
+ </Envionment>
+ <RuleLogConditionToken uuid="UUID05808DC4EBC91401000036DD3B016400A8C0" type="3">
+ </RuleLogConditionToken>
+</RulePackage>

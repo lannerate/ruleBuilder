@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<digester-rules>
+   <object-create-rule pattern="rulehistory" classname="com.flagleader.repository.tree.RuleHistory" />
+
+   <pattern value="*/Rule">
+     <object-create-rule classname="com.flagleader.repository.tree.Rule" />
+     <set-properties-rule>
+       <alias attr-name="uuid" prop-name="uuid" />
+       <alias attr-name="displayName" prop-name="displayName" />
+       <alias attr-name="modifyTime" prop-name="modifyTime" />
+       <alias attr-name="createTime" prop-name="createTime" />
+       <alias attr-name="actived" prop-name="actived" />
+       <alias attr-name="exceptionType" prop-name="exceptionType" />
+       <alias attr-name="supportElse" prop-name="supportElse" />
+       <alias attr-name="supportCatch" prop-name="supportCatch" />
+       <alias attr-name="supportInit" prop-name="supportInit" />
+       <alias attr-name="startTime" prop-name="startTime" />
+       <alias attr-name="endTime" prop-name="endTime" />
+       <alias attr-name="errorMsg" prop-name="errorMsg" />
+       <alias attr-name="document" prop-name="document" />
+       <alias attr-name="supportEnter" prop-name="supportEnter" />
+       <alias attr-name="editTable" prop-name="editTable" />
+     </set-properties-rule>
+     <call-method-rule pattern="doc" methodname="setDocument" paramcount="0" />
+     <set-next-rule methodname="addChildElement" />
+   </pattern>
+
+    <pattern value="*/RuleToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.RuleToken" />
+       <set-properties-rule >
+        <alias attr-name="uuid" prop-name="uuid" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/ElseIfRuleToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.ElseIfRuleToken" />
+       <set-properties-rule >
+        <alias attr-name="uuid" prop-name="uuid" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+<pattern value="*/RuleEnterToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.RuleEnterToken" />
+       <set-properties-rule >
+        <alias attr-name="uuid" prop-name="uuid" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/RuleSetToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.RuleSetToken" />
+       <set-properties-rule >
+        <alias attr-name="uuid" prop-name="uuid" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+    
+   <pattern value="*/MultiActionToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.MultiActionToken" />
+       <set-properties-rule >
+        <alias attr-name="uuid" prop-name="uuid" />
+        <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+    <pattern value="*/PackCatchActionToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.PackCatchActionToken" />
+       <set-properties-rule >
+        <alias attr-name="uuid" prop-name="uuid" />
+        <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/MultiConditionToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.condition.MultiConditionToken" />
+       <set-properties-rule >
+        <alias attr-name="uuid" prop-name="uuid" />
+        <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+    
+       <pattern value="*/RuleLogConditionToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.condition.RuleLogConditionToken" />
+       <set-properties-rule >
+        <alias attr-name="uuid" prop-name="uuid" />
+        <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+       <pattern value="*/ConditionToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.condition.ConditionToken" />
+       <set-properties-rule >
+         <alias attr-name="leftParenthesisNumber" prop-name="leftParenthesisNumber" />
+         <alias attr-name="rightParenthesisNumber" prop-name="rightParenthesisNumber" />
+         <alias attr-name="opeType" prop-name="opeType" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+       <pattern value="*/JavaStatementToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.JavaStatementToken" />
+       <set-properties-rule >
+         <alias attr-name="value" prop-name="value" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+    
+   <pattern value="*/LogConditionToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.condition.LogConditionToken" />
+       <set-properties-rule >
+         <alias attr-name="leftParenthesisNumber" prop-name="leftParenthesisNumber" />
+         <alias attr-name="rightParenthesisNumber" prop-name="rightParenthesisNumber" />
+         <alias attr-name="opeType" prop-name="opeType" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/DecisionMultiConditionToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.condition.DecisionMultiConditionToken" />
+       <set-properties-rule >
+        <alias attr-name="uuid" prop-name="uuid" />
+        <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+    
+   <pattern value="*/DecisionConditionToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.condition.DecisionConditionToken" />
+       <set-properties-rule >
+       	<alias attr-name="uuid" prop-name="uuid" />
+         <alias attr-name="leftParenthesisNumber" prop-name="leftParenthesisNumber" />
+         <alias attr-name="rightParenthesisNumber" prop-name="rightParenthesisNumber" />
+         <alias attr-name="opeType" prop-name="opeType" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/LogicalJudgeToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.condition.LogicalJudgeToken" />
+       <set-properties-rule >
+         <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/MemberToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.MemberToken" />
+        <set-properties-rule >
+         <alias attr-name="elementUuid" prop-name="elementUuid" />
+         <alias attr-name="displayName" prop-name="displayName" />
+         <alias attr-name="uniqueName" prop-name="uniqueName" />
+         <alias attr-name="valueType" prop-name="valueType" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/SheetFieldsSelectToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.SheetFieldsSelectToken" />
+        <set-properties-rule >
+         <alias attr-name="elementUuid" prop-name="elementUuid" />
+         <alias attr-name="displayName" prop-name="displayName" />
+         <alias attr-name="uniqueName" prop-name="uniqueName" />
+         <alias attr-name="valueType" prop-name="valueType" />
+         <alias attr-name="fieldUuids" prop-name="fieldUuids" />
+         <alias attr-name="fieldNames" prop-name="fieldNames" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/SheetFunctionsSelectToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.SheetFunctionsSelectToken" />
+        <set-properties-rule >
+         <alias attr-name="elementUuid" prop-name="elementUuid" />
+         <alias attr-name="displayName" prop-name="displayName" />
+         <alias attr-name="uniqueName" prop-name="uniqueName" />
+         <alias attr-name="valueType" prop-name="valueType" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/SheetFunction">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.SheetFunction" />
+        <set-properties-rule >
+         <alias attr-name="funcName" prop-name="funcName" />
+         <alias attr-name="fieldUuid" prop-name="fieldUuid" />
+         <alias attr-name="fieldUnique" prop-name="fieldUnique" />
+         <alias attr-name="asName" prop-name="asName" />
+         <alias attr-name="displayName" prop-name="displayName" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/SheetWheresSelectToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.SheetWheresSelectToken" />
+        <set-properties-rule >
+         <alias attr-name="elementUuid" prop-name="elementUuid" />
+         <alias attr-name="displayName" prop-name="displayName" />
+         <alias attr-name="uniqueName" prop-name="uniqueName" />
+         <alias attr-name="valueType" prop-name="valueType" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/SheetWhere">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.SheetWhere" />
+        <set-properties-rule >
+         <alias attr-name="funcName" prop-name="funcName" />
+         <alias attr-name="fieldUuid" prop-name="fieldUuid" />
+         <alias attr-name="fieldUnique" prop-name="fieldUnique" />
+         <alias attr-name="displayName" prop-name="displayName" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/SheetAndFieldsSelectToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.SheetAndFieldsSelectToken" />
+        <set-properties-rule >
+         <alias attr-name="elementUuid" prop-name="elementUuid" />
+         <alias attr-name="sheetUuid" prop-name="sheetUuid" />
+         <alias attr-name="uniqueName" prop-name="uniqueName" />
+         <alias attr-name="valueType" prop-name="valueType" />
+         <alias attr-name="sheetUnique" prop-name="sheetUnique" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/SheetFieldMapping">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.SheetFieldMapping" />
+        <set-properties-rule >
+         <alias attr-name="mappingUuid" prop-name="mappingUuid" />
+         <alias attr-name="fieldUuid" prop-name="fieldUuid" />
+         <alias attr-name="fieldUnique" prop-name="fieldUnique" />
+         <alias attr-name="mappingType" prop-name="mappingType" />
+         <alias attr-name="mappingUnique" prop-name="mappingUnique" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/SheetAndWheresSelectToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.SheetAndWheresSelectToken" />
+        <set-properties-rule >
+         <alias attr-name="elementUuid" prop-name="elementUuid" />
+         <alias attr-name="sheetUuid" prop-name="sheetUuid" />
+         <alias attr-name="uniqueName" prop-name="uniqueName" />
+         <alias attr-name="valueType" prop-name="valueType" />
+         <alias attr-name="sheetUnique" prop-name="sheetUnique" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/SheetFieldSelectToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.SheetFieldSelectToken" />
+        <set-properties-rule >
+         <alias attr-name="fieldUuid" prop-name="fieldUuid" />
+         <alias attr-name="fieldUnique" prop-name="fieldUnique" />
+         <alias attr-name="valueType" prop-name="valueType" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/NumberJudgeToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.condition.NumberJudgeToken" />
+       <set-properties-rule >
+         <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/DecimalJudgeToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.condition.DecimalJudgeToken" />
+       <set-properties-rule >
+         <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/StringJudgeToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.condition.StringJudgeToken" />
+       <set-properties-rule >
+         <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/DateJudgeToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.condition.DateJudgeToken" />
+       <set-properties-rule >
+         <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+ 
+   <pattern value="*/BooleanJudgeToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.condition.BooleanJudgeToken" />
+       <set-properties-rule >
+         <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/ClassJudgeToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.condition.ClassJudgeToken" />
+       <set-properties-rule >
+         <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/ValueToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.ValueToken" />
+       <set-properties-rule >
+         <alias attr-name="valueType" prop-name="valueType" />
+         <alias attr-name="displayName" prop-name="displayName" />
+         <alias attr-name="argName" prop-name="argName" />
+         <alias attr-name="leftParenthesisNumber" prop-name="leftParenthesisNumber" />
+         <alias attr-name="rightParenthesisNumber" prop-name="rightParenthesisNumber" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/NumberOperatorToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.NumberOperatorToken" />
+       <set-properties-rule >
+         <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+    
+   <pattern value="*/StringOperatorToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.StringOperatorToken" />
+       <set-properties-rule >
+         <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+
+   <pattern value="*/FieldToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.FieldToken" />
+        <set-properties-rule >
+         <alias attr-name="elementUuid" prop-name="elementUuid" />
+         <alias attr-name="displayName" prop-name="displayName" />
+         <alias attr-name="uniqueName" prop-name="uniqueName" />
+         <alias attr-name="valueType" prop-name="valueType" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/ConstantToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.ConstantToken" />
+       <set-properties-rule >
+         <alias attr-name="valueType" prop-name="valueType" />
+         <alias attr-name="value" prop-name="value" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+    <pattern value="*/ConstantSelectToken">
+	     <object-create-rule classname="com.flagleader.repository.rlm.value.ConstantSelectToken" />
+	     <set-properties-rule>
+	         <alias attr-name="elementUuid" prop-name="elementUuid" />
+	         <alias attr-name="displayName" prop-name="displayName" />
+	         <alias attr-name="uniqueName" prop-name="uniqueName" />
+	         <alias attr-name="valueType" prop-name="valueType" />
+	     </set-properties-rule>
+	     <set-next-rule methodname="addChildElement" />
+	</pattern>
+
+   <pattern value="*/NewToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.NewToken" />
+        <set-properties-rule >
+         <alias attr-name="elementUuid" prop-name="elementUuid" />
+         <alias attr-name="displayName" prop-name="displayName" />
+         <alias attr-name="uniqueName" prop-name="uniqueName" />
+         <alias attr-name="valueType" prop-name="valueType" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/ClassToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.value.ClassToken" />
+        <set-properties-rule >
+         <alias attr-name="elementUuid" prop-name="elementUuid" />
+         <alias attr-name="displayName" prop-name="displayName" />
+         <alias attr-name="uniqueName" prop-name="uniqueName" />
+         <alias attr-name="valueType" prop-name="valueType" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/StatementContainerToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.StatementContainerToken" />
+      <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/MethodToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.MethodToken" />
+        <set-properties-rule >
+         <alias attr-name="elementUuid" prop-name="elementUuid" />
+         <alias attr-name="displayName" prop-name="displayName" />
+         <alias attr-name="uniqueName" prop-name="uniqueName" />
+         <alias attr-name="valueType" prop-name="valueType" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/TableFunctionToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.TableFunctionToken" />
+        <set-properties-rule >
+         <alias attr-name="elementUuid" prop-name="elementUuid" />
+         <alias attr-name="displayName" prop-name="displayName" />
+         <alias attr-name="uniqueName" prop-name="uniqueName" />
+         <alias attr-name="valueType" prop-name="valueType" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/XmlFunctionToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.XmlFunctionToken" />
+        <set-properties-rule >
+         <alias attr-name="elementUuid" prop-name="elementUuid" />
+         <alias attr-name="displayName" prop-name="displayName" />
+         <alias attr-name="uniqueName" prop-name="uniqueName" />
+         <alias attr-name="valueType" prop-name="valueType" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/StaticTextToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.StaticTextToken" />
+        <set-properties-rule >
+         <alias attr-name="displayName" prop-name="displayName" />
+         <alias attr-name="colorType" prop-name="colorType" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/ElementTextToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.ElementTextToken" />
+        <set-properties-rule >
+         <alias attr-name="displayName" prop-name="displayName" />
+         <alias attr-name="colorType" prop-name="colorType" />
+         <alias attr-name="pos" prop-name="pos" />
+         <alias attr-name="elementUuid" prop-name="elementUuid" />
+         <alias attr-name="uniqueName" prop-name="uniqueName" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/AssignToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.AssignToken" />
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/AssignJudgeToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.AssignJudgeToken" />
+       <set-properties-rule >
+         <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/StringAssignJudgeToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.StringAssignJudgeToken" />
+       <set-properties-rule >
+         <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/NumberAssignJudgeToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.NumberAssignJudgeToken" />
+       <set-properties-rule >
+         <alias attr-name="type" prop-name="type" />
+       </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+
+   <pattern value="*/RunToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.RunToken" />
+        <set-properties-rule >
+         <alias attr-name="elementUuid" prop-name="elementUuid" />
+         <alias attr-name="displayName" prop-name="displayName" />
+         <alias attr-name="uniqueName" prop-name="uniqueName" />
+         <alias attr-name="valueType" prop-name="valueType" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/ExeRuleToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.ExeRuleToken" />
+        <set-properties-rule >
+         <alias attr-name="displayName" prop-name="displayName" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+<pattern value="*/ExeExpressionToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.ExeExpressionToken" />
+        <set-properties-rule >
+        <alias attr-name="uuid" prop-name="uuid" />
+        <alias attr-name="returnType" prop-name="returnType" />
+         <alias attr-name="displayName" prop-name="displayName" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+     <pattern value="*/ExeDecisionToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.ExeDecisionToken" />
+        <set-properties-rule >
+        <alias attr-name="uuid" prop-name="uuid" />
+        <alias attr-name="returnType" prop-name="returnType" />
+         <alias attr-name="displayName" prop-name="displayName" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/ReturnToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.ReturnToken" />
+        <set-properties-rule >
+         <alias attr-name="returnType" prop-name="returnType" />
+         <alias attr-name="displayName" prop-name="displayName" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/ThrowToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.ThrowToken" />
+        <set-properties-rule >
+         <alias attr-name="displayName" prop-name="displayName" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+   <pattern value="*/DebugToken">
+      <object-create-rule classname="com.flagleader.repository.rlm.action.DebugToken" />
+        <set-properties-rule >
+         <alias attr-name="displayName" prop-name="displayName" />
+        </set-properties-rule>
+       <set-next-rule methodname="addChildElement" />
+    </pattern>
+
+   <pattern value="*/advancedProperty">
+     <object-create-rule classname="com.flagleader.repository.tree.AdvancedProperty" />
+     <set-properties-rule>
+       <alias attr-name="key" prop-name="key" />
+       <alias attr-name="property" prop-name="property" />
+     </set-properties-rule>
+     <set-next-rule methodname="addAdvanceProperty" />
+   </pattern>
+
+
+ 
+</digester-rules>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="GBK"?>
+<RulePackage displayName="列表" uuid="ULXGZRXW85P66QQ0B3FLP8" packageName="tree" exportDir="" fileName="list" startTime="0" endTime="0" createTime="1331773591641" modifyTime="1331773600466" locked="false" checkType="0" version="1.0" mainVersion="" projver="" modifyUser="develop" stringignore="0" stringinit="1" datenulltype="0" rulesid="0" dbRules="false" edittype="0" logType="1" dblog="0" fileVersion="4" logTimes="0" vmlFlowType="3" templateType="" document="">
+ <RuleLogConditionToken uuid="UM2GZRXW85P66QQ0B3FLP8" type="3">
+ </RuleLogConditionToken>
+ <Envionment displayName="对象库" uuid="ULYGZRXW85P66QQ0B3FLP8" modifyTime="1331779881919" functionNum="1">
+  <ValueLibrary displayName="传入数据" modifyTime="1331779881919" uuid="UM3GZRXW85P66QQ0B3FLP8">
+   <MappingVariable displayName="superIDs" uuid="UM1GZRXW85P66QQ0B3FLP8" variableName="superIDs" visible="false" groupName="p" valueType="string" inout="3" loged="false">
+    <SubTypeMethod displayName="将superIDs按{arg1}切割成字符数组" uuid="UBPGZT79S42C6CLDU3FLP8" valueName="split(string)" visible="true" valueType="string[&#93;" variableName="com.flagleader.util.StringUtil.split($p,{arg1})" varPre="" groupName="p">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <SubVariable displayName="将superIDs按{arg1}切割成字符数组[{arg2}&#93;" uuid="UBQGZT79S42C6CLDU3FLP8" valueName="get(0)" visible="true" valueType="string" variableName="[{arg2}&#93;" varPre="" groupName="p">
+      <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+     </SubVariable>
+    </SubTypeMethod>
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1331773600441" uuid="UM4GZRXW85P66QQ0B3FLP8">
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1331773600441" uuid="UM5GZRXW85P66QQ0B3FLP8">
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1331773600441" uuid="UM6GZRXW85P66QQ0B3FLP8">
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <doc>
+  </doc>
+ </Envionment>
+ <ExportModel displayName="html/list.jsp" uuid="UM7GZRXW85P66QQ0B3FLP8" exportFile="" importFile="standard/page_output.rsp" value="" title="列表" modifyTime="1331901878936">
+  <modelStr>
+  </modelStr>
+  <advancedProperty key="judge" property="notsupport"/>
+  <advancedProperty key="rule" property="run"/>
+  <advancedProperty key="navigate" property="notshow"/>
+  <advancedProperty key="editrule" property="notsupport"/>
+  <advancedProperty key="input" property="show"/>
+  <advancedProperty key="inputtable" property="4"/>
+  <advancedProperty key="judgelength" property="none"/>
+  <advancedProperty key="submit" property="submit"/>
+  <advancedProperty key="output" property="show"/>
+  <advancedProperty key="success" property="notshow"/>
+  <advancedProperty key="error" property="errorshow"/>
+  <advancedProperty key="showscript" property="add"/>
+  <advancedProperty key="addpage" property="add.jsp"/>
+  <advancedProperty key="editpage" property="edit.jsp"/>
+  <advancedProperty key="deletepage" property="delete.jsp"/>
+  <advancedProperty key="submitpage" property="list.jsp"/>
+  <advancedProperty key="search" property="notshow"/>
+  <advancedProperty key="searchresult" property="session"/>
+  <PageFieldModel displayName="superIDs" variableName="superIDs" valueType="string" nullType="null" len="0" inputType="hidden" resultType="notdisplay" statType="inout" defaultValue="" inputValueType="nottest" showValue="resultvalue" valueFrom="request">
+  </PageFieldModel>
+  <doc>
+  </doc>
+ </ExportModel>
+</RulePackage>

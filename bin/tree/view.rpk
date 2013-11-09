@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="GBK"?>
+<RulePackage displayName="编辑" uuid="UKNGZRXW85P66QQ0B3FLP8" packageName="tree" exportDir="" fileName="view" startTime="0" endTime="0" createTime="1331729296152" modifyTime="1331729370661" locked="false" checkType="0" version="1.0" mainVersion="" projver="" modifyUser="develop" stringignore="0" stringinit="1" datenulltype="0" rulesid="0" dbRules="false" edittype="0" logType="0" dblog="0" fileVersion="2" logTimes="0" vmlFlowType="3" templateType="" document="">
+ <RuleSet displayName="规则集1" uuid="UKMGZRXW85P66QQ0B3FLP8" editType="3" startTime="0" endTime="0" createTime="1331729315905" modifyTime="1331729365906" actived="true" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" editTable="false" exceptionType="1" errorMsg="" syn="false">
+  <Rule displayName="规则" uuid="UKOGZRXW85P66QQ0B3FLP8" exceptionType="0" actived="true" errorMsg="" supportElse="true" supportCatch="false" supportInit="true" startTime="0" endTime="0" createTime="1331729315905" modifyTime="1331729429020" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false" syn="false">
+   <RuleToken uuid="UKYGZRXW85P66QQ0B3FLP8">
+    <MultiConditionToken uuid="UKZGZRXW85P66QQ0B3FLP8" type="0">
+    </MultiConditionToken>
+    <MultiActionToken uuid="UL1GZRXW85P66QQ0B3FLP8" type="0">
+    </MultiActionToken>
+    <MultiActionToken uuid="UL2GZRXW85P66QQ0B3FLP8" type="3">
+    </MultiActionToken>
+    <MultiActionToken uuid="UL3GZRXW85P66QQ0B3FLP8" type="1">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <RuleSetToken uuid="UL4GZRXW85P66QQ0B3FLP8">
+   <MultiConditionToken uuid="UL5GZRXW85P66QQ0B3FLP8" type="0">
+    <ConditionToken uuid="UL6GZRXW85P66QQ0B3FLP8" leftParenthesisNumber="0" rightParenthesisNumber="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="ULEGZRXW85P66QQ0B3FLP8" uniqueName="string_nID" valueType="" displayName="nID">
+     </MemberToken>
+     <StringJudgeToken type="8">
+     </StringJudgeToken>
+    </ConditionToken>
+   </MultiConditionToken>
+  </RuleSetToken>
+  <doc>
+  </doc>
+ </RuleSet>
+ <RuleLogConditionToken uuid="UL7GZRXW85P66QQ0B3FLP8" type="3">
+ </RuleLogConditionToken>
+ <Envionment displayName="对象库" uuid="UKPGZRXW85P66QQ0B3FLP8" modifyTime="1331729483093" functionNum="1">
+  <ValueLibrary displayName="传入数据" modifyTime="1331729483093" uuid="UL8GZRXW85P66QQ0B3FLP8">
+   <MappingVariable displayName="nID" uuid="ULEGZRXW85P66QQ0B3FLP8" variableName="nID" visible="false" groupName="p" valueType="string" inout="3" loged="false">
+    <SubTypeMethod displayName="将nID按{arg1}切割成字符数组" uuid="ULCGZRXW85P66QQ0B3FLP8" valueName="split(string)" visible="true" valueType="string[&#93;" variableName="com.flagleader.util.StringUtil.split($p,{arg1})" varPre="" groupName="p">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <SubVariable displayName="将nID按{arg1}切割成字符数组[{arg2}&#93;" uuid="ULDGZRXW85P66QQ0B3FLP8" valueName="get(0)" visible="true" valueType="string" variableName="[{arg2}&#93;" varPre="" groupName="p">
+      <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+     </SubVariable>
+    </SubTypeMethod>
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1331729315905" uuid="UL9GZRXW85P66QQ0B3FLP8">
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1331729315905" uuid="ULAGZRXW85P66QQ0B3FLP8">
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1331729315905" uuid="ULBGZRXW85P66QQ0B3FLP8">
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <doc>
+  </doc>
+ </Envionment>
+ <ExportModel displayName="system/lanmuedit.jsp" uuid="UKQGZRXW85P66QQ0B3FLP8" exportFile="" importFile="standard/page_popupinput.rsp" value="" title="修改栏目" modifyTime="1331729500146">
+  <modelStr>
+  </modelStr>
+  <advancedProperty key="judge" property="notsupport"/>
+  <advancedProperty key="rule" property="run"/>
+  <advancedProperty key="navigate" property="show"/>
+  <advancedProperty key="input" property="show"/>
+  <advancedProperty key="inputtable" property="2"/>
+  <advancedProperty key="submit" property="submit"/>
+  <advancedProperty key="success" property="notshow"/>
+  <advancedProperty key="error" property="notshow"/>
+  <advancedProperty key="output" property="notshow"/>
+  <doc>
+  </doc>
+ </ExportModel>
+ <ExportModel displayName="system/lanmuview.jsp" uuid="UKRGZRXW85P66QQ0B3FLP8" exportFile="" importFile="standard/page_popupinput.rsp" value="" title="修改栏目" modifyTime="1331729510756">
+  <modelStr>
+  </modelStr>
+  <advancedProperty key="judge" property="notsupport"/>
+  <advancedProperty key="rule" property="run"/>
+  <advancedProperty key="navigate" property="show"/>
+  <advancedProperty key="input" property="show"/>
+  <advancedProperty key="inputtable" property="2"/>
+  <advancedProperty key="success" property="notshow"/>
+  <advancedProperty key="error" property="notshow"/>
+  <advancedProperty key="submit" property="nosubmit"/>
+  <advancedProperty key="output" property="notshow"/>
+  <doc>
+  </doc>
+ </ExportModel>
+ <ExportModel displayName="system/lanmuadd.jsp" uuid="UKSGZRXW85P66QQ0B3FLP8" exportFile="" importFile="standard/page_popupinput.rsp" value="" title="修改栏目" modifyTime="1331729520014">
+  <modelStr>
+  </modelStr>
+  <advancedProperty key="judge" property="notsupport"/>
+  <advancedProperty key="rule" property="run"/>
+  <advancedProperty key="navigate" property="show"/>
+  <advancedProperty key="input" property="show"/>
+  <advancedProperty key="inputtable" property="2"/>
+  <advancedProperty key="submit" property="submit"/>
+  <advancedProperty key="output" property="show"/>
+  <advancedProperty key="success" property="notshow"/>
+  <advancedProperty key="error" property="notshow"/>
+  <doc>
+  </doc>
+ </ExportModel>
+</RulePackage>

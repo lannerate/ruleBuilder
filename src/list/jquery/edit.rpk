@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GBK"?>
+<RulePackage displayName="修改" uuid="U80GZUKBLVPAQT6VA3FLP8" packageName="list.jquery" exportDir="" fileName="edit" startTime="0" endTime="0" createTime="1331686554472" modifyTime="1331864349851" locked="false" checkType="0" version="1.0" mainVersion="" projver="" modifyUser="develop" stringignore="0" stringinit="1" datenulltype="0" rulesid="0" dbRules="false" edittype="0" logType="1" dblog="0" fileVersion="4" logTimes="0" vmlFlowType="3" templateType="" document="">
+ <RuleLogConditionToken uuid="UOWGZRMQ05JEK1EX43FLP8" type="3">
+ </RuleLogConditionToken>
+ <Envionment displayName="对象库" uuid="U81GZUKBLVPAQT6VA3FLP8" modifyTime="1331864349853" functionNum="1">
+  <ValueLibrary displayName="传入数据" modifyTime="1331864349838" uuid="U9FGZUKBLVPAQT6VA3FLP8">
+   <MappingVariable displayName="提 交" uuid="U7VGZUKBLVPAQT6VA3FLP8" variableName="buttontijiao" visible="true" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="success" uuid="U7WGZUKBLVPAQT6VA3FLP8" variableName="su" visible="true" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="nID" uuid="U7XGZUKBLVPAQT6VA3FLP8" variableName="nID" visible="true" groupName="p" valueType="string" inout="3" loged="false">
+    <SubTypeMethod displayName="将nID按{arg1}切割成字符数组" uuid="U7YGZUKBLVPAQT6VA3FLP8" valueName="split(string)" visible="true" valueType="string[&#93;" variableName="com.flagleader.util.StringUtil.split($p,{arg1})" varPre="" groupName="p">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <SubVariable displayName="将nID按{arg1}切割成字符数组[{arg2}&#93;" uuid="U7ZGZUKBLVPAQT6VA3FLP8" valueName="get(0)" visible="true" valueType="string" variableName="[{arg2}&#93;" varPre="" groupName="p">
+      <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+     </SubVariable>
+    </SubTypeMethod>
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1331864349841" uuid="U9GGZUKBLVPAQT6VA3FLP8">
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1331864349841" uuid="U9HGZUKBLVPAQT6VA3FLP8">
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1331864349841" uuid="U9IGZUKBLVPAQT6VA3FLP8">
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <doc>
+  </doc>
+ </Envionment>
+ <ExportModel displayName="html/edit.jsp" uuid="U82GZUKBLVPAQT6VA3FLP8" exportFile="" importFile="jquery/page_input.rsp" value="" title="修改" modifyTime="1331901830324">
+  <modelStr>
+  </modelStr>
+  <advancedProperty key="judge" property="notsupport"/>
+  <advancedProperty key="rule" property="run"/>
+  <advancedProperty key="input" property="show"/>
+  <advancedProperty key="inputtable" property="4"/>
+  <advancedProperty key="judgelength" property="none"/>
+  <advancedProperty key="output" property="show"/>
+  <advancedProperty key="error" property="errorshow"/>
+  <advancedProperty key="showscript" property="add"/>
+  <advancedProperty key="submit" property="reset"/>
+  <advancedProperty key="successpage" property="list.jsp"/>
+  <advancedProperty key="success" property="successcloseopener"/>
+  <advancedProperty key="navigate" property="showclose"/>
+  <PageFieldModel displayName="提 交" variableName="buttontijiao" valueType="string" nullType="null" len="0" inputType="button" resultType="notdisplay" statType="input" defaultValue="" inputValueType="nottest" showValue="resultvalue" valueFrom="request">
+   <advancedProperty key="buttontype" property="submit"/>
+   <advancedProperty key="url" property=""/>
+  </PageFieldModel>
+  <PageFieldModel displayName="success" variableName="su" valueType="string" nullType="null" len="0" inputType="notdisplay" resultType="notdisplay" statType="success" defaultValue="" inputValueType="nottest" showValue="resultvalue" valueFrom="request">
+  </PageFieldModel>
+  <PageFieldModel displayName="nID" variableName="nID" valueType="string" nullType="null" len="0" inputType="hidden" resultType="notdisplay" statType="inout" defaultValue="" inputValueType="nottest" showValue="resultvalue" valueFrom="request">
+  </PageFieldModel>
+  <doc>
+  </doc>
+ </ExportModel>
+</RulePackage>

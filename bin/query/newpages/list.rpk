@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="GBK"?>
+<RulePackage displayName="列表" uuid="U7SH7BCV4XF57TKG3FLOV" packageName="query.newpages" exportDir="" fileName="list" startTime="0" endTime="0" createTime="1331864199113" modifyTime="1348119603192" locked="false" checkType="0" version="1.0" mainVersion="" projver="" modifyUser="192.168.1.113" stringignore="0" stringinit="1" datenulltype="0" rulesid="0" dbRules="false" edittype="0" logType="1" dblog="0" fileVersion="4" logTimes="0" vmlFlowType="3" templateType="" document="">
+ <RuleLogConditionToken uuid="U4TGZUKBLVPAQT6VA3FLP8" type="3">
+ </RuleLogConditionToken>
+ <PackCatchActionToken uuid="U29H7BCV4XF57TKG3FLOV" type="4">
+ </PackCatchActionToken>
+ <PackCatchActionToken uuid="U2EH7BCV4XF57TKG3FLOV" type="4">
+ </PackCatchActionToken>
+ <PackCatchActionToken uuid="U8QH7BCV4XF57TKG3FLOV" type="4">
+ </PackCatchActionToken>
+ <Envionment displayName="对象库" uuid="U7TH7BCV4XF57TKG3FLOV" modifyTime="1348119603192" functionNum="1">
+  <ValueLibrary displayName="传入数据" modifyTime="1348119603176" uuid="U8RH7BCV4XF57TKG3FLOV">
+   <MappingVariable displayName="page_num" uuid="U7NH7BCV4XF57TKG3FLOV" variableName="page_num" visible="false" groupName="p" valueType="int" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="per_page" uuid="U7OH7BCV4XF57TKG3FLOV" variableName="per_page" visible="false" groupName="p" valueType="int" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="order_field" uuid="U7PH7BCV4XF57TKG3FLOV" variableName="order_field" visible="false" groupName="p" valueType="string" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="order_desc" uuid="U7QH7BCV4XF57TKG3FLOV" variableName="order_desc" visible="false" groupName="p" valueType="boolean" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <MappingVariable displayName="record_count" uuid="U7RH7BCV4XF57TKG3FLOV" variableName="record_count" visible="false" groupName="p" valueType="int" inout="3" loged="false" webhidden="false">
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1348119603176" uuid="U8SH7BCV4XF57TKG3FLOV">
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1348119603176" uuid="U8TH7BCV4XF57TKG3FLOV">
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1348119603176" uuid="U8UH7BCV4XF57TKG3FLOV">
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <doc>
+  </doc>
+ </Envionment>
+ <ExportModel displayName="html/list.jsp" uuid="U7UH7BCV4XF57TKG3FLOV" exportFile="" importFile="pms/page_output_multi.rsp" value="" title="列表" modifyTime="1348119603176">
+  <modelStr>
+  </modelStr>
+  <advancedProperty key="judge" property="notsupport"/>
+  <advancedProperty key="rule" property="run"/>
+  <advancedProperty key="navigate" property="notshow"/>
+  <advancedProperty key="editrule" property="notsupport"/>
+  <advancedProperty key="input" property="show"/>
+  <advancedProperty key="inputtable" property="4"/>
+  <advancedProperty key="judgelength" property="none"/>
+  <advancedProperty key="submit" property="submit"/>
+  <advancedProperty key="output" property="show"/>
+  <advancedProperty key="success" property="notshow"/>
+  <advancedProperty key="error" property="errorshow"/>
+  <advancedProperty key="showscript" property="add"/>
+  <advancedProperty key="addpage" property="add.jsp"/>
+  <advancedProperty key="editpage" property="edit.jsp"/>
+  <advancedProperty key="deletepage" property="delete.jsp"/>
+  <advancedProperty key="submitpage" property="list.jsp"/>
+  <doc>
+  </doc>
+ </ExportModel>
+ <PackCatchActionToken uuid="U8VH7BCV4XF57TKG3FLOV" type="4">
+ </PackCatchActionToken>
+</RulePackage>

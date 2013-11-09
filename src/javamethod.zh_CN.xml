@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MethodInfos displayName="java">
+ <GlobalMethod funcName="now()" disName="当前时间" returnType="datetime" typeName="日期处理">
+  <funcBody>
+DateUtil.now()  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="exceptionmessage()" disName="异常信息" returnType="string" typeName="系统支持">
+  <funcBody>
+e.getMessage()  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="left(string,int)" disName="从{string}左侧截取{int}个字符" returnType="string" typeName="字符截取">
+  <funcBody>
+com.flagleader.util.GCPub.stringLeft({string},{int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="stringRight(string,int)" disName="从{string}右侧截取{int}个字符" returnType="string" typeName="字符截取">
+  <funcBody>
+com.flagleader.util.GCPub.stringRight({string},{int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="stringStart(string,int)" disName="从{string}的{int}位开始的字符串" returnType="string" typeName="字符截取">
+  <funcBody>
+com.flagleader.util.GCPub.stringStart({string},{int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="minusRightString(string,int)" disName="去掉{string}中最后{int}位的字符串" returnType="string" typeName="字符截取">
+  <funcBody>
+com.flagleader.util.StringUtil.minusRightString({string},{int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="middle(int,int)" disName="取{string}中间从{int}到{int}的字符" returnType="string" typeName="字符截取">
+  <funcBody>
+com.flagleader.util.StringUtil.substring({string},{int},{int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="round(double)" disName="四舍五入{double}" returnType="long" typeName="数值处理">
+  <funcBody>
+MathUtil.round({double})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="round(float)" disName="四舍五入{float}" returnType="int" typeName="数值处理">
+  <funcBody>
+MathUtil.round({float})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="abs(double)" disName="取{double}的绝对值" returnType="double" typeName="数值处理">
+  <funcBody>
+MathUtil.abs({double})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="max(double,double)" disName="取{double}和{double}中的最大值" returnType="double" typeName="数值比较">
+  <funcBody>
+MathUtil.max({double},{double})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="min(double,double)" disName="取{double}和{double}中的最小值" returnType="double" typeName="数值比较">
+  <funcBody>
+MathUtil.min({double},{double})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="random()" disName="随机数值" returnType="double" typeName="数值处理">
+  <funcBody>
+MathUtil.random()  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="monthdays" disName="取{int}年{int}月的天数" returnType="int" typeName="日期处理">
+  <funcBody>
+DateUtil.getCurMonthDays({int},{int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="dateAdd" disName="取{date}的后{int}天" returnType="date" typeName="日期处理">
+  <funcBody>
+DateUtil.dateAdd({date},{int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="dateMinus" disName="取{date}的前{int}天" returnType="date" typeName="日期处理">
+  <funcBody>
+DateUtil.dateMinus({date},{int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="parseInt(string)" disName="转换{string}为整形值" returnType="int" typeName="格式转换">
+  <funcBody>
+com.flagleader.util.NumberUtil.parseInt({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="parseDouble(string)" disName="转换{string}为浮点值" returnType="double" typeName="格式转换">
+  <funcBody>
+com.flagleader.util.NumberUtil.parseDouble({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="getNumberString(string)" disName="取{string}中纯数字" returnType="string" typeName="数字处理">
+  <funcBody>
+com.flagleader.util.NumberUtil.getNumberString({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="isNumber(string)" disName="判断{string}是数字" returnType="boolean" typeName="合法校验">
+  <funcBody>
+com.flagleader.util.NumberUtil.isNumber({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="formatDouble(double,string)" disName="格式化{double},样式为{string}" returnType="string" typeName="格式转换">
+  <funcBody>
+com.flagleader.util.NumberUtil.formatDouble({double},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="replaceAll(string,string,string)" disName="将{string}中的{string}全部替换成{string}" returnType="string" typeName="字符处理">
+  <funcBody>
+com.flagleader.util.StringUtil.replaceAll({string},{string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="replacePunct(string)" disName="将{string}全角换成半角" returnType="string" typeName="字符处理">
+  <funcBody>
+com.flagleader.util.StringUtil.replacePunct({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="stringToList(string,string,string)" disName="将{string}切成多项,其中类型为{string},切割符为{string}" returnType="list" typeName="字符切割">
+  <funcBody>
+com.flagleader.util.ListUtil.stringToList({string},{string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="getNumber" disName="将{string}按{string}过虑" returnType="string" typeName="数字处理">
+  <funcBody>
+com.flagleader.util.GCPub.getNumber({string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="decodeMoneyCn" disName="取{string}的小写金额" returnType="string" typeName="数字处理">
+  <funcBody>
+com.flagleader.util.GCPub.decodeMoneyCn({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="isDatetime" disName="判断{string}是否为合法日期" returnType="boolean" typeName="合法校验">
+  <funcBody>
+com.flagleader.util.GCPub.isDatetime({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="verify_Select" disName="是否{string}只选一项" returnType="boolean" typeName="合法校验">
+  <funcBody>
+com.flagleader.util.GCPub.verify_Select({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="Verify_ID_Legal" disName="判断{string}是否为合法身份证" returnType="boolean" typeName="身份证">
+  <funcBody>
+com.flagleader.util.GCPub.Verify_ID_Legal({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="sexFromLegal" disName="取{string}中的性别" returnType="string" typeName="身份证">
+  <funcBody>
+com.flagleader.util.GCPub.sexFromLegal({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="dateFromLegal" disName="取{string}中的生日" returnType="string" typeName="身份证">
+  <funcBody>
+com.flagleader.util.GCPub.dateFromLegal({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="IsMulti" disName="判断{string}是否多选" returnType="boolean" typeName="合法校验">
+  <funcBody>
+com.flagleader.util.GCPub.IsMulti({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="currentDate" disName="按{string}格式化当前时间" returnType="string" typeName="格式化">
+  <funcBody>
+com.flagleader.util.GCPub.currentDate({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="stringValue(double)" disName="取{double}的字符串" returnType="string" typeName="格式转换">
+  <funcBody>
+com.flagleader.util.StringUtil.stringValue({double})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="stringValue(int)" disName="取{int}的字符串" returnType="string" typeName="格式转换">
+  <funcBody>
+com.flagleader.util.StringUtil.stringValue({int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="format(string,string)" disName="将{string}按参数{string}格式化" returnType="string" typeName="格式化">
+  <funcBody>
+com.flagleader.util.GCPub.format({string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="removeRelationByKey(string,string)" disName="去掉{string}的括号中的内容，除了包含{string}的除外" returnType="string" typeName="格式化">
+  <funcBody>
+com.flagleader.util.GCPub.removeRelationByKey({string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="length(string}" disName="取{string}的长度" returnType="int" typeName="字符处理">
+  <funcBody>
+com.flagleader.util.StringUtil.length({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="fullYear(string,string,string)" disName="计算从{string}到{string}的周岁，日期格式为{string}" returnType="int" typeName="日期计算">
+  <funcBody>
+com.flagleader.util.GCPub.fullYear({string},{string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="disdate(string,string,string)" disName="计算从{string}到{string}的天数，日期格式为{string}" returnType="int" typeName="日期计算">
+  <funcBody>
+com.flagleader.util.GCPub.disdate({string},{string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="maxDate(date,date)" disName="取{date}和{date}中最大的日期" returnType="date" typeName="日期计算">
+  <funcBody>
+com.flagleader.util.DateUtil.maxDate({date},{date})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="formatDate(string,string,string)" disName="将日期{string}从{string}格式转成{string}格式" returnType="string" typeName="格式化">
+  <funcBody>
+com.flagleader.util.GCPub.formatDate({string},{string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="formatDate(date,string)" disName="将日期{date}按{string}格式化" returnType="string" typeName="格式化">
+  <funcBody>
+com.flagleader.util.GCPub.formatDate({date},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="isDatetime(string,string)" disName="判断{arg1}是否为{arg2}格式的日期" returnType="boolean" typeName="日期计算">
+  <funcBody>
+com.flagleader.util.GCPub.isDatetime({string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="leftPad(string,string,int)" disName="在{arg1}的左边补上{arg2}，使其长度为{arg3}" returnType="string" typeName="格式化">
+  <funcBody>
+com.flagleader.util.GCPub.leftPad({string},{string},{int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="replaceNotPunct(string)" disName="将{string}从半角转成全角" returnType="string" typeName="格式化">
+  <funcBody>
+com.flagleader.util.StringUtil.replaceNotPunct({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="rightPad(string,string,int)" disName="在{arg1}的右边补上{arg2}，使其长度为{arg3}" returnType="string" typeName="格式化">
+  <funcBody>
+com.flagleader.util.GCPub.rightPad({string},{string},{int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="compressDirectory(string,string)" disName="压缩{string}目录下所有文件到{string}中" returnType="void" typeName="文件处理">
+  <funcBody>
+com.flagleader.util.GCPub.compressDirectory({string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="toLowerCase(string)" disName="取{arg1}的小写值" returnType="string" typeName="格式化">
+  <funcBody>
+com.flagleader.util.StringUtil.toLowerCase({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="toUpperCase(string)" disName="取{arg1}的大写值" returnType="string" typeName="格式化">
+  <funcBody>
+com.flagleader.util.StringUtil.toUpperCase({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="deleteIllegalChar(string)" disName="删除{arg1}中非法字符" returnType="string" typeName="格式化">
+  <funcBody>
+GCPub.deleteIllegalChar({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="drawAscii(string)" disName="去掉{arg1}中非可见的ASCII字符以及汉字" returnType="string" typeName="格式化">
+  <funcBody>
+GCPub.drawAscii({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="ToSBC(string}" disName="将{arg1}半角转全角" returnType="string" typeName="格式化">
+  <funcBody>
+GCPub.ToSBC({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="ToDBC(string}" disName="将{arg1}全角转半角" returnType="string" typeName="格式化">
+  <funcBody>
+GCPub.ToDBC({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="headZeroA(string,int)" disName="在{arg1}的开头补0, 以达到长度{arg2}" returnType="string" typeName="格式化">
+  <funcBody>
+GCPub.headZeroA({string},{int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="tailBlankA(string,int)" disName="在{arg1}末尾填充空格以到达指定的长度{int}" returnType="string" typeName="格式化">
+  <funcBody>
+GCPub.tailBlankA({string},{int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="split(string,string)" disName="将{arg1}按{arg2}分割成字符数组" returnType="string[&#93;" typeName="字符切割">
+  <funcBody>
+StringUtil.split({string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="getByteLength(string)" disName="取{arg1}的字节长度" returnType="int" typeName="字符处理">
+  <funcBody>
+StringUtil.getByteLength({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="getByteLocation(string,int,int)" disName="计算{arg1}中从{arg2}位开始，字节长度为{arg3}字符串的截取位置" returnType="int" typeName="字符处理">
+  <funcBody>
+StringUtil.getByteLocation({string},{int},{int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="indexOfString(string,string)" disName="计算{arg1}中{arg2}的所在位置" returnType="int" typeName="字符处理">
+  <funcBody>
+StringUtil.indexOfString({string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="printlnBuffer(StringBuffer,string)" disName="在{arg1}中追加{arg2}并添加回车符" returnType="java.lang.StringBuffer" typeName="字符处理">
+  <funcBody>
+StringUtil.printlnBuffer({java.lang.StringBuffer},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="printBuffer(StringBuffer,string)" disName="在{arg1}中追加{arg2}" returnType="java.lang.StringBuffer" typeName="字符处理">
+  <funcBody>
+StringUtil.printBuffer({java.lang.StringBuffer},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="newline" disName="系统回车符" returnType="string" typeName="系统支持">
+  <funcBody>
+StringUtil.newline  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="GetNumFromString(string)" disName="从{arg1}中提取数字，不区分大小写" returnType="string" typeName="数字处理">
+  <funcBody>
+GCPub.GetNumFromString({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="splitNoEmpty(string)" disName="切分{arg1}，切分附为{arg2}，过滤空字符" returnType="string[&#93;" typeName="字符切割">
+  <funcBody>
+StringUtil.splitNoEmpty({string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="subBytes(string,int,int)" disName="截取{arg1}中起始字节为{arg2}字节长度为{arg2}的字符串" returnType="string" typeName="字符处理">
+  <funcBody>
+StringUtil.subBytes({string},{int},{int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="posOf(string,string)" disName="取得{arg1}中{arg2}所在的字节起始位置" returnType="int" typeName="字符处理">
+  <funcBody>
+StringUtil.posOf({string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="replaceNumberString(string)" disName="将{arg1}中的中文数值转成数字（保留其他字符）" returnType="string" typeName="数字处理">
+  <funcBody>
+GCPub.replaceNumberString({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="stringMiddleRight(string,int,int)" disName="截取{arg1}中从后{arg2}位开始{arg3}个字符" returnType="string" typeName="字符处理">
+  <funcBody>
+GCPub.stringMiddleRight({string},{int},{int}  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="Legal15to18(string)" disName="转换15位{arg1}为18位" returnType="string" typeName="身份证">
+  <funcBody>
+GCPub.Legal15to18({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="replaceRegular(string,string,string)" disName="将{arg1}中满足正则表达式{arg2}的字符替换成{arg3}" returnType="string" typeName="字符处理">
+  <funcBody>
+StringUtil.replaceRegular({string},{string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="getRegular(string,string)" disName="提取{arg1}中符合正则表达式{arg2}的字符" returnType="string" typeName="字符处理">
+  <funcBody>
+StringUtil.getRegular({string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="cn2Spell(string)" disName="转换{arg1}的中文为拼音" returnType="string" typeName="格式化">
+  <funcBody>
+GCPub.cn2Spell({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="trim(string)" disName="去掉{arg1}的左右空格" returnType="string" typeName="字符处理">
+  <funcBody>
+StringUtil.trim({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="getFirstNumber(string)" disName="取{arg1}中第一个数值字符串" returnType="string" typeName="数字处理">
+  <funcBody>
+GCPub.getFirstNumber({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="isDigital(string)" disName="判断{arg1}是否为纯数字" returnType="boolean" typeName="合法校验">
+  <funcBody>
+GCPub.isDigital({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="isCharOrDigital(string)" disName="判断{arg1}是否是字符或纯数字" returnType="boolean" typeName="合法校验">
+  <funcBody>
+GCPub.isCharOrDigital({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="isMatchRegex(string,string)" disName="判断{arg1}是否满足正则表达式{arg2}" returnType="boolean" typeName="合法校验">
+  <funcBody>
+GCPub.isMatchRegex({string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="saveToFile(string,string)" disName="将{arg1}保存到{arg2}文件中" returnType="void" typeName="文件处理">
+  <funcBody>
+GCPub.saveToFile({string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="saveToFile(string,string,string)" disName="将{arg1}保存到{arg2}文件中,编码格式为{arg3}" returnType="void" typeName="文件处理">
+  <funcBody>
+com.flagleader.util.filesystem.FileUtil.saveToFile({string},{string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="writeFile(string,byte[&#93;)" disName="将{arg2}保存到{arg1}文件中" returnType="void" typeName="文件处理">
+  <funcBody>
+com.flagleader.util.filesystem.FileUtil.writeFile({string},{byte[&#93;})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="readFromFile(string,string)" disName="读取{arg1}文件中内容,编码格式为{arg3}" returnType="string" typeName="文件处理">
+  <funcBody>
+com.flagleader.util.filesystem.FileUtil.readFromFile({string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="copyFileToDir(string,string)" disName="将{arg1}文件复制到到{arg2}目录中" returnType="void" typeName="文件处理">
+  <funcBody>
+GCPub.copyFileToDir({string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="getMessage(string)" disName="读取{arg1}的配置信息" returnType="string" typeName="系统支持">
+  <funcBody>
+com.flagleader.util.prefs.AppConfigs.getMessage({string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="setMaxRuleThread(int)" disName="设置当前线程可异步执行的最大规则线程数为{arg1}" returnType="void" typeName="系统支持">
+  <funcBody>
+com.flagleader.engine.impl.RuleRecordServer.getInstance().setMaxThread({int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="waitRuleThread()" disName="等待当前线程下所有异步执行的规则执行完毕" returnType="void" typeName="系统支持">
+  <funcBody>
+com.flagleader.engine.impl.RuleRecordServer.getInstance().waitThread()  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="getDefaultMessage(string,string)" disName="读取{arg1}的配置信息，缺省值为{arg2}" returnType="string" typeName="系统支持">
+  <funcBody>
+com.flagleader.util.prefs.AppConfigs.getMessage({string},{string})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="DecimalUtil.add(double,double)" disName="精确累加{arg1}和{arg2}" returnType="double" typeName="精确计算">
+  <funcBody>
+DecimalUtil.add({double},{double})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="DecimalUtil.sub(double,double)" disName="精确相减{arg1}和{arg2}" returnType="double" typeName="精确计算">
+  <funcBody>
+DecimalUtil.sub({double},{double})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="DecimalUtil.mul(double,double)" disName="精确相乘{arg1}和{arg2}" returnType="double" typeName="精确计算">
+  <funcBody>
+DecimalUtil.mul({double},{double})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="DecimalUtil.div(double,double)" disName="精确相除{arg1}和{arg2}" returnType="double" typeName="精确计算">
+  <funcBody>
+DecimalUtil.div({double},{double})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="DecimalUtil.div(double,double,int)" disName="精确相除{arg1}和{arg2}，精度为{arg3}" returnType="double" typeName="精确计算">
+  <funcBody>
+DecimalUtil.div({double},{double},{int})  </funcBody>
+ </GlobalMethod>
+ <GlobalMethod funcName="DecimalUtil.round(double,int)" disName="四舍五入{arg1}，精度为{arg2}" returnType="double" typeName="精确计算">
+  <funcBody>
+DecimalUtil.round({double},{int})  </funcBody>
+ </GlobalMethod>
+ <TypeMethod funcName="length()" disName="$p的字数" returnType="int" typeName="string">
+  <funcBody>
+com.flagleader.util.StringUtil.length($p)  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="trim()" disName="去掉左右空格的$p" returnType="string" typeName="string">
+  <funcBody>
+com.flagleader.util.StringUtil.trim($p)  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="parseInt()" disName="取整的$p" returnType="int" typeName="string">
+  <funcBody>
+com.flagleader.util.NumberUtil.parseInt($p)  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="parseDouble()" disName="取浮点的$p" returnType="double" typeName="string">
+  <funcBody>
+com.flagleader.util.NumberUtil.parseDouble($p)  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="parseBoolean()" disName="取布尔的$p" returnType="boolean" typeName="string">
+  <funcBody>
+com.flagleader.util.NumberUtil.parseBoolean($p)  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="parseDate" disName="取日期型的$p" returnType="date" typeName="string">
+  <funcBody>
+DateUtil.getDate($p)  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="parseDatetime" disName="取日期型的$p" returnType="datetime" typeName="string">
+  <funcBody>
+DateUtil.getDateTime($p)  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="left(int)" disName="截取$p左侧{int}个字符" returnType="string" typeName="string">
+  <funcBody>
+com.flagleader.util.StringUtil.substring($p,0,{int})  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="start(int)" disName="截取$p从{int}开始的字符串" returnType="string" typeName="string">
+  <funcBody>
+com.flagleader.util.StringUtil.substring($p,{int},$p.length())  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="right(int)" disName="截取$p右侧{int}个字符" returnType="string" typeName="string">
+  <funcBody>
+com.flagleader.util.StringUtil.substring($p,$p.length()-{int})  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="middle(int)" disName="取$p中间从{int}到{int}的字符" returnType="string" typeName="string">
+  <funcBody>
+com.flagleader.util.StringUtil.substring($p,{int},{int})  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="split(string)" disName="将$p按{string}切割成字符数组" returnType="string[&#93;" typeName="string">
+  <funcBody>
+com.flagleader.util.StringUtil.split($p,{string})  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="round()" disName="四舍五入$p" returnType="long" typeName="double">
+  <funcBody>
+MathUtil.round($p)  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="stringDate()" disName="格式化$p" returnType="string" typeName="date">
+  <funcBody>
+DateUtil.stringDate($p)  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="dayofweek()" disName="取$p的星期" returnType="int" typeName="date">
+  <funcBody>
+DateUtil.getDayOfWeek($p)  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="getDayOfYear()" disName="取$p的天数" returnType="int" typeName="date">
+  <funcBody>
+DateUtil.getDayOfYear($p)  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="indexOf(string)" disName="$p中{string}所在位置" returnType="int" typeName="string">
+  <funcBody>
+com.flagleader.util.StringUtil.indexOfString($p,{string})  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="year()" disName="$p的年份" returnType="int" typeName="date">
+  <funcBody>
+DateUtil.year($p)  </funcBody>
+ </TypeMethod>
+ <TypeMethod funcName="month" disName="$p的月份" returnType="int" typeName="date">
+  <funcBody>
+DateUtil.month($p)  </funcBody>
+ </TypeMethod>
+</MethodInfos>

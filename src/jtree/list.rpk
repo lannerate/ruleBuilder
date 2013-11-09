@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="GBK"?>
+<RulePackage displayName="列表" uuid="U2RGZT7GLEQC6CLDU3FLP8" packageName="jtree" exportDir="" fileName="list" startTime="0" endTime="0" createTime="1331780729439" modifyTime="1331780737984" locked="false" checkType="0" version="1.0" mainVersion="" projver="" modifyUser="develop" stringignore="0" stringinit="1" datenulltype="0" rulesid="0" dbRules="false" edittype="0" logType="1" dblog="0" fileVersion="4" logTimes="0" vmlFlowType="3" templateType="" document="">
+ <RuleLogConditionToken uuid="U2SGZT7GLEQC6CLDU3FLP8" type="3">
+ </RuleLogConditionToken>
+ <Envionment displayName="对象库" uuid="U2TGZT7GLEQC6CLDU3FLP8" modifyTime="1331780929180" functionNum="1">
+  <ValueLibrary displayName="传入数据" modifyTime="1331780929180" uuid="U2UGZT7GLEQC6CLDU3FLP8">
+   <MappingVariable displayName="page_num" uuid="U2MGZT7GLEQC6CLDU3FLP8" variableName="page_num" visible="false" groupName="p" valueType="int" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="per_page" uuid="U2NGZT7GLEQC6CLDU3FLP8" variableName="per_page" visible="false" groupName="p" valueType="int" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="order_field" uuid="U2OGZT7GLEQC6CLDU3FLP8" variableName="order_field" visible="false" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="order_desc" uuid="U2PGZT7GLEQC6CLDU3FLP8" variableName="order_desc" visible="false" groupName="p" valueType="boolean" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="record_count" uuid="U2QGZT7GLEQC6CLDU3FLP8" variableName="record_count" visible="false" groupName="p" valueType="int" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="superIDs" uuid="U31GZT7GLEQC6CLDU3FLP8" variableName="superIDs" visible="false" groupName="p" valueType="string" inout="3" loged="false">
+    <SubTypeMethod displayName="将superIDs按{arg1}切割成字符数组" uuid="U2ZGZT7GLEQC6CLDU3FLP8" valueName="split(string)" visible="true" valueType="string[&#93;" variableName="com.flagleader.util.StringUtil.split($p,{arg1})" varPre="" groupName="p">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <SubVariable displayName="将superIDs按{arg1}切割成字符数组[{arg2}&#93;" uuid="U30GZT7GLEQC6CLDU3FLP8" valueName="get(0)" visible="true" valueType="string" variableName="[{arg2}&#93;" varPre="" groupName="p">
+      <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+     </SubVariable>
+    </SubTypeMethod>
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1331780737981" uuid="U2VGZT7GLEQC6CLDU3FLP8">
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1331780737981" uuid="U2WGZT7GLEQC6CLDU3FLP8">
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1331780737981" uuid="U2XGZT7GLEQC6CLDU3FLP8">
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <doc>
+  </doc>
+ </Envionment>
+ <ExportModel displayName="html/list.jsp" uuid="U2YGZT7GLEQC6CLDU3FLP8" exportFile="" importFile="jquery/page_output_multi.rsp" value="" title="列表" modifyTime="1331791351561">
+  <modelStr>
+  </modelStr>
+  <advancedProperty key="judge" property="notsupport"/>
+  <advancedProperty key="rule" property="run"/>
+  <advancedProperty key="editrule" property="notsupport"/>
+  <advancedProperty key="input" property="show"/>
+  <advancedProperty key="inputtable" property="4"/>
+  <advancedProperty key="judgelength" property="none"/>
+  <advancedProperty key="submit" property="submit"/>
+  <advancedProperty key="output" property="show"/>
+  <advancedProperty key="success" property="notshow"/>
+  <advancedProperty key="error" property="errorshow"/>
+  <advancedProperty key="showscript" property="add"/>
+  <advancedProperty key="addpage" property="add.jsp"/>
+  <advancedProperty key="editpage" property="edit.jsp"/>
+  <advancedProperty key="deletepage" property="delete.jsp"/>
+  <advancedProperty key="submitpage" property="list.jsp"/>
+  <advancedProperty key="search" property="notshow"/>
+  <advancedProperty key="navigate" property="show"/>
+  <PageFieldModel displayName="superIDs" variableName="superIDs" valueType="string" nullType="null" len="0" inputType="hidden" resultType="notdisplay" statType="inout" defaultValue="" inputValueType="nottest" showValue="resultvalue" valueFrom="request">
+  </PageFieldModel>
+  <doc>
+  </doc>
+ </ExportModel>
+</RulePackage>

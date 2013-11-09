@@ -1,0 +1,2423 @@
+<?xml version="1.0" encoding="GBK"?>
+<RulePackage displayName="检入操作" uuid="UUID0E80E42FF04709010000738EC6017601A8C0" packageName="com.flagleader.dbrule" exportDir="classes" fileName="checkin" startTime="0" endTime="0" createTime="1139373521076" modifyTime="1263993427375" locked="false" checkType="0" version="1.0" mainVersion="" projver="" modifyUser="develop" stringignore="0" stringinit="1" datenulltype="0" rulesid="0" dbRules="false" edittype="0" logType="1" dblog="0" fileVersion="2" logTimes="0" vmlFlowType="3" templateType="" document="">
+ <Rule displayName="初始化" uuid="UUID1780E30950311901000052EA57006500A8C0" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1207714897078" modifyTime="1207715413140" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false">
+  <RuleToken uuid="UUID1880E30950311901000052EA57006500A8C0">
+   <MultiConditionToken uuid="UUID1980E30950311901000052EA57006500A8C0" type="0">
+   </MultiConditionToken>
+   <MultiActionToken uuid="UUID1A80E30950311901000052EA57006500A8C0" type="0">
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="UUID1680E30950311901000052EA57006500A8C0" uniqueName="datetime_curdate" valueType="" displayName="当前时间">
+      </FieldToken>
+      <AssignJudgeToken type="0">
+      </AssignJudgeToken>
+      <ValueToken valueType="datetime" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <MemberToken elementUuid="UUID0B80CBD2274809010000C162A2007601A8C0" uniqueName="java.util.Date.Date()" valueType="datetime" displayName="当前时间">
+       </MemberToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+   <MultiActionToken uuid="UUID1B80E30950311901000052EA57006500A8C0" type="3">
+   </MultiActionToken>
+  </RuleToken>
+  <doc>
+  </doc>
+ </Rule>
+ <RuleSet displayName="标签编号不存在" uuid="U1MG4O4LPN6XXHTLXB" editType="3" startTime="0" endTime="0" createTime="1263993409968" modifyTime="1263993675750" actived="true" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" editTable="false">
+  <Rule displayName="规则" uuid="U1NG4O4LPN6XXHTLXB" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="true" startTime="0" endTime="0" createTime="1263993456421" modifyTime="1263993675750" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false">
+   <RuleToken uuid="U1RG4O4LPN6XXHTLXB">
+    <MultiConditionToken uuid="U1SG4O4LPN6XXHTLXB" type="0">
+     <ConditionToken uuid="U1TG4O4LPN6XXHTLXB" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="U18G4O4LPN6XXHTLXB" uniqueName="boolean_db5select0MG4O4M1GI.next()" valueType="" displayName="取查询工程标签号当前查询结果的下一条记录">
+      </MemberToken>
+      <BooleanJudgeToken type="0">
+      </BooleanJudgeToken>
+      <BooleanJudgeToken type="0">
+      </BooleanJudgeToken>
+     </ConditionToken>
+    </MultiConditionToken>
+    <MultiActionToken uuid="U1UG4O4LPN6XXHTLXB" type="0">
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="U02G4O4LPN6XXHTLXB" uniqueName="int_projverid" valueType="" displayName="projverid">
+       </FieldToken>
+       <AssignJudgeToken type="0">
+       </AssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <TableFunctionToken elementUuid="U1LG4O4LPN6XXHTLXB" uniqueName="int_db5select0MG4O4M1GI.getInteger(0)" valueType="int" displayName="取查询工程标签号的projverid字段的值">
+        </TableFunctionToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="U1VG4O4LPN6XXHTLXB" type="1">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="U17G4O4LPN6XXHTLXB" uniqueName="void_db5select0MG4O4M1GI.selectWhere(&quot;select pv.projverid  from r_projversion pv,r_proj p  where pv.projid=p.projid and p.ruleproject= ?  and pv.projver= ? &quot;,new Object[&#93;{ {arg1}, {arg2}})" valueType="" displayName="根据{arg1}{arg2}执行查询工程标签号">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID4280E42FF04709010000738EC6017601A8C0" uniqueName="string_ruleproject" valueType="string" displayName="规则包工程名">
+        </MemberToken>
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+       </ValueToken>
+       <ValueToken valueType="string" displayName="" argName="arg2" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="U01G4O4LPN6XXHTLXB" uniqueName="string_projver" valueType="string" displayName="projver">
+        </MemberToken>
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+       </ValueToken>
+       <ElementTextToken displayName="执行查询工程标签号" colorType="tableFunction" pos="1" elementUuid="U17G4O4LPN6XXHTLXB" uniqueName="void_db5select0MG4O4M1GI.selectWhere(&quot;select pv.projverid  from r_projversion pv,r_proj p  where pv.projid=p.projid and p.ruleproject= ?  and pv.projver= ? &quot;,new Object[&#93;{ {arg1}, {arg2}})">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UREGIA0N8MX16YA31EKN" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <RuleSetToken uuid="U1WG4O4LPN6XXHTLXB">
+   <MultiConditionToken uuid="U1XG4O4LPN6XXHTLXB" type="0">
+    <ConditionToken uuid="U1YG4O4LPN6XXHTLXB" leftParenthesisNumber="0" rightParenthesisNumber="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="U02G4O4LPN6XXHTLXB" uniqueName="int_projverid" valueType="" displayName="projverid">
+     </MemberToken>
+     <NumberJudgeToken type="5">
+     </NumberJudgeToken>
+     <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <NumberOperatorToken type="0">
+      </NumberOperatorToken>
+      <ConstantToken valueType="int" value="0">
+      </ConstantToken>
+     </ValueToken>
+    </ConditionToken>
+    <ConditionToken uuid="U1ZG4O4LPN6XXHTLXB" leftParenthesisNumber="0" rightParenthesisNumber="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="U01G4O4LPN6XXHTLXB" uniqueName="string_projver" valueType="" displayName="projver">
+     </MemberToken>
+     <StringJudgeToken type="8">
+     </StringJudgeToken>
+    </ConditionToken>
+   </MultiConditionToken>
+  </RuleSetToken>
+  <doc>
+  </doc>
+ </RuleSet>
+ <RuleSet displayName="规则包已存在" uuid="UUID6B80E42FF04709010000738EC6017601A8C0" editType="3" startTime="0" endTime="0" createTime="1139374833984" modifyTime="1263993675750" actived="true" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" editTable="false">
+  <RuleSet displayName="新建版本" uuid="UUID0A8009444D75150100007BC945006400A8C0" editType="3" startTime="0" endTime="0" createTime="1191674011015" modifyTime="1324600380071" actived="true" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" editTable="false">
+   <Rule displayName="递增版本号" uuid="UUID18806D03FCC9140100001F9F71006400A8C0" exceptionType="1" actived="true" errorMsg="" supportElse="true" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1188799917936" modifyTime="1263992819828" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false">
+    <RuleToken uuid="UUID23806D03FCC9140100001F9F71006400A8C0">
+     <MultiConditionToken uuid="UUID24806D03FCC9140100001F9F71006400A8C0" type="0">
+      <ConditionToken uuid="UUID25806D03FCC9140100001F9F71006400A8C0" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <LogicalJudgeToken type="1">
+       </LogicalJudgeToken>
+       <MemberToken elementUuid="U03G4O4LPN6XXHTLXB" uniqueName="int_editstate" valueType="" displayName="editstate">
+       </MemberToken>
+       <NumberJudgeToken type="0">
+       </NumberJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantSelectToken elementUuid="UUID4580474963AC14010000563916006400A8C0" uniqueName="int_3_规则包状态" valueType="int" displayName="已发布">
+        </ConstantSelectToken>
+       </ValueToken>
+      </ConditionToken>
+     </MultiConditionToken>
+     <MultiActionToken uuid="UUID26806D03FCC9140100001F9F71006400A8C0" type="0">
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UUID3F80F55ED6BE13010000B833B5000100007F" uniqueName="double_rulever" valueType="double" displayName="规则版本">
+        </FieldToken>
+        <ValueToken valueType="double" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <TableFunctionToken elementUuid="UUID0780B12DE0AC140100006154EA006400A8C0" uniqueName="double_db5.executeDouble(&quot;select  max(rulever) from r_ruleversion where ruleid= ?  &quot;,new Object[&#93;{new Integer( {arg1})})" valueType="double" displayName="根据{arg1}执行最大版本号语句">
+          <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+           <NumberOperatorToken type="0">
+           </NumberOperatorToken>
+           <MemberToken elementUuid="UUID0380B763D45A12010000FCBB3F002D00A8C0" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+           </MemberToken>
+          </ValueToken>
+          <ElementTextToken displayName="执行最大版本号语句" colorType="default" pos="0" elementUuid="" uniqueName="">
+          </ElementTextToken>
+         </TableFunctionToken>
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+        </ValueToken>
+        <NumberAssignJudgeToken type="0">
+        </NumberAssignJudgeToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <MethodToken elementUuid="UUID1980474963AC14010000563916006400A8C0" uniqueName="addVer(boolean)" valueType="" displayName="递增版本号{arg1}">
+        <ValueToken valueType="boolean" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <ConstantToken valueType="boolean" value="true">
+         </ConstantToken>
+        </ValueToken>
+       </MethodToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+     <MultiActionToken uuid="UUID27806D03FCC9140100001F9F71006400A8C0" type="3">
+      <StatementContainerToken>
+       <AssignToken>
+        <FieldToken elementUuid="UUID3F80F55ED6BE13010000B833B5000100007F" uniqueName="double_rulever" valueType="double" displayName="规则版本">
+        </FieldToken>
+        <ValueToken valueType="double" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <TableFunctionToken elementUuid="UUID0780B12DE0AC140100006154EA006400A8C0" uniqueName="double_db5.executeDouble(&quot;select  max(rulever) from r_ruleversion where ruleid= ?  &quot;,new Object[&#93;{new Integer( {arg1})})" valueType="double" displayName="根据{arg1}执行最大版本号语句">
+          <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+           <NumberOperatorToken type="0">
+           </NumberOperatorToken>
+           <MemberToken elementUuid="UUID0380B763D45A12010000FCBB3F002D00A8C0" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+           </MemberToken>
+          </ValueToken>
+          <ElementTextToken displayName="执行最大版本号语句" colorType="default" pos="0" elementUuid="" uniqueName="">
+          </ElementTextToken>
+         </TableFunctionToken>
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+        </ValueToken>
+        <NumberAssignJudgeToken type="0">
+        </NumberAssignJudgeToken>
+       </AssignToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <MethodToken elementUuid="UUID1980474963AC14010000563916006400A8C0" uniqueName="addVer(boolean)" valueType="" displayName="递增版本号{arg1}">
+        <ValueToken valueType="boolean" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <ConstantToken valueType="boolean" value="false">
+         </ConstantToken>
+        </ValueToken>
+       </MethodToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+    </RuleToken>
+    <doc>
+    </doc>
+   </Rule>
+   <Rule displayName="新建版本" uuid="UUID0980E30950311901000052EA57006500A8C0" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1207714027406" modifyTime="1293614661171" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false">
+    <RuleToken uuid="UUID0B80E30950311901000052EA57006500A8C0">
+     <MultiConditionToken uuid="UUID0C80E30950311901000052EA57006500A8C0" type="0">
+     </MultiConditionToken>
+     <MultiActionToken uuid="UUID0D80E30950311901000052EA57006500A8C0" type="0">
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="U04G6WWM3OT2BXU62T" uniqueName="void_db5r_ruleversion.setString(&quot;ipaddress&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的ipaddress字段的值为{arg1}">
+        <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="U01G6WWM3OT2BXU62T" uniqueName="string_ipaddress" valueType="string" displayName="ipaddress">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID3D80F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setInteger(&quot;stateid&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的stateid字段的值为{arg1}">
+        <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <ConstantSelectToken elementUuid="UUID0B80474963AC14010000563916006400A8C0" uniqueName="int_1_编辑状态" valueType="int" displayName="新建">
+         </ConstantSelectToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID3B80F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setString(&quot;mhint&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的mhint字段的值为{arg1}">
+        <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="UUID3E80E42FF04709010000738EC6017601A8C0" uniqueName="string_mhint" valueType="string" displayName="规则包说明">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID3980F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setString(&quot;muser&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的muser字段的值为{arg1}">
+        <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="UUID3980E42FF04709010000738EC6017601A8C0" uniqueName="string_loginname" valueType="string" displayName="操作用户登录名">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID3780F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setTimestamp(&quot;mtime&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的mtime字段的值为{arg1}">
+        <ValueToken valueType="datetime" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <MemberToken elementUuid="UUID3B80E42FF04709010000738EC6017601A8C0" uniqueName="datetime_modifytime" valueType="datetime" displayName="规则包修改时间">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="URDGIA0N8MX16YA31EKN" uniqueName="db5r_ruleversion.setZipObject(java.lang.String,java.lang.String)" valueType="" displayName="r_ruleversion.setZipObject({arg1}, {arg2})">
+        <ValueToken valueType="java.lang.String" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <ConstantToken valueType="java.lang.String" value="rulezip">
+         </ConstantToken>
+        </ValueToken>
+        <ElementTextToken displayName="," colorType="tableFunction" pos="0" elementUuid="URDGIA0N8MX16YA31EKN" uniqueName="db5r_ruleversion.setZipObject(java.lang.String,java.lang.String)">
+        </ElementTextToken>
+        <ValueToken valueType="java.lang.String" displayName="" argName="arg2" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="UUID4180E42FF04709010000738EC6017601A8C0" uniqueName="string_rulecontent" valueType="java.lang.String" displayName="规则包内容">
+         </MemberToken>
+        </ValueToken>
+        <ElementTextToken displayName=")" colorType="tableFunction" pos="1" elementUuid="URDGIA0N8MX16YA31EKN" uniqueName="db5r_ruleversion.setZipObject(java.lang.String,java.lang.String)">
+        </ElementTextToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID3380F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setDouble(&quot;rulever&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的rulever字段的值为{arg1}">
+        <ValueToken valueType="double" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <MemberToken elementUuid="UUID3F80F55ED6BE13010000B833B5000100007F" uniqueName="double_rulever" valueType="double" displayName="规则版本">
+         </MemberToken>
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID2E805479BAFE180100000ADACB016400A8C0" uniqueName="void_db5r_ruleversion.setString(&quot;mainversion&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的mainversion字段的值为{arg1}">
+        <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="UUID0880C5DE075D1701000080D54C006601A8C0" uniqueName="string_mainversion" valueType="string" displayName="mainversion">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID0E80C5DE075D1701000080D54C006601A8C0" uniqueName="void_db5r_ruleversion.setTimestamp(&quot;stime&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的stime字段的值为{arg1}">
+        <ValueToken valueType="datetime" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <MemberToken elementUuid="UUID1680E30950311901000052EA57006500A8C0" uniqueName="datetime_curdate" valueType="datetime" displayName="当前时间">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID3180F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setInteger(&quot;ruleid&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的ruleid字段的值为{arg1}">
+        <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <MemberToken elementUuid="UUID0380B763D45A12010000FCBB3F002D00A8C0" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="U1QG4O4LPN6XXHTLXB" uniqueName="void_db5r_ruleversion.setInteger(&quot;projverid&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的projverid字段的值为{arg1}">
+        <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <MemberToken elementUuid="U02G4O4LPN6XXHTLXB" uniqueName="int_projverid" valueType="int" displayName="projverid">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID0C80C5DE075D1701000080D54C006601A8C0" uniqueName="void_db5r_ruleversion.setString(&quot;suser&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的suser字段的值为{arg1}">
+        <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="UUID3980E42FF04709010000738EC6017601A8C0" uniqueName="string_loginname" valueType="string" displayName="操作用户登录名">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID1F80F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.insert()" valueType="" displayName="添加r_ruleversion当前记录">
+       </TableFunctionToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+     <MultiActionToken uuid="UUID0E80E30950311901000052EA57006500A8C0" type="3">
+     </MultiActionToken>
+    </RuleToken>
+    <doc>
+    </doc>
+   </Rule>
+   <RuleSetToken uuid="UUID138009444D75150100007BC945006400A8C0">
+    <MultiConditionToken uuid="U0FGWHTXB9LHVUNT3FLOS" type="0">
+     <ConditionToken uuid="U0GGWHTXB9LHVUNT3FLOS" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UUID0B8009444D75150100007BC945006400A8C0" uniqueName="boolean_newversion" valueType="" displayName="新建版本">
+      </MemberToken>
+      <BooleanJudgeToken type="0">
+      </BooleanJudgeToken>
+     </ConditionToken>
+    </MultiConditionToken>
+   </RuleSetToken>
+   <doc>
+   </doc>
+  </RuleSet>
+  <RuleSet displayName="不新建版本" uuid="UUID0880E30950311901000052EA57006500A8C0" editType="3" startTime="0" endTime="0" createTime="1207713845890" modifyTime="1324600384046" actived="true" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" editTable="false">
+   <Rule displayName="更新版本" uuid="UUID0A80E30950311901000052EA57006500A8C0" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1207714096656" modifyTime="1293614668921" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false">
+    <RuleToken uuid="UUID0F80E30950311901000052EA57006500A8C0">
+     <MultiConditionToken uuid="UUID1080E30950311901000052EA57006500A8C0" type="0">
+     </MultiConditionToken>
+     <MultiActionToken uuid="UUID1180E30950311901000052EA57006500A8C0" type="0">
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID2380F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.resetValues()" valueType="" displayName="初始化r_ruleversion当前记录">
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="U04G6WWM3OT2BXU62T" uniqueName="void_db5r_ruleversion.setString(&quot;ipaddress&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的ipaddress字段的值为{arg1}">
+        <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="U01G6WWM3OT2BXU62T" uniqueName="string_ipaddress" valueType="string" displayName="ipaddress">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID3D80F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setInteger(&quot;stateid&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的stateid字段的值为{arg1}">
+        <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <ConstantSelectToken elementUuid="UUID0D80474963AC14010000563916006400A8C0" uniqueName="int_3_编辑状态" valueType="int" displayName="修改完毕">
+         </ConstantSelectToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID3B80F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setString(&quot;mhint&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的mhint字段的值为{arg1}">
+        <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="UUID3E80E42FF04709010000738EC6017601A8C0" uniqueName="string_mhint" valueType="string" displayName="规则包说明">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID3980F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setString(&quot;muser&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的muser字段的值为{arg1}">
+        <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="UUID3980E42FF04709010000738EC6017601A8C0" uniqueName="string_loginname" valueType="string" displayName="操作用户登录名">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID3780F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setTimestamp(&quot;mtime&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的mtime字段的值为{arg1}">
+        <ValueToken valueType="datetime" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <MemberToken elementUuid="UUID3B80E42FF04709010000738EC6017601A8C0" uniqueName="datetime_modifytime" valueType="datetime" displayName="规则包修改时间">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="URDGIA0N8MX16YA31EKN" uniqueName="db5r_ruleversion.setZipObject(java.lang.String,java.lang.String)" valueType="" displayName="r_ruleversion.setZipObject({arg1}, {arg2})">
+        <ValueToken valueType="java.lang.String" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <ConstantToken valueType="java.lang.String" value="rulezip">
+         </ConstantToken>
+        </ValueToken>
+        <ElementTextToken displayName="," colorType="default" pos="0" elementUuid="" uniqueName="">
+        </ElementTextToken>
+        <ValueToken valueType="java.lang.String" displayName="" argName="arg2" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="UUID4180E42FF04709010000738EC6017601A8C0" uniqueName="string_rulecontent" valueType="java.lang.String" displayName="规则包内容">
+         </MemberToken>
+        </ValueToken>
+        <ElementTextToken displayName=")" colorType="default" pos="0" elementUuid="" uniqueName="">
+        </ElementTextToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID3380F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setDouble(&quot;rulever&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的rulever字段的值为{arg1}">
+        <ValueToken valueType="double" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <MemberToken elementUuid="UUID3F80F55ED6BE13010000B833B5000100007F" uniqueName="double_rulever" valueType="double" displayName="规则版本">
+         </MemberToken>
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID2E805479BAFE180100000ADACB016400A8C0" uniqueName="void_db5r_ruleversion.setString(&quot;mainversion&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的mainversion字段的值为{arg1}">
+        <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="UUID0880C5DE075D1701000080D54C006601A8C0" uniqueName="string_mainversion" valueType="string" displayName="mainversion">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID3180F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setInteger(&quot;ruleid&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的ruleid字段的值为{arg1}">
+        <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <NumberOperatorToken type="0">
+         </NumberOperatorToken>
+         <MemberToken elementUuid="UUID0380B763D45A12010000FCBB3F002D00A8C0" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID0C80C5DE075D1701000080D54C006601A8C0" uniqueName="void_db5r_ruleversion.setString(&quot;suser&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的suser字段的值为{arg1}">
+        <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="0">
+         </StringOperatorToken>
+         <MemberToken elementUuid="UUID3980E42FF04709010000738EC6017601A8C0" uniqueName="string_loginname" valueType="string" displayName="操作用户登录名">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID0E80C5DE075D1701000080D54C006601A8C0" uniqueName="void_db5r_ruleversion.setTimestamp(&quot;stime&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的stime字段的值为{arg1}">
+        <ValueToken valueType="datetime" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <MemberToken elementUuid="UUID1680E30950311901000052EA57006500A8C0" uniqueName="datetime_curdate" valueType="datetime" displayName="当前时间">
+         </MemberToken>
+        </ValueToken>
+       </TableFunctionToken>
+      </StatementContainerToken>
+      <StatementContainerToken>
+       <TableFunctionToken elementUuid="UUID2180F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.update()" valueType="" displayName="更新r_ruleversion当前记录">
+       </TableFunctionToken>
+      </StatementContainerToken>
+     </MultiActionToken>
+     <MultiActionToken uuid="UUID1280E30950311901000052EA57006500A8C0" type="3">
+     </MultiActionToken>
+    </RuleToken>
+    <doc>
+    </doc>
+   </Rule>
+   <RuleSetToken uuid="UUID1380E30950311901000052EA57006500A8C0">
+    <MultiConditionToken uuid="UUID1480E30950311901000052EA57006500A8C0" type="0">
+     <ConditionToken uuid="UUID1580E30950311901000052EA57006500A8C0" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UUID0B8009444D75150100007BC945006400A8C0" uniqueName="boolean_newversion" valueType="" displayName="新建版本">
+      </MemberToken>
+      <BooleanJudgeToken type="1">
+      </BooleanJudgeToken>
+     </ConditionToken>
+    </MultiConditionToken>
+   </RuleSetToken>
+   <doc>
+   </doc>
+  </RuleSet>
+  <Rule displayName="修改工程名称" uuid="UUID1A80474963AC14010000563916006400A8C0" exceptionType="2" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1188304279203" modifyTime="1263993228000" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false">
+   <RuleToken uuid="UUID3880474963AC14010000563916006400A8C0">
+    <MultiConditionToken uuid="UUID3980474963AC14010000563916006400A8C0" type="0">
+     <ConditionToken uuid="UUID3A80474963AC14010000563916006400A8C0" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UUID4380E42FF04709010000738EC6017601A8C0" uniqueName="boolean_changeproject" valueType="" displayName="修改工程">
+      </MemberToken>
+      <BooleanJudgeToken type="0">
+      </BooleanJudgeToken>
+     </ConditionToken>
+    </MultiConditionToken>
+    <MultiActionToken uuid="UUID3B80474963AC14010000563916006400A8C0" type="0">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3480E42FF04709010000738EC6017601A8C0" uniqueName="void_db5r_rule.setString(&quot;ruleproject&quot;,{arg1})" valueType="" displayName="设置r_rule表规则包工程名字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID4280E42FF04709010000738EC6017601A8C0" uniqueName="string_ruleproject" valueType="string" displayName="规则包工程名">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UUID3C80474963AC14010000563916006400A8C0" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <Rule displayName="更新主规则记录" uuid="UUID1D80474963AC14010000563916006400A8C0" exceptionType="2" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1188304279203" modifyTime="1266902911015" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false">
+   <RuleToken uuid="UUID3D80474963AC14010000563916006400A8C0">
+    <MultiConditionToken uuid="UUID3E80474963AC14010000563916006400A8C0" type="0">
+    </MultiConditionToken>
+    <MultiActionToken uuid="UUID3F80474963AC14010000563916006400A8C0" type="0">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="U04G6092OLSGO11X1S" uniqueName="void_db5r_rule.setString(&quot;groupinfo&quot;,{arg1})" valueType="" displayName="设置r_rule的groupinfo字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="U01G6092OLSGO11X1S" uniqueName="string_groupinfo" valueType="string" displayName="groupinfo">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID1D80F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_rule.setDouble(&quot;rulever&quot;,{arg1})" valueType="" displayName="设置r_rule的rulever字段的值为{arg1}">
+       <ValueToken valueType="double" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <MemberToken elementUuid="UUID3F80F55ED6BE13010000B833B5000100007F" uniqueName="double_rulever" valueType="double" displayName="规则版本">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID0580ED1ADACD1301000023FC04010100007F" uniqueName="void_db5r_rule.setInteger(&quot;editstate&quot;,{arg1})" valueType="" displayName="设置r_rule的editstate字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantSelectToken elementUuid="UUID1880474963AC14010000563916006400A8C0" uniqueName="int_1_规则包状态" valueType="int" displayName="可修改">
+        </ConstantSelectToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID068048C149CA130100002B7BD4016400A8C0" uniqueName="void_db5r_rule.setString(&quot;jspinfo&quot;,{arg1})" valueType="" displayName="设置r_rule的jspinfo字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID098048C149CA130100002B7BD4016400A8C0" uniqueName="string_jspinfo" valueType="string" displayName="jspinfo">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID2280E42FF04709010000738EC6017601A8C0" uniqueName="void_db5r_rule.setInteger(&quot;ruleid&quot;,{arg1})" valueType="" displayName="设置r_rule表规则编号字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <MemberToken elementUuid="UUID0380B763D45A12010000FCBB3F002D00A8C0" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID2480E42FF04709010000738EC6017601A8C0" uniqueName="void_db5r_rule.setString(&quot;exerule&quot;,{arg1})" valueType="" displayName="设置r_rule表规则执行名字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID3C80E42FF04709010000738EC6017601A8C0" uniqueName="string_rulename" valueType="string" displayName="规则包执行名">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID2680E42FF04709010000738EC6017601A8C0" uniqueName="void_db5r_rule.setString(&quot;ruledisplay&quot;,{arg1})" valueType="" displayName="设置r_rule表规则显示名称字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID3D80E42FF04709010000738EC6017601A8C0" uniqueName="string_ruledisplay" valueType="string" displayName="规则包显示名">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3680E42FF04709010000738EC6017601A8C0" uniqueName="void_db5r_rule.setTimestamp(&quot;modifytime&quot;,{arg1})" valueType="" displayName="设置r_rule表上次修改时间字段的值为{arg1}">
+       <ValueToken valueType="datetime" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID3B80E42FF04709010000738EC6017601A8C0" uniqueName="datetime_modifytime" valueType="datetime" displayName="规则包修改时间">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID2C80E42FF04709010000738EC6017601A8C0" uniqueName="void_db5r_rule.setTimestamp(&quot;otime&quot;,{arg1})" valueType="" displayName="设置r_rule表编辑时间字段的值为{arg1}">
+       <ValueToken valueType="datetime" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID1680E30950311901000052EA57006500A8C0" uniqueName="datetime_curdate" valueType="datetime" displayName="当前时间">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID0780CBD2274809010000C162A2007601A8C0" uniqueName="void_db5r_rule.setString(&quot;loginname&quot;,{arg1})" valueType="" displayName="设置r_rule表loginname字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID3980E42FF04709010000738EC6017601A8C0" uniqueName="string_loginname" valueType="string" displayName="操作用户登录名">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID1280E42FF04709010000738EC6017601A8C0" uniqueName="void_db5r_rule.update()" valueType="" displayName="更新r_rule表当前记录">
+      </TableFunctionToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UUID4080474963AC14010000563916006400A8C0" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <Rule displayName="记录日志" uuid="UUID5A801C352CB125010000A7A1A6014401A8C0" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1261402543000" modifyTime="1263993255671" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false">
+   <RuleToken uuid="UUID5B801C352CB125010000A7A1A6014401A8C0">
+    <MultiConditionToken uuid="UUID5C801C352CB125010000A7A1A6014401A8C0" type="0">
+    </MultiConditionToken>
+    <MultiActionToken uuid="UUID5D801C352CB125010000A7A1A6014401A8C0" type="0">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID49801C352CB125010000A7A1A6014401A8C0" uniqueName="void_db5sys_log.setInteger(&quot;logtype&quot;,{arg1})" valueType="" displayName="设置系统日志的logtype字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantToken valueType="int" value="4">
+        </ConstantToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID47801C352CB125010000A7A1A6014401A8C0" uniqueName="void_db5sys_log.setString(&quot;state&quot;,{arg1})" valueType="" displayName="设置系统日志的操作内容字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="1">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID3980E42FF04709010000738EC6017601A8C0" uniqueName="string_loginname" valueType="string" displayName="操作用户登录名">
+        </MemberToken>
+        <ValueToken valueType="string" displayName="" argName="string" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="1">
+         </StringOperatorToken>
+         <ConstantToken valueType="string" value="将规则">
+         </ConstantToken>
+         <ValueToken valueType="string" displayName="" argName="string" leftParenthesisNumber="0" rightParenthesisNumber="0">
+          <StringOperatorToken type="1">
+          </StringOperatorToken>
+          <MemberToken elementUuid="UUID3D80E42FF04709010000738EC6017601A8C0" uniqueName="string_ruledisplay" valueType="string" displayName="规则包显示名">
+          </MemberToken>
+          <ValueToken valueType="string" displayName="" argName="string" leftParenthesisNumber="0" rightParenthesisNumber="0">
+           <StringOperatorToken type="1">
+           </StringOperatorToken>
+           <ConstantToken valueType="string" value="进行了修改，版本号为">
+           </ConstantToken>
+           <ValueToken valueType="string" displayName="" argName="string" leftParenthesisNumber="0" rightParenthesisNumber="0">
+            <StringOperatorToken type="0">
+            </StringOperatorToken>
+            <MemberToken elementUuid="UUID3F80F55ED6BE13010000B833B5000100007F" uniqueName="double_rulever" valueType="string" displayName="规则版本">
+            </MemberToken>
+           </ValueToken>
+          </ValueToken>
+         </ValueToken>
+        </ValueToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID45801C352CB125010000A7A1A6014401A8C0" uniqueName="void_db5sys_log.setString(&quot;loginip&quot;,{arg1})" valueType="" displayName="设置系统日志的操作ip字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID63801C352CB125010000A7A1A6014401A8C0" uniqueName="string_loginip" valueType="string" displayName="loginip">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID43801C352CB125010000A7A1A6014401A8C0" uniqueName="void_db5sys_log.setTimestamp(&quot;logintime&quot;,{arg1})" valueType="" displayName="设置系统日志的操作时间字段的值为{arg1}">
+       <ValueToken valueType="datetime" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID0B80CBD2274809010000C162A2007601A8C0" uniqueName="java.util.Date.Date()" valueType="datetime" displayName="当前时间">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID41801C352CB125010000A7A1A6014401A8C0" uniqueName="void_db5sys_log.setString(&quot;loginname&quot;,{arg1})" valueType="" displayName="设置系统日志的操作用户名字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID3980E42FF04709010000738EC6017601A8C0" uniqueName="string_loginname" valueType="string" displayName="操作用户登录名">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID2F801C352CB125010000A7A1A6014401A8C0" uniqueName="void_db5sys_log.insert()" valueType="" displayName="添加系统日志当前记录">
+      </TableFunctionToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UUID5E801C352CB125010000A7A1A6014401A8C0" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <RuleSetToken uuid="UUID4180474963AC14010000563916006400A8C0">
+   <MultiConditionToken uuid="UUID4280474963AC14010000563916006400A8C0" type="0">
+    <ConditionToken uuid="UUID4380474963AC14010000563916006400A8C0" leftParenthesisNumber="0" rightParenthesisNumber="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UUID0380B763D45A12010000FCBB3F002D00A8C0" uniqueName="int_ruleid" valueType="" displayName="规则编号">
+     </MemberToken>
+     <NumberJudgeToken type="2">
+     </NumberJudgeToken>
+     <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <NumberOperatorToken type="0">
+      </NumberOperatorToken>
+      <ConstantToken valueType="int" value="0">
+      </ConstantToken>
+     </ValueToken>
+    </ConditionToken>
+   </MultiConditionToken>
+  </RuleSetToken>
+  <doc>
+  </doc>
+ </RuleSet>
+ <RuleSet displayName="规则包不存在" uuid="UUID6180E42FF04709010000738EC6017601A8C0" editType="3" startTime="0" endTime="0" createTime="1139374633545" modifyTime="1322604786214" actived="true" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" editTable="false">
+  <Rule displayName="递增版本号" uuid="UUID2280B2AB59EE22010000920865006806A8C0" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1249540042937" modifyTime="1323933939858" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false">
+   <RuleToken uuid="UUID2380B2AB59EE22010000920865006806A8C0">
+    <MultiConditionToken uuid="UUID2480B2AB59EE22010000920865006806A8C0" type="0">
+    </MultiConditionToken>
+    <MultiActionToken uuid="UUID2680B2AB59EE22010000920865006806A8C0" type="0">
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UUID3F80F55ED6BE13010000B833B5000100007F" uniqueName="double_rulever" valueType="" displayName="规则版本">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="double" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <ConstantToken valueType="double" value="1.0">
+        </ConstantToken>
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UUID2780B2AB59EE22010000920865006806A8C0" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <Rule displayName="添加主规则记录" uuid="UUID0080CBD2274809010000C162A2007601A8C0" exceptionType="2" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1139376902678" modifyTime="1323912008804" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false">
+   <RuleToken uuid="UUID0180CBD2274809010000C162A2007601A8C0">
+    <MultiConditionToken uuid="UUID2880B2AB59EE22010000920865006806A8C0" type="0">
+    </MultiConditionToken>
+    <MultiActionToken uuid="UUID2980B2AB59EE22010000920865006806A8C0" type="0">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="U04G6092OLSGO11X1S" uniqueName="void_db5r_rule.setString(&quot;groupinfo&quot;,{arg1})" valueType="" displayName="设置r_rule的groupinfo字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="U01G6092OLSGO11X1S" uniqueName="string_groupinfo" valueType="string" displayName="groupinfo">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID0580ED1ADACD1301000023FC04010100007F" uniqueName="void_db5r_rule.setInteger(&quot;editstate&quot;,{arg1})" valueType="" displayName="设置r_rule的editstate字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantSelectToken elementUuid="UUID1880474963AC14010000563916006400A8C0" uniqueName="int_1_规则包状态" valueType="int" displayName="可修改">
+        </ConstantSelectToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID068048C149CA130100002B7BD4016400A8C0" uniqueName="void_db5r_rule.setString(&quot;jspinfo&quot;,{arg1})" valueType="" displayName="设置r_rule的jspinfo字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID098048C149CA130100002B7BD4016400A8C0" uniqueName="string_jspinfo" valueType="string" displayName="jspinfo">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID1D80F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_rule.setDouble(&quot;rulever&quot;,{arg1})" valueType="" displayName="设置r_rule的rulever字段的值为{arg1}">
+       <ValueToken valueType="double" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID3F80F55ED6BE13010000B833B5000100007F" uniqueName="double_rulever" valueType="double" displayName="规则版本">
+        </MemberToken>
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID2480E42FF04709010000738EC6017601A8C0" uniqueName="void_db5r_rule.setString(&quot;exerule&quot;,{arg1})" valueType="" displayName="设置r_rule表规则执行名字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID3C80E42FF04709010000738EC6017601A8C0" uniqueName="string_rulename" valueType="string" displayName="规则包执行名">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID2680E42FF04709010000738EC6017601A8C0" uniqueName="void_db5r_rule.setString(&quot;ruledisplay&quot;,{arg1})" valueType="" displayName="设置r_rule表规则显示名称字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID3D80E42FF04709010000738EC6017601A8C0" uniqueName="string_ruledisplay" valueType="string" displayName="规则包显示名">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID2C80E42FF04709010000738EC6017601A8C0" uniqueName="void_db5r_rule.setTimestamp(&quot;otime&quot;,{arg1})" valueType="" displayName="设置r_rule表编辑时间字段的值为{arg1}">
+       <ValueToken valueType="datetime" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID1680E30950311901000052EA57006500A8C0" uniqueName="datetime_curdate" valueType="datetime" displayName="当前时间">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3080E42FF04709010000738EC6017601A8C0" uniqueName="void_db5r_rule.setInteger(&quot;ruletypeid&quot;,{arg1})" valueType="" displayName="设置r_rule表规则分类编号字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <MemberToken elementUuid="UUID078038F262CC13010000A86D70016400A8C0" uniqueName="int_ruletypeid" valueType="int" displayName="ruletypeid">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3480E42FF04709010000738EC6017601A8C0" uniqueName="void_db5r_rule.setString(&quot;ruleproject&quot;,{arg1})" valueType="" displayName="设置r_rule表规则包工程名字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID4280E42FF04709010000738EC6017601A8C0" uniqueName="string_ruleproject" valueType="string" displayName="规则包工程名">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3680E42FF04709010000738EC6017601A8C0" uniqueName="void_db5r_rule.setTimestamp(&quot;modifytime&quot;,{arg1})" valueType="" displayName="设置r_rule表上次修改时间字段的值为{arg1}">
+       <ValueToken valueType="datetime" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID3B80E42FF04709010000738EC6017601A8C0" uniqueName="datetime_modifytime" valueType="datetime" displayName="规则包修改时间">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID0780CBD2274809010000C162A2007601A8C0" uniqueName="void_db5r_rule.setString(&quot;loginname&quot;,{arg1})" valueType="" displayName="设置r_rule表loginname字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID3980E42FF04709010000738EC6017601A8C0" uniqueName="string_loginname" valueType="string" displayName="操作用户登录名">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName="" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="U00GW72Z15FIF64PZ8KFLT" uniqueName="int_db5r_rule.insertAndGeneratedKey()" valueType="" displayName="添加r_rule当前记录并且取得自增主键值">
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <AssignToken>
+       <FieldToken elementUuid="UUID0380B763D45A12010000FCBB3F002D00A8C0" uniqueName="int_ruleid" valueType="" displayName="规则编号">
+       </FieldToken>
+       <NumberAssignJudgeToken type="0">
+       </NumberAssignJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <MemberToken elementUuid="UUID2180E42FF04709010000738EC6017601A8C0" uniqueName="int_db5r_rule.getInteger(0)" valueType="int" displayName="取r_rule表规则编号字段的值">
+        </MemberToken>
+       </ValueToken>
+      </AssignToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UUID2A80B2AB59EE22010000920865006806A8C0" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <Rule displayName="该版本规则包不存在" uuid="UUID4780474963AC14010000563916006400A8C0" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1188304940343" modifyTime="1293614674031" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false">
+   <RuleToken uuid="UUID4880474963AC14010000563916006400A8C0">
+    <MultiConditionToken uuid="UUID4980474963AC14010000563916006400A8C0" type="0">
+    </MultiConditionToken>
+    <MultiActionToken uuid="UUID4A80474963AC14010000563916006400A8C0" type="0">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="U04G6WWM3OT2BXU62T" uniqueName="void_db5r_ruleversion.setString(&quot;ipaddress&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的ipaddress字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="U01G6WWM3OT2BXU62T" uniqueName="string_ipaddress" valueType="string" displayName="ipaddress">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3D80F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setInteger(&quot;stateid&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的stateid字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantSelectToken elementUuid="UUID0B80474963AC14010000563916006400A8C0" uniqueName="int_1_编辑状态" valueType="int" displayName="新建">
+        </ConstantSelectToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3B80F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setString(&quot;mhint&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的mhint字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID3E80E42FF04709010000738EC6017601A8C0" uniqueName="string_mhint" valueType="string" displayName="规则包说明">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3980F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setString(&quot;muser&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的muser字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID3980E42FF04709010000738EC6017601A8C0" uniqueName="string_loginname" valueType="string" displayName="操作用户登录名">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3780F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setTimestamp(&quot;mtime&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的mtime字段的值为{arg1}">
+       <ValueToken valueType="datetime" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID3B80E42FF04709010000738EC6017601A8C0" uniqueName="datetime_modifytime" valueType="datetime" displayName="规则包修改时间">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="URDGIA0N8MX16YA31EKN" uniqueName="db5r_ruleversion.setZipObject(java.lang.String,java.lang.String)" valueType="" displayName="r_ruleversion.setZipObject({arg1}, {arg2})">
+       <ValueToken valueType="java.lang.String" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <ConstantToken valueType="java.lang.String" value="rulezip">
+        </ConstantToken>
+       </ValueToken>
+       <ElementTextToken displayName="," colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+       <ValueToken valueType="java.lang.String" displayName="" argName="arg2" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID4180E42FF04709010000738EC6017601A8C0" uniqueName="string_rulecontent" valueType="java.lang.String" displayName="规则包内容">
+        </MemberToken>
+       </ValueToken>
+       <ElementTextToken displayName=")" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3380F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setDouble(&quot;rulever&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的rulever字段的值为{arg1}">
+       <ValueToken valueType="double" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID3F80F55ED6BE13010000B833B5000100007F" uniqueName="double_rulever" valueType="double" displayName="规则版本">
+        </MemberToken>
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID2E805479BAFE180100000ADACB016400A8C0" uniqueName="void_db5r_ruleversion.setString(&quot;mainversion&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的mainversion字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID0880C5DE075D1701000080D54C006601A8C0" uniqueName="string_mainversion" valueType="string" displayName="mainversion">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID0E80C5DE075D1701000080D54C006601A8C0" uniqueName="void_db5r_ruleversion.setTimestamp(&quot;stime&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的stime字段的值为{arg1}">
+       <ValueToken valueType="datetime" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID1680E30950311901000052EA57006500A8C0" uniqueName="datetime_curdate" valueType="datetime" displayName="当前时间">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="U1QG4O4LPN6XXHTLXB" uniqueName="void_db5r_ruleversion.setInteger(&quot;projverid&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的projverid字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <MemberToken elementUuid="U02G4O4LPN6XXHTLXB" uniqueName="int_projverid" valueType="int" displayName="projverid">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID0C80C5DE075D1701000080D54C006601A8C0" uniqueName="void_db5r_ruleversion.setString(&quot;suser&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的suser字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID3980E42FF04709010000738EC6017601A8C0" uniqueName="string_loginname" valueType="string" displayName="操作用户登录名">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID3180F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.setInteger(&quot;ruleid&quot;,{arg1})" valueType="" displayName="设置r_ruleversion的ruleid字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <MemberToken elementUuid="UUID0380B763D45A12010000FCBB3F002D00A8C0" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID1F80F55ED6BE13010000B833B5000100007F" uniqueName="void_db5r_ruleversion.insert()" valueType="" displayName="添加r_ruleversion当前记录">
+      </TableFunctionToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UUID4B80474963AC14010000563916006400A8C0" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <Rule displayName="规则1" uuid="UUID59801C352CB125010000A7A1A6014401A8C0" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1261402303921" modifyTime="1263993675765" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false">
+   <RuleToken uuid="UUID5F801C352CB125010000A7A1A6014401A8C0">
+    <MultiConditionToken uuid="UUID60801C352CB125010000A7A1A6014401A8C0" type="0">
+    </MultiConditionToken>
+    <MultiActionToken uuid="UUID61801C352CB125010000A7A1A6014401A8C0" type="0">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID49801C352CB125010000A7A1A6014401A8C0" uniqueName="void_db5sys_log.setInteger(&quot;logtype&quot;,{arg1})" valueType="" displayName="设置系统日志的logtype字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantToken valueType="int" value="4">
+        </ConstantToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID47801C352CB125010000A7A1A6014401A8C0" uniqueName="void_db5sys_log.setString(&quot;state&quot;,{arg1})" valueType="" displayName="设置系统日志的操作内容字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="1">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID3980E42FF04709010000738EC6017601A8C0" uniqueName="string_loginname" valueType="string" displayName="操作用户登录名">
+        </MemberToken>
+        <ValueToken valueType="string" displayName="" argName="string" leftParenthesisNumber="0" rightParenthesisNumber="0">
+         <StringOperatorToken type="1">
+         </StringOperatorToken>
+         <ConstantToken valueType="string" value="新增了规则包">
+         </ConstantToken>
+         <ValueToken valueType="string" displayName="" argName="string" leftParenthesisNumber="0" rightParenthesisNumber="0">
+          <StringOperatorToken type="1">
+          </StringOperatorToken>
+          <MemberToken elementUuid="UUID3D80E42FF04709010000738EC6017601A8C0" uniqueName="string_ruledisplay" valueType="string" displayName="规则包显示名">
+          </MemberToken>
+          <ValueToken valueType="string" displayName="" argName="string" leftParenthesisNumber="0" rightParenthesisNumber="0">
+           <StringOperatorToken type="1">
+           </StringOperatorToken>
+           <ConstantToken valueType="string" value="，并且新增了版本">
+           </ConstantToken>
+           <ValueToken valueType="string" displayName="" argName="string" leftParenthesisNumber="0" rightParenthesisNumber="0">
+            <StringOperatorToken type="0">
+            </StringOperatorToken>
+            <MemberToken elementUuid="UUID3F80F55ED6BE13010000B833B5000100007F" uniqueName="double_rulever" valueType="string" displayName="规则版本">
+            </MemberToken>
+           </ValueToken>
+          </ValueToken>
+         </ValueToken>
+        </ValueToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID45801C352CB125010000A7A1A6014401A8C0" uniqueName="void_db5sys_log.setString(&quot;loginip&quot;,{arg1})" valueType="" displayName="设置系统日志的操作ip字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID63801C352CB125010000A7A1A6014401A8C0" uniqueName="string_loginip" valueType="string" displayName="loginip">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID43801C352CB125010000A7A1A6014401A8C0" uniqueName="void_db5sys_log.setTimestamp(&quot;logintime&quot;,{arg1})" valueType="" displayName="设置系统日志的操作时间字段的值为{arg1}">
+       <ValueToken valueType="datetime" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID0B80CBD2274809010000C162A2007601A8C0" uniqueName="java.util.Date.Date()" valueType="datetime" displayName="当前时间">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID41801C352CB125010000A7A1A6014401A8C0" uniqueName="void_db5sys_log.setString(&quot;loginname&quot;,{arg1})" valueType="" displayName="设置系统日志的操作用户名字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID3980E42FF04709010000738EC6017601A8C0" uniqueName="string_loginname" valueType="string" displayName="操作用户登录名">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID2F801C352CB125010000A7A1A6014401A8C0" uniqueName="void_db5sys_log.insert()" valueType="" displayName="添加系统日志当前记录">
+      </TableFunctionToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UUID62801C352CB125010000A7A1A6014401A8C0" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <RuleSet displayName="分配用户权限" uuid="U2HG4O4LPN6XXHTLXB" editType="2" startTime="0" endTime="0" createTime="1263994062218" modifyTime="1323912410939" actived="true" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" editTable="false">
+   <RuleSet displayName="规则集" uuid="U0GGW72Z15FIF64PZ8KFLT" editType="3" startTime="0" endTime="0" createTime="1323912393266" modifyTime="1323912410937" actived="true" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" editTable="false">
+    <Rule displayName="规则" uuid="U2JG4O4LPN6XXHTLXB" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1263994179093" modifyTime="1323933984630" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false">
+     <RuleToken uuid="U2KG4O4LPN6XXHTLXB">
+      <MultiConditionToken uuid="U2LG4O4LPN6XXHTLXB" type="0">
+      </MultiConditionToken>
+      <MultiActionToken uuid="U2NG4O4LPN6XXHTLXB" type="0">
+       <StatementContainerToken>
+        <TableFunctionToken elementUuid="UUID1E80B2AB59EE22010000920865006806A8C0" uniqueName="void_db5r_ruleuser.setInteger(&quot;userid&quot;,{arg1})" valueType="" displayName="设置r_ruleuser的userid字段的值为{arg1}">
+         <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+          <NumberOperatorToken type="0">
+          </NumberOperatorToken>
+          <MemberToken elementUuid="U2GG4O4LPN6XXHTLXB" uniqueName="int_db5select0ZG4O4M1GI.getInteger(0)" valueType="int" displayName="取可分配权限用户的userid字段的值">
+          </MemberToken>
+         </ValueToken>
+        </TableFunctionToken>
+       </StatementContainerToken>
+       <StatementContainerToken>
+        <TableFunctionToken elementUuid="UUID1C80B2AB59EE22010000920865006806A8C0" uniqueName="void_db5r_ruleuser.setLong(&quot;ruleid&quot;,{arg1})" valueType="" displayName="设置r_ruleuser的ruleid字段的值为{arg1}">
+         <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+          <NumberOperatorToken type="0">
+          </NumberOperatorToken>
+          <MemberToken elementUuid="UUID0380B763D45A12010000FCBB3F002D00A8C0" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+          </MemberToken>
+         </ValueToken>
+        </TableFunctionToken>
+       </StatementContainerToken>
+       <StatementContainerToken>
+        <TableFunctionToken elementUuid="UUID0980B2AB59EE22010000920865006806A8C0" uniqueName="int_db5r_ruleuser.insertRows()" valueType="" displayName="添加r_ruleuser当前记录">
+        </TableFunctionToken>
+       </StatementContainerToken>
+      </MultiActionToken>
+      <MultiActionToken uuid="URFGIA0N8MX16YA31EKN" type="3">
+      </MultiActionToken>
+     </RuleToken>
+     <doc>
+     </doc>
+    </Rule>
+    <RuleSetToken uuid="U0JGW72Z15FIF64PZ8KFLT">
+     <MultiConditionToken uuid="U0KGW72Z15FIF64PZ8KFLT" type="0">
+      <ConditionToken uuid="U0LGW72Z15FIF64PZ8KFLT" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <LogicalJudgeToken type="1">
+       </LogicalJudgeToken>
+       <MemberToken elementUuid="U2GG4O4LPN6XXHTLXB" uniqueName="int_db5select0ZG4O4M1GI.getInteger(0)" valueType="" displayName="取可分配权限用户的userid字段的值">
+       </MemberToken>
+       <NumberJudgeToken type="1">
+       </NumberJudgeToken>
+       <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <MemberToken elementUuid="UUID2180B2AB59EE22010000920865006806A8C0" uniqueName="int_userid" valueType="int" displayName="userid">
+        </MemberToken>
+       </ValueToken>
+      </ConditionToken>
+     </MultiConditionToken>
+    </RuleSetToken>
+    <doc>
+    </doc>
+   </RuleSet>
+   <RuleSetToken uuid="U2OG4O4LPN6XXHTLXB">
+    <MultiConditionToken uuid="U2PG4O4LPN6XXHTLXB" type="0">
+     <ConditionToken uuid="U2QG4O4LPN6XXHTLXB" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="U23G4O4LPN6XXHTLXB" uniqueName="boolean_db5select0ZG4O4M1GI.next()" valueType="" displayName="取可分配权限用户当前查询结果的下一条记录">
+      </MemberToken>
+      <BooleanJudgeToken type="0">
+      </BooleanJudgeToken>
+     </ConditionToken>
+    </MultiConditionToken>
+    <MultiActionToken uuid="U2RG4O4LPN6XXHTLXB" type="2">
+     <StatementContainerToken>
+      <MethodToken elementUuid="U22G4O4LPN6XXHTLXB" uniqueName="void_db5select0ZG4O4M1GI.selectWhere(&quot;select rp.userid  from r_projuser rp,r_proj p  where p.projid=rp.projid and p.ruleproject= ? &quot;,new Object[&#93;{ {arg1}})" valueType="" displayName="根据{arg1}执行可分配权限用户">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID4280E42FF04709010000738EC6017601A8C0" uniqueName="string_ruleproject" valueType="string" displayName="规则包工程名">
+        </MemberToken>
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+       </ValueToken>
+       <ElementTextToken displayName="执行可分配权限用户" colorType="tableFunction" pos="0" elementUuid="U22G4O4LPN6XXHTLXB" uniqueName="void_db5select0ZG4O4M1GI.selectWhere(&quot;select rp.userid  from r_projuser rp,r_proj p  where p.projid=rp.projid and p.ruleproject= ? &quot;,new Object[&#93;{ {arg1}})">
+       </ElementTextToken>
+      </MethodToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="U2SG4O4LPN6XXHTLXB" type="5">
+    </MultiActionToken>
+   </RuleSetToken>
+   <doc>
+   </doc>
+  </RuleSet>
+  <Rule displayName="添加用户权限" uuid="UUID1F808DA2765817010000A73AEE006601A8C0" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1199780235109" modifyTime="1323933987641" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false">
+   <RuleToken uuid="UUID20808DA2765817010000A73AEE006601A8C0">
+    <MultiConditionToken uuid="UUID21808DA2765817010000A73AEE006601A8C0" type="0">
+     <ConditionToken uuid="U2TG4O4LPN6XXHTLXB" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="UUID2180B2AB59EE22010000920865006806A8C0" uniqueName="int_userid" valueType="" displayName="userid">
+      </MemberToken>
+      <NumberJudgeToken type="1">
+      </NumberJudgeToken>
+      <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <ConstantToken valueType="int" value="0">
+       </ConstantToken>
+       <NumberOperatorToken type="0">
+       </NumberOperatorToken>
+      </ValueToken>
+     </ConditionToken>
+    </MultiConditionToken>
+    <MultiActionToken uuid="UUID22808DA2765817010000A73AEE006601A8C0" type="0">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID1E80B2AB59EE22010000920865006806A8C0" uniqueName="void_db5r_ruleuser.setInteger(&quot;userid&quot;,{arg1})" valueType="" displayName="设置r_ruleuser的userid字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <MemberToken elementUuid="UUID2180B2AB59EE22010000920865006806A8C0" uniqueName="int_userid" valueType="int" displayName="userid">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID1C80B2AB59EE22010000920865006806A8C0" uniqueName="void_db5r_ruleuser.setLong(&quot;ruleid&quot;,{arg1})" valueType="" displayName="设置r_ruleuser的ruleid字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <MemberToken elementUuid="UUID0380B763D45A12010000FCBB3F002D00A8C0" uniqueName="int_ruleid" valueType="int" displayName="规则编号">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="UUID0980B2AB59EE22010000920865006806A8C0" uniqueName="int_db5r_ruleuser.insertRows()" valueType="" displayName="添加r_ruleuser当前记录">
+      </TableFunctionToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="UUID23808DA2765817010000A73AEE006601A8C0" type="3">
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <Rule displayName="添加工程" uuid="U3YGVLFJ31GC6HG53FLOQ" exceptionType="1" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="true" startTime="0" endTime="0" createTime="1322604786191" modifyTime="1322709824051" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" restartType="0" vmlFlowType="0" supportEnter="false" editTable="false">
+   <RuleToken uuid="U3ZGVLFJ31GC6HG53FLOQ">
+    <MultiConditionToken uuid="U40GVLFJ31GC6HG53FLOQ" type="0">
+     <ConditionToken uuid="U41GVLFJ31GC6HG53FLOQ" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <LogicalJudgeToken type="1">
+      </LogicalJudgeToken>
+      <MemberToken elementUuid="U3JGVLFJ31GC6HG53FLOQ" uniqueName="boolean_db5select0BG4NNGI6K.next()" valueType="" displayName="取查询工程当前查询结果的下一条记录">
+      </MemberToken>
+      <BooleanJudgeToken type="1">
+      </BooleanJudgeToken>
+      <BooleanJudgeToken type="0">
+      </BooleanJudgeToken>
+     </ConditionToken>
+    </MultiConditionToken>
+    <MultiActionToken uuid="U42GVLFJ31GC6HG53FLOQ" type="0">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="U2JGVLFJ31GC6HG53FLOQ" uniqueName="void_db5r_proj.setString(&quot;ruleproject&quot;,{arg1})" valueType="" displayName="设置r_proj的ruleproject字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID4280E42FF04709010000738EC6017601A8C0" uniqueName="string_ruleproject" valueType="string" displayName="规则包工程名">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="U2LGVLFJ31GC6HG53FLOQ" uniqueName="void_db5r_proj.setString(&quot;projdetail&quot;,{arg1})" valueType="" displayName="设置r_proj的projdetail字段的值为{arg1}">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+        <MemberToken elementUuid="UUID4280E42FF04709010000738EC6017601A8C0" uniqueName="string_ruleproject" valueType="string" displayName="规则包工程名">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="U2NGVLFJ31GC6HG53FLOQ" uniqueName="void_db5r_proj.setInteger(&quot;cuser&quot;,{arg1})" valueType="" displayName="设置r_proj的cuser字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <MemberToken elementUuid="UUID2180B2AB59EE22010000920865006806A8C0" uniqueName="int_userid" valueType="int" displayName="userid">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="U2PGVLFJ31GC6HG53FLOQ" uniqueName="void_db5r_proj.setTimestamp(&quot;ctime&quot;,{arg1})" valueType="" displayName="设置r_proj的ctime字段的值为{arg1}">
+       <ValueToken valueType="datetime" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID0B80CBD2274809010000C162A2007601A8C0" uniqueName="java.util.Date.Date()" valueType="datetime" displayName="当前时间">
+        </MemberToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="U2RGVLFJ31GC6HG53FLOQ" uniqueName="void_db5r_proj.setInteger(&quot;iorder&quot;,{arg1})" valueType="" displayName="设置r_proj的iorder字段的值为{arg1}">
+       <ValueToken valueType="int" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <NumberOperatorToken type="0">
+        </NumberOperatorToken>
+        <ConstantToken valueType="int" value="0">
+        </ConstantToken>
+       </ValueToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="U1SGVLFJ31GC6HG53FLOQ" uniqueName="int_db5r_proj.insertRows()" valueType="" displayName="添加r_proj当前记录">
+      </TableFunctionToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+    <MultiActionToken uuid="U43GVLFJ31GC6HG53FLOQ" type="3">
+    </MultiActionToken>
+    <MultiActionToken uuid="U44GVLFJ31GC6HG53FLOQ" type="1">
+     <StatementContainerToken>
+      <TableFunctionToken elementUuid="U3IGVLFJ31GC6HG53FLOQ" uniqueName="void_db5select0BG4NNGI6K.selectWhere(&quot;select p.projid  from r_proj p where p.ruleproject= ? &quot;,new Object[&#93;{ {arg1}})" valueType="" displayName="根据{arg1}执行查询工程">
+       <ValueToken valueType="string" displayName="" argName="arg1" leftParenthesisNumber="0" rightParenthesisNumber="0">
+        <MemberToken elementUuid="UUID4280E42FF04709010000738EC6017601A8C0" uniqueName="string_ruleproject" valueType="string" displayName="规则包工程名">
+        </MemberToken>
+        <StringOperatorToken type="0">
+        </StringOperatorToken>
+       </ValueToken>
+       <ElementTextToken displayName="执行查询工程" colorType="default" pos="0" elementUuid="" uniqueName="">
+       </ElementTextToken>
+      </TableFunctionToken>
+     </StatementContainerToken>
+    </MultiActionToken>
+   </RuleToken>
+   <doc>
+   </doc>
+  </Rule>
+  <RuleSetToken uuid="UUID6280E42FF04709010000738EC6017601A8C0">
+   <MultiConditionToken uuid="UUID6A80E42FF04709010000738EC6017601A8C0" type="0">
+    <ConditionToken uuid="UUID0380F55ED6BE13010000B833B5000100007F" leftParenthesisNumber="0" rightParenthesisNumber="0">
+     <LogicalJudgeToken type="1">
+     </LogicalJudgeToken>
+     <MemberToken elementUuid="UUID0380B763D45A12010000FCBB3F002D00A8C0" uniqueName="int_ruleid" valueType="" displayName="规则编号">
+     </MemberToken>
+     <NumberJudgeToken type="0">
+     </NumberJudgeToken>
+     <ValueToken valueType="int" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+      <NumberOperatorToken type="0">
+      </NumberOperatorToken>
+      <ConstantToken valueType="int" value="0">
+      </ConstantToken>
+     </ValueToken>
+    </ConditionToken>
+   </MultiConditionToken>
+  </RuleSetToken>
+  <doc>
+  </doc>
+ </RuleSet>
+ <Envionment displayName="对象库" uuid="UUID0D80E42FF04709010000738EC6017601A8C0" modifyTime="1323912598350" functionNum="2">
+  <classDir>
+D:\VisualRules\lib\flservlet.jar  </classDir>
+  <ValueLibrary displayName="传入数据" modifyTime="1268877041953" uuid="UUID0880E42FF04709010000738EC6017601A8C0">
+   <MappingVariable displayName="修改工程" uuid="UUID4380E42FF04709010000738EC6017601A8C0" variableName="changeproject" visible="true" groupName="操作信息" valueType="boolean" inout="1" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="错误提示信息" uuid="UUID4480E42FF04709010000738EC6017601A8C0" variableName="error" visible="true" groupName="操作信息" valueType="string" inout="2" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="新建版本" uuid="UUID0B8009444D75150100007BC945006400A8C0" variableName="newversion" visible="true" groupName="操作信息" valueType="boolean" inout="1" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="ruletypeid" uuid="UUID078038F262CC13010000A86D70016400A8C0" variableName="ruletypeid" visible="true" groupName="规则包信息" valueType="int" inout="1" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="操作用户登录名" uuid="UUID3980E42FF04709010000738EC6017601A8C0" variableName="loginname" visible="true" groupName="规则包信息" valueType="string" inout="1" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则包修改时间" uuid="UUID3B80E42FF04709010000738EC6017601A8C0" variableName="modifytime" visible="true" groupName="规则包信息" valueType="datetime" inout="1" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则包执行名" uuid="UUID3C80E42FF04709010000738EC6017601A8C0" variableName="rulename" visible="true" groupName="规则包信息" valueType="string" inout="1" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则包显示名" uuid="UUID3D80E42FF04709010000738EC6017601A8C0" variableName="ruledisplay" visible="true" groupName="规则包信息" valueType="string" inout="1" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则包说明" uuid="UUID3E80E42FF04709010000738EC6017601A8C0" variableName="mhint" visible="true" groupName="规则包信息" valueType="string" inout="1" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则包内容" uuid="UUID4180E42FF04709010000738EC6017601A8C0" variableName="rulecontent" visible="true" groupName="规则包信息" valueType="string" inout="1" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则包工程名" uuid="UUID4280E42FF04709010000738EC6017601A8C0" variableName="ruleproject" visible="true" groupName="规则包信息" valueType="string" inout="1" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则编号" uuid="UUID0380B763D45A12010000FCBB3F002D00A8C0" variableName="ruleid" visible="true" groupName="规则包信息" valueType="int" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="规则版本" uuid="UUID3F80F55ED6BE13010000B833B5000100007F" variableName="rulever" visible="true" groupName="规则包信息" valueType="double" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="jspinfo" uuid="UUID098048C149CA130100002B7BD4016400A8C0" variableName="jspinfo" visible="true" groupName="规则包信息" valueType="string" inout="1" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="dbinfo" uuid="UUID0A8048C149CA130100002B7BD4016400A8C0" variableName="dbinfo" visible="true" groupName="规则包信息" valueType="string" inout="1" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="mainversion" uuid="UUID0880C5DE075D1701000080D54C006601A8C0" variableName="mainversion" visible="true" groupName="规则包信息" valueType="string" inout="1" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="userid" uuid="UUID2180B2AB59EE22010000920865006806A8C0" variableName="userid" visible="true" groupName="p" valueType="int" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="loginip" uuid="UUID63801C352CB125010000A7A1A6014401A8C0" variableName="loginip" visible="true" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="projver" uuid="U01G4O4LPN6XXHTLXB" variableName="projver" visible="true" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="projverid" uuid="U02G4O4LPN6XXHTLXB" variableName="projverid" visible="true" groupName="p" valueType="int" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="groupinfo" uuid="U01G6092OLSGO11X1S" variableName="groupinfo" visible="true" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="ipaddress" uuid="U01G6WWM3OT2BXU62T" variableName="ipaddress" visible="true" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1263992717812" uuid="UUID0980E42FF04709010000738EC6017601A8C0">
+   <TempVariable displayName="当前时间" uuid="UUID1680E30950311901000052EA57006500A8C0" variableName="curdate" visible="true" groupName="临时数据" valueType="datetime" loged="false">
+   </TempVariable>
+   <TempVariable displayName="editstate" uuid="U03G4O4LPN6XXHTLXB" variableName="editstate" visible="true" groupName="临时数据" valueType="int" loged="false">
+   </TempVariable>
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1139380590952" uuid="UUID0B80E42FF04709010000738EC6017601A8C0">
+   <FunctionClass displayName="java.util.Date" uuid="UUID0A80CBD2274809010000C162A2007601A8C0" visible="false" className="java.util.Date" valueType="java.util.Date" dir="" groupName="" shortClassName="Date">
+    <BusinessObjectConstructor displayName="当前时间" uuid="UUID0B80CBD2274809010000C162A2007601A8C0" memberName="Date()" visible="true" valueType="java.util.Date" groupName="" shortMemberName="Date">
+    </BusinessObjectConstructor>
+   </FunctionClass>
+   <FunctionClass displayName="com.flagleader.util.MD5" uuid="UUID2481CBD2274809010000C162A2007601A8C0" visible="false" className="com.flagleader.util.MD5" valueType="com.flagleader.util.MD5" dir="" groupName="" shortClassName="MD5">
+    <BusinessObjectMethod displayName="加密({arg1})" uuid="UUID2581CBD2274809010000C162A2007601A8C0" memberName="getMD5ofStr(java.lang.String)" visible="true" valueType="java.lang.String" groupName="" shortMemberName="getMD5ofStr">
+     <MethodParam typeName="java.lang.String" paramName="arg1" defaultValue=""/>
+    </BusinessObjectMethod>
+   </FunctionClass>
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1184511668875" uuid="UUID0C80E42FF04709010000738EC6017601A8C0">
+   <ConstantEnum displayName="修改完毕" uuid="UUID0B8048C149CA130100002B7BD4016400A8C0" value="3" visible="true" groupName="常量数据" valueType="int">
+   </ConstantEnum>
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <DBModel displayName="rules" uuid="UUID01808479E1CF1C0100000AB946006400A8C0" url="jdbc:mysql://localhost/rules" driver="com.mysql.jdbc.Driver" userName="root" encryptedPasswd="Xs9UzDAgGfLhcJn2WMXwew==" datasourceName="rules" catalogName="" schemaName="" connType="0" varName="db5" modifyTime="1323912598350" dbFilePath="D:\Personal\Desktop\rules.dbs" vml="0" transationlevel="0">
+   <TableModel uuid="UUID02808479E1CF1C0100000AB946006400A8C0" displayName="r_rule" tableName="r_rule" shortTableName="r_rule" varName="r_rule" accessType="0" resultType="0" modifyTime="1323911917205" vml="0">
+    <TableFunction displayName="查询r_rule表中符合条件记录" uuid="UUID0F80E42FF04709010000738EC6017601A8C0" valueName="select" visible="true" valueType="void" variableName="select()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="删除r_rule表当前记录" uuid="UUID1080E42FF04709010000738EC6017601A8C0" valueName="delete" visible="false" valueType="void" variableName="delete()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="根据外键删除r_rule表当前记录" uuid="UUID1180E42FF04709010000738EC6017601A8C0" valueName="deleteByForeignKey" visible="false" valueType="void" variableName="deleteByForeignKey()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="更新r_rule表当前记录" uuid="UUID1280E42FF04709010000738EC6017601A8C0" valueName="update" visible="true" valueType="void" variableName="update()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="根据外键更新r_rule表当前记录" uuid="UUID1380E42FF04709010000738EC6017601A8C0" valueName="updateByForeignKey" visible="false" valueType="void" variableName="updateByForeignKey()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="添加r_rule表当前记录" uuid="UUID1480E42FF04709010000738EC6017601A8C0" valueName="insert" visible="true" valueType="void" variableName="insert()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="判断r_rule表当前查询结果是否存在下一条记录" uuid="UUID1580E42FF04709010000738EC6017601A8C0" valueName="hasNext" visible="false" valueType="boolean" variableName="hasNext()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取r_rule表当前查询结果的下一条记录" uuid="UUID1680E42FF04709010000738EC6017601A8C0" valueName="next" visible="true" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="初始化r_rule表当前记录" uuid="UUID1780E42FF04709010000738EC6017601A8C0" valueName="resetValues" visible="true" valueType="void" variableName="resetValues()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="r_rule表当前查询结果的记录数" uuid="UUID1880E42FF04709010000738EC6017601A8C0" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="关闭r_rule表当前查询结果集" uuid="UUID1980E42FF04709010000738EC6017601A8C0" valueName="close" visible="false" valueType="void" variableName="close()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="查询r_rule表中所有记录" uuid="UUID1A80E42FF04709010000738EC6017601A8C0" valueName="selectAll" visible="false" valueType="void" variableName="selectAll()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取r_rule表当前查询结果的第一条记录" uuid="UUID1B80E42FF04709010000738EC6017601A8C0" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取r_rule表当前查询结果的上一条记录" uuid="UUID1C80E42FF04709010000738EC6017601A8C0" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取r_rule表当前查询结果的最后一条记录" uuid="UUID1D80E42FF04709010000738EC6017601A8C0" valueName="last" visible="true" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="r_rule表当前查询结果的所有记录" uuid="UUID1E80E42FF04709010000738EC6017601A8C0" valueName="getListResult" visible="false" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得r_rule表当前记录在查询结果中的位置" uuid="UUID1F80E42FF04709010000738EC6017601A8C0" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取r_rule表当前查询结果的第{arg1}条记录" uuid="UUID2080E42FF04709010000738EC6017601A8C0" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule表规则编号字段的值" uuid="UUID2180E42FF04709010000738EC6017601A8C0" valueName="getRuleid" visible="true" valueType="int" variableName="getInteger(0)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule表规则编号字段的值为{arg1}" uuid="UUID2280E42FF04709010000738EC6017601A8C0" valueName="setRuleid" visible="true" valueType="void" variableName="setInteger(&quot;ruleid&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule表规则执行名字段的值" uuid="UUID2380E42FF04709010000738EC6017601A8C0" valueName="getExerule" visible="false" valueType="string" variableName="getString(1)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule表规则执行名字段的值为{arg1}" uuid="UUID2480E42FF04709010000738EC6017601A8C0" valueName="setExerule" visible="true" valueType="void" variableName="setString(&quot;exerule&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule表规则显示名称字段的值" uuid="UUID2580E42FF04709010000738EC6017601A8C0" valueName="getRuledisplay" visible="false" valueType="string" variableName="getString(2)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule表规则显示名称字段的值为{arg1}" uuid="UUID2680E42FF04709010000738EC6017601A8C0" valueName="setRuledisplay" visible="true" valueType="void" variableName="setString(&quot;ruledisplay&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule表编辑时间字段的值" uuid="UUID2B80E42FF04709010000738EC6017601A8C0" valueName="getOtime" visible="false" valueType="datetime" variableName="getTimestamp(5)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule表编辑时间字段的值为{arg1}" uuid="UUID2C80E42FF04709010000738EC6017601A8C0" valueName="setOtime" visible="true" valueType="void" variableName="setTimestamp(&quot;otime&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="datetime" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule表规则分类编号字段的值" uuid="UUID2F80E42FF04709010000738EC6017601A8C0" valueName="getRuletypeid" visible="false" valueType="int" variableName="getInteger(7)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule表规则分类编号字段的值为{arg1}" uuid="UUID3080E42FF04709010000738EC6017601A8C0" valueName="setRuletypeid" visible="true" valueType="void" variableName="setInteger(&quot;ruletypeid&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule表规则包工程名字段的值" uuid="UUID3380E42FF04709010000738EC6017601A8C0" valueName="getRuleproject" visible="false" valueType="string" variableName="getString(8)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule表规则包工程名字段的值为{arg1}" uuid="UUID3480E42FF04709010000738EC6017601A8C0" valueName="setRuleproject" visible="true" valueType="void" variableName="setString(&quot;ruleproject&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule表上次修改时间字段的值" uuid="UUID3580E42FF04709010000738EC6017601A8C0" valueName="getModifytime" visible="false" valueType="datetime" variableName="getTimestamp(9)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule表上次修改时间字段的值为{arg1}" uuid="UUID3680E42FF04709010000738EC6017601A8C0" valueName="setModifytime" visible="true" valueType="void" variableName="setTimestamp(&quot;modifytime&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="datetime" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <indexModel displayName="PRIMARY" indexName="PRIMARY" unique="true">
+    </indexModel>
+    <TableFunction displayName="取r_rule表loginname字段的值" uuid="UUID0680CBD2274809010000C162A2007601A8C0" valueName="getLoginname" visible="false" valueType="string" variableName="getString(4)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule表loginname字段的值为{arg1}" uuid="UUID0780CBD2274809010000C162A2007601A8C0" valueName="setLoginname" visible="true" valueType="void" variableName="setString(&quot;loginname&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="判断r_rule主键字段是否已有其他表引用" uuid="UUID1B80F55ED6BE13010000B833B5000100007F" valueName="hasExported" visible="false" valueType="boolean" variableName="hasExported()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取r_rule的rulever字段的值" uuid="UUID1C80F55ED6BE13010000B833B5000100007F" valueName="getRulever" visible="false" valueType="double" variableName="getDouble(10)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule的rulever字段的值为{arg1}" uuid="UUID1D80F55ED6BE13010000B833B5000100007F" valueName="setRulever" visible="false" valueType="void" variableName="setDouble(&quot;rulever&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="double" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule的jspinfo字段的值" uuid="UUID058048C149CA130100002B7BD4016400A8C0" valueName="getJspinfo" visible="false" valueType="string" variableName="getString(11)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule的jspinfo字段的值为{arg1}" uuid="UUID068048C149CA130100002B7BD4016400A8C0" valueName="setJspinfo" visible="false" valueType="void" variableName="setString(&quot;jspinfo&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule的dbinfo字段的值" uuid="UUID078048C149CA130100002B7BD4016400A8C0" valueName="getDbinfo" visible="false" valueType="string" variableName="getString(12)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule的dbinfo字段的值为{arg1}" uuid="UUID088048C149CA130100002B7BD4016400A8C0" valueName="setDbinfo" visible="false" valueType="void" variableName="setString(&quot;dbinfo&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule的editstate字段的值" uuid="UUID0680ED1ADACD1301000023FC04010100007F" valueName="getEditstate" visible="false" valueType="int" variableName="getInteger(13)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule的editstate字段的值为{arg1}" uuid="UUID0580ED1ADACD1301000023FC04010100007F" valueName="setEditstate" visible="false" valueType="void" variableName="setInteger(&quot;editstate&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <indexModel displayName="PK_r_rule" indexName="PK_r_rule" unique="true">
+    </indexModel>
+    <TableFunction displayName="取r_rule的ruledescribe字段的值" uuid="UUID2F805479BAFE180100000ADACB016400A8C0" valueName="getRuledescribe" visible="false" valueType="string" variableName="getString(3)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule的ruledescribe字段的值为{arg1}" uuid="UUID30805479BAFE180100000ADACB016400A8C0" valueName="setRuledescribe" visible="false" valueType="void" variableName="setString(&quot;ruledescribe&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule的stateid字段的值" uuid="UUID31805479BAFE180100000ADACB016400A8C0" valueName="getStateid" visible="false" valueType="int" variableName="getInteger(6)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule的stateid字段的值为{arg1}" uuid="UUID32805479BAFE180100000ADACB016400A8C0" valueName="setStateid" visible="false" valueType="void" variableName="setInteger(&quot;stateid&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule的resulttable字段的值" uuid="UUID33805479BAFE180100000ADACB016400A8C0" valueName="getResulttable" visible="false" valueType="string" variableName="getString(14)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule的resulttable字段的值为{arg1}" uuid="UUID34805479BAFE180100000ADACB016400A8C0" valueName="setResulttable" visible="false" valueType="void" variableName="setString(&quot;resulttable&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule的executerule字段的值" uuid="UUID35805479BAFE180100000ADACB016400A8C0" valueName="getExecuterule" visible="false" valueType="string" variableName="getString(15)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule的executerule字段的值为{arg1}" uuid="UUID36805479BAFE180100000ADACB016400A8C0" valueName="setExecuterule" visible="false" valueType="void" variableName="setString(&quot;executerule&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule的resultselect字段的值" uuid="UUID37805479BAFE180100000ADACB016400A8C0" valueName="getResultselect" visible="false" valueType="string" variableName="getString(16)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule的resultselect字段的值为{arg1}" uuid="UUID38805479BAFE180100000ADACB016400A8C0" valueName="setResultselect" visible="false" valueType="void" variableName="setString(&quot;resultselect&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule的resultback字段的值" uuid="UUID39805479BAFE180100000ADACB016400A8C0" valueName="getResultback" visible="false" valueType="string" variableName="getString(17)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule的resultback字段的值为{arg1}" uuid="UUID3A805479BAFE180100000ADACB016400A8C0" valueName="setResultback" visible="false" valueType="void" variableName="setString(&quot;resultback&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule的resulttemp字段的值" uuid="UUID3B805479BAFE180100000ADACB016400A8C0" valueName="getResulttemp" visible="false" valueType="string" variableName="getString(18)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule的resulttemp字段的值为{arg1}" uuid="UUID3C805479BAFE180100000ADACB016400A8C0" valueName="setResulttemp" visible="false" valueType="void" variableName="setString(&quot;resulttemp&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_rule的rewardApply字段的值" uuid="UUID3D805479BAFE180100000ADACB016400A8C0" valueName="getRewardapply" visible="false" valueType="string" variableName="getString(19)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule的rewardApply字段的值为{arg1}" uuid="UUID3E805479BAFE180100000ADACB016400A8C0" valueName="setRewardapply" visible="false" valueType="void" variableName="setString(&quot;rewardapply&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="添加或更新r_rule当前记录" uuid="UUID0180B2AB59EE22010000920865006806A8C0" valueName="replace" visible="false" valueType="int" variableName="replace()" varPre="" groupName="修改">
+    </TableFunction>
+    <indexModel displayName="Index_2" indexName="Index_2" unique="true">
+    </indexModel>
+    <indexModel displayName="Index_3" indexName="Index_3" unique="false">
+    </indexModel>
+    <indexModel displayName="Index_4" indexName="Index_4" unique="false">
+    </indexModel>
+    <fieldModel displayName="规则编号" uuid="UUID03808479E1CF1C0100000AB946006400A8C0" fieldName="ruleid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="true" autoIncrement="true" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="true" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="规则执行名" uuid="UUID04808479E1CF1C0100000AB946006400A8C0" fieldName="exerule" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="90" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="规则显示名称" uuid="UUID05808479E1CF1C0100000AB946006400A8C0" fieldName="ruledisplay" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="90" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="ruledescribe" uuid="UUID06808479E1CF1C0100000AB946006400A8C0" fieldName="ruledescribe" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="255" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="loginname" uuid="UUID07808479E1CF1C0100000AB946006400A8C0" fieldName="loginname" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="编辑时间" uuid="UUID08808479E1CF1C0100000AB946006400A8C0" fieldName="otime" fieldType="DATETIME" valueType="datetime" classType="java.sql.Timestamp" len="19" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="93" defaultType="datetime">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="stateid" uuid="UUID09808479E1CF1C0100000AB946006400A8C0" fieldName="stateid" fieldType="SMALLINT UNSIGNED" valueType="int" classType="java.lang.Integer" len="5" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="5" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="规则分类编号" uuid="UUID0A808479E1CF1C0100000AB946006400A8C0" fieldName="ruletypeid" fieldType="SMALLINT UNSIGNED" valueType="int" classType="java.lang.Integer" len="5" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="5" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="规则包工程名" uuid="UUID0B808479E1CF1C0100000AB946006400A8C0" fieldName="ruleproject" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="40" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="上次修改时间" uuid="UUID0C808479E1CF1C0100000AB946006400A8C0" fieldName="modifytime" fieldType="DATETIME" valueType="datetime" classType="java.sql.Timestamp" len="19" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="93" defaultType="datetime">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="rulever" uuid="UUID0D808479E1CF1C0100000AB946006400A8C0" fieldName="rulever" fieldType="DOUBLE" valueType="double" classType="java.lang.Double" len="22" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="true" primaryKey="false" friendKey="false" iType="8" defaultType="double">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="jspinfo" uuid="UUID0E808479E1CF1C0100000AB946006400A8C0" fieldName="jspinfo" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="255" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="dbinfo" uuid="UUID0F808479E1CF1C0100000AB946006400A8C0" fieldName="dbinfo" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="255" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="editstate" uuid="UUID10808479E1CF1C0100000AB946006400A8C0" fieldName="editstate" fieldType="SMALLINT UNSIGNED" valueType="int" classType="java.lang.Integer" len="5" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="5" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="resulttable" uuid="UUID11808479E1CF1C0100000AB946006400A8C0" fieldName="resulttable" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="255" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="executerule" uuid="UUID12808479E1CF1C0100000AB946006400A8C0" fieldName="executerule" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="2000" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="resultselect" uuid="UUID13808479E1CF1C0100000AB946006400A8C0" fieldName="resultselect" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="2000" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="resultback" uuid="UUID14808479E1CF1C0100000AB946006400A8C0" fieldName="resultback" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="2000" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="resulttemp" uuid="UUID15808479E1CF1C0100000AB946006400A8C0" fieldName="resulttemp" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="2000" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="rewardApply" uuid="UUID16808479E1CF1C0100000AB946006400A8C0" fieldName="rewardApply" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="2000" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="groupinfo" uuid="U02G6092OLSGO11X1S" fieldName="groupinfo" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="200" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <TableFunction displayName="取r_rule的groupinfo字段的值" uuid="U03G6092OLSGO11X1S" valueName="getGroupinfo" visible="false" valueType="string" variableName="getString(20)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_rule的groupinfo字段的值为{arg1}" uuid="U04G6092OLSGO11X1S" valueName="setGroupinfo" visible="false" valueType="void" variableName="setString(&quot;groupinfo&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="添加r_rule当前记录并且取得自增主键值" uuid="U00GW72Z15FIF64PZ8KFLT" valueName="insertAndGeneratedKey" visible="false" valueType="int" variableName="insertAndGeneratedKey()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="将{arg1}中的数据根据所选列的对应关系，添加到r_rule数据库表中" uuid="U01GW72Z15FIF64PZ8KFLT" valueName="insertBySheet" visible="true" valueType="void" variableName="insertBySheet({arg1})" varPre="" groupName="修改">
+     <MethodParam typeName="sheetandfields" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="将{arg1}中的数据根据所选列的对应关系，按主键更新到r_rule数据库表中" uuid="U02GW72Z15FIF64PZ8KFLT" valueName="updateBySheet" visible="true" valueType="void" variableName="updateBySheet({arg1})" varPre="" groupName="修改">
+     <MethodParam typeName="sheetandfields" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <doc>
+    </doc>
+   </TableModel>
+   <TableModel uuid="UUID17808479E1CF1C0100000AB946006400A8C0" displayName="r_ruleversion" tableName="r_ruleversion" shortTableName="r_ruleversion" varName="r_ruleversion" accessType="0" resultType="0" modifyTime="1293614628703" vml="0">
+    <TableFunction displayName="查询r_ruleversion中符合条件记录" uuid="UUID1E80F55ED6BE13010000B833B5000100007F" valueName="select" visible="false" valueType="void" variableName="select()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="添加r_ruleversion当前记录" uuid="UUID1F80F55ED6BE13010000B833B5000100007F" valueName="insert" visible="false" valueType="void" variableName="insert()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="删除r_ruleversion当前记录" uuid="UUID2080F55ED6BE13010000B833B5000100007F" valueName="delete" visible="false" valueType="void" variableName="delete()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="更新r_ruleversion当前记录" uuid="UUID2180F55ED6BE13010000B833B5000100007F" valueName="update" visible="true" valueType="void" variableName="update()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取r_ruleversion当前查询结果的下一条记录" uuid="UUID2280F55ED6BE13010000B833B5000100007F" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="初始化r_ruleversion当前记录" uuid="UUID2380F55ED6BE13010000B833B5000100007F" valueName="resetValues" visible="true" valueType="void" variableName="resetValues()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取r_ruleversion当前查询结果的最后一条记录" uuid="UUID2480F55ED6BE13010000B833B5000100007F" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="r_ruleversion当前查询结果的所有记录" uuid="UUID2580F55ED6BE13010000B833B5000100007F" valueName="getListResult" visible="false" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="根据外键删除r_ruleversion当前记录" uuid="UUID2680F55ED6BE13010000B833B5000100007F" valueName="deleteByForeignKey" visible="false" valueType="void" variableName="deleteByForeignKey()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="判断r_ruleversion主键字段是否已有其他表引用" uuid="UUID2780F55ED6BE13010000B833B5000100007F" valueName="hasExported" visible="false" valueType="boolean" variableName="hasExported()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="根据外键更新r_ruleversion当前记录" uuid="UUID2880F55ED6BE13010000B833B5000100007F" valueName="updateByForeignKey" visible="false" valueType="void" variableName="updateByForeignKey()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="r_ruleversion当前查询结果的记录数" uuid="UUID2980F55ED6BE13010000B833B5000100007F" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="关闭r_ruleversion当前查询结果集" uuid="UUID2A80F55ED6BE13010000B833B5000100007F" valueName="close" visible="false" valueType="void" variableName="close()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="查询r_ruleversion中所有记录" uuid="UUID2B80F55ED6BE13010000B833B5000100007F" valueName="selectAll" visible="false" valueType="void" variableName="selectAll()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取r_ruleversion当前查询结果的第一条记录" uuid="UUID2C80F55ED6BE13010000B833B5000100007F" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取r_ruleversion当前查询结果的上一条记录" uuid="UUID2D80F55ED6BE13010000B833B5000100007F" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得r_ruleversion当前记录在查询结果中的位置" uuid="UUID2E80F55ED6BE13010000B833B5000100007F" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取r_ruleversion当前查询结果的第{arg1}条记录" uuid="UUID2F80F55ED6BE13010000B833B5000100007F" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_ruleversion的ruleid字段的值" uuid="UUID3080F55ED6BE13010000B833B5000100007F" valueName="getRuleid" visible="false" valueType="int" variableName="getInteger(0)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_ruleversion的ruleid字段的值为{arg1}" uuid="UUID3180F55ED6BE13010000B833B5000100007F" valueName="setRuleid" visible="false" valueType="void" variableName="setInteger(&quot;ruleid&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_ruleversion的rulever字段的值" uuid="UUID3280F55ED6BE13010000B833B5000100007F" valueName="getRulever" visible="false" valueType="double" variableName="getDouble(1)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_ruleversion的rulever字段的值为{arg1}" uuid="UUID3380F55ED6BE13010000B833B5000100007F" valueName="setRulever" visible="false" valueType="void" variableName="setDouble(&quot;rulever&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="double" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_ruleversion的mtime字段的值" uuid="UUID3680F55ED6BE13010000B833B5000100007F" valueName="getMtime" visible="false" valueType="datetime" variableName="getTimestamp(2)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_ruleversion的mtime字段的值为{arg1}" uuid="UUID3780F55ED6BE13010000B833B5000100007F" valueName="setMtime" visible="false" valueType="void" variableName="setTimestamp(&quot;mtime&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="datetime" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_ruleversion的muser字段的值" uuid="UUID3880F55ED6BE13010000B833B5000100007F" valueName="getMuser" visible="false" valueType="string" variableName="getString(3)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_ruleversion的muser字段的值为{arg1}" uuid="UUID3980F55ED6BE13010000B833B5000100007F" valueName="setMuser" visible="false" valueType="void" variableName="setString(&quot;muser&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_ruleversion的mhint字段的值" uuid="UUID3A80F55ED6BE13010000B833B5000100007F" valueName="getMhint" visible="false" valueType="string" variableName="getString(4)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_ruleversion的mhint字段的值为{arg1}" uuid="UUID3B80F55ED6BE13010000B833B5000100007F" valueName="setMhint" visible="false" valueType="void" variableName="setString(&quot;mhint&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_ruleversion的stateid字段的值" uuid="UUID3C80F55ED6BE13010000B833B5000100007F" valueName="getStateid" visible="false" valueType="int" variableName="getInteger(5)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_ruleversion的stateid字段的值为{arg1}" uuid="UUID3D80F55ED6BE13010000B833B5000100007F" valueName="setStateid" visible="false" valueType="void" variableName="setInteger(&quot;stateid&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <indexModel displayName="PRIMARY" indexName="PRIMARY" unique="true">
+    </indexModel>
+    <indexModel displayName="PK_r_ruleversion" indexName="PK_r_ruleversion" unique="true">
+    </indexModel>
+    <TableFunction displayName="取r_ruleversion的suser字段的值" uuid="UUID0B80C5DE075D1701000080D54C006601A8C0" valueName="getSuser" visible="false" valueType="string" variableName="getString(6)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_ruleversion的suser字段的值为{arg1}" uuid="UUID0C80C5DE075D1701000080D54C006601A8C0" valueName="setSuser" visible="false" valueType="void" variableName="setString(&quot;suser&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_ruleversion的stime字段的值" uuid="UUID0D80C5DE075D1701000080D54C006601A8C0" valueName="getStime" visible="false" valueType="datetime" variableName="getTimestamp(7)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_ruleversion的stime字段的值为{arg1}" uuid="UUID0E80C5DE075D1701000080D54C006601A8C0" valueName="setStime" visible="true" valueType="void" variableName="setTimestamp(&quot;stime&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="datetime" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_ruleversion的mainversion字段的值" uuid="UUID2D805479BAFE180100000ADACB016400A8C0" valueName="getMainversion" visible="false" valueType="string" variableName="getString(8)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置r_ruleversion的mainversion字段的值为{arg1}" uuid="UUID2E805479BAFE180100000ADACB016400A8C0" valueName="setMainversion" visible="false" valueType="void" variableName="setString(&quot;mainversion&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="添加或更新r_ruleversion当前记录" uuid="UUID0280B2AB59EE22010000920865006806A8C0" valueName="replace" visible="false" valueType="int" variableName="replace()" varPre="" groupName="修改">
+    </TableFunction>
+    <indexModel displayName="Index_2" indexName="Index_2" unique="false">
+    </indexModel>
+    <TableFunction displayName="取r_ruleversion的projverid字段的值" uuid="U1PG4O4LPN6XXHTLXB" valueName="getProjverid" visible="false" valueType="int" variableName="getInteger(9)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_ruleversion的projverid字段的值为{arg1}" uuid="U1QG4O4LPN6XXHTLXB" valueName="setProjverid" visible="false" valueType="void" variableName="setInteger(&quot;projverid&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <indexModel displayName="Index_3" indexName="Index_3" unique="false">
+    </indexModel>
+    <TableFunction displayName="取r_ruleversion的ipaddress字段的值" uuid="U03G6WWM3OT2BXU62T" valueName="getIpaddress" visible="false" valueType="string" variableName="getString(10)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_ruleversion的ipaddress字段的值为{arg1}" uuid="U04G6WWM3OT2BXU62T" valueName="setIpaddress" visible="false" valueType="void" variableName="setString(&quot;ipaddress&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="添加r_ruleversion当前记录并且取得自增主键值" uuid="UR7GIA0N8MX16YA31EKN" valueName="insertAndGeneratedKey" visible="false" valueType="int" variableName="insertAndGeneratedKey()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="将{arg1}中的数据根据所选列的对应关系，添加到r_ruleversion数据库表中" uuid="UR8GIA0N8MX16YA31EKN" valueName="insertBySheet" visible="true" valueType="void" variableName="insertBySheet({arg1})" varPre="" groupName="修改">
+     <MethodParam typeName="sheetandfields" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="将{arg1}中的数据根据所选列的对应关系，按主键更新到r_ruleversion数据库表中" uuid="UR9GIA0N8MX16YA31EKN" valueName="updateBySheet" visible="true" valueType="void" variableName="updateBySheet({arg1})" varPre="" groupName="修改">
+     <MethodParam typeName="sheetandfields" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <fieldModel displayName="ruleid" uuid="UUID18808479E1CF1C0100000AB946006400A8C0" fieldName="ruleid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="true" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="rulever" uuid="UUID19808479E1CF1C0100000AB946006400A8C0" fieldName="rulever" fieldType="DOUBLE" valueType="double" classType="java.lang.Double" len="2" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="true" primaryKey="true" friendKey="false" iType="8" defaultType="double">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="mtime" uuid="UUID1B808479E1CF1C0100000AB946006400A8C0" fieldName="mtime" fieldType="DATETIME" valueType="datetime" classType="java.sql.Timestamp" len="19" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="93" defaultType="datetime">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="muser" uuid="UUID1C808479E1CF1C0100000AB946006400A8C0" fieldName="muser" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="mhint" uuid="UUID1D808479E1CF1C0100000AB946006400A8C0" fieldName="mhint" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="200" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="stateid" uuid="UUID1E808479E1CF1C0100000AB946006400A8C0" fieldName="stateid" fieldType="SMALLINT UNSIGNED" valueType="int" classType="java.lang.Integer" len="5" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="5" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="suser" uuid="UUID1F808479E1CF1C0100000AB946006400A8C0" fieldName="suser" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="20" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="stime" uuid="UUID20808479E1CF1C0100000AB946006400A8C0" fieldName="stime" fieldType="DATETIME" valueType="datetime" classType="java.sql.Timestamp" len="19" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="93" defaultType="datetime">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="mainversion" uuid="UUID21808479E1CF1C0100000AB946006400A8C0" fieldName="mainversion" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="projverid" uuid="U1OG4O4LPN6XXHTLXB" fieldName="projverid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="ipaddress" uuid="U02G6WWM3OT2BXU62T" fieldName="ipaddress" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="15" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="rulezip" uuid="URAGIA0N8MX16YA31EKN" fieldName="rulezip" fieldType="BLOB" valueType="byte[&#93;" classType="[B" len="65535" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="true" currency="false" signed="false" primaryKey="false" friendKey="false" iType="-4" defaultType="byte[&#93;">
+     <doc>
+     </doc>
+    </fieldModel>
+    <TableFunction displayName="取r_ruleversion的rulezip字段的值" uuid="URBGIA0N8MX16YA31EKN" valueName="getRulezip" visible="false" valueType="byte[&#93;" variableName="getBytes(11)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_ruleversion的rulezip字段的值为{arg1}" uuid="URCGIA0N8MX16YA31EKN" valueName="setRulezip" visible="false" valueType="void" variableName="setBytes(&quot;rulezip&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="byte[&#93;" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <BusinessObjectMethod displayName="r_ruleversion.setZipObject({arg1}, {arg2})" uuid="URDGIA0N8MX16YA31EKN" memberName="setZipObject(java.lang.String, java.lang.String)" visible="true" valueType="void" groupName="p" shortMemberName="setZipObject">
+     <MethodParam typeName="java.lang.String" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="java.lang.String" paramName="arg2" defaultValue=""/>
+    </BusinessObjectMethod>
+    <doc>
+    </doc>
+   </TableModel>
+   <TableModel uuid="UUID0780B2AB59EE22010000920865006806A8C0" displayName="r_ruleuser" tableName="r_ruleuser" shortTableName="r_ruleuser" varName="r_ruleuser" accessType="0" resultType="0" modifyTime="1249539550171" vml="0">
+    <TableFunction displayName="查询r_ruleuser中符合条件记录" uuid="UUID0880B2AB59EE22010000920865006806A8C0" valueName="select" visible="false" valueType="void" variableName="select()" varPre="" groupName="查询">
+    </TableFunction>
+    <TableFunction displayName="添加r_ruleuser当前记录" uuid="UUID0980B2AB59EE22010000920865006806A8C0" valueName="insert" visible="false" valueType="int" variableName="insertRows()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="删除r_ruleuser当前记录" uuid="UUID0A80B2AB59EE22010000920865006806A8C0" valueName="delete" visible="false" valueType="int" variableName="deleteRows()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="更新r_ruleuser当前记录" uuid="UUID0B80B2AB59EE22010000920865006806A8C0" valueName="update" visible="false" valueType="int" variableName="updateRows()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="添加或更新r_ruleuser当前记录" uuid="UUID0C80B2AB59EE22010000920865006806A8C0" valueName="replace" visible="false" valueType="int" variableName="replace()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="取r_ruleuser当前查询结果的下一条记录" uuid="UUID0D80B2AB59EE22010000920865006806A8C0" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="初始化r_ruleuser当前记录" uuid="UUID0E80B2AB59EE22010000920865006806A8C0" valueName="resetValues" visible="false" valueType="void" variableName="resetValues()" varPre="" groupName="查询">
+    </TableFunction>
+    <TableFunction displayName="取r_ruleuser当前查询结果的最后一条记录" uuid="UUID0F80B2AB59EE22010000920865006806A8C0" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="r_ruleuser当前查询结果的所有记录" uuid="UUID1080B2AB59EE22010000920865006806A8C0" valueName="getListResult" visible="false" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="根据外键删除r_ruleuser当前记录" uuid="UUID1180B2AB59EE22010000920865006806A8C0" valueName="deleteByForeignKey" visible="false" valueType="void" variableName="deleteByForeignKey()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="判断r_ruleuser主键字段是否已有其他表引用" uuid="UUID1280B2AB59EE22010000920865006806A8C0" valueName="hasExported" visible="false" valueType="boolean" variableName="hasExported()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="根据外键更新r_ruleuser当前记录" uuid="UUID1380B2AB59EE22010000920865006806A8C0" valueName="updateByForeignKey" visible="false" valueType="void" variableName="updateByForeignKey()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="r_ruleuser当前查询结果的记录数" uuid="UUID1480B2AB59EE22010000920865006806A8C0" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="关闭r_ruleuser当前查询结果集" uuid="UUID1580B2AB59EE22010000920865006806A8C0" valueName="close" visible="false" valueType="void" variableName="close()" varPre="" groupName="查询">
+    </TableFunction>
+    <TableFunction displayName="查询r_ruleuser中所有记录" uuid="UUID1680B2AB59EE22010000920865006806A8C0" valueName="selectAll" visible="false" valueType="void" variableName="selectAll()" varPre="" groupName="查询">
+    </TableFunction>
+    <TableFunction displayName="取r_ruleuser当前查询结果的第一条记录" uuid="UUID1780B2AB59EE22010000920865006806A8C0" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取r_ruleuser当前查询结果的上一条记录" uuid="UUID1880B2AB59EE22010000920865006806A8C0" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取得r_ruleuser当前记录在查询结果中的位置" uuid="UUID1980B2AB59EE22010000920865006806A8C0" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取r_ruleuser当前查询结果的第{arg1}条记录" uuid="UUID1A80B2AB59EE22010000920865006806A8C0" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="结果">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_ruleuser的ruleid字段的值" uuid="UUID1B80B2AB59EE22010000920865006806A8C0" valueName="getRuleid" visible="false" valueType="long" variableName="getLong(0)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_ruleuser的ruleid字段的值为{arg1}" uuid="UUID1C80B2AB59EE22010000920865006806A8C0" valueName="setRuleid" visible="false" valueType="void" variableName="setLong(&quot;ruleid&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="long" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_ruleuser的userid字段的值" uuid="UUID1D80B2AB59EE22010000920865006806A8C0" valueName="getUserid" visible="false" valueType="int" variableName="getInteger(1)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_ruleuser的userid字段的值为{arg1}" uuid="UUID1E80B2AB59EE22010000920865006806A8C0" valueName="setUserid" visible="false" valueType="void" variableName="setInteger(&quot;userid&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <fieldModel displayName="ruleid" uuid="UUID1F80B2AB59EE22010000920865006806A8C0" fieldName="ruleid" fieldType="BIGINT UNSIGNED" valueType="long" classType="java.math.BigInteger" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="true" friendKey="false" iType="-5" defaultType="long">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="userid" uuid="UUID2080B2AB59EE22010000920865006806A8C0" fieldName="userid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="true" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <indexModel displayName="PRIMARY" indexName="PRIMARY" unique="true">
+    </indexModel>
+    <doc>
+    </doc>
+   </TableModel>
+   <TableModel uuid="UUID2D801C352CB125010000A7A1A6014401A8C0" displayName="系统日志" tableName="sys_log" shortTableName="sys_log" varName="sys_log" accessType="0" resultType="0" modifyTime="1261402240578" vml="0">
+    <TableFunction displayName="查询系统日志中符合条件记录" uuid="UUID2E801C352CB125010000A7A1A6014401A8C0" valueName="select" visible="false" valueType="void" variableName="select()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="添加系统日志当前记录" uuid="UUID2F801C352CB125010000A7A1A6014401A8C0" valueName="insert" visible="false" valueType="void" variableName="insert()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="删除系统日志当前记录" uuid="UUID30801C352CB125010000A7A1A6014401A8C0" valueName="delete" visible="false" valueType="void" variableName="delete()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="更新系统日志当前记录" uuid="UUID31801C352CB125010000A7A1A6014401A8C0" valueName="update" visible="false" valueType="void" variableName="update()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取系统日志当前查询结果的下一条记录" uuid="UUID32801C352CB125010000A7A1A6014401A8C0" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="初始化系统日志当前记录" uuid="UUID33801C352CB125010000A7A1A6014401A8C0" valueName="resetValues" visible="false" valueType="void" variableName="resetValues()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取系统日志当前查询结果的最后一条记录" uuid="UUID34801C352CB125010000A7A1A6014401A8C0" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="系统日志当前查询结果的所有记录" uuid="UUID35801C352CB125010000A7A1A6014401A8C0" valueName="getListResult" visible="false" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="根据外键删除系统日志当前记录" uuid="UUID36801C352CB125010000A7A1A6014401A8C0" valueName="deleteByForeignKey" visible="false" valueType="void" variableName="deleteByForeignKey()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="判断系统日志主键字段是否已有其他表引用" uuid="UUID37801C352CB125010000A7A1A6014401A8C0" valueName="hasExported" visible="false" valueType="boolean" variableName="hasExported()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="根据外键更新系统日志当前记录" uuid="UUID38801C352CB125010000A7A1A6014401A8C0" valueName="updateByForeignKey" visible="false" valueType="void" variableName="updateByForeignKey()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="系统日志当前查询结果的记录数" uuid="UUID39801C352CB125010000A7A1A6014401A8C0" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="关闭系统日志当前查询结果集" uuid="UUID3A801C352CB125010000A7A1A6014401A8C0" valueName="close" visible="false" valueType="void" variableName="close()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="查询系统日志中所有记录" uuid="UUID3B801C352CB125010000A7A1A6014401A8C0" valueName="selectAll" visible="false" valueType="void" variableName="selectAll()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取系统日志当前查询结果的第一条记录" uuid="UUID3C801C352CB125010000A7A1A6014401A8C0" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取系统日志当前查询结果的上一条记录" uuid="UUID3D801C352CB125010000A7A1A6014401A8C0" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得系统日志当前记录在查询结果中的位置" uuid="UUID3E801C352CB125010000A7A1A6014401A8C0" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取系统日志当前查询结果的第{arg1}条记录" uuid="UUID3F801C352CB125010000A7A1A6014401A8C0" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取系统日志的操作用户名字段的值" uuid="UUID40801C352CB125010000A7A1A6014401A8C0" valueName="getLoginname" visible="false" valueType="string" variableName="getString(1)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置系统日志的操作用户名字段的值为{arg1}" uuid="UUID41801C352CB125010000A7A1A6014401A8C0" valueName="setLoginname" visible="false" valueType="void" variableName="setString(&quot;loginname&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取系统日志的操作时间字段的值" uuid="UUID42801C352CB125010000A7A1A6014401A8C0" valueName="getLogintime" visible="false" valueType="datetime" variableName="getTimestamp(2)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置系统日志的操作时间字段的值为{arg1}" uuid="UUID43801C352CB125010000A7A1A6014401A8C0" valueName="setLogintime" visible="false" valueType="void" variableName="setTimestamp(&quot;logintime&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="datetime" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取系统日志的操作ip字段的值" uuid="UUID44801C352CB125010000A7A1A6014401A8C0" valueName="getLoginip" visible="false" valueType="string" variableName="getString(3)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置系统日志的操作ip字段的值为{arg1}" uuid="UUID45801C352CB125010000A7A1A6014401A8C0" valueName="setLoginip" visible="false" valueType="void" variableName="setString(&quot;loginip&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取系统日志的操作内容字段的值" uuid="UUID46801C352CB125010000A7A1A6014401A8C0" valueName="getState" visible="false" valueType="string" variableName="getString(4)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置系统日志的操作内容字段的值为{arg1}" uuid="UUID47801C352CB125010000A7A1A6014401A8C0" valueName="setState" visible="false" valueType="void" variableName="setString(&quot;state&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <indexModel displayName="PK_sys_log" indexName="PK_sys_log" unique="true">
+    </indexModel>
+    <TableFunction displayName="取系统日志的logtype字段的值" uuid="UUID48801C352CB125010000A7A1A6014401A8C0" valueName="getLogtype" visible="false" valueType="int" variableName="getInteger(5)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置系统日志的logtype字段的值为{arg1}" uuid="UUID49801C352CB125010000A7A1A6014401A8C0" valueName="setLogtype" visible="true" valueType="void" variableName="setInteger(&quot;logtype&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="添加或更新系统日志当前记录" uuid="UUID4A801C352CB125010000A7A1A6014401A8C0" valueName="replace" visible="false" valueType="int" variableName="replace()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="取系统日志的logid字段的值" uuid="UUID4B801C352CB125010000A7A1A6014401A8C0" valueName="getLogid" visible="false" valueType="long" variableName="getLong(0)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置系统日志的logid字段的值为{arg1}" uuid="UUID4C801C352CB125010000A7A1A6014401A8C0" valueName="setLogid" visible="false" valueType="void" variableName="setLong(&quot;logid&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="long" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取系统日志的resname字段的值" uuid="UUID4D801C352CB125010000A7A1A6014401A8C0" valueName="getResname" visible="false" valueType="string" variableName="getString(6)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置系统日志的resname字段的值为{arg1}" uuid="UUID4E801C352CB125010000A7A1A6014401A8C0" valueName="setResname" visible="false" valueType="void" variableName="setString(&quot;resname&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取系统日志的opename字段的值" uuid="UUID4F801C352CB125010000A7A1A6014401A8C0" valueName="getOpename" visible="false" valueType="string" variableName="getString(7)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置系统日志的opename字段的值为{arg1}" uuid="UUID50801C352CB125010000A7A1A6014401A8C0" valueName="setOpename" visible="false" valueType="void" variableName="setString(&quot;opename&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <fieldModel displayName="logid" uuid="UUID51801C352CB125010000A7A1A6014401A8C0" fieldName="logid" fieldType="BIGINT UNSIGNED" valueType="long" classType="java.math.BigInteger" len="20" unNull="true" readOnly="true" autoIncrement="true" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="true" friendKey="false" iType="-5" defaultType="long">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="操作用户名" uuid="UUID52801C352CB125010000A7A1A6014401A8C0" fieldName="loginname" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="操作时间" uuid="UUID53801C352CB125010000A7A1A6014401A8C0" fieldName="logintime" fieldType="DATETIME" valueType="datetime" classType="java.sql.Timestamp" len="19" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="93" defaultType="datetime">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="操作ip" uuid="UUID54801C352CB125010000A7A1A6014401A8C0" fieldName="loginip" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="15" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="操作内容" uuid="UUID55801C352CB125010000A7A1A6014401A8C0" fieldName="state" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="21845" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="-1" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="logtype" uuid="UUID56801C352CB125010000A7A1A6014401A8C0" fieldName="logtype" fieldType="SMALLINT UNSIGNED" valueType="int" classType="java.lang.Integer" len="5" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="5" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="resname" uuid="UUID57801C352CB125010000A7A1A6014401A8C0" fieldName="resname" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="opename" uuid="UUID58801C352CB125010000A7A1A6014401A8C0" fieldName="opename" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="20" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <indexModel displayName="PRIMARY" indexName="PRIMARY" unique="true">
+    </indexModel>
+    <indexModel displayName="Index_2" indexName="Index_2" unique="false">
+    </indexModel>
+    <indexModel displayName="Index_3" indexName="Index_3" unique="false">
+    </indexModel>
+    <doc>
+    </doc>
+   </TableModel>
+   <TableModel uuid="U1QGVLFJ31GC6HG53FLOQ" displayName="r_proj" tableName="r_proj" shortTableName="r_proj" varName="r_proj" accessType="0" resultType="0" modifyTime="1322602806875" vml="0">
+    <TableFunction displayName="查询r_proj中符合条件记录" uuid="U1RGVLFJ31GC6HG53FLOQ" valueName="select" visible="false" valueType="void" variableName="select()" varPre="" groupName="查询">
+    </TableFunction>
+    <TableFunction displayName="添加r_proj当前记录" uuid="U1SGVLFJ31GC6HG53FLOQ" valueName="insert" visible="false" valueType="int" variableName="insertRows()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="删除r_proj当前记录" uuid="U1TGVLFJ31GC6HG53FLOQ" valueName="delete" visible="false" valueType="int" variableName="deleteRows()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="更新r_proj当前记录" uuid="U1UGVLFJ31GC6HG53FLOQ" valueName="update" visible="false" valueType="int" variableName="updateRows()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="添加或更新r_proj当前记录" uuid="U1VGVLFJ31GC6HG53FLOQ" valueName="replace" visible="false" valueType="int" variableName="replace()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="取r_proj当前查询结果的下一条记录" uuid="U1WGVLFJ31GC6HG53FLOQ" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="初始化r_proj当前记录" uuid="U1XGVLFJ31GC6HG53FLOQ" valueName="resetValues" visible="false" valueType="void" variableName="resetValues()" varPre="" groupName="查询">
+    </TableFunction>
+    <TableFunction displayName="取r_proj当前查询结果的最后一条记录" uuid="U1YGVLFJ31GC6HG53FLOQ" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="r_proj当前查询结果的所有记录" uuid="U1ZGVLFJ31GC6HG53FLOQ" valueName="getListResult" visible="false" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="添加r_proj当前记录并且取得自增主键值" uuid="U20GVLFJ31GC6HG53FLOQ" valueName="insertAndGeneratedKey" visible="false" valueType="int" variableName="insertAndGeneratedKey()" varPre="" groupName="修改">
+    </TableFunction>
+    <TableFunction displayName="将{arg1}中的数据根据所选列的对应关系，添加到r_proj数据库表中" uuid="U21GVLFJ31GC6HG53FLOQ" valueName="insertBySheet" visible="true" valueType="void" variableName="insertBySheet({arg1})" varPre="" groupName="修改">
+     <MethodParam typeName="sheetandfields" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="将{arg1}中的数据根据所选列的对应关系，按主键更新到r_proj数据库表中" uuid="U22GVLFJ31GC6HG53FLOQ" valueName="updateBySheet" visible="true" valueType="void" variableName="updateBySheet({arg1})" varPre="" groupName="修改">
+     <MethodParam typeName="sheetandfields" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="r_proj当前查询结果的记录数" uuid="U23GVLFJ31GC6HG53FLOQ" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="关闭r_proj当前查询结果集" uuid="U24GVLFJ31GC6HG53FLOQ" valueName="close" visible="false" valueType="void" variableName="close()" varPre="" groupName="查询">
+    </TableFunction>
+    <TableFunction displayName="查询r_proj中所有记录" uuid="U25GVLFJ31GC6HG53FLOQ" valueName="selectAll" visible="false" valueType="void" variableName="selectAll()" varPre="" groupName="查询">
+    </TableFunction>
+    <TableFunction displayName="取r_proj当前查询结果的第一条记录" uuid="U26GVLFJ31GC6HG53FLOQ" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取r_proj当前查询结果的上一条记录" uuid="U27GVLFJ31GC6HG53FLOQ" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取得r_proj当前记录在查询结果中的位置" uuid="U28GVLFJ31GC6HG53FLOQ" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取r_proj当前查询结果的第{arg1}条记录" uuid="U29GVLFJ31GC6HG53FLOQ" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="结果">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <fieldModel displayName="projid" uuid="U2AGVLFJ31GC6HG53FLOQ" fieldName="projid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="false" autoIncrement="true" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="true" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="ruleproject" uuid="U2BGVLFJ31GC6HG53FLOQ" fieldName="ruleproject" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="40" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="projdetail" uuid="U2CGVLFJ31GC6HG53FLOQ" fieldName="projdetail" fieldType="VARCHAR" valueType="string" classType="java.lang.String" len="100" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="cuser" uuid="U2DGVLFJ31GC6HG53FLOQ" fieldName="cuser" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="ctime" uuid="U2EGVLFJ31GC6HG53FLOQ" fieldName="ctime" fieldType="DATETIME" valueType="datetime" classType="java.sql.Timestamp" len="19" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="93" defaultType="datetime">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="iorder" uuid="U2FGVLFJ31GC6HG53FLOQ" fieldName="iorder" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <TableFunction displayName="取r_proj的projid字段的值" uuid="U2GGVLFJ31GC6HG53FLOQ" valueName="getProjid" visible="false" valueType="int" variableName="getInteger(0)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_proj的projid字段的值为{arg1}" uuid="U2HGVLFJ31GC6HG53FLOQ" valueName="setProjid" visible="false" valueType="void" variableName="setInteger(&quot;projid&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_proj的ruleproject字段的值" uuid="U2IGVLFJ31GC6HG53FLOQ" valueName="getRuleproject" visible="false" valueType="string" variableName="getString(1)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_proj的ruleproject字段的值为{arg1}" uuid="U2JGVLFJ31GC6HG53FLOQ" valueName="setRuleproject" visible="false" valueType="void" variableName="setString(&quot;ruleproject&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_proj的projdetail字段的值" uuid="U2KGVLFJ31GC6HG53FLOQ" valueName="getProjdetail" visible="false" valueType="string" variableName="getString(2)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_proj的projdetail字段的值为{arg1}" uuid="U2LGVLFJ31GC6HG53FLOQ" valueName="setProjdetail" visible="false" valueType="void" variableName="setString(&quot;projdetail&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_proj的cuser字段的值" uuid="U2MGVLFJ31GC6HG53FLOQ" valueName="getCuser" visible="false" valueType="int" variableName="getInteger(3)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_proj的cuser字段的值为{arg1}" uuid="U2NGVLFJ31GC6HG53FLOQ" valueName="setCuser" visible="false" valueType="void" variableName="setInteger(&quot;cuser&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_proj的ctime字段的值" uuid="U2OGVLFJ31GC6HG53FLOQ" valueName="getCtime" visible="false" valueType="datetime" variableName="getTimestamp(4)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_proj的ctime字段的值为{arg1}" uuid="U2PGVLFJ31GC6HG53FLOQ" valueName="setCtime" visible="false" valueType="void" variableName="setTimestamp(&quot;ctime&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="datetime" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取r_proj的iorder字段的值" uuid="U2QGVLFJ31GC6HG53FLOQ" valueName="getIorder" visible="false" valueType="int" variableName="getInteger(5)" varPre="" groupName="取值">
+    </TableFunction>
+    <TableFunction displayName="设置r_proj的iorder字段的值为{arg1}" uuid="U2RGVLFJ31GC6HG53FLOQ" valueName="setIorder" visible="false" valueType="void" variableName="setInteger(&quot;iorder&quot;,{arg1})" varPre="" groupName="赋值">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <indexModel displayName="PRIMARY" indexName="PRIMARY" unique="true">
+    </indexModel>
+    <indexModel displayName="Index_2" indexName="Index_2" unique="true">
+    </indexModel>
+    <doc>
+    </doc>
+   </TableModel>
+   <selectTable uuid="U16G4O4LPN6XXHTLXB" displayName="查询工程标签号" sqlSelect="select pv.projverid&#13;&#10;from r_projversion pv,r_proj p&#13;&#10;where pv.projid=p.projid and p.ruleproject={string} and pv.projver={string}" englishName="select0MG4O4M1GI" resultType="0" afterCommit="true" modifyTime="1263993403578" vml="0">
+    <TableFunction displayName="根据{arg1}{arg2}执行查询工程标签号" uuid="U17G4O4LPN6XXHTLXB" valueName="selectWhere" visible="true" valueType="void" variableName="selectWhere(&quot;select pv.projverid  from r_projversion pv,r_proj p  where pv.projid=p.projid and p.ruleproject= ?  and pv.projver= ? &quot;,new Object[&#93;{ {arg1}, {arg2}})" varPre="" groupName="查询">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="string" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取查询工程标签号当前查询结果的下一条记录" uuid="U18G4O4LPN6XXHTLXB" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="查询工程标签号当前查询结果的所有记录" uuid="U19G4O4LPN6XXHTLXB" valueName="getListResult" visible="true" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="设置查询工程标签号的排序字段为{arg1}，方向为{arg2}" uuid="U1AG4O4LPN6XXHTLXB" valueName="setOrderField" visible="false" valueType="void" variableName="setOrderField({arg1},{arg2})" varPre="" groupName="分页">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="boolean" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="设置查询工程标签号分页页码为{arg1}，每页数为{arg2}" uuid="U1BG4O4LPN6XXHTLXB" valueName="setPage" visible="false" valueType="void" variableName="setPage({arg1},{arg2})" varPre="" groupName="分页">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取符合查询工程标签号查询条件的总记录数" uuid="U1CG4O4LPN6XXHTLXB" valueName="getCount" visible="false" valueType="int" variableName="getCount()" varPre="" groupName="分页">
+    </TableFunction>
+    <TableFunction displayName="查询工程标签号当前查询结果的记录数" uuid="U1DG4O4LPN6XXHTLXB" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="将查询工程标签号的当前光标移动到第一条记录前" uuid="U1EG4O4LPN6XXHTLXB" valueName="beforeFirst" visible="false" valueType="void" variableName="beforeFirst()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取查询工程标签号当前查询结果的第一条记录" uuid="U1FG4O4LPN6XXHTLXB" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取查询工程标签号当前查询结果的上一条记录" uuid="U1GG4O4LPN6XXHTLXB" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取查询工程标签号当前查询结果的最后一条记录" uuid="U1HG4O4LPN6XXHTLXB" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取得查询工程标签号当前记录在查询结果中的位置" uuid="U1IG4O4LPN6XXHTLXB" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取查询工程标签号当前查询结果的第{arg1}条记录" uuid="U1JG4O4LPN6XXHTLXB" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="结果">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <fieldModel displayName="projverid" uuid="U1KG4O4LPN6XXHTLXB" fieldName="projverid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="true" autoIncrement="true" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <TableFunction displayName="取查询工程标签号的projverid字段的值" uuid="U1LG4O4LPN6XXHTLXB" valueName="getProjverid" visible="false" valueType="int" variableName="getInteger(0)" varPre="" groupName="取值">
+    </TableFunction>
+    <doc>
+    </doc>
+   </selectTable>
+   <selectTable uuid="U21G4O4LPN6XXHTLXB" displayName="可分配权限用户" sqlSelect="select rp.userid&#13;&#10;from r_projuser rp,r_proj p&#13;&#10;where p.projid=rp.projid and p.ruleproject={string}" englishName="select0ZG4O4M1GI" resultType="0" afterCommit="false" modifyTime="1263994213937" vml="0">
+    <TableFunction displayName="根据{arg1}执行可分配权限用户" uuid="U22G4O4LPN6XXHTLXB" valueName="selectWhere" visible="true" valueType="void" variableName="selectWhere(&quot;select rp.userid  from r_projuser rp,r_proj p  where p.projid=rp.projid and p.ruleproject= ? &quot;,new Object[&#93;{ {arg1}})" varPre="" groupName="查询">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取可分配权限用户当前查询结果的下一条记录" uuid="U23G4O4LPN6XXHTLXB" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="可分配权限用户当前查询结果的所有记录" uuid="U24G4O4LPN6XXHTLXB" valueName="getListResult" visible="true" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="设置可分配权限用户的排序字段为{arg1}，方向为{arg2}" uuid="U25G4O4LPN6XXHTLXB" valueName="setOrderField" visible="false" valueType="void" variableName="setOrderField({arg1},{arg2})" varPre="" groupName="分页">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="boolean" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="设置可分配权限用户分页页码为{arg1}，每页数为{arg2}" uuid="U26G4O4LPN6XXHTLXB" valueName="setPage" visible="false" valueType="void" variableName="setPage({arg1},{arg2})" varPre="" groupName="分页">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取符合可分配权限用户查询条件的总记录数" uuid="U27G4O4LPN6XXHTLXB" valueName="getCount" visible="false" valueType="int" variableName="getCount()" varPre="" groupName="分页">
+    </TableFunction>
+    <TableFunction displayName="可分配权限用户当前查询结果的记录数" uuid="U28G4O4LPN6XXHTLXB" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="将可分配权限用户的当前光标移动到第一条记录前" uuid="U29G4O4LPN6XXHTLXB" valueName="beforeFirst" visible="false" valueType="void" variableName="beforeFirst()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取可分配权限用户当前查询结果的第一条记录" uuid="U2AG4O4LPN6XXHTLXB" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取可分配权限用户当前查询结果的上一条记录" uuid="U2BG4O4LPN6XXHTLXB" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取可分配权限用户当前查询结果的最后一条记录" uuid="U2CG4O4LPN6XXHTLXB" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取得可分配权限用户当前记录在查询结果中的位置" uuid="U2DG4O4LPN6XXHTLXB" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取可分配权限用户当前查询结果的第{arg1}条记录" uuid="U2EG4O4LPN6XXHTLXB" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="结果">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <fieldModel displayName="userid" uuid="U2FG4O4LPN6XXHTLXB" fieldName="userid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <TableFunction displayName="取可分配权限用户的userid字段的值" uuid="U2GG4O4LPN6XXHTLXB" valueName="getUserid" visible="false" valueType="int" variableName="getInteger(0)" varPre="" groupName="取值">
+    </TableFunction>
+    <doc>
+    </doc>
+   </selectTable>
+   <selectTable uuid="U3XGVLFJ31GC6HG53FLOQ" displayName="查询工程" sqlSelect="select p.projid&#13;&#10;from r_proj p where p.ruleproject={string}" englishName="select0BG4NNGI6K" resultType="0" afterCommit="true" modifyTime="1322604725175" vml="0">
+    <TableFunction displayName="根据{arg1}执行查询工程" uuid="U3IGVLFJ31GC6HG53FLOQ" valueName="selectWhere" visible="true" valueType="void" variableName="selectWhere(&quot;select p.projid  from r_proj p where p.ruleproject= ? &quot;,new Object[&#93;{ {arg1}})" varPre="" groupName="查询">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取查询工程当前查询结果的下一条记录" uuid="U3JGVLFJ31GC6HG53FLOQ" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="查询工程当前查询结果的所有记录" uuid="U3KGVLFJ31GC6HG53FLOQ" valueName="getListResult" visible="true" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="设置查询工程的排序字段为{arg1}，方向为{arg2}" uuid="U3LGVLFJ31GC6HG53FLOQ" valueName="setOrderField" visible="false" valueType="void" variableName="setOrderField({arg1},{arg2})" varPre="" groupName="分页">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="boolean" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="设置查询工程分页页码为{arg1}，每页数为{arg2}" uuid="U3MGVLFJ31GC6HG53FLOQ" valueName="setPage" visible="false" valueType="void" variableName="setPage({arg1},{arg2})" varPre="" groupName="分页">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取符合查询工程查询条件的总记录数" uuid="U3NGVLFJ31GC6HG53FLOQ" valueName="getCount" visible="false" valueType="int" variableName="getCount()" varPre="" groupName="分页">
+    </TableFunction>
+    <TableFunction displayName="查询工程当前查询结果的记录数" uuid="U3OGVLFJ31GC6HG53FLOQ" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="将查询工程的当前光标移动到第一条记录前" uuid="U3PGVLFJ31GC6HG53FLOQ" valueName="beforeFirst" visible="false" valueType="void" variableName="beforeFirst()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取查询工程当前查询结果的第一条记录" uuid="U3QGVLFJ31GC6HG53FLOQ" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取查询工程当前查询结果的上一条记录" uuid="U3RGVLFJ31GC6HG53FLOQ" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取查询工程当前查询结果的最后一条记录" uuid="U3SGVLFJ31GC6HG53FLOQ" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取得查询工程当前记录在查询结果中的位置" uuid="U3TGVLFJ31GC6HG53FLOQ" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="结果">
+    </TableFunction>
+    <TableFunction displayName="取查询工程当前查询结果的第{arg1}条记录" uuid="U3UGVLFJ31GC6HG53FLOQ" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="结果">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <fieldModel displayName="projid" uuid="U3VGVLFJ31GC6HG53FLOQ" fieldName="projid" fieldType="INTEGER UNSIGNED" valueType="int" classType="java.lang.Long" len="10" unNull="true" readOnly="true" autoIncrement="true" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <TableFunction displayName="取查询工程的projid字段的值" uuid="U3WGVLFJ31GC6HG53FLOQ" valueName="getProjid" visible="false" valueType="int" variableName="getInteger(0)" varPre="" groupName="取值">
+    </TableFunction>
+    <doc>
+    </doc>
+   </selectTable>
+   <CustomSql uuid="UUID29808479E1CF1C0100000AB946006400A8C0" displayName="最大版本号" sqlCustom="select  max(rulever) from r_ruleversion where ruleid={int} " valueType="double" modifyTime="1223258879500" vml="0">
+    <TableFunction displayName="根据{arg1}执行最大版本号语句" uuid="UUID0780B12DE0AC140100006154EA006400A8C0" valueName="execute(&quot;select  max(rulever) from r_ruleversion where ruleid= ?  &quot;)" visible="true" valueType="double" variableName="executeDouble(&quot;select  max(rulever) from r_ruleversion where ruleid= ?  &quot;,new Object[&#93;{new Integer( {arg1})})" varPre="" groupName="">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <doc>
+    </doc>
+   </CustomSql>
+   <CustomSql uuid="UUID2A808479E1CF1C0100000AB946006400A8C0" displayName="最大规则编号" sqlCustom="select max(ruleid) from r_rule where exerule={string}" valueType="int" modifyTime="1249698419218" vml="0">
+    <TableFunction displayName="根据{arg1}最大规则编号" uuid="UUID24805479BAFE180100000ADACB016400A8C0" valueName="execute(&quot;select max(ruleid) from r_rule where exerule= ? &quot;)" visible="true" valueType="int" variableName="executeInteger(&quot;select max(ruleid) from r_rule where exerule= ? &quot;,new Object[&#93;{ {arg1}})" varPre="" groupName="">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <doc>
+    </doc>
+   </CustomSql>
+   <CustomSql uuid="U2IG4O4LPN6XXHTLXB" displayName="工程编号" sqlCustom="select p.projid&#13;&#10;from r_proj p,r_projuser rp&#13;&#10;where p.projid=rp.projid and rp.userid={int} and p.ruleproject={string}" valueType="int" modifyTime="1263993878234" vml="0">
+    <TableFunction displayName="根据{arg1}{arg2}工程编号" uuid="U20G4O4LPN6XXHTLXB" valueName="execute(&quot;select p.projid  from r_proj p,r_projuser rp  where p.projid=rp.projid and rp.userid= ?  and p.ruleproject= ? &quot;)" visible="true" valueType="int" variableName="executeInteger(&quot;select p.projid  from r_proj p,r_projuser rp  where p.projid=rp.projid and rp.userid= ?  and p.ruleproject= ? &quot;,new Object[&#93;{new Integer( {arg1}), {arg2}})" varPre="" groupName="">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="string" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <doc>
+    </doc>
+   </CustomSql>
+   <CustomSql uuid="U0NGW72Z15FIF64PZ8KFLT" displayName="规则用户权限" sqlCustom="select count(*) from r_ruleuser where ruleid={int} and userid={int}" valueType="int" modifyTime="1323912598350" vml="0">
+    <TableFunction displayName="根据{arg1}{arg2}规则用户权限" uuid="U0HGW72Z15FIF64PZ8KFLT" valueName="execute(&quot;select count(*) from r_ruleuser where ruleid= ?  and userid= ? &quot;)" visible="true" valueType="int" variableName="executeInteger(&quot;select count(*) from r_ruleuser where ruleid= ?  and userid= ? &quot;,new Object[&#93;{new Integer( {arg1}),new Integer( {arg2})})" varPre="" groupName="">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+     <MethodParam typeName="int" paramName="arg2" defaultValue=""/>
+    </TableFunction>
+    <doc>
+    </doc>
+   </CustomSql>
+   <EnumTable uuid="UUID2B808479E1CF1C0100000AB946006400A8C0" displayName="编辑状态" sqlSelect="" enumType="string" modifyTime="1188303767437" vml="0">
+    <ConstantEnum displayName="新建" uuid="UUID0B80474963AC14010000563916006400A8C0" value="1" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="正在修改" uuid="UUID0C80474963AC14010000563916006400A8C0" value="2" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="修改完毕" uuid="UUID0D80474963AC14010000563916006400A8C0" value="3" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="测试通过" uuid="UUID0E80474963AC14010000563916006400A8C0" value="4" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="审核通过" uuid="UUID0F80474963AC14010000563916006400A8C0" value="5" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="审核不通过" uuid="UUID1080474963AC14010000563916006400A8C0" value="6" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="已经发布" uuid="UUID1180474963AC14010000563916006400A8C0" value="7" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="发布不通过" uuid="UUID1280474963AC14010000563916006400A8C0" value="8" visible="true" groupName="编辑状态" valueType="int">
+    </ConstantEnum>
+    <doc>
+    </doc>
+   </EnumTable>
+   <EnumTable uuid="UUID2C808479E1CF1C0100000AB946006400A8C0" displayName="规则包状态" sqlSelect="" enumType="string" modifyTime="1188304540031" vml="0">
+    <ConstantEnum displayName="可修改" uuid="UUID1880474963AC14010000563916006400A8C0" value="1" visible="true" groupName="规则包状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="被锁定" uuid="UUID4480474963AC14010000563916006400A8C0" value="2" visible="true" groupName="规则包状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="已发布" uuid="UUID4580474963AC14010000563916006400A8C0" value="3" visible="true" groupName="规则包状态" valueType="int">
+    </ConstantEnum>
+    <ConstantEnum displayName="已作废" uuid="UUID4680474963AC14010000563916006400A8C0" value="4" visible="true" groupName="规则包状态" valueType="int">
+    </ConstantEnum>
+    <doc>
+    </doc>
+   </EnumTable>
+   <doc>
+   </doc>
+  </DBModel>
+  <CustomFunction displayName="递增版本号{arg1}" uuid="UUID1580474963AC14010000563916006400A8C0" modifyTime="1261562653312">
+   <FunctionMember uuid="UUID1980474963AC14010000563916006400A8C0" displayName="递增版本号{arg1}" visible="true">
+    <txt>
+public void addVer(boolean fabu) {&#13;&#10;   if ( rulever == 0 ){&#13;&#10;&#9;&#9;rulever = 1 ;&#13;&#10;&#9;} else if ( fabu ) {&#13;&#10;&#9;&#9;rulever = (int)rulever+1 ;&#13;&#10;&#9;} else {&#13;&#10;&#9;&#9;rulever = rulever + 0.01 ;&#13;&#10;&#9;}&#10;}    </txt>
+   </FunctionMember>
+  </CustomFunction>
+  <doc>
+  </doc>
+ </Envionment>
+ <RuleLogConditionToken uuid="UUID4C80474963AC14010000563916006400A8C0" type="3">
+ </RuleLogConditionToken>
+</RulePackage>

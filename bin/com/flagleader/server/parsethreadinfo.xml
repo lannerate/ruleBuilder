@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<digester-rules>
+   <object-create-rule pattern="RuleThreadInfos" classname="com.flagleader.server.RuleThreadInfos" />
+   <set-properties-rule pattern="RuleThreadInfos" >
+      <alias attr-name="displayName" prop-name="displayName" />
+      <alias attr-name="port" prop-name="port" />
+      <alias attr-name="autoupdate" prop-name="autoupdate" />
+      <alias attr-name="acceptIPs" prop-name="acceptIPs" />
+      <alias attr-name="streamtype" prop-name="streamtype" />
+   </set-properties-rule>
+   
+   <pattern value="*/RuleThreadInfo">
+     <object-create-rule classname="com.flagleader.server.RuleThreadInfo" />
+     <set-properties-rule>
+       <alias attr-name="groupName" prop-name="groupName" />
+       <alias attr-name="displayName" prop-name="displayName" />
+       <alias attr-name="ruleName" prop-name="ruleName" />
+       <alias attr-name="internalTime" prop-name="internalTime" />
+       <alias attr-name="minThreads" prop-name="minThreads" />
+       <alias attr-name="maxThreads" prop-name="maxThreads" />
+       <alias attr-name="location" prop-name="location" />
+       <alias attr-name="remoteips" prop-name="remoteips" />
+       <alias attr-name="remoteports" prop-name="remoteports" />
+       <alias attr-name="connName" prop-name="connName" />
+       <alias attr-name="sql" prop-name="sql" />
+     </set-properties-rule>
+     <set-next-rule methodname="addRuleThreadInfo" />
+   </pattern>
+ 
+</digester-rules>

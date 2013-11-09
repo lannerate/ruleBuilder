@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="GB18030"?>
+<RulePackage displayName="所有菜单栏目" uuid="UUID06806AE57B93070100006D574401BC01A8C0" packageName="com.flagleader.dbold" exportDir="classes" fileName="lanmu" startTime="0" endTime="0" createTime="1132153819735" modifyTime="1216548541593" locked="false" checkType="0" version="1.0" mainVersion="" modifyUser="develop" stringignore="0" stringinit="1" datenulltype="0" rulesid="0" dbRules="false" edittype="0" document="">
+ <Rule displayName="规则" uuid="UUID1880D9B9A09907010000D5C43D01BC01A8C0" exceptionType="0" actived="true" errorMsg="" supportElse="false" supportCatch="false" supportInit="false" startTime="0" endTime="0" createTime="1132153896636" modifyTime="1132283357950" modifyUser="" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0">
+  <RuleToken uuid="UUID1980D9B9A09907010000D5C43D01BC01A8C0">
+   <MultiConditionToken uuid="UUID1A80D9B9A09907010000D5C43D01BC01A8C0" type="0">
+   </MultiConditionToken>
+   <MultiActionToken uuid="UUID1B80D9B9A09907010000D5C43D01BC01A8C0" type="0">
+    <StatementContainerToken>
+     <TableFunctionToken elementUuid="UUID0D804D1A57A107010000F9D5AE010100007F" uniqueName="void_db5sys_lanmu.selectAll()" valueType="" displayName="查询sys_lanmu中所有记录">
+     </TableFunctionToken>
+    </StatementContainerToken>
+    <StatementContainerToken>
+     <AssignToken>
+      <FieldToken elementUuid="UUID1780D9B9A09907010000D5C43D01BC01A8C0" uniqueName="list&lt;list&gt;_lanmulist" valueType="" displayName="lanmulist">
+      </FieldToken>
+      <AssignJudgeToken type="0">
+      </AssignJudgeToken>
+      <ValueToken valueType="list&lt;list&gt;" displayName="" argName="" leftParenthesisNumber="0" rightParenthesisNumber="0">
+       <MemberToken elementUuid="UUID11804D1A57A107010000F9D5AE010100007F" uniqueName="list&lt;list&gt;_db5sys_lanmu.getListResult()" valueType="list&lt;list&gt;" displayName="sys_lanmu当前查询结果的所有记录">
+       </MemberToken>
+      </ValueToken>
+     </AssignToken>
+    </StatementContainerToken>
+   </MultiActionToken>
+   <MultiActionToken uuid="UUID1C80D9B9A09907010000D5C43D01BC01A8C0" type="3">
+   </MultiActionToken>
+  </RuleToken>
+  <doc>
+  </doc>
+ </Rule>
+ <Envionment displayName="对象库" uuid="UUID05806AE57B93070100006D574401BC01A8C0" modifyTime="1216548541593" functionNum="2">
+  <ClassLibrary displayName="Java类对象" uuid="UUID02806AE57B93070100006D574401BC01A8C0" modifyTime="1180435751625">
+  </ClassLibrary>
+  <ValueLibrary displayName="传入数据" modifyTime="1180435751640" uuid="UUID00806AE57B93070100006D574401BC01A8C0">
+   <MappingVariable displayName="lanmulist" uuid="UUID1780D9B9A09907010000D5C43D01BC01A8C0" variableName="lanmulist" visible="true" groupName="" valueType="list&lt;list&gt;" inout="3" loged="false">
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1180435751656" uuid="UUID01806AE57B93070100006D574401BC01A8C0">
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1180435751671" uuid="UUID03806AE57B93070100006D574401BC01A8C0">
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1180435751671" uuid="UUID04806AE57B93070100006D574401BC01A8C0">
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <DBModel displayName="rules" uuid="UUID0180F977F13F1B01000080AA7800DAE0FEA9" url="jdbc:jtds:sqlserver://computer:1433/rules" driver="net.sourceforge.jtds.jdbc.Driver" userName="rules" encryptedPasswd="3wmRPnEHnlcP614OUF89h9hwVTpxWKXBCEPTpk2O1nc=" datasourceName="rules" catalogName="" schemaName="" connType="0" varName="db5" modifyTime="1216548541593" dbFilePath="D:\Personal\Desktop\rules.dbs" vml="0">
+   <TableModel uuid="UUID01801A7255B31A0100007A125100AA1AA50A" displayName="sys_lanmu" tableName="sys_lanmu" shortTableName="sys_lanmu" varName="sys_lanmu" accessMode="false" resultType="0" modifyTime="1209448302218" vml="0">
+    <TableFunction displayName="查询sys_lanmu中符合条件记录" uuid="UUID02804D1A57A107010000F9D5AE010100007F" valueName="select" visible="false" valueType="void" variableName="select()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="删除sys_lanmu当前记录" uuid="UUID03804D1A57A107010000F9D5AE010100007F" valueName="delete" visible="false" valueType="void" variableName="delete()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="根据外键删除sys_lanmu当前记录" uuid="UUID04804D1A57A107010000F9D5AE010100007F" valueName="deleteByForeignKey" visible="false" valueType="void" variableName="deleteByForeignKey()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="更新sys_lanmu当前记录" uuid="UUID05804D1A57A107010000F9D5AE010100007F" valueName="update" visible="false" valueType="void" variableName="update()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="根据外键更新sys_lanmu当前记录" uuid="UUID06804D1A57A107010000F9D5AE010100007F" valueName="updateByForeignKey" visible="false" valueType="void" variableName="updateByForeignKey()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="添加sys_lanmu当前记录" uuid="UUID07804D1A57A107010000F9D5AE010100007F" valueName="insert" visible="false" valueType="void" variableName="insert()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="sys_lanmu是否存在下一条记录" uuid="UUID08804D1A57A107010000F9D5AE010100007F" valueName="hasNext" visible="false" valueType="boolean" variableName="hasNext()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取sys_lanmu当前查询结果的下一条记录" uuid="UUID09804D1A57A107010000F9D5AE010100007F" valueName="next" visible="false" valueType="boolean" variableName="next()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="初始化sys_lanmu当前记录" uuid="UUID0A804D1A57A107010000F9D5AE010100007F" valueName="resetValues" visible="false" valueType="void" variableName="resetValues()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="sys_lanmu当前查询结果的记录数" uuid="UUID0B804D1A57A107010000F9D5AE010100007F" valueName="getRows" visible="false" valueType="int" variableName="getRows()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="关闭sys_lanmu当前查询结果集" uuid="UUID0C804D1A57A107010000F9D5AE010100007F" valueName="close" visible="false" valueType="void" variableName="close()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="查询sys_lanmu中所有记录" uuid="UUID0D804D1A57A107010000F9D5AE010100007F" valueName="selectAll" visible="true" valueType="void" variableName="selectAll()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取sys_lanmu当前查询结果的第一条记录" uuid="UUID0E804D1A57A107010000F9D5AE010100007F" valueName="first" visible="false" valueType="boolean" variableName="first()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取sys_lanmu当前查询结果的上一条记录" uuid="UUID0F804D1A57A107010000F9D5AE010100007F" valueName="previous" visible="false" valueType="boolean" variableName="previous()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取sys_lanmu当前查询结果的最后一条记录" uuid="UUID10804D1A57A107010000F9D5AE010100007F" valueName="last" visible="false" valueType="boolean" variableName="last()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="sys_lanmu当前查询结果的所有记录" uuid="UUID11804D1A57A107010000F9D5AE010100007F" valueName="getListResult" visible="true" valueType="list&lt;list&gt;" variableName="getListResult()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取得sys_lanmu当前记录在查询结果中的位置" uuid="UUID12804D1A57A107010000F9D5AE010100007F" valueName="getCurrentRow" visible="false" valueType="int" variableName="getCurrentRow()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取sys_lanmu当前查询结果的第{arg1}条记录" uuid="UUID13804D1A57A107010000F9D5AE010100007F" valueName="gotoRow" visible="false" valueType="int" variableName="gotoRow({arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取sys_lanmu的栏目编号字段的值" uuid="UUID14804D1A57A107010000F9D5AE010100007F" valueName="getLanmuid" visible="false" valueType="int" variableName="getInteger(0)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置sys_lanmu的栏目编号字段的值为{arg1}" uuid="UUID15804D1A57A107010000F9D5AE010100007F" valueName="setLanmuid" visible="false" valueType="void" variableName="setInteger(&quot;lanmuid&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取sys_lanmu的栏目名称字段的值" uuid="UUID16804D1A57A107010000F9D5AE010100007F" valueName="getLanmuname" visible="false" valueType="string" variableName="getString(1)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置sys_lanmu的栏目名称字段的值为{arg1}" uuid="UUID17804D1A57A107010000F9D5AE010100007F" valueName="setLanmuname" visible="false" valueType="void" variableName="setString(&quot;lanmuname&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <indexModel displayName="PRIMARY" indexName="PRIMARY" unique="true">
+    </indexModel>
+    <fkModel displayName="" pkTableName="sys_lanmu" fieldName="lanmuid" FKTableName="sys_page" FKFieldName="lanmuid" defaultValue="NULL" updateRule="3" deleteRule="3">
+    </fkModel>
+    <fkModel displayName="" pkTableName="sys_lanmu" fieldName="lanmuid" FKTableName="sys_page" FKFieldName="lanmuid" defaultValue="NULL" updateRule="3" deleteRule="3">
+    </fkModel>
+    <TableFunction displayName="判断sys_lanmu主键字段是否已有其他表引用" uuid="UUID0B80C387C6FF180100004792D4010100007F" valueName="hasExported" visible="false" valueType="boolean" variableName="hasExported()" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="取sys_lanmu的superid字段的值" uuid="UUID0C80C387C6FF180100004792D4010100007F" valueName="getSuperid" visible="false" valueType="int" variableName="getInteger(2)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置sys_lanmu的superid字段的值为{arg1}" uuid="UUID0D80C387C6FF180100004792D4010100007F" valueName="setSuperid" visible="false" valueType="void" variableName="setInteger(&quot;superid&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取sys_lanmu的vorder字段的值" uuid="UUID0E80C387C6FF180100004792D4010100007F" valueName="getVorder" visible="false" valueType="int" variableName="getInteger(3)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置sys_lanmu的vorder字段的值为{arg1}" uuid="UUID0F80C387C6FF180100004792D4010100007F" valueName="setVorder" visible="false" valueType="void" variableName="setInteger(&quot;vorder&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="int" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取sys_lanmu的sicon字段的值" uuid="UUID1080C387C6FF180100004792D4010100007F" valueName="getSicon" visible="false" valueType="string" variableName="getString(4)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置sys_lanmu的sicon字段的值为{arg1}" uuid="UUID1180C387C6FF180100004792D4010100007F" valueName="setSicon" visible="false" valueType="void" variableName="setString(&quot;sicon&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取sys_lanmu的bicon字段的值" uuid="UUID1280C387C6FF180100004792D4010100007F" valueName="getBicon" visible="false" valueType="string" variableName="getString(5)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置sys_lanmu的bicon字段的值为{arg1}" uuid="UUID1380C387C6FF180100004792D4010100007F" valueName="setBicon" visible="false" valueType="void" variableName="setString(&quot;bicon&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <TableFunction displayName="取sys_lanmu的url字段的值" uuid="UUID1480C387C6FF180100004792D4010100007F" valueName="getUrl" visible="false" valueType="string" variableName="getString(6)" varPre="" groupName="rules">
+    </TableFunction>
+    <TableFunction displayName="设置sys_lanmu的url字段的值为{arg1}" uuid="UUID1580C387C6FF180100004792D4010100007F" valueName="setUrl" visible="false" valueType="void" variableName="setString(&quot;url&quot;,{arg1})" varPre="" groupName="rules">
+     <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    </TableFunction>
+    <indexModel displayName="PK_sys_lanmu" indexName="PK_sys_lanmu" unique="true">
+    </indexModel>
+    <fieldModel displayName="栏目编号" uuid="UUID0280F977F13F1B01000080AA7800DAE0FEA9" fieldName="lanmuid" fieldType="int identity" valueType="int" classType="java.lang.Integer" len="10" unNull="true" readOnly="true" autoIncrement="true" searchable="true" caseSensitive="false" currency="false" signed="true" primaryKey="true" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="栏目名称" uuid="UUID0380F977F13F1B01000080AA7800DAE0FEA9" fieldName="lanmuName" fieldType="varchar" valueType="string" classType="java.lang.String" len="90" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="superid" uuid="UUID0480F977F13F1B01000080AA7800DAE0FEA9" fieldName="superid" fieldType="int" valueType="int" classType="java.lang.Integer" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="true" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="vorder" uuid="UUID0580F977F13F1B01000080AA7800DAE0FEA9" fieldName="vorder" fieldType="int" valueType="int" classType="java.lang.Integer" len="10" unNull="true" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="true" primaryKey="false" friendKey="false" iType="4" defaultType="int">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="sicon" uuid="UUID0680F977F13F1B01000080AA7800DAE0FEA9" fieldName="sicon" fieldType="varchar" valueType="string" classType="java.lang.String" len="90" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="bicon" uuid="UUID0780F977F13F1B01000080AA7800DAE0FEA9" fieldName="bicon" fieldType="varchar" valueType="string" classType="java.lang.String" len="90" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <fieldModel displayName="url" uuid="UUID0880F977F13F1B01000080AA7800DAE0FEA9" fieldName="url" fieldType="varchar" valueType="string" classType="java.lang.String" len="510" unNull="false" readOnly="false" autoIncrement="false" searchable="true" caseSensitive="false" currency="false" signed="false" primaryKey="false" friendKey="false" iType="12" defaultType="string">
+     <doc>
+     </doc>
+    </fieldModel>
+    <doc>
+    </doc>
+   </TableModel>
+   <doc>
+   </doc>
+  </DBModel>
+  <doc>
+  </doc>
+ </Envionment>
+ <RuleLogConditionToken uuid="UUID0380BC0EEEC914010000E29C7E006400A8C0" type="3">
+ </RuleLogConditionToken>
+</RulePackage>

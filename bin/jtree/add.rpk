@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="GBK"?>
+<RulePackage displayName="添加" uuid="U48GZT7GLEQC6CLDU3FLP8" packageName="jtree" exportDir="" fileName="add" startTime="0" endTime="0" createTime="1331780960316" modifyTime="1331780968548" locked="false" checkType="0" version="1.0" mainVersion="" projver="" modifyUser="develop" stringignore="0" stringinit="1" datenulltype="0" rulesid="0" dbRules="false" edittype="0" logType="1" dblog="0" fileVersion="4" logTimes="0" vmlFlowType="3" templateType="" document="">
+ <RuleLogConditionToken uuid="U63GZT7GLEQC6CLDU3FLP8" type="3">
+ </RuleLogConditionToken>
+ <Envionment displayName="对象库" uuid="U49GZT7GLEQC6CLDU3FLP8" modifyTime="1331780965573" functionNum="1">
+  <ValueLibrary displayName="传入数据" modifyTime="1331780965561" uuid="U64GZT7GLEQC6CLDU3FLP8">
+   <MappingVariable displayName="提 交" uuid="U46GZT7GLEQC6CLDU3FLP8" variableName="buttontijiao" visible="true" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="success" uuid="U47GZT7GLEQC6CLDU3FLP8" variableName="su" visible="true" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1331780965561" uuid="U65GZT7GLEQC6CLDU3FLP8">
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1331780965561" uuid="U66GZT7GLEQC6CLDU3FLP8">
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1331780965561" uuid="U67GZT7GLEQC6CLDU3FLP8">
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <doc>
+  </doc>
+ </Envionment>
+ <ExportModel displayName="html/add.jsp" uuid="U4AGZT7GLEQC6CLDU3FLP8" exportFile="" importFile="jquery/page_input.rsp" value="" title="添加" modifyTime="1331901894626">
+  <modelStr>
+  </modelStr>
+  <advancedProperty key="judge" property="notsupport"/>
+  <advancedProperty key="rule" property="run"/>
+  <advancedProperty key="input" property="show"/>
+  <advancedProperty key="inputtable" property="4"/>
+  <advancedProperty key="judgelength" property="none"/>
+  <advancedProperty key="output" property="show"/>
+  <advancedProperty key="error" property="errorshow"/>
+  <advancedProperty key="showscript" property="add"/>
+  <advancedProperty key="submit" property="reset"/>
+  <advancedProperty key="successpage" property="list.jsp"/>
+  <advancedProperty key="success" property="successcloseopener"/>
+  <advancedProperty key="navigate" property="showclose"/>
+  <PageFieldModel displayName="提 交" variableName="buttontijiao" valueType="string" nullType="null" len="0" inputType="button" resultType="notdisplay" statType="input" defaultValue="" inputValueType="nottest" showValue="resultvalue" valueFrom="request">
+   <advancedProperty key="buttontype" property="submit"/>
+   <advancedProperty key="url" property=""/>
+  </PageFieldModel>
+  <PageFieldModel displayName="success" variableName="su" valueType="string" nullType="null" len="0" inputType="notdisplay" resultType="notdisplay" statType="success" defaultValue="" inputValueType="nottest" showValue="resultvalue" valueFrom="request">
+  </PageFieldModel>
+  <PageFieldModel displayName="superIDs" variableName="superIDs" valueType="string" nullType="null" len="0" inputType="hidden" resultType="notdisplay" statType="inout" defaultValue="" inputValueType="nottest" showValue="resultvalue" valueFrom="request">
+  </PageFieldModel>
+  <doc>
+  </doc>
+ </ExportModel>
+</RulePackage>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<digester-rules>
+   <object-create-rule pattern="RuleRepository" classname="com.flagleader.repository.tree.RuleRepository" />
+   <set-properties-rule pattern="RuleRepository" >
+      <alias attr-name="displayName" prop-name="displayName" />
+      <alias attr-name="dbsPath" prop-name="dbsPath" />
+      <alias attr-name="classDir" prop-name="classDir" />
+      <alias attr-name="exportPagePath" prop-name="exportPagePath" />
+      <alias attr-name="exportExeRulePath" prop-name="exportExeRulePath" />
+      <alias attr-name="dateFormat" prop-name="dateFormat" />
+      <alias attr-name="datetimeFormat" prop-name="datetimeFormat" />
+      <alias attr-name="timeFormat" prop-name="timeFormat" />
+      <alias attr-name="rspRoot" prop-name="rspRoot" />
+      <alias attr-name="driver" prop-name="driver" />
+      <alias attr-name="url" prop-name="url" />
+      <alias attr-name="uid" prop-name="uid" />
+      <alias attr-name="passwd" prop-name="passwd" />
+      <alias attr-name="jspRoot" prop-name="jspRoot" />
+      <alias attr-name="ftpServer" prop-name="ftpServer" />
+      <alias attr-name="ftpUser" prop-name="ftpUser" />
+      <alias attr-name="ftpPasswd" prop-name="ftpPasswd" />
+      <alias attr-name="ftpRscPath" prop-name="ftpRscPath" />
+      <alias attr-name="ftpJspPath" prop-name="ftpJspPath" />
+      <alias attr-name="ftpRulesPath" prop-name="ftpRulesPath" />
+      <alias attr-name="userRuleServer" prop-name="userRuleServer" />
+      <alias attr-name="passwdRuleServer" prop-name="passwdRuleServer" />
+      <alias attr-name="autoFtpExe" prop-name="autoFtpExe" />
+      <alias attr-name="autoFtpPage" prop-name="autoFtpPage" />
+      <alias attr-name="autoFtpRules" prop-name="autoFtpRules" />
+      <alias attr-name="autoCompile" prop-name="autoCompile" />
+      <alias attr-name="autoExportPage" prop-name="autoExportPage" />
+      <alias attr-name="autoCheck" prop-name="autoCheck" />
+      <alias attr-name="showVarname" prop-name="showVarname" />
+       <alias attr-name="logtrace" prop-name="logtrace" />
+       <alias attr-name="ruleServiceUrl" prop-name="ruleServiceUrl" />
+   </set-properties-rule>
+
+   <pattern value="RuleRepository/RuleProject">
+      <object-create-rule classname="com.flagleader.repository.tree.RuleProject" />
+      <set-properties-rule>
+         <alias attr-name="displayName" prop-name="displayName" />
+         <alias attr-name="uuid" prop-name="uuid" />
+         <alias attr-name="filePath" prop-name="filePath" />
+         <alias attr-name="opened" prop-name="opened" />
+      </set-properties-rule>
+      <set-next-rule methodname="addChildElement" />
+   </pattern>
+	   <pattern value="*/advancedProperty">
+     <object-create-rule classname="com.flagleader.repository.tree.AdvancedProperty" />
+     <set-properties-rule>
+       <alias attr-name="key" prop-name="key" />
+       <alias attr-name="property" prop-name="property" />
+     </set-properties-rule>
+     <set-next-rule methodname="addAdvanceProperty" />
+   </pattern>
+   
+</digester-rules>

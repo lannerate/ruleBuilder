@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="GBK"?>
+<RuleThreadInfos displayName="sample" port="1509">
+ <RuleThreadInfo groupName="helloworld" displayName="世界你好" ruleName="simple.helloworld" internalTime="100" minThreads="1" maxThreads="10" location="0" remoteips="" remoteports="" connName="rules" sql="insert into testlog (name,errorinfo) values ('{name}','错误信息为:{errorinfo}') ">
+ </RuleThreadInfo>
+</RuleThreadInfos>

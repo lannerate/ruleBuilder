@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="GBK"?>
+<RulePackage displayName="列表" uuid="UMRGZUKBLVPAQT6VA3FLP8" packageName="query.pages" exportDir="" fileName="list" startTime="0" endTime="0" createTime="1331872535362" modifyTime="1331891457027" locked="false" checkType="0" version="1.0" mainVersion="" projver="" modifyUser="develop" stringignore="0" stringinit="1" datenulltype="0" rulesid="0" dbRules="false" edittype="0" logType="1" dblog="0" fileVersion="4" logTimes="0" vmlFlowType="3" templateType="" document="">
+ <RuleSet displayName="设置查询条件" uuid="U09GZUQQWOFAQT6VA3FLP8" editType="3" startTime="0" endTime="0" createTime="1331875488948" modifyTime="1331875488948" actived="true" modifyUser="develop" vml="0" logtype="0" sheetWhile="false" sheetUuid="" sheetName="" sheetOther="0" dataShap="0" vmlFlowType="0" restartType="0" first="false" editTable="false" exceptionType="1" errorMsg="" syn="false">
+  <RuleSetToken uuid="U0AGZUQQWOFAQT6VA3FLP8">
+   <MultiConditionToken uuid="U0BGZUQQWOFAQT6VA3FLP8" type="0">
+   </MultiConditionToken>
+   <MultiActionToken uuid="U0WGZUQQWOFAQT6VA3FLP8" type="2">
+   </MultiActionToken>
+   <MultiActionToken uuid="U0XGZUQQWOFAQT6VA3FLP8" type="5">
+   </MultiActionToken>
+   <MultiActionToken uuid="U0YGZUQQWOFAQT6VA3FLP8" type="6">
+   </MultiActionToken>
+  </RuleSetToken>
+  <doc>
+  </doc>
+ </RuleSet>
+ <RuleLogConditionToken uuid="UMSGZUKBLVPAQT6VA3FLP8" type="3">
+ </RuleLogConditionToken>
+ <Envionment displayName="对象库" uuid="UMTGZUKBLVPAQT6VA3FLP8" modifyTime="1331882403399" functionNum="1">
+  <ValueLibrary displayName="传入数据" modifyTime="1331872547903" uuid="UMUGZUKBLVPAQT6VA3FLP8">
+   <MappingVariable displayName="page_num" uuid="UMLGZUKBLVPAQT6VA3FLP8" variableName="page_num" visible="false" groupName="p" valueType="int" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="per_page" uuid="UMMGZUKBLVPAQT6VA3FLP8" variableName="per_page" visible="false" groupName="p" valueType="int" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="order_field" uuid="UMNGZUKBLVPAQT6VA3FLP8" variableName="order_field" visible="false" groupName="p" valueType="string" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="order_desc" uuid="UMOGZUKBLVPAQT6VA3FLP8" variableName="order_desc" visible="false" groupName="p" valueType="boolean" inout="3" loged="false">
+   </MappingVariable>
+   <MappingVariable displayName="record_count" uuid="UMPGZUKBLVPAQT6VA3FLP8" variableName="record_count" visible="false" groupName="p" valueType="int" inout="3" loged="false">
+   </MappingVariable>
+   <doc>
+   </doc>
+  </ValueLibrary>
+  <VariableLibrary displayName="临时数据" modifyTime="1331872547903" uuid="UMVGZUKBLVPAQT6VA3FLP8">
+   <doc>
+   </doc>
+  </VariableLibrary>
+  <FunctionLibrary displayName="外部调用" modifyTime="1331882403399" uuid="UMWGZUKBLVPAQT6VA3FLP8">
+   <GlobalFunction displayName="将{arg1}按{arg2}分割成字符数组" uuid="U0RGZUQQWOFAQT6VA3FLP8" valueName="split(string,string)" visible="true" valueType="string[&#93;" variableName="StringUtil.split({arg1},{arg2})" groupName="字符切割">
+    <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    <MethodParam typeName="string" paramName="arg2" defaultValue=""/>
+    <SubVariable displayName="将{arg1}按{arg2}分割成字符数组[{arg3}&#93;" uuid="U0QGZUQQWOFAQT6VA3FLP8" valueName="get(0)" visible="true" valueType="string" variableName="[{arg3}&#93;" varPre="" groupName="p">
+     <MethodParam typeName="int" paramName="arg3" defaultValue=""/>
+    </SubVariable>
+   </GlobalFunction>
+   <GlobalFunction displayName="计算{arg1}中{arg2}的所在位置" uuid="U14GZUQQWOFAQT6VA3FLP8" valueName="indexOfString(string,string)" visible="true" valueType="int" variableName="StringUtil.indexOfString({arg1},{arg2})" groupName="字符处理">
+    <MethodParam typeName="string" paramName="arg1" defaultValue=""/>
+    <MethodParam typeName="string" paramName="arg2" defaultValue=""/>
+   </GlobalFunction>
+   <doc>
+   </doc>
+  </FunctionLibrary>
+  <EnumLibrary displayName="常量数据" modifyTime="1331872547903" uuid="UMXGZUKBLVPAQT6VA3FLP8">
+   <doc>
+   </doc>
+  </EnumLibrary>
+  <doc>
+  </doc>
+ </Envionment>
+ <ExportModel displayName="query/pages/list.jsp" uuid="UMQGZUKBLVPAQT6VA3FLP8" exportFile="" importFile="standard/page_output_multi.rsp" value="" title="列表" modifyTime="1331902872219">
+  <modelStr>
+  </modelStr>
+  <advancedProperty key="judge" property="notsupport"/>
+  <advancedProperty key="rule" property="run"/>
+  <advancedProperty key="navigate" property="notshow"/>
+  <advancedProperty key="editrule" property="notsupport"/>
+  <advancedProperty key="input" property="show"/>
+  <advancedProperty key="inputtable" property="4"/>
+  <advancedProperty key="judgelength" property="none"/>
+  <advancedProperty key="submit" property="submit"/>
+  <advancedProperty key="output" property="show"/>
+  <advancedProperty key="success" property="notshow"/>
+  <advancedProperty key="error" property="errorshow"/>
+  <advancedProperty key="showscript" property="add"/>
+  <advancedProperty key="addpage" property="add.jsp"/>
+  <advancedProperty key="editpage" property="edit.jsp"/>
+  <advancedProperty key="deletepage" property="delete.jsp"/>
+  <advancedProperty key="submitpage" property="list.jsp"/>
+  <advancedProperty key="search" property="show"/>
+  <advancedProperty key="querypage" property=""/>
+  <doc>
+  </doc>
+ </ExportModel>
+</RulePackage>
