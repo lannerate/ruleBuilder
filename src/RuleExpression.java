@@ -101,7 +101,7 @@ public class RuleExpression
       localGlobalFunction.setVisible(true);
       localFunctionLibrary.addChildElement(localGlobalFunction);
     }
-    for (j = 1; j <= this.c.size(); j++)
+    for (int j = 1; j <= this.c.size(); j++)
     {
       localObject = new ExpressionRule("rule" + j);
       ((ExpressionRule)localObject).setExpression((String)this.c.get(j - 1));
